@@ -388,6 +388,25 @@ function scaleAmount(a,m){
 }
 
 // ── State ──────────────────────────────────────────────────────────────────
+function migrateRecipes(recipes){
+  // Fix any recipe where unit was stored separately from amount
+  return recipes.map(r=>{
+    if(!r.ingredients) return r;
+    const fixed = r.ingredients.map(ing=>{
+      // If unit exists and amount doesn't already contain it, merge them
+      if(ing.unit && ing.amount && !ing.amount.toLowerCase().includes(ing.unit.toLowerCase())){
+        return {...ing, amount: ing.amount+' '+ing.unit, unit:''};
+      }
+      // If amount is just a bare number with no unit text, append unit
+      if(ing.unit && ing.amount && /^[\d\s¼½¾⅓⅔⅛⅜⅝⅞\/\.]+$/.test(ing.amount.trim())){
+        return {...ing, amount: ing.amount.trim()+' '+ing.unit, unit:''};
+      }
+      return ing;
+    });
+    return {...r, ingredients:fixed};
+  });
+}
+
 function loadState(){
   try{
     const raw=localStorage.getItem(STORAGE_KEY);
@@ -396,9 +415,29 @@ function loadState(){
     for(const k of['dinner_planner_v4','dinner_planner_v3','dinner_planner_v2']){
       if(!state.recipes.length){try{const o=JSON.parse(localStorage.getItem(k)||'');if(o&&o.recipes)state.recipes=o.recipes;}catch(e){}}
     }
+    // fix split amount/unit on all existing recipes
+    if(state.recipes.length){
+      state.recipes=migrateRecipes(state.recipes);
+      saveState();
+    }
   }catch(e){}
 }
-function saveState(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}
+function saveState(){
+  try{
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+  }catch(e){
+    if(e.name==='QuotaExceededError'){
+      // Strip source images from oldest recipes to free space, then retry
+      const stripped=state.recipes.map(r=>({...r,sourceImages:undefined}));
+      try{
+        localStorage.setItem(STORAGE_KEY,JSON.stringify({...state,recipes:stripped}));
+        toast('Storage full — recipe images removed to save space. Export your recipes as a backup.');
+      }catch(e2){
+        toast('Storage full. Please export your recipes and clear some space.');
+      }
+    }
+  }
+}
 function getApiKey(){return localStorage.getItem(API_KEY_STORAGE)||'';}
 function saveApiKey(k){localStorage.setItem(API_KEY_STORAGE,k.trim());}
 
@@ -597,10 +636,24 @@ document.getElementById('photo-file-input').addEventListener('change',function(e
   files.forEach(file=>{
     const reader=new FileReader();
     reader.onload=function(ev){
-      const dataUrl=ev.target.result;
-      pendingPhotos.push({dataUrl,mimeType:file.type||'image/jpeg'});
-      const img=document.createElement('img');img.src=dataUrl;prev.appendChild(img);
-      document.getElementById('upload-text-label').innerHTML=`<strong>${pendingPhotos.length} image${pendingPhotos.length>1?'s':''} ready</strong> — tap to add more`;
+      // Compress image before storing to save localStorage space
+      const img=new Image();
+      img.onload=function(){
+        const canvas=document.createElement('canvas');
+        const MAX=1200; // max dimension
+        let w=img.width,h=img.height;
+        if(w>MAX||h>MAX){
+          if(w>h){h=Math.round(h*MAX/w);w=MAX;}
+          else{w=Math.round(w*MAX/h);h=MAX;}
+        }
+        canvas.width=w;canvas.height=h;
+        canvas.getContext('2d').drawImage(img,0,0,w,h);
+        const dataUrl=canvas.toDataURL('image/jpeg',0.82);
+        pendingPhotos.push({dataUrl,mimeType:'image/jpeg'});
+        const thumb=document.createElement('img');thumb.src=dataUrl;prev.appendChild(thumb);
+        document.getElementById('upload-text-label').innerHTML=`<strong>${pendingPhotos.length} image${pendingPhotos.length>1?'s':''} ready</strong> — tap to add more`;
+      };
+      img.src=ev.target.result;
     };
     reader.readAsDataURL(file);
   });
@@ -804,7 +857,9 @@ function buildShoppingList(){
     perRecipe[r.id]={name:r.name,emoji:r.emoji,items:[]};
     for(const ing of(r.ingredients||[])){
       const key=ing.name.toLowerCase().replace(/[^a-z0-9]/g,'');
-      const amt=scaleAmount(ing.amount,m)||'';
+      const baseAmt=(ing.unit&&!ing.amount.toLowerCase().includes(ing.unit.toLowerCase()))
+        ?(ing.amount+' '+ing.unit).trim():(ing.amount||'').trim();
+      const amt=scaleAmount(baseAmt,m)||'';
       const dname=ing.notes?`${ing.name} (${ing.notes})`:ing.name;
       perRecipe[r.id].items.push({key,name:dname,amount:amt});
       if(!combined[key])combined[key]={name:dname,amounts:[]};
@@ -906,9 +961,11 @@ function renderRecipes(){
         </div>
         <div class="ing-grid">`;
         for(const ing of r.ingredients){
-          const scaledAmt=scaleAmount(ing.amount,mult)||'';
-          const unit=ing.unit&&!ing.amount.includes(ing.unit)?ing.unit:'';
-          const da=[scaledAmt,unit].filter(Boolean).join(' ');
+          // Build full amount string: combine amount + unit if unit not already in amount
+          const baseAmt = (ing.unit && !ing.amount.toLowerCase().includes(ing.unit.toLowerCase()))
+            ? (ing.amount+' '+ing.unit).trim()
+            : (ing.amount||'').trim();
+          const da = scaleAmount(baseAmt, mult) || '';
           html+=`<div class="ing-row">
             <span class="ing-name">${escHtml(ing.name)}${ing.notes?` <span class="ing-note">(${escHtml(ing.notes)})</span>`:''}</span>
             <span class="ing-amount">${escHtml(da)}</span>
