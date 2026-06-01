@@ -663,7 +663,7 @@ async function submitRecipe(){
     return;
   }
 
-  if(!key){showError('Add your Anthropic API key in Settings to use URL and photo import.');return;}
+  if(!key){showError('No API key found. Go to Settings tab, paste your key, and tap Save key first.');return;}
 
   if(addMethod==='url'){
     const url=document.getElementById('url-input').value.trim();
@@ -699,8 +699,8 @@ async function submitRecipe(){
       persistRecipe({...parsed,...meta,sourceImages,id:Date.now()});
       closeSheet();toast('Recipe added!');
     }catch(e){
-      if(e.message==='NO_API_KEY')showError('Add your API key in Settings first.');
-      else{showError('Could not read the image. '+e.message);btn.textContent='Add recipe';btn.disabled=false;}
+      showError('Error: '+e.message);
+      btn.textContent='Add recipe';btn.disabled=false;
     }
   }
 }
