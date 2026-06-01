@@ -758,9 +758,21 @@ async function submitRecipe(){
     if(!url){showError('Please enter a URL.');return;}
     btn.innerHTML='<span class="spinner"></span>Fetching…';btn.disabled=true;
     try{
-      const fr=await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
-      const fd=await fr.json();
-      const text=(fd.contents||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').substring(0,4000);
+      // Try multiple proxies in sequence
+      let text='';
+      const proxies=[
+        ()=>fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`).then(r=>r.json()).then(d=>d.contents||''),
+        ()=>fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`).then(r=>r.text()),
+        ()=>fetch(`https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`).then(r=>r.text()),
+      ];
+      for(const proxy of proxies){
+        try{
+          const raw=await Promise.race([proxy(), new Promise((_,r)=>setTimeout(()=>r(new Error('timeout')),8000))]);
+          if(raw&&raw.length>200){text=raw;break;}
+        }catch(e){}
+      }
+      if(!text) throw new Error('All proxies failed');
+      text=text.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').substring(0,4000);
       btn.innerHTML='<span class="spinner"></span>Parsing…';
       const raw=await apiPost({system:SYS,messages:[{role:'user',content:`URL:${url}\nText:\n${text}`}]});
       const parsed=parseJSON(raw);
