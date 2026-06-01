@@ -327,7 +327,10 @@ textarea.form-input{resize:none;height:90px;line-height:1.5}
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-img" src="" alt="">
+  <button id="lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)" style="position:absolute;left:12px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:22px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center">‹</button>
+  <img id="lightbox-img" src="" alt="" style="touch-action:none">
+  <button id="lightbox-next" onclick="event.stopPropagation();lightboxNav(1)" style="position:absolute;right:12px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:22px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center">›</button>
+  <div id="lightbox-counter" style="position:absolute;bottom:20px;color:rgba(255,255,255,0.7);font-size:13px;display:none"></div>
 </div>
 
 <div class="status-msg" id="status-msg"></div>
@@ -450,7 +453,39 @@ function getAllTags(){
 }
 
 // ── Lightbox ───────────────────────────────────────────────────────────────
-function openLightbox(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');}
+let lightboxImages=[];
+let lightboxIndex=0;
+let lbTouchStartX=0;
+
+function openLightbox(src, images){
+  lightboxImages = images||[src];
+  lightboxIndex = lightboxImages.indexOf(src);
+  if(lightboxIndex<0) lightboxIndex=0;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  // swipe support
+  const img=document.getElementById('lightbox-img');
+  img.ontouchstart=e=>{lbTouchStartX=e.touches[0].clientX;};
+  img.ontouchend=e=>{
+    const dx=e.changedTouches[0].clientX-lbTouchStartX;
+    if(Math.abs(dx)>50) lightboxNav(dx<0?1:-1);
+  };
+}
+function updateLightbox(){
+  document.getElementById('lightbox-img').src=lightboxImages[lightboxIndex];
+  const multi=lightboxImages.length>1;
+  const prev=document.getElementById('lightbox-prev');
+  const next=document.getElementById('lightbox-next');
+  const counter=document.getElementById('lightbox-counter');
+  prev.style.display=multi?'flex':'none';
+  next.style.display=multi?'flex':'none';
+  counter.style.display=multi?'block':'none';
+  if(multi) counter.textContent=`${lightboxIndex+1} / ${lightboxImages.length}`;
+}
+function lightboxNav(dir){
+  lightboxIndex=(lightboxIndex+dir+lightboxImages.length)%lightboxImages.length;
+  updateLightbox();
+}
 function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
 
 // ── Toast ──────────────────────────────────────────────────────────────────
@@ -824,7 +859,7 @@ function renderRecipes(){
         <div class="card-thumb">
           ${thumbSrc
             ?`<img src="${escHtml(thumbSrc)}" alt="recipe">
-               <button class="card-thumb-btn" onclick="event.stopPropagation();openLightbox('${escHtml(thumbSrc)}')" aria-label="View image">
+               <button class="card-thumb-btn" onclick="event.stopPropagation();openLightbox('${escHtml(thumbSrc)}',${JSON.stringify(r.sourceImages||[thumbSrc]).replace(/"/g,'&quot;')})" aria-label="View image">
                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                </button>`
             :(r.emoji||'🍽️')}
@@ -871,7 +906,9 @@ function renderRecipes(){
         </div>
         <div class="ing-grid">`;
         for(const ing of r.ingredients){
-          const da=scaleAmount(ing.amount,mult)||'';
+          const scaledAmt=scaleAmount(ing.amount,mult)||'';
+          const unit=ing.unit&&!ing.amount.includes(ing.unit)?ing.unit:'';
+          const da=[scaledAmt,unit].filter(Boolean).join(' ');
           html+=`<div class="ing-row">
             <span class="ing-name">${escHtml(ing.name)}${ing.notes?` <span class="ing-note">(${escHtml(ing.notes)})</span>`:''}</span>
             <span class="ing-amount">${escHtml(da)}</span>
@@ -882,9 +919,10 @@ function renderRecipes(){
 
       // Source images
       if(hasImages){
+        const imgListJson=JSON.stringify(r.sourceImages).replace(/"/g,'&quot;');
         html+=`<div class="source-images">`;
         r.sourceImages.forEach((src,i)=>{
-          html+=`<img class="source-img-thumb" src="${escHtml(src)}" alt="Page ${i+1}" onclick="openLightbox('${escHtml(src)}')" loading="lazy">`;
+          html+=`<img class="source-img-thumb" src="${escHtml(src)}" alt="Page ${i+1}" onclick="openLightbox('${escHtml(src)}',JSON.parse(this.dataset.imgs))" data-imgs="${imgListJson}" loading="lazy">`;
         });
         html+=`</div>`;
       }
