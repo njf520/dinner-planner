@@ -836,21 +836,7 @@ async function submitRecipe(){
 function persistRecipe(r){
   state.recipes.unshift(r);
   saveState();
-  autoBackup();
   render();
-}
-
-function autoBackup(){
-  // Silently save a backup JSON every time a recipe is added or edited
-  try{
-    const data=JSON.stringify({recipes:state.recipes},null,2);
-    const blob=new Blob([data],{type:'application/json'});
-    const a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);
-    a.download='dinner-backup.json';
-    a.click();
-    URL.revokeObjectURL(a.href);
-  }catch(e){}
 }
 
 // ── Recipe actions ─────────────────────────────────────────────────────────
