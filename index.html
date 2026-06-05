@@ -671,12 +671,26 @@ document.getElementById('photo-file-input').addEventListener('change',function(e
 document.getElementById('photo-camera-input').addEventListener('change',function(e){handleImageFiles(e.target.files);});
 
 // ── Claude API ─────────────────────────────────────────────────────────────
-const SYS=`You are a recipe parser. Return ONLY valid JSON, no markdown.
-Shape: {"name":"str","servings":4,"source":"str or null","emoji":"food emoji","time":"e.g. 45 min or null","difficulty":"easy|medium|hard or null","tags":["tag1"],"ingredients":[{"name":"str","amount":"str","unit":"str","notes":"str or null"}]}
-UNIT RULES: Always American. Never grams/ml/kg/liters. Convert: g→oz, kg→lb, ml→fl oz or cups, L→cups.
-Best cooking unit: spices=tsp, butter=tbsp, medium liquid=cup, cheese/meat=oz or lb, flour/sugar=cup.
-Fractions: ¼ ⅓ ½ ¾. Put full amount in "amount" field (e.g. "¾ cup"). Unit word only in "unit".
-For tags, suggest 1-4 short lowercase descriptors like cuisine type or style (e.g. italian, quick, weeknight, vegetarian).
+const SYS=`You are a recipe and cocktail parser. Return ONLY valid JSON, no markdown.
+Shape: {"name":"str","servings":null,"source":"str or null","emoji":"food or drink emoji","time":"e.g. 45 min or null","difficulty":"easy|medium|hard or null","tags":["tag1"],"ingredients":[{"name":"str","amount":"str","unit":"str","notes":"str or null"}]}
+
+FOOD RECIPE UNIT RULES — always American:
+- NEVER grams/ml/liters/kg. Convert: g→oz, kg→lb, ml→fl oz or cups, L→cups
+- Best cooking unit: spices=tsp, butter=tbsp, medium liquid=cup, cheese/meat=oz or lb, flour/sugar=cup
+- Fractions: ¼ ⅓ ½ ¾. Put full amount in "amount" field (e.g. "¾ cup"). Unit word only in "unit".
+
+COCKTAIL RECIPE RULES:
+- For cocktails, use oz for all spirits and liqueurs (standard bar measurement)
+- Convert ml to oz: 15ml=½ oz, 20ml=⅔ oz, 22.5ml=¾ oz, 30ml=1 oz, 45ml=1½ oz, 60ml=2 oz
+- Keep dashes, drops, barspoons as-is (do not convert)
+- Set servings to 1 for cocktails
+- Store glass type and garnish as ingredients with amount "" and unit "glass" or "garnish"
+- Use emoji 🍸 or 🥃 for cocktails
+- Tags should include "cocktail" plus spirit type (e.g. "mezcal", "gin", "whiskey")
+
+URL FALLBACK: If given a URL with little/no page text, use your knowledge of that URL/recipe to fill in the details. Difford's Guide, Epicurious, Serious Eats, NYT Cooking, and similar sites are well known — reconstruct from your training data if needed.
+
+For tags, suggest 1-4 short lowercase descriptors.
 Return ONLY the JSON.`;
 
 async function apiPost(body){
@@ -782,17 +796,20 @@ async function submitRecipe(){
           if(raw&&raw.length>200){text=raw;break;}
         }catch(e){}
       }
-      if(!text) throw new Error('All proxies failed');
-      text=text.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').substring(0,4000);
       btn.innerHTML='<span class="spinner"></span>Parsing…';
-      const raw=await apiPost({system:SYS,messages:[{role:'user',content:`URL:${url}\nText:\n${text}`}]});
+      // If page text is too thin (JS-rendered site), fall back to Claude's knowledge
+      const cleanText=text.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').substring(0,4000);
+      const prompt = cleanText.length > 300
+        ? `URL:${url}\nPage text:\n${cleanText}`
+        : `The page at this URL requires JavaScript to render so I could not fetch its content. Please use your knowledge of this recipe URL to fill in all details:\nURL: ${url}`;
+      const raw=await apiPost({system:SYS,messages:[{role:'user',content:prompt}]});
       const parsed=parseJSON(raw);
       const meta=collectMeta(parsed);
       persistRecipe({...parsed,...meta,source:url,id:Date.now()});
       closeSheet();toast('Recipe added!');
     }catch(e){
       if(e.message==='NO_API_KEY')showError('Add your API key in Settings first.');
-      else{showError('Could not read that URL. Try photo or manual.');btn.textContent='Add recipe';btn.disabled=false;}
+      else{showError('Error: '+e.message);btn.textContent='Add recipe';btn.disabled=false;}
     }
     return;
   }
@@ -816,7 +833,25 @@ async function submitRecipe(){
   }
 }
 
-function persistRecipe(r){state.recipes.unshift(r);saveState();render();}
+function persistRecipe(r){
+  state.recipes.unshift(r);
+  saveState();
+  autoBackup();
+  render();
+}
+
+function autoBackup(){
+  // Silently save a backup JSON every time a recipe is added or edited
+  try{
+    const data=JSON.stringify({recipes:state.recipes},null,2);
+    const blob=new Blob([data],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='dinner-backup.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }catch(e){}
+}
 
 // ── Recipe actions ─────────────────────────────────────────────────────────
 function deleteRecipe(id){
@@ -1081,12 +1116,17 @@ function renderSettings(){
   const c=document.getElementById('main-content');
   const key=getApiKey();
   c.innerHTML=`
+    <div style="background:#fceaea;border:2px solid #a32d2d;border-radius:11px;padding:14px;margin-bottom:20px">
+      <div style="font-weight:600;color:#a32d2d;margin-bottom:5px;font-size:14px">⚠️ Important — back up your recipes</div>
+      <p style="font-size:13px;color:#a32d2d;line-height:1.5;margin-bottom:10px">Recipes are stored in your browser. Clearing your browser cache or site data will delete them permanently. A backup file downloads automatically each time you add a recipe — keep those files safe.</p>
+      <button onclick="exportData()" style="padding:9px 16px;background:#a32d2d;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif">Download backup now</button>
+    </div>
     <div style="margin-bottom:22px">
       <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Anthropic API key</div>
       <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:12px">Required for URL and photo import. Stored only on this device.</p>
       ${!key?`<div class="apikey-banner">Get a key at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>. New accounts get free credits.</div>`:''}
       <label class="form-label">API key</label>
-      <input type="password" class="form-input" id="api-key-input" placeholder="sk-ant-..." value="${escHtml(key)}" style="margin-bottom:9px">
+      <input type="text" class="form-input" id="api-key-input" placeholder="sk-ant-..." value="${escHtml(key)}" style="margin-bottom:9px;font-family:monospace;font-size:12px"">
       <button class="btn-primary" onclick="saveKeyFromInput()">Save key</button>
     </div>
     <div style="border-top:1px solid var(--border);padding-top:18px">
@@ -1104,7 +1144,8 @@ function renderSettings(){
 }
 
 function saveKeyFromInput(){
-  const v=document.getElementById('api-key-input').value.trim();
+  const v=document.getElementById('api-key-input').value.replace(/\s+/g,'');
+  document.getElementById('api-key-input').value=v;
   saveApiKey(v);toast(v?'API key saved!':'API key cleared');renderSettings();
 }
 function confirmClearAll(){
