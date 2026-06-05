@@ -232,6 +232,7 @@ textarea.form-input{resize:none;height:90px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">dinner<span>.</span></div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.0</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -348,6 +349,7 @@ textarea.form-input{resize:none;height:90px;line-height:1.5}
 <div class="status-msg" id="status-msg"></div>
 
 <script>
+const VERSION='1.0';
 const STORAGE_KEY='dinner_planner_v5';
 const API_KEY_STORAGE='anthropic_api_key';
 
@@ -419,6 +421,45 @@ function migrateRecipes(recipes){
   });
 }
 
+const IMG_KEY_PREFIX='dinner_img_';
+
+function saveImages(recipeId, images){
+  if(!images||!images.length) return true;
+  try{
+    localStorage.setItem(IMG_KEY_PREFIX+recipeId, JSON.stringify(images));
+    return true;
+  }catch(e){
+    if(e.name==='QuotaExceededError'){
+      try{
+        const recompressed=images.map(img=>{
+          try{
+            const canvas=document.createElement('canvas');
+            const el=document.createElement('img');
+            el.src=img;
+            canvas.width=800;canvas.height=600;
+            canvas.getContext('2d').drawImage(el,0,0,800,600);
+            return canvas.toDataURL('image/jpeg',0.4);
+          }catch(ex){return img;}
+        });
+        localStorage.setItem(IMG_KEY_PREFIX+recipeId, JSON.stringify(recompressed));
+        return true;
+      }catch(e2){return false;}
+    }
+    return false;
+  }
+}
+
+function loadImages(recipeId){
+  try{
+    const raw=localStorage.getItem(IMG_KEY_PREFIX+recipeId);
+    return raw?JSON.parse(raw):null;
+  }catch(e){return null;}
+}
+
+function deleteImages(recipeId){
+  localStorage.removeItem(IMG_KEY_PREFIX+recipeId);
+}
+
 function loadState(){
   try{
     const raw=localStorage.getItem(STORAGE_KEY);
@@ -430,24 +471,44 @@ function loadState(){
     // fix split amount/unit on all existing recipes
     if(state.recipes.length){
       state.recipes=migrateRecipes(state.recipes);
-      saveState();
     }
+    // load images from separate storage and attach to recipes
+    state.recipes=state.recipes.map(r=>{
+      // if images already on recipe (old format), migrate them to separate storage
+      if(r.sourceImages&&r.sourceImages.length){
+        saveImages(r.id, r.sourceImages);
+        return {...r, sourceImages:r.sourceImages}; // keep in memory
+      }
+      // load from separate storage
+      const imgs=loadImages(r.id);
+      if(imgs) return {...r, sourceImages:imgs};
+      return r;
+    });
+    saveState();
   }catch(e){}
 }
+
 function saveState(){
+  // Step 1: Save recipe data WITHOUT images — this must never fail silently
   try{
-    localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+    const recipesWithoutImages=state.recipes.map(r=>({...r,sourceImages:undefined}));
+    localStorage.setItem(STORAGE_KEY,JSON.stringify({...state,recipes:recipesWithoutImages}));
   }catch(e){
     if(e.name==='QuotaExceededError'){
-      // Strip source images from oldest recipes to free space, then retry
-      const stripped=state.recipes.map(r=>({...r,sourceImages:undefined}));
-      try{
-        localStorage.setItem(STORAGE_KEY,JSON.stringify({...state,recipes:stripped}));
-        toast('Storage full — recipe images removed to save space. Export your recipes as a backup.');
-      }catch(e2){
-        toast('Storage full. Please export your recipes and clear some space.');
-      }
+      toast('⚠️ Critical: recipe data could not be saved — storage full. Export a backup NOW from Settings.');
     }
+    return;
+  }
+  // Step 2: Save images one recipe at a time — if one fails, skip it, never touch others
+  const failed=[];
+  state.recipes.forEach(r=>{
+    if(r.sourceImages&&r.sourceImages.length){
+      const ok=saveImages(r.id,r.sourceImages);
+      if(!ok) failed.push(r.name);
+    }
+  });
+  if(failed.length){
+    toast('⚠️ Images for "'+failed[0]+'"'+( failed.length>1?' +'+( failed.length-1)+' more':'')+' couldn\'t save — browser storage limit hit. Recipe data is safe. Export a backup from Settings.');
   }
 }
 function getApiKey(){return localStorage.getItem(API_KEY_STORAGE)||'';}
@@ -540,10 +601,17 @@ function lightboxNav(dir){
 function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
 
 // ── Toast ──────────────────────────────────────────────────────────────────
-function toast(msg,dur=2400){
+function toast(msg,dur=0){
+  // Auto-duration: short for confirmations, longer for warnings, even longer for errors
+  if(!dur){
+    if(msg.includes('⚠️')||msg.includes('Critical')) dur=8000;
+    else if(msg.length>60) dur=4500;
+    else dur=2400;
+  }
   const el=document.getElementById('status-msg');
   el.textContent=msg;el.classList.add('show');
-  setTimeout(()=>el.classList.remove('show'),dur);
+  clearTimeout(el._toastTimer);
+  el._toastTimer=setTimeout(()=>el.classList.remove('show'),dur);
 }
 
 // ── Sheet ──────────────────────────────────────────────────────────────────
@@ -587,7 +655,8 @@ function resetAddForm(){
   });
   document.getElementById('photo-file-input').value='';
   document.getElementById('photo-previews').innerHTML='';
-  document.getElementById('upload-text-label').innerHTML='<strong>Tap to choose</strong> photos or screenshots';
+  const utl=document.getElementById('upload-text-label');
+  if(utl) utl.innerHTML='';
   document.getElementById('add-error').style.display='none';
   document.getElementById('add-btn').textContent='Add recipe';
   document.getElementById('add-btn').disabled=false;
@@ -695,16 +764,33 @@ Return ONLY the JSON.`;
 
 async function apiPost(body){
   const key=getApiKey();if(!key)throw new Error('NO_API_KEY');
-  const res=await fetch('https://api.anthropic.com/v1/messages',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1400,...body})
-  });
-  if(!res.ok){const e=await res.json().catch(()=>{});throw new Error(e?.error?.message||`API ${res.status}`);}
-  const data=await res.json();
-  return data.content.find(b=>b.type==='text')?.text||'';
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),45000); // 45 second timeout
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1400,...body}),
+      signal:controller.signal
+    });
+    clearTimeout(timeout);
+    if(!res.ok){const e=await res.json().catch(()=>{});throw new Error(e?.error?.message||`API error ${res.status}`);}
+    const data=await res.json();
+    return data.content.find(b=>b.type==='text')?.text||'';
+  }catch(e){
+    clearTimeout(timeout);
+    if(e.name==='AbortError') throw new Error('Request timed out — please try again');
+    throw e;
+  }
 }
-function parseJSON(raw){return JSON.parse(raw.replace(/```json|```/g,'').trim());}
+function parseJSON(raw){
+  const clean=raw.replace(/```json|```/g,'').trim();
+  // Find the first { and last } to extract just the JSON object
+  const start=clean.indexOf('{');
+  const end=clean.lastIndexOf('}');
+  if(start===-1||end===-1) throw new Error('No JSON object found in response');
+  return JSON.parse(clean.slice(start,end+1));
+}
 function showError(msg){
   document.getElementById('add-error').textContent=msg;
   document.getElementById('add-error').style.display='block';
@@ -759,12 +845,12 @@ async function submitRecipe(){
         const raw=await apiPost({system:SYS,messages:[{role:'user',content:`Name:${name}\nSource:${source}\nIngredients:\n${ingText}`}]});
         const parsed=parseJSON(raw);
         const meta=collectMeta(parsed);
-        persistRecipe({...parsed,...meta,source:source||parsed.source||null,id:Date.now()});
+        persistRecipe({...parsed,...meta,source:source||parsed.source||null,id:Date.now()+Math.floor(Math.random()*1000)});
         closeSheet();toast('Recipe added!');
       }catch(e){
         const ingredients=ingText.split('\n').filter(Boolean).map(l=>({name:l,amount:'',unit:'',notes:null}));
         const meta=collectMeta({});
-        persistRecipe({name,emoji:'🍽️',...meta,source:source||null,ingredients,id:Date.now()});
+        persistRecipe({name,emoji:'🍽️',...meta,source:source||null,ingredients,id:Date.now()+Math.floor(Math.random()*1000)});
         closeSheet();toast('Added (without AI parsing)');
       }
     }else{
@@ -805,7 +891,7 @@ async function submitRecipe(){
       const raw=await apiPost({system:SYS,messages:[{role:'user',content:prompt}]});
       const parsed=parseJSON(raw);
       const meta=collectMeta(parsed);
-      persistRecipe({...parsed,...meta,source:url,id:Date.now()});
+      persistRecipe({...parsed,...meta,source:url,id:Date.now()+Math.floor(Math.random()*1000)});
       closeSheet();toast('Recipe added!');
     }catch(e){
       if(e.message==='NO_API_KEY')showError('Add your API key in Settings first.');
@@ -824,7 +910,7 @@ async function submitRecipe(){
       const parsed=parseJSON(raw);
       const meta=collectMeta(parsed);
       const sourceImages=pendingPhotos.map(p=>p.dataUrl);
-      persistRecipe({...parsed,...meta,sourceImages,id:Date.now()});
+      persistRecipe({...parsed,...meta,sourceImages,id:Date.now()+Math.floor(Math.random()*1000)});
       closeSheet();toast('Recipe added!');
     }catch(e){
       showError('Error: '+e.message);
@@ -859,6 +945,7 @@ function deleteRecipe(id){
   state.recipes=state.recipes.filter(r=>r.id!==id);
   state.planned=state.planned.filter(p=>p!==id);
   delete recipeMultipliers[id];
+  deleteImages(id);
   if(expandedRecipe===id)expandedRecipe=null;
   saveState();render();
 }
@@ -899,6 +986,7 @@ function formatLastMade(ts){
 // ── Shopping ───────────────────────────────────────────────────────────────
 function doneShopping(){
   if(!state.planned.length)return;
+  if(!confirm('Mark all planned recipes as made today and clear the shopping list?'))return;
   const now=Date.now();
   state.recipes=state.recipes.map(r=>state.planned.includes(r.id)?{...r,lastMade:now}:r);
   state.planned=[];state.checkedItems={};state.haveItems={};
@@ -915,8 +1003,9 @@ function buildShoppingList(){
     perRecipe[r.id]={name:r.name,emoji:r.emoji,items:[]};
     for(const ing of(r.ingredients||[])){
       const key=ing.name.toLowerCase().replace(/[^a-z0-9]/g,'');
-      const baseAmt=(ing.unit&&!ing.amount.toLowerCase().includes(ing.unit.toLowerCase()))
-        ?(ing.amount+' '+ing.unit).trim():(ing.amount||'').trim();
+      const ingAmt=(ing.amount||'').toString();
+      const baseAmt=(ing.unit&&!ingAmt.toLowerCase().includes(ing.unit.toLowerCase()))
+        ?(ingAmt+' '+ing.unit).trim():ingAmt.trim();
       const amt=scaleAmount(baseAmt,m)||'';
       const dname=ing.notes?`${ing.name} (${ing.notes})`:ing.name;
       perRecipe[r.id].items.push({key,name:dname,amount:amt});
@@ -1020,9 +1109,10 @@ function renderRecipes(){
         <div class="ing-grid">`;
         for(const ing of r.ingredients){
           // Build full amount string: combine amount + unit if unit not already in amount
-          const baseAmt = (ing.unit && !ing.amount.toLowerCase().includes(ing.unit.toLowerCase()))
-            ? (ing.amount+' '+ing.unit).trim()
-            : (ing.amount||'').trim();
+          const ingAmt2=(ing.amount||'').toString();
+          const baseAmt = (ing.unit && !ingAmt2.toLowerCase().includes(ing.unit.toLowerCase()))
+            ? (ingAmt2+' '+ing.unit).trim()
+            : ingAmt2.trim();
           const da = scaleAmount(baseAmt, mult) || '';
           html+=`<div class="ing-row">
             <span class="ing-name">${escHtml(ing.name)}${ing.notes?` <span class="ing-note">(${escHtml(ing.notes)})</span>`:''}</span>
@@ -1149,7 +1239,9 @@ function saveKeyFromInput(){
   saveApiKey(v);toast(v?'API key saved!':'API key cleared');renderSettings();
 }
 function confirmClearAll(){
-  if(confirm('Delete all recipes? This cannot be undone.')){
+  if(confirm('Delete ALL recipes, plans, and shopping marks? This CANNOT be undone. Make sure you have a backup first.')){
+    // Also clean up all image keys
+    state.recipes.forEach(r=>deleteImages(r.id));
     state={recipes:[],planned:[],checkedItems:{},haveItems:{}};recipeMultipliers={};
     saveState();render();toast('All recipes cleared');
   }
@@ -1167,9 +1259,20 @@ function handleImport(e){
   reader.onload=function(ev){
     try{
       const data=JSON.parse(ev.target.result);
-      if(data.recipes&&Array.isArray(data.recipes)){state.recipes.push(...data.recipes);saveState();render();toast(`Imported ${data.recipes.length} recipes!`);}
-      else throw new Error();
-    }catch{toast('Could not read that file.');}
+      if(!data.recipes||!Array.isArray(data.recipes)) throw new Error();
+      // Skip duplicates by ID and name
+      const existingIds=new Set(state.recipes.map(r=>r.id));
+      const existingNames=new Set(state.recipes.map(r=>(r.name||'').toLowerCase()));
+      const toAdd=data.recipes.filter(r=>!existingIds.has(r.id)&&!existingNames.has((r.name||'').toLowerCase()));
+      const skipped=data.recipes.length-toAdd.length;
+      if(!toAdd.length){toast('No new recipes to import — all already exist.');return;}
+      state.recipes.push(...toAdd);
+      saveState();render();
+      let msg=`Imported ${toAdd.length} recipe${toAdd.length!==1?'s':''}`;
+      if(skipped) msg+=` (${skipped} duplicate${skipped!==1?'s':''} skipped)`;
+      msg+='. Note: photos are not included in backups.';
+      toast(msg, 5000);
+    }catch{toast('Could not read that file — is it a valid backup?');}
   };
   reader.readAsText(file);
 }
