@@ -232,7 +232,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">dinner<span>.</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.0</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.1</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -349,7 +349,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <div class="status-msg" id="status-msg"></div>
 
 <script>
-const VERSION='1.0';
+const VERSION='1.1';
 const STORAGE_KEY='dinner_planner_v5';
 const API_KEY_STORAGE='anthropic_api_key';
 
@@ -388,17 +388,37 @@ function toFrac(n){
   return W===0?(F||'0'):(F?`${W}${F}`:`${W}`);
 }
 function scaleAmount(a,m){
-  if(!a||m===1) return a;
+  if(!a) return a;
+  if(m===1) return a;
   let w=a.trim();
-  for(const[f,v] of Object.entries(FRAC_MAP)) w=w.replace(new RegExp(f,'g'),f);
+  // Replace unicode fractions with their values for parsing
+  for(const[f,v] of Object.entries(FRAC_MAP)) w=w.replace(new RegExp(f,'g'),' '+v+' ');
+  // Find where the numeric part ends
   let i=0;
   const nc=new Set([...'0123456789./ ','¼','½','¾','⅓','⅔','⅛','⅜','⅝','⅞']);
-  while(i<w.length&&nc.has(w[i]))i++;
-  const np=w.slice(0,i).trim(),rest=w.slice(i).trim();
-  const val=parseAmount(np);
+  // re-check original for numeric chars
+  let orig=a.trim();
+  let j=0;
+  const ncOrig=new Set([...'0123456789./ ','¼','½','¾','⅓','⅔','⅛','⅜','⅝','⅞']);
+  while(j<orig.length&&ncOrig.has(orig[j]))j++;
+  const numPart=orig.slice(0,j).trim();
+  const unitPart=orig.slice(j).trim();
+  const val=parseAmount(numPart);
   if(val===null||isNaN(val)) return a;
   const scaled=val*m;
-  return toFrac(scaled)+(rest?' '+rest:'');
+  return toFrac(scaled)+(unitPart?' '+unitPart:'');
+}
+
+// Build display amount from ingredient fields — always combines amount+unit correctly
+function buildDisplayAmt(ing, mult){
+  const amt=(ing.amount||'').toString().trim();
+  const unit=(ing.unit||'').toString().trim();
+  // If unit is already in the amount string, don't add it again
+  const fullAmt = (unit && !amt.toLowerCase().includes(unit.toLowerCase()))
+    ? (amt+' '+unit).trim()
+    : amt;
+  if(!fullAmt) return '';
+  return mult && mult!==1 ? scaleAmount(fullAmt, mult)||fullAmt : fullAmt;
 }
 
 // ── State ──────────────────────────────────────────────────────────────────
@@ -743,21 +763,27 @@ document.getElementById('photo-camera-input').addEventListener('change',function
 const SYS=`You are a recipe and cocktail parser. Return ONLY valid JSON, no markdown.
 Shape: {"name":"str","servings":null,"source":"str or null","emoji":"food or drink emoji","time":"e.g. 45 min or null","difficulty":"easy|medium|hard or null","tags":["tag1"],"ingredients":[{"name":"str","amount":"str","unit":"str","notes":"str or null"}]}
 
-FOOD RECIPE UNIT RULES — always American:
+CRITICAL AMOUNT RULES:
+- ALWAYS put the FULL amount including unit in the "amount" field: "1½ oz", "¾ cup", "2 tbsp", "3 dashes"
+- Put the unit word ALSO in the "unit" field separately: "oz", "cup", "tbsp"
+- NEVER put just a bare number in amount with the unit only in unit field
+- Examples: amount="1½ oz" unit="oz" ✓   amount="1½" unit="oz" ✗
+
+FOOD RECIPE UNITS — always American:
 - NEVER grams/ml/liters/kg. Convert: g→oz, kg→lb, ml→fl oz or cups, L→cups
 - Best cooking unit: spices=tsp, butter=tbsp, medium liquid=cup, cheese/meat=oz or lb, flour/sugar=cup
-- Fractions: ¼ ⅓ ½ ¾. Put full amount in "amount" field (e.g. "¾ cup"). Unit word only in "unit".
+- Fractions: ¼ ⅓ ½ ¾
 
 COCKTAIL RECIPE RULES:
-- For cocktails, use oz for all spirits and liqueurs (standard bar measurement)
+- Use oz for all spirits and liqueurs
 - Convert ml to oz: 15ml=½ oz, 20ml=⅔ oz, 22.5ml=¾ oz, 30ml=1 oz, 45ml=1½ oz, 60ml=2 oz
-- Keep dashes, drops, barspoons as-is (do not convert)
+- Keep dashes, drops, barspoons as-is
 - Set servings to 1 for cocktails
-- Store glass type and garnish as ingredients with amount "" and unit "glass" or "garnish"
+- Store glass type and garnish as ingredients with amount="" unit="glass" or "garnish"
 - Use emoji 🍸 or 🥃 for cocktails
 - Tags should include "cocktail" plus spirit type (e.g. "mezcal", "gin", "whiskey")
 
-URL FALLBACK: If given a URL with little/no page text, use your knowledge of that URL/recipe to fill in the details. Difford's Guide, Epicurious, Serious Eats, NYT Cooking, and similar sites are well known — reconstruct from your training data if needed.
+URL FALLBACK: If given a URL with little/no page text, use your knowledge of that URL/recipe to fill in the details. Difford's Guide, Epicurious, Serious Eats, NYT Cooking are well known — reconstruct from training data if needed.
 
 For tags, suggest 1-4 short lowercase descriptors.
 Return ONLY the JSON.`;
@@ -1003,10 +1029,7 @@ function buildShoppingList(){
     perRecipe[r.id]={name:r.name,emoji:r.emoji,items:[]};
     for(const ing of(r.ingredients||[])){
       const key=ing.name.toLowerCase().replace(/[^a-z0-9]/g,'');
-      const ingAmt=(ing.amount||'').toString();
-      const baseAmt=(ing.unit&&!ingAmt.toLowerCase().includes(ing.unit.toLowerCase()))
-        ?(ingAmt+' '+ing.unit).trim():ingAmt.trim();
-      const amt=scaleAmount(baseAmt,m)||'';
+      const amt=buildDisplayAmt(ing,m)||'';
       const dname=ing.notes?`${ing.name} (${ing.notes})`:ing.name;
       perRecipe[r.id].items.push({key,name:dname,amount:amt});
       if(!combined[key])combined[key]={name:dname,amounts:[]};
@@ -1108,12 +1131,7 @@ function renderRecipes(){
         </div>
         <div class="ing-grid">`;
         for(const ing of r.ingredients){
-          // Build full amount string: combine amount + unit if unit not already in amount
-          const ingAmt2=(ing.amount||'').toString();
-          const baseAmt = (ing.unit && !ingAmt2.toLowerCase().includes(ing.unit.toLowerCase()))
-            ? (ingAmt2+' '+ing.unit).trim()
-            : ingAmt2.trim();
-          const da = scaleAmount(baseAmt, mult) || '';
+          const da=buildDisplayAmt(ing, mult);
           html+=`<div class="ing-row">
             <span class="ing-name">${escHtml(ing.name)}${ing.notes?` <span class="ing-note">(${escHtml(ing.notes)})</span>`:''}</span>
             <span class="ing-amount">${escHtml(da)}</span>
