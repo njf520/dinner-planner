@@ -833,7 +833,25 @@ async function submitRecipe(){
   }
 }
 
-function persistRecipe(r){state.recipes.unshift(r);saveState();render();}
+function persistRecipe(r){
+  state.recipes.unshift(r);
+  saveState();
+  autoBackup();
+  render();
+}
+
+function autoBackup(){
+  // Silently save a backup JSON every time a recipe is added or edited
+  try{
+    const data=JSON.stringify({recipes:state.recipes},null,2);
+    const blob=new Blob([data],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='dinner-backup.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }catch(e){}
+}
 
 // ── Recipe actions ─────────────────────────────────────────────────────────
 function deleteRecipe(id){
@@ -1098,6 +1116,11 @@ function renderSettings(){
   const c=document.getElementById('main-content');
   const key=getApiKey();
   c.innerHTML=`
+    <div style="background:#fceaea;border:2px solid #a32d2d;border-radius:11px;padding:14px;margin-bottom:20px">
+      <div style="font-weight:600;color:#a32d2d;margin-bottom:5px;font-size:14px">⚠️ Important — back up your recipes</div>
+      <p style="font-size:13px;color:#a32d2d;line-height:1.5;margin-bottom:10px">Recipes are stored in your browser. Clearing your browser cache or site data will delete them permanently. A backup file downloads automatically each time you add a recipe — keep those files safe.</p>
+      <button onclick="exportData()" style="padding:9px 16px;background:#a32d2d;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif">Download backup now</button>
+    </div>
     <div style="margin-bottom:22px">
       <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Anthropic API key</div>
       <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:12px">Required for URL and photo import. Stored only on this device.</p>
