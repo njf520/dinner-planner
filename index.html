@@ -833,7 +833,21 @@ async function submitRecipe(){
   }
 }
 
-function persistRecipe(r){
+function persistRecipe(r, skipDupeCheck=false){
+  if(!skipDupeCheck){
+    // Check for duplicate by URL
+    if(r.source&&r.source.startsWith('http')){
+      const dupe=state.recipes.find(x=>x.source&&x.source===r.source);
+      if(dupe){
+        if(!confirm(`You already have "${dupe.name}" from that URL. Add it again anyway?`)) return;
+      }
+    }
+    // Check for duplicate by name
+    const nameDupe=state.recipes.find(x=>x.name&&r.name&&x.name.toLowerCase()===r.name.toLowerCase());
+    if(nameDupe){
+      if(!confirm(`You already have a recipe called "${nameDupe.name}". Add it again anyway?`)) return;
+    }
+  }
   state.recipes.unshift(r);
   saveState();
   render();
@@ -1141,8 +1155,10 @@ function confirmClearAll(){
   }
 }
 function exportData(){
+  const now=new Date();
+  const date=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
   const blob=new Blob([JSON.stringify({recipes:state.recipes},null,2)],{type:'application/json'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='dinner-planner-recipes.json';a.click();
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`dinner-backup-${date}.json`;a.click();
 }
 function importData(){document.getElementById('import-file').click();}
 function handleImport(e){
