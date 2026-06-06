@@ -213,10 +213,11 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 .done-shopping-btn{width:100%;padding:12px;background:var(--green);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:8px}
 
 /* Lightbox */
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:500;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:500;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s;overflow:hidden}
 .lightbox.open{opacity:1;pointer-events:auto}
-.lightbox img{max-width:96vw;max-height:90vh;border-radius:8px;object-fit:contain}
-.lightbox-close{position:absolute;top:14px;right:16px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:20px;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lightbox-img-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;overflow:hidden}
+.lightbox img{max-width:96vw;max-height:90vh;border-radius:8px;object-fit:contain;transform-origin:center center;transition:transform 0.05s linear;touch-action:none;user-select:none}
+.lightbox-close{position:absolute;top:14px;right:16px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:20px;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10}
 
 /* Spinner / toast */
 .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:7px}
@@ -232,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">dinner<span>.</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.1</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.2</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -338,18 +339,20 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <button id="lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)" style="position:absolute;left:12px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:22px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center">‹</button>
-  <img id="lightbox-img" src="" alt="" style="touch-action:none">
-  <button id="lightbox-next" onclick="event.stopPropagation();lightboxNav(1)" style="position:absolute;right:12px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:22px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center">›</button>
-  <div id="lightbox-counter" style="position:absolute;bottom:20px;color:rgba(255,255,255,0.7);font-size:13px;display:none"></div>
+  <button id="lightbox-prev" onclick="lightboxNav(-1)" style="position:absolute;left:12px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:22px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:10">‹</button>
+  <div class="lightbox-img-wrap" id="lightbox-img-wrap">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <button id="lightbox-next" onclick="lightboxNav(1)" style="position:absolute;right:12px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:22px;width:40px;height:40px;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:10">›</button>
+  <div id="lightbox-counter" style="position:absolute;bottom:20px;color:rgba(255,255,255,0.7);font-size:13px;display:none;z-index:10"></div>
 </div>
 
 <div class="status-msg" id="status-msg"></div>
 
 <script>
-const VERSION='1.1';
+const VERSION='1.2';
 const STORAGE_KEY='dinner_planner_v5';
 const API_KEY_STORAGE='anthropic_api_key';
 
@@ -587,24 +590,29 @@ function getAllTags(){
 // ── Lightbox ───────────────────────────────────────────────────────────────
 let lightboxImages=[];
 let lightboxIndex=0;
-let lbTouchStartX=0;
+// Pinch/zoom state
+let lbScale=1, lbMinScale=1, lbMaxScale=4;
+let lbOffsetX=0, lbOffsetY=0;
+let lbLastTouchDist=0;
+let lbTouchStartX=0, lbTouchStartY=0;
+let lbDragStartX=0, lbDragStartY=0;
+let lbIsPinching=false;
 
 function openLightbox(src, images){
   lightboxImages = images||[src];
   lightboxIndex = lightboxImages.indexOf(src);
   if(lightboxIndex<0) lightboxIndex=0;
+  lbScale=1; lbOffsetX=0; lbOffsetY=0;
   updateLightbox();
   document.getElementById('lightbox').classList.add('open');
-  // swipe support
-  const img=document.getElementById('lightbox-img');
-  img.ontouchstart=e=>{lbTouchStartX=e.touches[0].clientX;};
-  img.ontouchend=e=>{
-    const dx=e.changedTouches[0].clientX-lbTouchStartX;
-    if(Math.abs(dx)>50) lightboxNav(dx<0?1:-1);
-  };
+  setupLightboxTouch();
 }
+
 function updateLightbox(){
-  document.getElementById('lightbox-img').src=lightboxImages[lightboxIndex];
+  const img=document.getElementById('lightbox-img');
+  img.src=lightboxImages[lightboxIndex];
+  lbScale=1; lbOffsetX=0; lbOffsetY=0;
+  applyLbTransform();
   const multi=lightboxImages.length>1;
   const prev=document.getElementById('lightbox-prev');
   const next=document.getElementById('lightbox-next');
@@ -614,11 +622,88 @@ function updateLightbox(){
   counter.style.display=multi?'block':'none';
   if(multi) counter.textContent=`${lightboxIndex+1} / ${lightboxImages.length}`;
 }
+
+function applyLbTransform(){
+  const img=document.getElementById('lightbox-img');
+  img.style.transform=`translate(${lbOffsetX}px,${lbOffsetY}px) scale(${lbScale})`;
+}
+
+function setupLightboxTouch(){
+  const wrap=document.getElementById('lightbox-img-wrap');
+  wrap.ontouchstart=function(e){
+    if(e.touches.length===2){
+      lbIsPinching=true;
+      lbLastTouchDist=getTouchDist(e.touches);
+    } else if(e.touches.length===1){
+      lbIsPinching=false;
+      lbTouchStartX=e.touches[0].clientX;
+      lbTouchStartY=e.touches[0].clientY;
+      lbDragStartX=lbOffsetX;
+      lbDragStartY=lbOffsetY;
+    }
+  };
+  wrap.ontouchmove=function(e){
+    e.preventDefault();
+    if(e.touches.length===2){
+      lbIsPinching=true;
+      const dist=getTouchDist(e.touches);
+      const delta=dist/lbLastTouchDist;
+      lbScale=Math.min(lbMaxScale, Math.max(lbMinScale, lbScale*delta));
+      lbLastTouchDist=dist;
+      applyLbTransform();
+    } else if(e.touches.length===1&&lbScale>1){
+      // pan when zoomed in
+      lbOffsetX=lbDragStartX+(e.touches[0].clientX-lbTouchStartX);
+      lbOffsetY=lbDragStartY+(e.touches[0].clientY-lbTouchStartY);
+      applyLbTransform();
+    }
+  };
+  wrap.ontouchend=function(e){
+    if(!lbIsPinching&&e.changedTouches.length===1&&lbScale===1){
+      const dx=e.changedTouches[0].clientX-lbTouchStartX;
+      const dy=Math.abs(e.changedTouches[0].clientY-lbTouchStartY);
+      if(Math.abs(dx)>50&&dy<40) lightboxNav(dx<0?1:-1);
+    }
+    if(e.touches.length<2) lbIsPinching=false;
+    // snap back if over-panned
+    if(lbScale<=1){ lbScale=1; lbOffsetX=0; lbOffsetY=0; applyLbTransform(); }
+  };
+  // double-tap to zoom
+  let lbLastTap=0;
+  wrap.ontouchend=function(e){
+    const now=Date.now();
+    if(!lbIsPinching&&e.changedTouches.length===1&&lbScale===1){
+      const dx=e.changedTouches[0].clientX-lbTouchStartX;
+      const dy=Math.abs(e.changedTouches[0].clientY-lbTouchStartY);
+      if(Math.abs(dx)>50&&dy<40){ lightboxNav(dx<0?1:-1); return; }
+      if(now-lbLastTap<300){ lbScale=2.5; applyLbTransform(); lbLastTap=0; return; }
+      lbLastTap=now;
+    } else if(lbIsPinching&&e.touches.length<2){
+      lbIsPinching=false;
+      if(lbScale<=1.05){ lbScale=1; lbOffsetX=0; lbOffsetY=0; applyLbTransform(); }
+    }
+  };
+  // close on tap when not zoomed
+  const lb=document.getElementById('lightbox');
+  lb.onclick=function(e){
+    if(lbScale===1&&e.target===lb) closeLightbox();
+  };
+}
+
+function getTouchDist(touches){
+  const dx=touches[0].clientX-touches[1].clientX;
+  const dy=touches[0].clientY-touches[1].clientY;
+  return Math.sqrt(dx*dx+dy*dy);
+}
+
 function lightboxNav(dir){
   lightboxIndex=(lightboxIndex+dir+lightboxImages.length)%lightboxImages.length;
   updateLightbox();
 }
-function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  lbScale=1; lbOffsetX=0; lbOffsetY=0;
+}
 
 // ── Toast ──────────────────────────────────────────────────────────────────
 function toast(msg,dur=0){
