@@ -57,7 +57,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .filter-chip.sort-active{background:var(--bg2);color:var(--text);border-color:var(--border2)}
 
 /* ── Main ── */
-.main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px 80px}
+.main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px calc(80px + env(safe-area-inset-bottom, 16px))}
 
 /* ── Recipe cards (rolodex view) ── */
 .recipe-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;transition:box-shadow .15s}
@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">dinner<span>.</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.3</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.4</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -352,7 +352,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <div class="status-msg" id="status-msg"></div>
 
 <script>
-const VERSION='1.3';
+const VERSION='1.4';
 const STORAGE_KEY='dinner_planner_v5';
 const API_KEY_STORAGE='anthropic_api_key';
 
@@ -1399,6 +1399,29 @@ function escHtml(s){
 }
 
 loadState();render();
+
+// Auto-update check: fetch live page and compare version string
+async function checkForUpdate(){
+  try{
+    const res=await fetch(window.location.href+'?cachebust='+Date.now(),{cache:'no-store'});
+    const html=await res.text();
+    const match=html.match(/const VERSION='([^']+)'/);
+    if(match&&match[1]&&match[1]!==VERSION){
+      showUpdateBanner(match[1]);
+    }
+  }catch(e){}
+}
+
+function showUpdateBanner(newVersion){
+  const banner=document.createElement('div');
+  banner.id='update-banner';
+  banner.style.cssText='position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:var(--accent);color:#fff;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;z-index:999;font-size:13px;font-weight:500';
+  banner.innerHTML=`<span>v${newVersion} available</span><button onclick="window.location.reload(true)" style="background:rgba(255,255,255,0.25);border:none;color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Update now</button>`;
+  document.body.appendChild(banner);
+}
+
+// Check for update 3 seconds after load
+setTimeout(checkForUpdate, 3000);
 </script>
 </body>
 </html>
