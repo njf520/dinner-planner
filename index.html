@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">dinner<span>.</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.2</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.3</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -352,7 +352,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <div class="status-msg" id="status-msg"></div>
 
 <script>
-const VERSION='1.2';
+const VERSION='1.3';
 const STORAGE_KEY='dinner_planner_v5';
 const API_KEY_STORAGE='anthropic_api_key';
 
@@ -1065,6 +1065,10 @@ function togglePlan(id){
   if(idx>=0)state.planned.splice(idx,1);else state.planned.push(id);
   saveState();render();
 }
+function unplanRecipe(id){
+  state.planned=state.planned.filter(p=>p!==id);
+  saveState();renderShopping();
+}
 function toggleExpand(id){expandedRecipe=expandedRecipe===id?null:id;render();}
 function setMultiplier(id,m){recipeMultipliers[id]=m;render();}
 
@@ -1111,9 +1115,10 @@ function buildShoppingList(){
   const combined={},perRecipe={};
   for(const r of planned){
     const m=recipeMultipliers[r.id]||1;
-    perRecipe[r.id]={name:r.name,emoji:r.emoji,items:[]};
+    perRecipe[r.id]={name:r.name,emoji:r.emoji,items:[],id:r.id};
     for(const ing of(r.ingredients||[])){
-      const key=ing.name.toLowerCase().replace(/[^a-z0-9]/g,'');
+      // Use same key for both views so strikethrough state is shared
+      const key='ing_'+ing.name.toLowerCase().replace(/[^a-z0-9]/g,'');
       const amt=buildDisplayAmt(ing,m)||'';
       const dname=ing.notes?`${ing.name} (${ing.notes})`:ing.name;
       perRecipe[r.id].items.push({key,name:dname,amount:amt});
@@ -1121,7 +1126,7 @@ function buildShoppingList(){
       if(amt)combined[key].amounts.push(amt);
     }
   }
-  return{combinedList:Object.values(combined).map(c=>({name:c.name,amount:c.amounts.join(' + ')||''})),perRecipe};
+  return{combinedList:Object.values(combined).map(c=>({name:c.name,amount:c.amounts.join(' + ')||'',key:Object.keys(combined).find(k=>combined[k]===c)})),perRecipe};
 }
 
 // ── Render ─────────────────────────────────────────────────────────────────
@@ -1269,14 +1274,17 @@ function renderShopping(){
   if(vm==='combined'){
     html+=`<div class="shop-section">`;
     data.combinedList.forEach(item=>{
-      const key='c_'+item.name.toLowerCase().replace(/[^a-z0-9]/g,'');
-      html+=shopItemHtml(key,item.name,item.amount);
+      html+=shopItemHtml(item.key,item.name,item.amount);
     });
     html+=`</div>`;
   }else{
     for(const[rid,rd] of Object.entries(data.perRecipe)){
-      html+=`<div class="shop-section"><div class="shop-section-title">${escHtml(rd.emoji||'🍽️')} ${escHtml(rd.name)}</div>`;
-      rd.items.forEach(item=>{html+=shopItemHtml(`r${rid}_${item.key}`,item.name,item.amount);});
+      html+=`<div class="shop-section">
+        <div class="shop-section-title" style="display:flex;align-items:center;justify-content:space-between">
+          <span>${escHtml(rd.emoji||'🍽️')} ${escHtml(rd.name)}</span>
+          <button onclick="unplanRecipe(${rd.id})" style="font-size:11px;color:var(--text3);background:none;border:1px solid var(--border);border-radius:6px;padding:2px 8px;cursor:pointer;font-family:'DM Sans',sans-serif">Remove</button>
+        </div>`;
+      rd.items.forEach(item=>{html+=shopItemHtml(item.key,item.name,item.amount);});
       html+=`</div>`;
     }
   }
