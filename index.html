@@ -7,10 +7,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Dinner Planner">
+<meta name="apple-mobile-web-app-title" content="Plan &amp; Plate">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<title>Dinner Planner</title>
+<title>Plan & Plate</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -232,8 +232,8 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <div class="app">
   <div class="header">
     <div class="header-top">
-      <div class="app-title">dinner<span>.</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.4</div>
+      <div class="app-title">Plan &amp; <span>Plate</span></div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.6</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -352,7 +352,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <div class="status-msg" id="status-msg"></div>
 
 <script>
-const VERSION='1.4';
+const VERSION='1.6';
 const STORAGE_KEY='dinner_planner_v5';
 const API_KEY_STORAGE='anthropic_api_key';
 
@@ -1109,6 +1109,33 @@ function doneShopping(){
 }
 function clearPlan(){state.planned=[];saveState();render();}
 
+// ── Shopping list category ordering ───────────────────────────────────────
+const SHOP_CATEGORIES = [
+  { name: 'Produce & Fresh Herbs', keywords: ['lettuce','spinach','kale','arugula','cabbage','broccoli','cauliflower','carrot','celery','cucumber','zucchini','squash','eggplant','pepper','tomato','onion','shallot','garlic','leek','scallion','chive','ginger','potato','sweet potato','yam','beet','radish','turnip','parsnip','fennel','artichoke','asparagus','corn','pea','bean','mushroom','avocado','lemon','lime','orange','apple','pear','grape','berry','strawberry','blueberry','raspberry','blackberry','cherry','peach','plum','mango','pineapple','banana','melon','watermelon','fig','date','basil','parsley','cilantro','mint','thyme','rosemary','oregano','sage','dill','tarragon','chervil','bay','herb','fresh','produce','fruit','vegetable','greens','lettuce','arugula','chard','watercress','endive','radicchio','microgreen','sprout'] },
+  { name: 'Seeds & Nuts', keywords: ['almond','walnut','pecan','cashew','pistachio','hazelnut','peanut','pine nut','macadamia','chestnut','seed','sunflower','pumpkin','sesame','flax','chia','hemp','poppy','tahini','nut','nut butter'] },
+  { name: 'Cheese', keywords: ['cheese','parmesan','parmigiano','pecorino','cheddar','mozzarella','brie','camembert','gouda','gruyere','feta','ricotta','goat cheese','blue cheese','gorgonzola','manchego','provolone','fontina','havarti','muenster','queso','cotija','paneer'] },
+  { name: 'Olives & Pickles', keywords: ['olive','caper','pickle','gherkin','cornichon','pepperoncini','banana pepper','jalapeno','kimchi','sauerkraut','preserved lemon'] },
+  { name: 'Crackers, Chips & Snacks', keywords: ['cracker','chip','crisp','popcorn','pretzel','rice cake','pita chip','tortilla chip','breadstick','flatbread','matzo'] },
+  { name: 'Dairy, Eggs & Yogurt', keywords: ['milk','cream','half and half','butter','egg','yogurt','sour cream','cottage cheese','creme fraiche','whipping cream','heavy cream','buttermilk','kefir','dairy','lactose'] },
+  { name: 'Granola & Breakfast', keywords: ['granola','muesli','oat','oatmeal','cereal'] },
+  { name: 'Hummus & Dips', keywords: ['hummus','tzatziki','baba','guacamole','salsa','dip','spread'] },
+  { name: 'Coffee & Tea', keywords: ['coffee','espresso','tea','matcha','chai','cocoa','hot chocolate'] },
+  { name: 'Oils, Spices & Condiments', keywords: ['oil','olive oil','vegetable oil','coconut oil','sesame oil','vinegar','soy sauce','fish sauce','worcestershire','hot sauce','sriracha','tabasco','ketchup','mustard','mayonnaise','aioli','spice','pepper','salt','cumin','coriander','turmeric','paprika','cayenne','chili','cinnamon','nutmeg','cardamom','clove','allspice','star anise','bay leaf','dried','powder','seasoning','jam','jelly','marmalade','honey','maple syrup','miso','tahini','harissa','sambal','gochujang','curry','bouillon','stock cube','mirin','sake','rice wine','sherry','worcestershire'] },
+  { name: 'Baking & Sugar', keywords: ['flour','sugar','brown sugar','powdered sugar','baking soda','baking powder','yeast','cornstarch','potato starch','vanilla','chocolate','cocoa powder','molasses','corn syrup','shortening','lard','bread crumb','panko','gelatin','pectin','extract','food coloring','baking'] },
+  { name: 'Canned Goods & Dry Pasta', keywords: ['can','canned','tomato paste','tomato sauce','crushed tomato','diced tomato','chickpea','lentil','bean','black bean','kidney bean','white bean','pasta','spaghetti','penne','rigatoni','fettuccine','linguine','orzo','couscous','rice','quinoa','farro','barley','bulgur','noodle','ramen','udon','soba','vermicelli','broth','stock','coconut milk','evaporated milk','condensed milk','tuna','sardine','anchovy','clam','dried pasta','dry'] },
+  { name: 'Fish & Meat', keywords: ['chicken','beef','pork','lamb','veal','duck','turkey','sausage','bacon','ham','prosciutto','pancetta','chorizo','salami','pepperoni','fish','salmon','tuna','cod','halibut','tilapia','shrimp','scallop','crab','lobster','clam','mussel','oyster','squid','octopus','meat','poultry','seafood','steak','ground','filet','breast','thigh','wing','rib','chop','loin','tenderloin','brisket','chuck','sirloin'] },
+  { name: 'Frozen', keywords: ['frozen','ice cream','sorbet','gelato','popsicle','freeze'] },
+  { name: 'Bread', keywords: ['bread','loaf','baguette','roll','bun','pita','naan','tortilla','wrap','bagel','croissant','brioche','sourdough','rye','whole wheat bread','sandwich'] },
+];
+
+function getCategoryIndex(ingName){
+  const lower=ingName.toLowerCase();
+  for(let i=0;i<SHOP_CATEGORIES.length;i++){
+    if(SHOP_CATEGORIES[i].keywords.some(k=>lower.includes(k))) return i;
+  }
+  return SHOP_CATEGORIES.length; // uncategorized goes last
+}
+
 function buildShoppingList(){
   const planned=state.recipes.filter(r=>state.planned.includes(r.id));
   if(!planned.length)return null;
@@ -1117,16 +1144,24 @@ function buildShoppingList(){
     const m=recipeMultipliers[r.id]||1;
     perRecipe[r.id]={name:r.name,emoji:r.emoji,items:[],id:r.id};
     for(const ing of(r.ingredients||[])){
-      // Use same key for both views so strikethrough state is shared
       const key='ing_'+ing.name.toLowerCase().replace(/[^a-z0-9]/g,'');
       const amt=buildDisplayAmt(ing,m)||'';
       const dname=ing.notes?`${ing.name} (${ing.notes})`:ing.name;
-      perRecipe[r.id].items.push({key,name:dname,amount:amt});
-      if(!combined[key])combined[key]={name:dname,amounts:[]};
+      const catIdx=getCategoryIndex(ing.name);
+      perRecipe[r.id].items.push({key,name:dname,amount:amt,catIdx});
+      if(!combined[key])combined[key]={name:dname,amounts:[],catIdx,key};
       if(amt)combined[key].amounts.push(amt);
     }
   }
-  return{combinedList:Object.values(combined).map(c=>({name:c.name,amount:c.amounts.join(' + ')||'',key:Object.keys(combined).find(k=>combined[k]===c)})),perRecipe};
+  // Sort combined list by category then name
+  const combinedList=Object.values(combined)
+    .sort((a,b)=>a.catIdx!==b.catIdx?a.catIdx-b.catIdx:a.name.localeCompare(b.name))
+    .map(c=>({name:c.name,amount:c.amounts.join(' + ')||'',key:c.key,catIdx:c.catIdx}));
+  // Sort per-recipe items too
+  for(const rid of Object.keys(perRecipe)){
+    perRecipe[rid].items.sort((a,b)=>a.catIdx!==b.catIdx?a.catIdx-b.catIdx:a.name.localeCompare(b.name));
+  }
+  return{combinedList,perRecipe};
 }
 
 // ── Render ─────────────────────────────────────────────────────────────────
@@ -1272,11 +1307,17 @@ function renderShopping(){
     <span class="legend-item"><span style="display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border:1.5px solid var(--border2);border-radius:5px"></span>&nbsp;Got it</span>
   </div>`;
   if(vm==='combined'){
-    html+=`<div class="shop-section">`;
+    let lastCat=-1;
     data.combinedList.forEach(item=>{
+      if(item.catIdx!==lastCat){
+        if(lastCat!==-1) html+=`</div>`;
+        const catName=item.catIdx<SHOP_CATEGORIES.length?SHOP_CATEGORIES[item.catIdx].name:'Other';
+        html+=`<div class="shop-section"><div class="shop-section-title">${escHtml(catName)}</div>`;
+        lastCat=item.catIdx;
+      }
       html+=shopItemHtml(item.key,item.name,item.amount);
     });
-    html+=`</div>`;
+    if(lastCat!==-1) html+=`</div>`;
   }else{
     for(const[rid,rd] of Object.entries(data.perRecipe)){
       html+=`<div class="shop-section">

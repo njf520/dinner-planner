@@ -1,11 +1,11 @@
 {
-  "name": "Dinner Planner",
-  "short_name": "dinner.",
-  "description": "Your recipe rolodex and shopping list",
+  "name": "Plan & Plate",
+  "short_name": "Plan & Plate",
+  "description": "Your recipe rolodex, cocktail book, and shopping list",
   "start_url": "/dinner-planner/",
   "display": "standalone",
-  "background_color": "#1a1814",
-  "theme_color": "#1a1814",
+  "background_color": "#162318",
+  "theme_color": "#162318",
   "orientation": "portrait",
   "icons": [
     {
