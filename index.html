@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.9</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.1</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -351,8 +351,22 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 
 <div class="status-msg" id="status-msg"></div>
 
+<!-- Debug log modal -->
+<div id="debug-overlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:300;opacity:0;pointer-events:none;transition:opacity .2s" onclick="closeDebugLog()"></div>
+<div id="debug-modal" style="position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;max-width:480px;background:var(--card);border-radius:20px 20px 0 0;z-index:301;transition:transform .3s cubic-bezier(0.34,1.3,0.64,1);padding:18px 18px 40px;max-height:80vh;display:flex;flex-direction:column">
+  <div style="width:36px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 14px"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-shrink:0">
+    <div style="font-family:'DM Serif Display',serif;font-size:18px">Debug log</div>
+    <div style="display:flex;gap:8px">
+      <button onclick="debugLog=[];closeDebugLog();renderSettings()" style="padding:5px 12px;border:1px solid var(--border);border-radius:7px;background:transparent;color:var(--text2);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif">Clear</button>
+      <button onclick="closeDebugLog()" style="padding:5px 12px;border:1px solid var(--border);border-radius:7px;background:transparent;color:var(--text2);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif">Close</button>
+    </div>
+  </div>
+  <div id="debug-log-content" style="overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch"></div>
+</div>
+
 <script>
-const VERSION='1.9';
+const VERSION='2.1';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1006,7 +1020,9 @@ async function submitRecipe(){
       }
       btn.innerHTML='<span class="spinner"></span>Parsing…';
       // If page text is too thin (JS-rendered site), fall back to Claude's knowledge
-      const cleanText=text.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').substring(0,8000);
+      // Strip CSS, scripts, and HTML tags before extracting text — gets real content not boilerplate
+      const noScripts=text.replace(/<script[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<style[^>]*>[\s\S]*?<\/style>/gi,'');
+      const cleanText=noScripts.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim().substring(0,10000);
       dlog('Fetched page text length: '+cleanText.length+' chars', {preview:cleanText.substring(0,200)});
       const prompt = cleanText.length > 300
         ? `URL:${url}\nPage text:\n${cleanText}`
@@ -1399,15 +1415,13 @@ function renderSettings(){
     </div>
     ${state.recipes.length?`<div style="border-top:1px solid var(--border);padding-top:18px;margin-top:18px"><p style="font-size:14px;color:var(--text2);margin-bottom:9px">${state.recipes.length} recipe${state.recipes.length!==1?'s':''} saved.</p><button onclick="confirmClearAll()" style="padding:9px 14px;border:1px solid rgba(200,75,47,0.3);border-radius:9px;background:transparent;color:var(--accent);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">Clear all recipes</button></div>`:''}
     <div style="border-top:1px solid var(--border);padding-top:18px;margin-top:18px">
-      <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:8px">Debug log</div>
-      <p style="font-size:13px;color:var(--text2);margin-bottom:10px">Shows what happened during the last few recipe imports. Useful for diagnosing missing ingredients.</p>
-      ${debugLog.length?debugLog.map(e=>`
-        <div style="border:1px solid var(--border);border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:11px">
-          <div style="color:var(--text3);margin-bottom:3px">${e.time}</div>
-          <div style="color:var(--text);font-weight:500;margin-bottom:${e.data?'3px':'0'}">${escHtml(e.msg)}</div>
-          ${e.data?`<div style="color:var(--text2);font-family:monospace;font-size:10px;word-break:break-all;white-space:pre-wrap">${escHtml(e.data)}</div>`:''}
-        </div>`).join(''):'<div style="color:var(--text3);font-size:13px">No imports logged yet. Add a recipe to see the log.</div>'}
-      ${debugLog.length?`<button onclick="debugLog=[];renderSettings()" style="padding:7px 12px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text2);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:6px">Clear log</button>`:''}
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="font-family:'DM Serif Display',serif;font-size:17px">Debug log</div>
+        <button onclick="openDebugLog()" style="padding:7px 14px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text2);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:5px">
+          ${debugLog.length?`View ${debugLog.length} entr${debugLog.length===1?'y':'ies'}`:'View log'}
+        </button>
+      </div>
+      <p style="font-size:13px;color:var(--text2);margin-top:6px">Records what happens during recipe imports — useful for diagnosing missing ingredients.</p>
     </div>`;
 }
 
@@ -1453,6 +1467,30 @@ function handleImport(e){
     }catch{toast('Could not read that file — is it a valid backup?');}
   };
   reader.readAsText(file);
+}
+
+function openDebugLog(){
+  const content=document.getElementById('debug-log-content');
+  if(!debugLog.length){
+    content.innerHTML='<div style="color:var(--text3);font-size:13px;text-align:center;padding:20px">No imports logged yet.<br>Add a recipe to see the log.</div>';
+  } else {
+    content.innerHTML=debugLog.map(e=>`
+      <div style="border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:8px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px">
+          <div style="font-size:13px;font-weight:500;color:var(--text)">${escHtml(e.msg)}</div>
+          <div style="font-size:11px;color:var(--text3);flex-shrink:0;margin-left:8px">${e.time}</div>
+        </div>
+        ${e.data?`<div style="font-size:11px;color:var(--text2);font-family:monospace;word-break:break-all;white-space:pre-wrap;background:var(--bg2);border-radius:6px;padding:6px 8px;margin-top:4px">${escHtml(e.data)}</div>`:''}
+      </div>`).join('');
+  }
+  document.getElementById('debug-overlay').style.opacity='1';
+  document.getElementById('debug-overlay').style.pointerEvents='auto';
+  document.getElementById('debug-modal').style.transform='translateX(-50%) translateY(0)';
+}
+function closeDebugLog(){
+  document.getElementById('debug-overlay').style.opacity='0';
+  document.getElementById('debug-overlay').style.pointerEvents='none';
+  document.getElementById('debug-modal').style.transform='translateX(-50%) translateY(100%)';
 }
 
 function render(){
