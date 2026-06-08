@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.6</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v1.8</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -352,7 +352,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <div class="status-msg" id="status-msg"></div>
 
 <script>
-const VERSION='1.6';
+const VERSION='1.8';
 const STORAGE_KEY='dinner_planner_v5';
 const API_KEY_STORAGE='anthropic_api_key';
 
@@ -868,6 +868,10 @@ COCKTAIL RECIPE RULES:
 - Use emoji 🍸 or 🥃 for cocktails
 - Tags should include "cocktail" plus spirit type (e.g. "mezcal", "gin", "whiskey")
 
+CRITICAL: Capture EVERY ingredient listed. Do not skip, summarize, or omit any ingredient no matter how minor — including garnishes, optional ingredients, and small amounts like a pinch of salt or a drizzle of honey.
+
+CRITICAL: When a recipe says "X or Y or Z" meaning the cook should pick one (e.g. "basil or parsley or mint", "chicken or vegetable stock", "butter or olive oil"), do NOT create separate line items for each. Instead create ONE ingredient with the most generic name (e.g. "fresh herbs", "stock", "fat") and put the options in the notes field (e.g. "basil, parsley, or mint"). The amount should reflect a single choice, not multiples.
+
 URL FALLBACK: If given a URL with little/no page text, use your knowledge of that URL/recipe to fill in the details. Difford's Guide, Epicurious, Serious Eats, NYT Cooking are well known — reconstruct from training data if needed.
 
 For tags, suggest 1-4 short lowercase descriptors.
@@ -995,7 +999,7 @@ async function submitRecipe(){
       }
       btn.innerHTML='<span class="spinner"></span>Parsing…';
       // If page text is too thin (JS-rendered site), fall back to Claude's knowledge
-      const cleanText=text.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').substring(0,4000);
+      const cleanText=text.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').substring(0,8000);
       const prompt = cleanText.length > 300
         ? `URL:${url}\nPage text:\n${cleanText}`
         : `The page at this URL requires JavaScript to render so I could not fetch its content. Please use your knowledge of this recipe URL to fill in all details:\nURL: ${url}`;
@@ -1112,15 +1116,15 @@ function clearPlan(){state.planned=[];saveState();render();}
 // ── Shopping list category ordering ───────────────────────────────────────
 const SHOP_CATEGORIES = [
   { name: 'Produce & Fresh Herbs', keywords: ['lettuce','spinach','kale','arugula','cabbage','broccoli','cauliflower','carrot','celery','cucumber','zucchini','squash','eggplant','pepper','tomato','onion','shallot','garlic','leek','scallion','chive','ginger','potato','sweet potato','yam','beet','radish','turnip','parsnip','fennel','artichoke','asparagus','corn','pea','bean','mushroom','avocado','lemon','lime','orange','apple','pear','grape','berry','strawberry','blueberry','raspberry','blackberry','cherry','peach','plum','mango','pineapple','banana','melon','watermelon','fig','date','basil','parsley','cilantro','mint','thyme','rosemary','oregano','sage','dill','tarragon','chervil','bay','herb','fresh','produce','fruit','vegetable','greens','lettuce','arugula','chard','watercress','endive','radicchio','microgreen','sprout'] },
-  { name: 'Seeds & Nuts', keywords: ['almond','walnut','pecan','cashew','pistachio','hazelnut','peanut','pine nut','macadamia','chestnut','seed','sunflower','pumpkin','sesame','flax','chia','hemp','poppy','tahini','nut','nut butter'] },
+  { name: 'Seeds, Nuts & Dried Fruit', keywords: ['almond','walnut','pecan','cashew','pistachio','hazelnut','peanut','pine nut','macadamia','chestnut','seed','sunflower','pumpkin','sesame','flax','chia','hemp','poppy','tahini','nut','nut butter','raisin','dried cranberry','dried fruit','currant','sultana','apricot','prune','date','fig','dried cherry','dried blueberry'] },
   { name: 'Cheese', keywords: ['cheese','parmesan','parmigiano','pecorino','cheddar','mozzarella','brie','camembert','gouda','gruyere','feta','ricotta','goat cheese','blue cheese','gorgonzola','manchego','provolone','fontina','havarti','muenster','queso','cotija','paneer'] },
-  { name: 'Olives & Pickles', keywords: ['olive','caper','pickle','gherkin','cornichon','pepperoncini','banana pepper','jalapeno','kimchi','sauerkraut','preserved lemon'] },
+  { name: 'Olives & Pickles', keywords: ['olive oil','caper','pickle','gherkin','cornichon','pepperoncini','banana pepper','jalapeno','kimchi','sauerkraut','preserved lemon','kalamata','castelvetrano','pitted olive','green olive','black olive','stuffed olive'] },
   { name: 'Crackers, Chips & Snacks', keywords: ['cracker','chip','crisp','popcorn','pretzel','rice cake','pita chip','tortilla chip','breadstick','flatbread','matzo'] },
   { name: 'Dairy, Eggs & Yogurt', keywords: ['milk','cream','half and half','butter','egg','yogurt','sour cream','cottage cheese','creme fraiche','whipping cream','heavy cream','buttermilk','kefir','dairy','lactose'] },
   { name: 'Granola & Breakfast', keywords: ['granola','muesli','oat','oatmeal','cereal'] },
   { name: 'Hummus & Dips', keywords: ['hummus','tzatziki','baba','guacamole','salsa','dip','spread'] },
   { name: 'Coffee & Tea', keywords: ['coffee','espresso','tea','matcha','chai','cocoa','hot chocolate'] },
-  { name: 'Oils, Spices & Condiments', keywords: ['oil','olive oil','vegetable oil','coconut oil','sesame oil','vinegar','soy sauce','fish sauce','worcestershire','hot sauce','sriracha','tabasco','ketchup','mustard','mayonnaise','aioli','spice','pepper','salt','cumin','coriander','turmeric','paprika','cayenne','chili','cinnamon','nutmeg','cardamom','clove','allspice','star anise','bay leaf','dried','powder','seasoning','jam','jelly','marmalade','honey','maple syrup','miso','tahini','harissa','sambal','gochujang','curry','bouillon','stock cube','mirin','sake','rice wine','sherry','worcestershire'] },
+  { name: 'Oils, Spices & Condiments', keywords: ['olive oil','oil','vegetable oil','coconut oil','sesame oil','vinegar','soy sauce','fish sauce','worcestershire','hot sauce','sriracha','tabasco','ketchup','mustard','mayonnaise','aioli','spice','pepper','salt','cumin','coriander','turmeric','paprika','cayenne','chili','cinnamon','nutmeg','cardamom','clove','allspice','star anise','bay leaf','dried','powder','seasoning','honey','maple syrup','agave','jam','jelly','marmalade','miso','tahini','harissa','sambal','gochujang','curry','bouillon','stock cube','mirin','sake','rice wine','sherry','worcestershire'] },
   { name: 'Baking & Sugar', keywords: ['flour','sugar','brown sugar','powdered sugar','baking soda','baking powder','yeast','cornstarch','potato starch','vanilla','chocolate','cocoa powder','molasses','corn syrup','shortening','lard','bread crumb','panko','gelatin','pectin','extract','food coloring','baking'] },
   { name: 'Canned Goods & Dry Pasta', keywords: ['can','canned','tomato paste','tomato sauce','crushed tomato','diced tomato','chickpea','lentil','bean','black bean','kidney bean','white bean','pasta','spaghetti','penne','rigatoni','fettuccine','linguine','orzo','couscous','rice','quinoa','farro','barley','bulgur','noodle','ramen','udon','soba','vermicelli','broth','stock','coconut milk','evaporated milk','condensed milk','tuna','sardine','anchovy','clam','dried pasta','dry'] },
   { name: 'Fish & Meat', keywords: ['chicken','beef','pork','lamb','veal','duck','turkey','sausage','bacon','ham','prosciutto','pancetta','chorizo','salami','pepperoni','fish','salmon','tuna','cod','halibut','tilapia','shrimp','scallop','crab','lobster','clam','mussel','oyster','squid','octopus','meat','poultry','seafood','steak','ground','filet','breast','thigh','wing','rib','chop','loin','tenderloin','brisket','chuck','sirloin'] },
