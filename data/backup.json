@@ -1,6 +1,99 @@
 {
   "recipes": [
     {
+      "name": "Grilled King Oyster Mushrooms with Tarragon Butter",
+      "servings": "4-6",
+      "source": null,
+      "emoji": "🍄",
+      "time": "15 min",
+      "difficulty": "easy",
+      "tags": [
+        "grilled",
+        "mushrooms",
+        "side dish",
+        "vegetarian"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": "at room temperature"
+        },
+        {
+          "name": "fresh tarragon",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "chopped"
+        },
+        {
+          "name": "fresh flat-leaf parsley",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "chopped"
+        },
+        {
+          "name": "fresh chives",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "snipped"
+        },
+        {
+          "name": "garlic clove",
+          "amount": "1",
+          "unit": "clove",
+          "notes": "minced"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "finely grated"
+        },
+        {
+          "name": "king oyster mushrooms",
+          "amount": "10 oz",
+          "unit": "oz",
+          "notes": "halved lengthwise"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "lemon",
+          "amount": "½",
+          "unit": "lemon",
+          "notes": "for juice"
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": "to taste",
+          "unit": null,
+          "notes": "for finishing"
+        }
+      ],
+      "notes": null,
+      "id": 1781474728378,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474728378-0.jpg"
+      ]
+    },
+    {
       "name": "Ragù Bolognese Sauce",
       "servings": "5-6 cups",
       "source": "https://www.theclevercarrot.com/2022/01/ragu-bolognese-sauce/",
@@ -3399,5 +3492,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T22:05:04.037Z"
+  "exportedAt": "2026-06-14T22:05:44.343Z"
 }
