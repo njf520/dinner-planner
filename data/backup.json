@@ -1,6 +1,129 @@
 {
   "recipes": [
     {
+      "name": "Farro with Artichokes and Herb Salad",
+      "servings": 6,
+      "source": "Jonathan Sawyer",
+      "emoji": "🌾",
+      "time": "1 hour",
+      "difficulty": "medium",
+      "tags": [
+        "farro",
+        "artichokes",
+        "grain",
+        "salad"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "carrot",
+          "amount": "1",
+          "unit": "whole",
+          "notes": "finely diced"
+        },
+        {
+          "name": "celery root",
+          "amount": "1 small",
+          "unit": "whole",
+          "notes": "peeled and finely diced"
+        },
+        {
+          "name": "onion",
+          "amount": "1 small",
+          "unit": "whole",
+          "notes": "finely diced"
+        },
+        {
+          "name": "celery ribs",
+          "amount": "2",
+          "unit": "ribs",
+          "notes": "1 finely diced and 1 thinly sliced, plus ½ cup celery leaves"
+        },
+        {
+          "name": "bay leaf",
+          "amount": "1",
+          "unit": "leaf",
+          "notes": null
+        },
+        {
+          "name": "farro",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": "14 ounces"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "low-sodium chicken broth",
+          "amount": "4 cups",
+          "unit": "cups",
+          "notes": null
+        },
+        {
+          "name": "salt and freshly ground pepper",
+          "amount": "",
+          "unit": "seasoning",
+          "notes": null
+        },
+        {
+          "name": "Grana Padano cheese",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "grated, plus shaved cheese for garnish"
+        },
+        {
+          "name": "marinated baby artichokes",
+          "amount": "4 oz",
+          "unit": "oz",
+          "notes": "drained and halved (¾ cup)"
+        },
+        {
+          "name": "flat-leaf parsley leaves",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "chives",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "snipped"
+        },
+        {
+          "name": "tarragon leaves",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "white wine vinegar",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473229967,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473229967-0.jpg"
+      ]
+    },
+    {
       "name": "Greek Sea Bass Baked with Santorini Assyrtiko Wine, Caper Leaves, and Herbs",
       "servings": 6,
       "source": null,
@@ -3273,5 +3396,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:40:21.903Z"
+  "exportedAt": "2026-06-14T21:40:46.119Z"
 }
