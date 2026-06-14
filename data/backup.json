@@ -3,15 +3,15 @@
     {
       "name": "Braised Fish with Tomato & Coconut Chickpeas",
       "servings": 4,
-      "source": "What to Cook When You Don't Feel Like Cooking - A Cookbook",
+      "source": "What to Cook When You Don't Feel Like Cooking",
       "emoji": "🐟",
       "time": "25 min",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "tags": [
+        "braised",
         "fish",
         "chickpeas",
-        "one-pan",
-        "braised"
+        "one-pan"
       ],
       "ingredients": [
         {
@@ -54,7 +54,7 @@
           "name": "kosher salt",
           "amount": "1½ tsp",
           "unit": "tsp",
-          "notes": null
+          "notes": "divided"
         },
         {
           "name": "limes",
@@ -70,7 +70,7 @@
         },
         {
           "name": "fresh spinach",
-          "amount": "2 big handfuls",
+          "amount": "3 big handfuls",
           "unit": "handfuls",
           "notes": null
         },
@@ -82,21 +82,21 @@
         },
         {
           "name": "extra-virgin olive oil",
-          "amount": "as needed",
-          "unit": "oil",
-          "notes": null
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for drizzling"
         },
         {
           "name": "freshly ground black pepper",
-          "amount": "to taste",
-          "unit": "seasoning",
+          "amount": "1 big pinch",
+          "unit": "pinch",
           "notes": null
         }
       ],
       "notes": null,
-      "id": 1781473935432,
+      "id": 1781474186298,
       "imageBackupUrls": [
-        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473935432-0.jpg"
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474186298-0.jpg"
       ]
     },
     {
@@ -281,8 +281,8 @@
         },
         {
           "name": "eggs",
-          "amount": "2",
-          "unit": "whole",
+          "amount": "2 whole",
+          "unit": "",
           "notes": null
         }
       ],
@@ -308,8 +308,8 @@
       "ingredients": [
         {
           "name": "lemon",
-          "amount": "½",
-          "unit": "whole",
+          "amount": "½ whole",
+          "unit": "",
           "notes": null
         },
         {
@@ -320,20 +320,20 @@
         },
         {
           "name": "extra-virgin olive oil",
-          "amount": "as needed",
-          "unit": "oil",
+          "amount": "as needed oil",
+          "unit": "",
           "notes": "for cooking"
         },
         {
           "name": "salt-packed anchovies",
-          "amount": "6",
-          "unit": "fillets",
+          "amount": "6 fillets",
+          "unit": "",
           "notes": "rinsed and deboned"
         },
         {
           "name": "Calabrian chiles",
-          "amount": "6",
-          "unit": "chiles",
+          "amount": "6 chiles",
+          "unit": "",
           "notes": "roughly chopped"
         },
         {
@@ -344,8 +344,8 @@
         },
         {
           "name": "kosher salt",
-          "amount": "to taste",
-          "unit": "salt",
+          "amount": "to taste salt",
+          "unit": "",
           "notes": null
         },
         {
@@ -425,8 +425,8 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "4",
-          "unit": "cloves",
+          "amount": "4 cloves",
+          "unit": "",
           "notes": null
         },
         {
@@ -488,20 +488,20 @@
       "ingredients": [
         {
           "name": "large shallot",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": "thinly sliced"
         },
         {
           "name": "fennel bulb",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": "thinly sliced"
         },
         {
           "name": "garlic cloves",
-          "amount": "4",
-          "unit": "cloves",
+          "amount": "4 cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
@@ -536,8 +536,8 @@
         },
         {
           "name": "fish fillets",
-          "amount": "4",
-          "unit": "fillets",
+          "amount": "4 fillets",
+          "unit": "",
           "notes": "6- to 8-ounce, like cod or halibut"
         },
         {
@@ -554,8 +554,8 @@
         },
         {
           "name": "pita breads",
-          "amount": "4",
-          "unit": "breads",
+          "amount": "4 breads",
+          "unit": "",
           "notes": "for serving"
         }
       ],
@@ -581,8 +581,8 @@
       "ingredients": [
         {
           "name": "tuna steaks",
-          "amount": "4 (4- to 6-ounce)",
-          "unit": "steaks",
+          "amount": "4 (4- to 6-ounce) steaks",
+          "unit": "",
           "notes": null
         },
         {
@@ -617,14 +617,14 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "2",
-          "unit": "cloves",
+          "amount": "2 cloves",
+          "unit": "",
           "notes": null
         },
         {
           "name": "lime",
-          "amount": "1",
-          "unit": "lime",
+          "amount": "1 lime",
+          "unit": "",
           "notes": null
         },
         {
@@ -680,14 +680,14 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "1 or 2 large",
-          "unit": "cloves",
+          "amount": "1 or 2 large cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
           "name": "ice cubes",
-          "amount": "3 or 4",
-          "unit": "cubes",
+          "amount": "3 or 4 cubes",
+          "unit": "",
           "notes": null
         },
         {
@@ -761,20 +761,20 @@
         },
         {
           "name": "red onion",
-          "amount": "1 small",
-          "unit": "onion",
+          "amount": "1 small onion",
+          "unit": "",
           "notes": "coarsely chopped, reserve 1-2 tbsp for serving"
         },
         {
           "name": "green bell pepper",
-          "amount": "½ large",
-          "unit": "pepper",
+          "amount": "½ large pepper",
+          "unit": "",
           "notes": "cored, seeded, and coarsely chopped"
         },
         {
           "name": "garlic cloves",
-          "amount": "2 large",
-          "unit": "cloves",
+          "amount": "2 large cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
@@ -833,8 +833,8 @@
         },
         {
           "name": "Roma tomato",
-          "amount": "1",
-          "unit": "tomato",
+          "amount": "1 tomato",
+          "unit": "",
           "notes": "chopped"
         },
         {
@@ -885,14 +885,14 @@
       "ingredients": [
         {
           "name": "kosher salt",
-          "amount": "to taste",
-          "unit": "pinch",
+          "amount": "to taste pinch",
+          "unit": "",
           "notes": null
         },
         {
           "name": "ground black pepper",
-          "amount": "to taste",
-          "unit": "pinch",
+          "amount": "to taste pinch",
+          "unit": "",
           "notes": null
         },
         {
@@ -909,8 +909,8 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "4 large",
-          "unit": "cloves",
+          "amount": "4 large cloves",
+          "unit": "",
           "notes": "crushed"
         },
         {
@@ -927,8 +927,8 @@
         },
         {
           "name": "scallions",
-          "amount": "3",
-          "unit": "scallions",
+          "amount": "3 scallions",
+          "unit": "",
           "notes": "trimmed, white and green parts chopped"
         },
         {
@@ -957,8 +957,8 @@
         },
         {
           "name": "lemon zest",
-          "amount": "1",
-          "unit": "lemon",
+          "amount": "1 lemon",
+          "unit": "",
           "notes": "grated"
         },
         {
@@ -1119,8 +1119,8 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "5",
-          "unit": "cloves",
+          "amount": "5 cloves",
+          "unit": "",
           "notes": "large, minced"
         },
         {
@@ -1224,8 +1224,8 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "4 large",
-          "unit": "cloves",
+          "amount": "4 large cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
@@ -1311,8 +1311,8 @@
         },
         {
           "name": "beef tenderloin steaks",
-          "amount": "8",
-          "unit": "steaks",
+          "amount": "8 steaks",
+          "unit": "",
           "notes": "about 1½ inches thick"
         },
         {
@@ -1383,14 +1383,14 @@
         },
         {
           "name": "white onion",
-          "amount": "1 small",
-          "unit": "onion",
+          "amount": "1 small onion",
+          "unit": "",
           "notes": "very finely diced"
         },
         {
           "name": "garlic cloves",
-          "amount": "2",
-          "unit": "cloves",
+          "amount": "2 cloves",
+          "unit": "",
           "notes": "minced or grated"
         },
         {
@@ -1453,32 +1453,32 @@
         },
         {
           "name": "carrot",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": "finely diced"
         },
         {
           "name": "celery root",
-          "amount": "1 small",
-          "unit": "whole",
+          "amount": "1 small whole",
+          "unit": "",
           "notes": "peeled and finely diced"
         },
         {
           "name": "onion",
-          "amount": "1 small",
-          "unit": "whole",
+          "amount": "1 small whole",
+          "unit": "",
           "notes": "finely diced"
         },
         {
           "name": "celery ribs",
-          "amount": "2",
-          "unit": "ribs",
+          "amount": "2 ribs",
+          "unit": "",
           "notes": "1 finely diced and 1 thinly sliced, plus ½ cup celery leaves"
         },
         {
           "name": "bay leaf",
-          "amount": "1",
-          "unit": "leaf",
+          "amount": "1 leaf",
+          "unit": "",
           "notes": null
         },
         {
@@ -1570,8 +1570,8 @@
       "ingredients": [
         {
           "name": "sea bass or sea bream fillets",
-          "amount": "6",
-          "unit": "fillets",
+          "amount": "6 fillets",
+          "unit": "",
           "notes": "skin-on"
         },
         {
@@ -1588,20 +1588,20 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "2",
-          "unit": "cloves",
+          "amount": "2 cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
           "name": "fennel bulb",
-          "amount": "1",
-          "unit": "bulb",
+          "amount": "1 bulb",
+          "unit": "",
           "notes": "trimmed, halved, and sliced"
         },
         {
           "name": "red onion",
-          "amount": "1",
-          "unit": "onion",
+          "amount": "1 onion",
+          "unit": "",
           "notes": "halved and chopped"
         },
         {
@@ -1630,26 +1630,26 @@
         },
         {
           "name": "lemon",
-          "amount": "1",
-          "unit": "lemon",
+          "amount": "1 lemon",
+          "unit": "",
           "notes": "grated zest only"
         },
         {
           "name": "fresh thyme sprigs",
-          "amount": "4 or 5",
-          "unit": "sprigs",
+          "amount": "4 or 5 sprigs",
+          "unit": "",
           "notes": null
         },
         {
           "name": "salt",
-          "amount": "to taste",
-          "unit": "seasoning",
+          "amount": "to taste seasoning",
+          "unit": "",
           "notes": null
         },
         {
           "name": "freshly ground black pepper",
-          "amount": "to taste",
-          "unit": "seasoning",
+          "amount": "to taste seasoning",
+          "unit": "",
           "notes": null
         },
         {
@@ -1804,8 +1804,8 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "5 large",
-          "unit": "cloves",
+          "amount": "5 large cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
@@ -1834,14 +1834,14 @@
         },
         {
           "name": "carrots",
-          "amount": "6",
-          "unit": "carrots",
+          "amount": "6 carrots",
+          "unit": "",
           "notes": "9-10 oz total, peeled, halved lengthwise, cut into 2-inch pieces"
         },
         {
           "name": "medium onions",
-          "amount": "2",
-          "unit": "onions",
+          "amount": "2 onions",
+          "unit": "",
           "notes": "halved and cut into ½-inch slices"
         },
         {
@@ -1864,8 +1864,8 @@
         },
         {
           "name": "boneless, skinless chicken thighs",
-          "amount": "10",
-          "unit": "thighs",
+          "amount": "10 thighs",
+          "unit": "",
           "notes": null
         }
       ],
@@ -3457,5 +3457,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:52:31.651Z"
+  "exportedAt": "2026-06-14T21:56:42.595Z"
 }
