@@ -1,6 +1,69 @@
 {
   "recipes": [
     {
+      "name": "Turmeric Gin Cocktail",
+      "servings": 1,
+      "source": "Nick Farrell",
+      "emoji": "🍸",
+      "time": null,
+      "difficulty": "medium",
+      "tags": [
+        "cocktail",
+        "gin",
+        "turmeric",
+        "shaken"
+      ],
+      "ingredients": [
+        {
+          "name": "powdered turmeric",
+          "amount": "pinch",
+          "unit": "pinch",
+          "notes": null
+        },
+        {
+          "name": "gin",
+          "amount": "1½ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "domaine ginger liqueur",
+          "amount": "1 oz",
+          "unit": "oz",
+          "notes": "domaine canton"
+        },
+        {
+          "name": "carrot eau de vie",
+          "amount": "¼ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "lemon juice",
+          "amount": "¾ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "carrot juice",
+          "amount": "1¼ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "fee foam bitters",
+          "amount": "2 dashes",
+          "unit": "dashes",
+          "notes": "nondairy foaming agent"
+        }
+      ],
+      "notes": null,
+      "id": 1781474298563,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474298563-0.jpg"
+      ]
+    },
+    {
       "name": "Braised Fish with Tomato & Coconut Chickpeas",
       "servings": 4,
       "source": "What to Cook When You Don't Feel Like Cooking",
@@ -3397,5 +3460,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:57:53.148Z"
+  "exportedAt": "2026-06-14T21:58:35.041Z"
 }
