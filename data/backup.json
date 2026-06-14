@@ -1,6 +1,123 @@
 {
   "recipes": [
     {
+      "name": "Greek Sea Bass Baked with Santorini Assyrtiko Wine, Caper Leaves, and Herbs",
+      "servings": 6,
+      "source": null,
+      "emoji": "🐟",
+      "time": "60 min",
+      "difficulty": "medium",
+      "tags": [
+        "greek",
+        "seafood",
+        "baked",
+        "mediterranean"
+      ],
+      "ingredients": [
+        {
+          "name": "sea bass or sea bream fillets",
+          "amount": "6",
+          "unit": "fillets",
+          "notes": "skin-on"
+        },
+        {
+          "name": "Santorini assyrtiko wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "mustard",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": "Greek or Dijon"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "fennel bulb",
+          "amount": "1",
+          "unit": "bulb",
+          "notes": "trimmed, halved, and sliced"
+        },
+        {
+          "name": "red onion",
+          "amount": "1",
+          "unit": "onion",
+          "notes": "halved and chopped"
+        },
+        {
+          "name": "tomatoes",
+          "amount": "3 cups",
+          "unit": "cups",
+          "notes": "cherry or teardrop, whole"
+        },
+        {
+          "name": "capers",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "drained"
+        },
+        {
+          "name": "caper leaves",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "if available"
+        },
+        {
+          "name": "extra-virgin Greek olive oil",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "lemon",
+          "amount": "1",
+          "unit": "lemon",
+          "notes": "grated zest only"
+        },
+        {
+          "name": "fresh thyme sprigs",
+          "amount": "4 or 5",
+          "unit": "sprigs",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "unit": "seasoning",
+          "notes": null
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "to taste",
+          "unit": "seasoning",
+          "notes": null
+        },
+        {
+          "name": "fresh chives",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "snipped"
+        },
+        {
+          "name": "fresh parsley",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "chopped"
+        }
+      ],
+      "notes": null,
+      "id": 1781473199887,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473199887-0.jpg"
+      ]
+    },
+    {
       "name": "Pan-Roasted Romanesco with Golden Raisins, Tahini & Sumac",
       "servings": "4-6",
       "source": null,
@@ -1267,132 +1384,6 @@
       ],
       "notes": null,
       "id": 1780699492197
-    },
-    {
-      "name": "Farro with Artichokes and Herb Salad",
-      "servings": 6,
-      "source": "Jonathon Sawyer",
-      "emoji": "🌾",
-      "time": "1 hour",
-      "difficulty": "medium",
-      "tags": [
-        "farro",
-        "artichokes",
-        "vegetarian",
-        "grain"
-      ],
-      "ingredients": [
-        {
-          "name": "unsalted butter",
-          "amount": "4 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "carrot",
-          "amount": "1 whole",
-          "unit": "",
-          "notes": "finely diced"
-        },
-        {
-          "name": "celery root",
-          "amount": "1 small",
-          "unit": "",
-          "notes": "peeled and finely diced"
-        },
-        {
-          "name": "onion",
-          "amount": "1 small",
-          "unit": "",
-          "notes": "finely diced"
-        },
-        {
-          "name": "celery ribs",
-          "amount": "2 whole",
-          "unit": "",
-          "notes": "1 finely diced and 1 thinly sliced, plus ½ cup celery leaves"
-        },
-        {
-          "name": "bay leaf",
-          "amount": "1 whole",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "farro",
-          "amount": "2 cups",
-          "unit": "",
-          "notes": "14 ounces"
-        },
-        {
-          "name": "dry white wine",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "low-sodium chicken broth",
-          "amount": "4 cups",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "salt",
-          "amount": "to taste",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "freshly ground pepper",
-          "amount": "to taste",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "Grana Padano cheese",
-          "amount": "3 tbsp",
-          "unit": "",
-          "notes": "grated, plus shaved cheese for garnish"
-        },
-        {
-          "name": "marinated baby artichokes",
-          "amount": "4 oz",
-          "unit": "",
-          "notes": "drained and halved (¾ cup)"
-        },
-        {
-          "name": "flat-leaf parsley leaves",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "chives",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "snipped"
-        },
-        {
-          "name": "tarragon leaves",
-          "amount": "1 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "white wine vinegar",
-          "amount": "1 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "extra-virgin olive oil",
-          "amount": "1 tbsp",
-          "unit": "",
-          "notes": null
-        }
-      ],
-      "notes": null,
-      "id": 1780699335661
     },
     {
       "name": "Porcini Crusted Beef Tenderloin with Sautéed King Trumpet, Oyster & Shiitake Mushrooms and Red Wine Demi-Glace",
@@ -3282,5 +3273,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:39:52.299Z"
+  "exportedAt": "2026-06-14T21:40:21.903Z"
 }
