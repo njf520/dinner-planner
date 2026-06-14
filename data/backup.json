@@ -1,6 +1,99 @@
 {
   "recipes": [
     {
+      "name": "Any Fish with Saffron Cherry Tomatoes",
+      "servings": 4,
+      "source": null,
+      "emoji": "🐟",
+      "time": "25 min",
+      "difficulty": "medium",
+      "tags": [
+        "fish",
+        "saffron",
+        "mediterranean",
+        "skillet"
+      ],
+      "ingredients": [
+        {
+          "name": "large shallot",
+          "amount": "1",
+          "unit": "whole",
+          "notes": "thinly sliced"
+        },
+        {
+          "name": "fennel bulb",
+          "amount": "1",
+          "unit": "whole",
+          "notes": "thinly sliced"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "cherry tomatoes",
+          "amount": "2 pints",
+          "unit": "pints",
+          "notes": "halved"
+        },
+        {
+          "name": "saffron",
+          "amount": "pinch",
+          "unit": "pinch",
+          "notes": "about 20 threads"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for tomatoes"
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for tomatoes"
+        },
+        {
+          "name": "fish fillets",
+          "amount": "4",
+          "unit": "fillets",
+          "notes": "6- to 8-ounce, like cod or halibut"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "big pinch each",
+          "unit": "pinch",
+          "notes": "for seasoning fish"
+        },
+        {
+          "name": "black pepper",
+          "amount": "big pinch each",
+          "unit": "pinch",
+          "notes": "for seasoning fish"
+        },
+        {
+          "name": "pita breads",
+          "amount": "4",
+          "unit": "breads",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473571656,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473571656-0.jpg"
+      ]
+    },
+    {
       "name": "Everything-Crusted Tuna with Snap Peas & Tahini-Jang Sauce",
       "servings": 4,
       "source": null,
@@ -3348,5 +3441,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:45:56.610Z"
+  "exportedAt": "2026-06-14T21:46:27.214Z"
 }
