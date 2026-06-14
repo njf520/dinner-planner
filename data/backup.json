@@ -1,6 +1,93 @@
 {
   "recipes": [
     {
+      "name": "Foil-Baked Salmon with Cherry Tomatoes, Olives, and Thyme",
+      "servings": "4-6",
+      "source": null,
+      "emoji": "🐟",
+      "time": "15 min",
+      "difficulty": "easy",
+      "tags": [
+        "salmon",
+        "foil-baked",
+        "mediterranean",
+        "easy"
+      ],
+      "ingredients": [
+        {
+          "name": "cherry tomatoes",
+          "amount": "1½ cups",
+          "unit": "cups",
+          "notes": "halved"
+        },
+        {
+          "name": "pitted olives",
+          "amount": "3 oz",
+          "unit": "oz",
+          "notes": "about ½ cup, halved - combo of kalamata and green olives is great"
+        },
+        {
+          "name": "shallot",
+          "amount": "1 medium",
+          "unit": "",
+          "notes": "finely chopped"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 large",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "fresh thyme leaves",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "dried oregano",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "salmon fillet",
+          "amount": "1 large (1¼ lb)",
+          "unit": "lb",
+          "notes": "skin removed, thawed if frozen"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "from ½ large lemon"
+        }
+      ],
+      "notes": null,
+      "id": 1781473399257,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473399257-0.jpg"
+      ]
+    },
+    {
       "name": "Sautéed Trout with Cilantro-Lime Sauce",
       "servings": 4,
       "source": null,
@@ -1879,109 +1966,6 @@
       "id": 1780699492197
     },
     {
-      "name": "Olive Oil and Garlic Spaghetti with Artichokes and Olives",
-      "servings": 4,
-      "source": null,
-      "emoji": "🍝",
-      "time": "20 min",
-      "difficulty": "easy",
-      "tags": [
-        "pasta",
-        "vegetarian",
-        "mediterranean",
-        "garlic"
-      ],
-      "ingredients": [
-        {
-          "name": "kosher salt",
-          "amount": "",
-          "unit": "",
-          "notes": "for pasta water"
-        },
-        {
-          "name": "ground black pepper",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "thin spaghetti",
-          "amount": "1 lb",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "extra-virgin olive oil",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "4 large",
-          "unit": "",
-          "notes": "crushed"
-        },
-        {
-          "name": "fresh flat leaf parsley",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": "roughly chopped"
-        },
-        {
-          "name": "yellow grape tomatoes",
-          "amount": "2 cups",
-          "unit": "",
-          "notes": "halved"
-        },
-        {
-          "name": "scallions",
-          "amount": "3",
-          "unit": "",
-          "notes": "trimmed, white and green parts chopped"
-        },
-        {
-          "name": "marinated artichoke hearts",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": "drained and quartered from jar"
-        },
-        {
-          "name": "kalamata olives",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "halved and pitted"
-        },
-        {
-          "name": "creamy feta cheese",
-          "amount": "2-3 oz",
-          "unit": "",
-          "notes": "crumbled"
-        },
-        {
-          "name": "fresh basil leaves",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": "torn, plus more if desired"
-        },
-        {
-          "name": "lemon",
-          "amount": "1",
-          "unit": "",
-          "notes": "grated zest only"
-        },
-        {
-          "name": "red pepper flakes",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": "optional"
-        }
-      ],
-      "notes": null,
-      "id": 1780699047677,
-      "lastMade": 1780862649073
-    },
-    {
       "name": "Meanest Loaded Hummus Dip",
       "servings": 6,
       "source": null,
@@ -3327,5 +3311,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:43:11.070Z"
+  "exportedAt": "2026-06-14T21:43:38.135Z"
 }
