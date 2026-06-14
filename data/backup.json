@@ -2468,90 +2468,6 @@
       "id": 1780699492197
     },
     {
-      "name": "Peanutty Pork & Brussels",
-      "servings": 3,
-      "source": null,
-      "emoji": "🥩",
-      "time": "15 min",
-      "difficulty": "easy",
-      "tags": [
-        "stir-fry",
-        "pork",
-        "asian",
-        "quick"
-      ],
-      "ingredients": [
-        {
-          "name": "sesame oil",
-          "amount": "1 tbsp",
-          "unit": "",
-          "notes": "untoasted"
-        },
-        {
-          "name": "ground pork",
-          "amount": "1 lb",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "kosher salt",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": "plus more as needed"
-        },
-        {
-          "name": "Brussels sprouts",
-          "amount": "1 lb",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "4 cloves",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "cilantro leaves and tender stems",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": "fresh"
-        },
-        {
-          "name": "low-sodium soy sauce",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "rice vinegar",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "creamy peanut butter",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "sriracha",
-          "amount": "1-2 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "toasted sesame seeds",
-          "amount": "",
-          "unit": "garnish",
-          "notes": "for serving"
-        }
-      ],
-      "notes": null,
-      "id": 1780698959977
-    },
-    {
       "name": "Maximilian Affair",
       "servings": 1,
       "source": "https://www.diffordsguide.com/cocktails/recipe/14827/maximilian-affair",
@@ -3441,5 +3357,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:46:27.214Z"
+  "exportedAt": "2026-06-14T21:46:53.290Z"
 }
