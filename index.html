@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.1</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.2</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -366,7 +366,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='2.1';
+const VERSION='2.2';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -474,6 +474,7 @@ function saveImages(recipeId, images){
     return true;
   }catch(e){
     if(e.name==='QuotaExceededError'){
+      dlog('QuotaExceeded saving images for recipe '+recipeId+', trying recompression');
       try{
         const recompressed=images.map(img=>{
           try{
@@ -486,9 +487,14 @@ function saveImages(recipeId, images){
           }catch(ex){return img;}
         });
         localStorage.setItem(IMG_KEY_PREFIX+recipeId, JSON.stringify(recompressed));
+        dlog('Recompression succeeded for recipe '+recipeId);
         return true;
-      }catch(e2){return false;}
+      }catch(e2){
+        dlog('Recompression also failed for recipe '+recipeId+': '+e2.message);
+        return false;
+      }
     }
+    dlog('saveImages unknown error for recipe '+recipeId+': '+e.message);
     return false;
   }
 }
@@ -516,19 +522,24 @@ function loadState(){
     if(state.recipes.length){
       state.recipes=migrateRecipes(state.recipes);
     }
-    // load images from separate storage and attach to recipes
+    // load images from separate storage and attach to recipes in memory only
     state.recipes=state.recipes.map(r=>{
-      // if images already on recipe (old format), migrate them to separate storage
-      if(r.sourceImages&&r.sourceImages.length){
-        saveImages(r.id, r.sourceImages);
-        return {...r, sourceImages:r.sourceImages}; // keep in memory
+      // Check separate storage first
+      const storedImgs=loadImages(r.id);
+      if(storedImgs&&storedImgs.length){
+        return {...r, sourceImages:storedImgs};
       }
-      // load from separate storage
-      const imgs=loadImages(r.id);
-      if(imgs) return {...r, sourceImages:imgs};
+      // Fall back to images embedded in recipe data (old format)
+      // and migrate them to separate storage
+      if(r.sourceImages&&r.sourceImages.length){
+        const ok=saveImages(r.id, r.sourceImages);
+        dlog('Migrated images for '+r.name+': '+(ok?'OK':'FAILED'));
+        return {...r, sourceImages:r.sourceImages};
+      }
       return r;
     });
-    saveState();
+    // Save state ONLY after images are loaded — and don't let this fail silently
+    try{ saveState(); }catch(e){ dlog('saveState failed during loadState: '+e.message); }
   }catch(e){}
 }
 
