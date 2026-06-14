@@ -1,6 +1,166 @@
 {
   "recipes": [
     {
+      "name": "Porcini Crusted Beef Tenderloin with Sautéed King Trumpet, Oyster & Shiitake Mushrooms and Red Wine Demi-Glace",
+      "servings": 8,
+      "source": "The City Kitchen Cooking Classes",
+      "emoji": "🥩",
+      "time": "45 min",
+      "difficulty": "hard",
+      "tags": [
+        "beef",
+        "mushrooms",
+        "fine dining",
+        "porcini"
+      ],
+      "ingredients": [
+        {
+          "name": "porcini powder",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "garlic powder",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for crust"
+        },
+        {
+          "name": "pepper",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for crust"
+        },
+        {
+          "name": "beef tenderloin steaks",
+          "amount": "8",
+          "unit": "steaks",
+          "notes": "about 1½ inches thick"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for steaks"
+        },
+        {
+          "name": "butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for steaks"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "butter",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "oyster mushrooms",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "ends trimmed"
+        },
+        {
+          "name": "shiitake mushrooms",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "stems removed, caps quartered"
+        },
+        {
+          "name": "king trumpet mushrooms",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "sliced"
+        },
+        {
+          "name": "salt",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "fresh rosemary",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "finely chopped"
+        },
+        {
+          "name": "butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for demi-glace"
+        },
+        {
+          "name": "white onion",
+          "amount": "1 small",
+          "unit": "onion",
+          "notes": "very finely diced"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2",
+          "unit": "cloves",
+          "notes": "minced or grated"
+        },
+        {
+          "name": "dry red wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "stock",
+          "amount": "¾ cup",
+          "unit": "cup",
+          "notes": "beef or veal"
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for demi-glace"
+        },
+        {
+          "name": "pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for demi-glace"
+        },
+        {
+          "name": "micro greens",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473282450,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473282450-0.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473282450-1.jpg"
+      ]
+    },
+    {
       "name": "Farro with Artichokes and Herb Salad",
       "servings": 6,
       "source": "Jonathan Sawyer",
@@ -1507,114 +1667,6 @@
       ],
       "notes": null,
       "id": 1780699492197
-    },
-    {
-      "name": "Tuesday Night Skillet Chicken Cutlets with Artichokes and Mushrooms",
-      "servings": 4,
-      "source": null,
-      "emoji": "🍗",
-      "time": "30 min",
-      "difficulty": "easy",
-      "tags": [
-        "chicken",
-        "skillet",
-        "weeknight",
-        "mediterranean"
-      ],
-      "ingredients": [
-        {
-          "name": "boneless, skinless chicken breast halves",
-          "amount": "1½ lb",
-          "unit": "",
-          "notes": "4 large half breasts"
-        },
-        {
-          "name": "kosher salt",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "ground black pepper",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "dried oregano",
-          "amount": "2 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "all purpose flour",
-          "amount": "⅓ cup",
-          "unit": "",
-          "notes": "or flour of your choice"
-        },
-        {
-          "name": "extra virgin olive oil",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "plus more as needed"
-        },
-        {
-          "name": "baby bella mushrooms",
-          "amount": "8 oz",
-          "unit": "",
-          "notes": "sliced, about 3 cups"
-        },
-        {
-          "name": "grape tomatoes",
-          "amount": "2 cups",
-          "unit": "",
-          "notes": "halved"
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "4 large",
-          "unit": "",
-          "notes": "minced"
-        },
-        {
-          "name": "artichoke hearts",
-          "amount": "15 oz",
-          "unit": "",
-          "notes": "1 can, drained, rinsed, and quartered"
-        },
-        {
-          "name": "dry white wine",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "low-sodium chicken broth",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "lemon juice",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "from 1 large lemon"
-        },
-        {
-          "name": "fresh basil leaves",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "torn"
-        },
-        {
-          "name": "plain grains",
-          "amount": "",
-          "unit": "",
-          "notes": "cooked according to package directions, for serving"
-        }
-      ],
-      "notes": null,
-      "id": 1780699257240
     },
     {
       "name": "Sautéed Trout with Cilantro-Lime Sauce",
@@ -3246,5 +3298,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:41:07.417Z"
+  "exportedAt": "2026-06-14T21:41:50.364Z"
 }
