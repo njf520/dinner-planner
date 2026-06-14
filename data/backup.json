@@ -1,6 +1,111 @@
 {
   "recipes": [
     {
+      "name": "Olive Oil and Garlic Spaghetti with Artichokes and Olives",
+      "servings": 4,
+      "source": null,
+      "emoji": "🍝",
+      "time": "20 min",
+      "difficulty": "easy",
+      "tags": [
+        "pasta",
+        "vegetarian",
+        "mediterranean",
+        "italian"
+      ],
+      "ingredients": [
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": "pinch",
+          "notes": null
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "to taste",
+          "unit": "pinch",
+          "notes": null
+        },
+        {
+          "name": "thin spaghetti",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 large",
+          "unit": "cloves",
+          "notes": "crushed"
+        },
+        {
+          "name": "fresh flat leaf parsley",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "roughly chopped"
+        },
+        {
+          "name": "yellow grape tomatoes",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": "halved"
+        },
+        {
+          "name": "scallions",
+          "amount": "3",
+          "unit": "scallions",
+          "notes": "trimmed, white and green parts chopped"
+        },
+        {
+          "name": "marinated artichoke hearts",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "drained and quartered, jarred"
+        },
+        {
+          "name": "kalamata olives",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "halved and pitted"
+        },
+        {
+          "name": "creamy feta cheese",
+          "amount": "2 to 3 oz",
+          "unit": "oz",
+          "notes": "crumbled, about ½ cup"
+        },
+        {
+          "name": "fresh basil leaves",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "torn, plus more if desired"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "1",
+          "unit": "lemon",
+          "notes": "grated"
+        },
+        {
+          "name": "red pepper flakes",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "optional"
+        }
+      ],
+      "notes": null,
+      "id": 1781473431147,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473431147-0.jpg"
+      ]
+    },
+    {
       "name": "Foil-Baked Salmon with Cherry Tomatoes, Olives, and Thyme",
       "servings": "4-6",
       "source": null,
@@ -1966,132 +2071,6 @@
       "id": 1780699492197
     },
     {
-      "name": "Meanest Loaded Hummus Dip",
-      "servings": 6,
-      "source": null,
-      "emoji": "🥙",
-      "time": "30 min",
-      "difficulty": "medium",
-      "tags": [
-        "mediterranean",
-        "dip",
-        "lamb",
-        "appetizer"
-      ],
-      "ingredients": [
-        {
-          "name": "extra virgin olive oil",
-          "amount": "1 tbsp",
-          "unit": "",
-          "notes": "for cooking"
-        },
-        {
-          "name": "red onion",
-          "amount": "1 small",
-          "unit": "",
-          "notes": "coarsely chopped"
-        },
-        {
-          "name": "green bell pepper",
-          "amount": "½ large",
-          "unit": "",
-          "notes": "cored, seeded, and coarsely chopped"
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "2 large",
-          "unit": "",
-          "notes": "minced"
-        },
-        {
-          "name": "ground lamb",
-          "amount": "8 oz",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "kosher salt",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "black pepper",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "ground allspice",
-          "amount": "1 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "sumac",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "ground cinnamon",
-          "amount": "¼ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "canned tomato sauce",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "hummus",
-          "amount": "12 oz",
-          "unit": "",
-          "notes": "quality store-bought or homemade"
-        },
-        {
-          "name": "extra virgin olive oil",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": "for drizzling"
-        },
-        {
-          "name": "Roma tomato",
-          "amount": "1 medium",
-          "unit": "",
-          "notes": "chopped"
-        },
-        {
-          "name": "flat-leaf parsley",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": "chopped"
-        },
-        {
-          "name": "fresh pomegranate seeds",
-          "amount": "3 tbsp",
-          "unit": "",
-          "notes": "arils"
-        },
-        {
-          "name": "toasted pine nuts",
-          "amount": "3 tbsp",
-          "unit": "",
-          "notes": "optional"
-        },
-        {
-          "name": "warm pita bread or pita chips",
-          "amount": "",
-          "unit": "serving",
-          "notes": "for serving"
-        }
-      ],
-      "notes": null,
-      "id": 1780699018169
-    },
-    {
       "name": "The Smoothest, Fluffiest Hummus",
       "servings": 6,
       "source": null,
@@ -3311,5 +3290,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:43:38.135Z"
+  "exportedAt": "2026-06-14T21:44:11.469Z"
 }
