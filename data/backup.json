@@ -1,6 +1,153 @@
 {
   "recipes": [
     {
+      "name": "Romaine, Arugula, and Mint Fattoush Salad",
+      "servings": 6,
+      "source": "Leyla restaurant, Charleston, South Carolina",
+      "emoji": "🥗",
+      "time": null,
+      "difficulty": "easy",
+      "tags": [
+        "salad",
+        "mediterranean",
+        "lebanese",
+        "fattoush"
+      ],
+      "ingredients": [
+        {
+          "name": "pocket style pitas",
+          "amount": "2 whole",
+          "unit": "",
+          "notes": "6 inch"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "for frying pita"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "pinch",
+          "unit": "pinch",
+          "notes": "for pita"
+        },
+        {
+          "name": "sumac",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "for pita"
+        },
+        {
+          "name": "romaine lettuce hearts",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": "about 3 hearts, trimmed and thinly sliced crosswise"
+        },
+        {
+          "name": "packed baby arugula",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "1 to 2 ounces"
+        },
+        {
+          "name": "red bell pepper",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "cored, seeded, and sliced into thin batons"
+        },
+        {
+          "name": "English cucumber",
+          "amount": "½ whole",
+          "unit": "",
+          "notes": "hothouse, halved lengthwise, seeds scooped out, and thinly sliced crosswise (about 1 cup)"
+        },
+        {
+          "name": "halved cherry tomatoes",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "small red onion",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "thinly sliced crosswise into rounds"
+        },
+        {
+          "name": "radishes",
+          "amount": "2 or 3 whole",
+          "unit": "",
+          "notes": "thinly sliced crosswise into rounds"
+        },
+        {
+          "name": "thinly sliced mint leaves",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "½ to ¾ tsp",
+          "unit": "tsp",
+          "notes": "generous pinch for seasoning"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "olive oil",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": "for dressing"
+        },
+        {
+          "name": "pomegranate molasses",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "garlic",
+          "amount": "2 cloves",
+          "unit": "cloves",
+          "notes": "minced, for dressing"
+        },
+        {
+          "name": "sumac",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "allspice",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "cinnamon",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        }
+      ],
+      "notes": null,
+      "id": 1781473077703,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473077703-0.jpg"
+      ]
+    },
+    {
       "name": "Boeuf Bourguignon",
       "servings": null,
       "source": "Nick Farrell recipe",
@@ -3141,5 +3288,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:35:05.113Z"
+  "exportedAt": "2026-06-14T21:38:36.262Z"
 }
