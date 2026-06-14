@@ -1,6 +1,111 @@
 {
   "recipes": [
     {
+      "name": "Sheet Pan Smoky Chicken, Chickpeas, and Carrots",
+      "servings": 6,
+      "source": null,
+      "emoji": "🍗",
+      "time": "45 min",
+      "difficulty": "easy",
+      "tags": [
+        "sheet pan",
+        "chicken",
+        "smoky",
+        "dinner"
+      ],
+      "ingredients": [
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "for tomato rub"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "from 2 large lemons"
+        },
+        {
+          "name": "tomato paste",
+          "amount": "5 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "5 large",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "ground cumin",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "smoked paprika",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "Aleppo pepper flakes",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "",
+          "unit": "",
+          "notes": "for brushing sheet pan and drizzling"
+        },
+        {
+          "name": "carrots",
+          "amount": "6",
+          "unit": "carrots",
+          "notes": "9-10 oz total, peeled, halved lengthwise, cut into 2-inch pieces"
+        },
+        {
+          "name": "medium onions",
+          "amount": "2",
+          "unit": "onions",
+          "notes": "halved and cut into ½-inch slices"
+        },
+        {
+          "name": "chickpeas",
+          "amount": "1 (15 oz) can",
+          "unit": "can",
+          "notes": "drained"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "",
+          "notes": "for seasoning"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "",
+          "unit": "",
+          "notes": "for seasoning"
+        },
+        {
+          "name": "boneless, skinless chicken thighs",
+          "amount": "10",
+          "unit": "thighs",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473127040,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473127040-0.jpg"
+      ]
+    },
+    {
       "name": "Romaine, Arugula, and Mint Fattoush Salad",
       "servings": 6,
       "source": "Leyla restaurant, Charleston, South Carolina",
@@ -3288,5 +3393,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:38:36.262Z"
+  "exportedAt": "2026-06-14T21:39:03.106Z"
 }
