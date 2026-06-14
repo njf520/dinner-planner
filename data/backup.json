@@ -1,6 +1,105 @@
 {
   "recipes": [
     {
+      "name": "Watermelon and Cucumber Gazpacho",
+      "servings": 4,
+      "source": null,
+      "emoji": "🥣",
+      "time": "1 hour",
+      "difficulty": "easy",
+      "tags": [
+        "gazpacho",
+        "cold soup",
+        "summer",
+        "vegetarian"
+      ],
+      "ingredients": [
+        {
+          "name": "seedless watermelon chunks",
+          "amount": "5 cups",
+          "unit": "cup",
+          "notes": "divided use"
+        },
+        {
+          "name": "cucumber",
+          "amount": "1 small",
+          "unit": "whole",
+          "notes": "peeled, seeded, finely diced"
+        },
+        {
+          "name": "red bell pepper",
+          "amount": "1 medium",
+          "unit": "whole",
+          "notes": "cored, seeded, finely diced"
+        },
+        {
+          "name": "yellow bell pepper",
+          "amount": "1 medium",
+          "unit": "whole",
+          "notes": "cored, seeded, finely diced"
+        },
+        {
+          "name": "jalapeño",
+          "amount": "1 small",
+          "unit": "whole",
+          "notes": "seeded, minced (use half for a less spicy version)"
+        },
+        {
+          "name": "pale green inner celery stalks",
+          "amount": "3",
+          "unit": "stalk",
+          "notes": "finely diced"
+        },
+        {
+          "name": "red onion",
+          "amount": "½ small",
+          "unit": "whole",
+          "notes": "finely diced"
+        },
+        {
+          "name": "fresh mint",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "finely chopped"
+        },
+        {
+          "name": "fresh lime juice",
+          "amount": "3 tablespoons",
+          "unit": "tablespoon",
+          "notes": null
+        },
+        {
+          "name": "red wine vinegar",
+          "amount": "2 tablespoons",
+          "unit": "tablespoon",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "¼ teaspoon",
+          "unit": "teaspoon",
+          "notes": null
+        },
+        {
+          "name": "sour cream",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        },
+        {
+          "name": "fresh mint sprigs",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781474789768,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474789768-0.jpg"
+      ]
+    },
+    {
       "name": "Grilled King Oyster Mushrooms with Tarragon Butter",
       "servings": "4-6",
       "source": null,
@@ -3396,5 +3495,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T22:06:11.968Z"
+  "exportedAt": "2026-06-14T22:06:45.564Z"
 }
