@@ -1,6 +1,138 @@
 {
   "recipes": [
     {
+      "name": "Ragù Bolognese Sauce",
+      "servings": "5-6 cups",
+      "source": "https://www.theclevercarrot.com/2022/01/ragu-bolognese-sauce/",
+      "emoji": "🍝",
+      "time": "3 hours 10 min",
+      "difficulty": "medium",
+      "tags": [
+        "italian",
+        "pasta sauce",
+        "meat sauce",
+        "bolognese"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "pancetta",
+          "amount": "2 oz",
+          "unit": "oz",
+          "notes": "diced"
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "whole",
+          "notes": null
+        },
+        {
+          "name": "carrot",
+          "amount": "1",
+          "unit": "whole",
+          "notes": null
+        },
+        {
+          "name": "celery stick",
+          "amount": "1",
+          "unit": "stick",
+          "notes": null
+        },
+        {
+          "name": "ground beef",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "about 80% lean"
+        },
+        {
+          "name": "ground pork",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "whole milk",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "ground nutmeg",
+          "amount": "pinch",
+          "unit": "pinch",
+          "notes": null
+        },
+        {
+          "name": "bay leaf",
+          "amount": "1",
+          "unit": "leaf",
+          "notes": "dried, or 2 fresh"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "tomato paste",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "heaping"
+        },
+        {
+          "name": "chicken stock",
+          "amount": "1-2 cups",
+          "unit": "cups",
+          "notes": "quality"
+        },
+        {
+          "name": "whole peeled plum tomatoes in purée",
+          "amount": "28 oz",
+          "unit": "can",
+          "notes": "passed through food mill, optional"
+        },
+        {
+          "name": "salt",
+          "amount": "",
+          "unit": "seasoning",
+          "notes": "to taste"
+        },
+        {
+          "name": "black pepper",
+          "amount": "",
+          "unit": "seasoning",
+          "notes": "to taste"
+        },
+        {
+          "name": "pappardelle pasta",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": "homemade, for serving"
+        },
+        {
+          "name": "Parmesan cheese",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "fresh grated, for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781474614437
+    },
+    {
       "name": "Bifu Kare Raisu",
       "servings": 6,
       "source": null,
@@ -3140,114 +3272,6 @@
       "id": 1780698917162
     },
     {
-      "name": "Classic Ragù Bolognese",
-      "servings": 6,
-      "source": null,
-      "emoji": "🍝",
-      "time": "2 hours",
-      "difficulty": "medium",
-      "tags": [
-        "italian",
-        "pasta",
-        "meat sauce",
-        "comfort food"
-      ],
-      "ingredients": [
-        {
-          "name": "extra-virgin olive oil",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "medium onions",
-          "amount": "2 medium",
-          "unit": "",
-          "notes": "finely chopped (about 1½ cups)"
-        },
-        {
-          "name": "celery stalks",
-          "amount": "2 stalks",
-          "unit": "",
-          "notes": "finely chopped (about 1 cup)"
-        },
-        {
-          "name": "carrots",
-          "amount": "2 medium",
-          "unit": "",
-          "notes": "peeled, finely chopped (about ¾ cup)"
-        },
-        {
-          "name": "ground beef",
-          "amount": "6 oz",
-          "unit": "",
-          "notes": "85% lean"
-        },
-        {
-          "name": "ground veal",
-          "amount": "6 oz",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "pancetta",
-          "amount": "3 oz",
-          "unit": "",
-          "notes": "thinly sliced, finely chopped"
-        },
-        {
-          "name": "dry red wine",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "beef stock or chicken stock",
-          "amount": "3 cups",
-          "unit": "",
-          "notes": "divided"
-        },
-        {
-          "name": "tomato paste",
-          "amount": "3 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "kosher salt",
-          "amount": "",
-          "unit": "to taste",
-          "notes": null
-        },
-        {
-          "name": "freshly ground black pepper",
-          "amount": "",
-          "unit": "to taste",
-          "notes": null
-        },
-        {
-          "name": "whole milk",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "tagliatelle or fettuccine",
-          "amount": "1 lb",
-          "unit": "",
-          "notes": "preferably fresh egg pasta"
-        },
-        {
-          "name": "Parmesan cheese",
-          "amount": "",
-          "unit": "for serving",
-          "notes": "finely grated"
-        }
-      ],
-      "notes": null,
-      "id": 1780698356962
-    },
-    {
       "name": "Grilled King Oyster Mushrooms with Tarragon Butter",
       "servings": 6,
       "source": null,
@@ -3465,5 +3489,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T22:00:41.719Z"
+  "exportedAt": "2026-06-14T22:03:49.238Z"
 }
