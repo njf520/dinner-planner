@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.4</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.5</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -366,7 +366,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='2.4';
+const VERSION='2.5';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -411,6 +411,8 @@ function toFrac(n){
   const W=bv>=0.99?w+1:w,F=bv>=0.99?'':bs;
   return W===0?(F||'0'):(F?`${W}${F}`:`${W}`);
 }
+// Scales the leading numeric portion of an amount string (e.g. "1½ cup" * 2 = "3 cup"),
+// leaving the unit text untouched. Returns the original string if no number is found.
 function scaleAmount(a,m){
   if(!a) return a;
   if(m===1) return a;
@@ -466,6 +468,9 @@ function migrateRecipes(recipes){
 }
 
 // ── IndexedDB image storage ────────────────────────────────────────────────
+// Source images are kept out of localStorage (which has a small quota and previously
+// caused QuotaExceededError) and instead live in IndexedDB, keyed by recipe id.
+// loadState() merges them back onto each recipe object in memory after loading.
 const IDB_NAME='planplate_images';
 const IDB_STORE='images';
 const IDB_VERSION=1;
@@ -870,6 +875,8 @@ function tagInput(e){
   if(v.endsWith(',')){addTag(v.slice(0,-1));e.target.value='';}
 }
 
+// Downscales/recompresses an image to keep IndexedDB storage reasonable
+// (source photos default to 1200px max dimension, 80% JPEG quality).
 function compressImage(dataUrl, maxDim, quality){
   return new Promise(resolve=>{
     const img=new Image();
@@ -948,6 +955,9 @@ URL FALLBACK: If given a URL with little/no page text, use your knowledge of tha
 For tags, suggest 1-4 short lowercase descriptors.
 Return ONLY the JSON.`;
 
+// Calls the Anthropic API directly from the browser using the user's own key
+// (stored in localStorage, never sent anywhere else). 45s timeout guards against
+// hung requests on flaky mobile connections.
 async function apiPost(body){
   const key=getApiKey();if(!key)throw new Error('NO_API_KEY');
   const controller=new AbortController();
@@ -1055,7 +1065,8 @@ async function submitRecipe(){
     if(!url){showError('Please enter a URL.');return;}
     btn.innerHTML='<span class="spinner"></span>Fetching…';btn.disabled=true;
     try{
-      // Try multiple proxies in sequence
+      // Browsers can't fetch arbitrary cross-origin pages directly (CORS), so we try a
+      // few public CORS proxies in sequence until one returns usable HTML.
       let text='';
       const proxies=[
         ()=>fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`).then(r=>r.json()).then(d=>d.contents||''),
@@ -1111,6 +1122,8 @@ async function submitRecipe(){
   }
 }
 
+// Adds a parsed/manual recipe to state. Warns (via confirm) if a recipe with the same
+// source URL or name already exists, since AI imports can easily be triggered twice.
 function persistRecipe(r, skipDupeCheck=false){
   // images are saved to IDB after state update
   if(!skipDupeCheck){
@@ -1194,6 +1207,9 @@ function doneShopping(){
 function clearPlan(){state.planned=[];saveState();render();}
 
 // ── Shopping list category ordering ───────────────────────────────────────
+// Order of this array IS the order items appear in the shopping list — it roughly
+// follows a typical grocery store layout. Each category matches ingredients whose
+// name contains any of its keywords (first match wins, checked top to bottom).
 const SHOP_CATEGORIES = [
   { name: 'Produce & Fresh Herbs', keywords: ['lettuce','spinach','kale','arugula','cabbage','broccoli','cauliflower','carrot','celery','cucumber','zucchini','squash','eggplant','pepper','tomato','onion','shallot','garlic','leek','scallion','chive','ginger','potato','sweet potato','yam','beet','radish','turnip','parsnip','fennel','artichoke','asparagus','corn','pea','bean','mushroom','avocado','lemon','lime','orange','apple','pear','grape','berry','strawberry','blueberry','raspberry','blackberry','cherry','peach','plum','mango','pineapple','banana','melon','watermelon','fig','date','basil','parsley','cilantro','mint','thyme','rosemary','oregano','sage','dill','tarragon','chervil','bay','herb','fresh','produce','fruit','vegetable','greens','lettuce','arugula','chard','watercress','endive','radicchio','microgreen','sprout'] },
   { name: 'Seeds, Nuts & Dried Fruit', keywords: ['almond','walnut','pecan','cashew','pistachio','hazelnut','peanut','pine nut','macadamia','chestnut','seed','sunflower','pumpkin','sesame','flax','chia','hemp','poppy','tahini','nut','nut butter','raisin','dried cranberry','dried fruit','currant','sultana','apricot','prune','date','fig','dried cherry','dried blueberry'] },
@@ -1571,7 +1587,9 @@ function escHtml(s){
 
 loadState().then(()=>render());
 
-// Auto-update check: fetch live page and compare version string
+// Auto-update check: re-fetches this same page from GitHub Pages (cache-busted) and
+// compares its VERSION constant to ours. If newer, shows a banner with a reload button.
+// This is why VERSION must be bumped on every deploy.
 async function checkForUpdate(){
   try{
     const res=await fetch(window.location.href+'?cachebust='+Date.now(),{cache:'no-store'});
