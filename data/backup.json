@@ -2539,66 +2539,6 @@
       "id": 1780724432353
     },
     {
-      "name": "Square Root Cocktail",
-      "servings": 1,
-      "source": "Nick Farrell",
-      "emoji": "🍸",
-      "time": null,
-      "difficulty": "medium",
-      "tags": [
-        "cocktail",
-        "gin",
-        "turmeric",
-        "carrot"
-      ],
-      "ingredients": [
-        {
-          "name": "1½ oz gin",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "1 oz domaine ginger liqueur domaine canton",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "¼ oz carrot eau de vie",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "¾ oz lemon juice",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "1¼ oz carrot juice",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "pinch turmeric powdered",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "couple dashes fee foam bitters nondairy foaming agent",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        }
-      ],
-      "notes": null,
-      "id": 1780703863120
-    },
-    {
       "name": "Perfect Manhattan Cocktail",
       "servings": 1,
       "source": "https://rickrodgers.com/the-perfect-manhattan-cocktail-2/",
@@ -3457,5 +3397,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:56:42.595Z"
+  "exportedAt": "2026-06-14T21:57:53.148Z"
 }
