@@ -1,6 +1,136 @@
 {
   "recipes": [
     {
+      "name": "Meanest Loaded Hummus Dip",
+      "servings": 6,
+      "source": null,
+      "emoji": "🧄",
+      "time": null,
+      "difficulty": "medium",
+      "tags": [
+        "hummus",
+        "dip",
+        "lamb",
+        "middle eastern"
+      ],
+      "ingredients": [
+        {
+          "name": "extra virgin olive oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for cooking"
+        },
+        {
+          "name": "red onion",
+          "amount": "1 small",
+          "unit": "onion",
+          "notes": "coarsely chopped, reserve 1-2 tbsp for serving"
+        },
+        {
+          "name": "green bell pepper",
+          "amount": "½ large",
+          "unit": "pepper",
+          "notes": "cored, seeded, and coarsely chopped"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2 large",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "ground lamb",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for seasoning meat"
+        },
+        {
+          "name": "black pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for seasoning meat"
+        },
+        {
+          "name": "ground allspice",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "sumac",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground cinnamon",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "canned tomato sauce",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "hummus",
+          "amount": "12 oz",
+          "unit": "oz",
+          "notes": "The Smoothest, Fluffiest Hummus or quality store-bought"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for drizzling"
+        },
+        {
+          "name": "Roma tomato",
+          "amount": "1",
+          "unit": "tomato",
+          "notes": "chopped"
+        },
+        {
+          "name": "flat leaf parsley",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "chopped"
+        },
+        {
+          "name": "pomegranate seeds",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "fresh arils"
+        },
+        {
+          "name": "toasted pine nuts",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "optional"
+        },
+        {
+          "name": "warm pita bread",
+          "amount": "",
+          "unit": "serving",
+          "notes": "or homemade pita chips for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473460889,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473460889-0.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473460889-1.jpg"
+      ]
+    },
+    {
       "name": "Olive Oil and Garlic Spaghetti with Artichokes and Olives",
       "servings": 4,
       "source": null,
@@ -2071,90 +2201,6 @@
       "id": 1780699492197
     },
     {
-      "name": "The Smoothest, Fluffiest Hummus",
-      "servings": 6,
-      "source": null,
-      "emoji": "🧆",
-      "time": "90 min",
-      "difficulty": "medium",
-      "tags": [
-        "hummus",
-        "dip",
-        "middle eastern",
-        "appetizer"
-      ],
-      "ingredients": [
-        {
-          "name": "dried chickpeas",
-          "amount": "1¼ cups",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "baking soda",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "1-2 large",
-          "unit": "",
-          "notes": "minced"
-        },
-        {
-          "name": "ice cubes",
-          "amount": "3-4 cubes",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "tahini paste",
-          "amount": "⅓ cup",
-          "unit": "",
-          "notes": "plus more as desired"
-        },
-        {
-          "name": "kosher salt",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "lemon juice",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "from 1 large lemon, plus more as desired"
-        },
-        {
-          "name": "hot water",
-          "amount": "",
-          "unit": "as needed",
-          "notes": "optional"
-        },
-        {
-          "name": "extra-virgin olive oil",
-          "amount": "",
-          "unit": "for serving",
-          "notes": null
-        },
-        {
-          "name": "sumac",
-          "amount": "",
-          "unit": "for serving",
-          "notes": null
-        },
-        {
-          "name": "warm pita bread",
-          "amount": "",
-          "unit": "for serving",
-          "notes": null
-        }
-      ],
-      "notes": null,
-      "id": 1780698997273
-    },
-    {
       "name": "Peanutty Pork & Brussels",
       "servings": 3,
       "source": null,
@@ -3290,5 +3336,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:44:11.469Z"
+  "exportedAt": "2026-06-14T21:44:39.684Z"
 }
