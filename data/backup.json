@@ -2664,7 +2664,10 @@
         }
       ],
       "notes": null,
-      "id": 1781471589014
+      "id": 1781471589014,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781471589014-0.jpg"
+      ]
     },
     {
       "name": "Easy Lemon and Herb Couscous Salad",
@@ -3495,5 +3498,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T22:06:45.564Z"
+  "exportedAt": "2026-06-14T22:07:22.334Z"
 }
