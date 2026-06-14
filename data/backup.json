@@ -3363,102 +3363,6 @@
       ],
       "notes": null,
       "id": 1780698917162
-    },
-    {
-      "name": "Watermelon and Cucumber Gazpacho",
-      "servings": 4,
-      "source": null,
-      "emoji": "🍉",
-      "time": "1 hour",
-      "difficulty": "easy",
-      "tags": [
-        "gazpacho",
-        "soup",
-        "cold",
-        "summer"
-      ],
-      "ingredients": [
-        {
-          "name": "seedless watermelon",
-          "amount": "5 cups",
-          "unit": "",
-          "notes": "chunks, divided use"
-        },
-        {
-          "name": "cucumber",
-          "amount": "1 small",
-          "unit": "",
-          "notes": "peeled, seeded, finely diced"
-        },
-        {
-          "name": "red bell pepper",
-          "amount": "1 medium",
-          "unit": "",
-          "notes": "cored, seeded, finely diced"
-        },
-        {
-          "name": "yellow bell pepper",
-          "amount": "1 medium",
-          "unit": "",
-          "notes": "cored, seeded, finely diced"
-        },
-        {
-          "name": "jalapeño",
-          "amount": "1 small",
-          "unit": "",
-          "notes": "seeded, minced (use half for less spicy version)"
-        },
-        {
-          "name": "celery stalks",
-          "amount": "3 stalks",
-          "unit": "",
-          "notes": "pale green inner stalks, finely diced"
-        },
-        {
-          "name": "red onion",
-          "amount": "½ small",
-          "unit": "",
-          "notes": "finely diced"
-        },
-        {
-          "name": "fresh mint",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "finely chopped"
-        },
-        {
-          "name": "fresh lime juice",
-          "amount": "3 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "red wine vinegar",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "salt",
-          "amount": "¼ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "sour cream",
-          "amount": "",
-          "unit": "garnish",
-          "notes": null
-        },
-        {
-          "name": "fresh mint sprigs",
-          "amount": "",
-          "unit": "garnish",
-          "notes": null
-        }
-      ],
-      "notes": null,
-      "id": 1780698256787
     }
   ],
   "planned": [],
@@ -3492,5 +3396,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T22:05:44.343Z"
+  "exportedAt": "2026-06-14T22:06:11.968Z"
 }
