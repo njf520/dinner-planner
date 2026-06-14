@@ -24,6 +24,9 @@ Live app: https://njf520.github.io/dinner-planner/
 - **Auto-update banner**: checks the live GitHub Pages copy on load and prompts to
   reload when a newer version is deployed
 - **Backup/restore**: export/import all recipe data as a dated JSON file
+- **Cloud backup (GitHub)**: recipes and source photos are automatically mirrored
+  to this GitHub repo (`data/backup.json` + `images/`), so a browser wipe or
+  reinstall doesn't lose anything — see "Cloud backup" below
 - **Debug log** (Settings → View log): records what happened during URL/photo
   imports, useful for diagnosing missing ingredients
 
