@@ -1,6 +1,93 @@
 {
   "recipes": [
     {
+      "name": "Everything-Crusted Tuna with Snap Peas & Tahini-Jang Sauce",
+      "servings": 4,
+      "source": null,
+      "emoji": "🐟",
+      "time": "30 min",
+      "difficulty": "medium",
+      "tags": [
+        "tuna",
+        "asian",
+        "seared",
+        "healthy"
+      ],
+      "ingredients": [
+        {
+          "name": "tuna steaks",
+          "amount": "4 (4- to 6-ounce)",
+          "unit": "steaks",
+          "notes": null
+        },
+        {
+          "name": "low-sodium soy sauce",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "sesame oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "toasted or not"
+        },
+        {
+          "name": "everything bagel seasoning",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "or sesame seeds, plus more as needed"
+        },
+        {
+          "name": "neutral oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "snap peas",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2",
+          "unit": "cloves",
+          "notes": null
+        },
+        {
+          "name": "lime",
+          "amount": "1",
+          "unit": "lime",
+          "notes": null
+        },
+        {
+          "name": "gochujang",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "tahini",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "or any nut/seed butter"
+        },
+        {
+          "name": "honey",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473523112,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473523112-0.jpg"
+      ]
+    },
+    {
       "name": "The Smoothest, Fluffiest Hummus",
       "servings": 6,
       "source": null,
@@ -3339,5 +3426,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:45:11.542Z"
+  "exportedAt": "2026-06-14T21:45:38.974Z"
 }
