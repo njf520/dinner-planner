@@ -1,6 +1,105 @@
 {
   "recipes": [
     {
+      "name": "Pan-Roasted Romanesco with Golden Raisins, Tahini & Sumac",
+      "servings": "4-6",
+      "source": null,
+      "emoji": "🥦",
+      "time": "20 min",
+      "difficulty": "medium",
+      "tags": [
+        "vegetarian",
+        "middle eastern",
+        "side dish",
+        "roasted"
+      ],
+      "ingredients": [
+        {
+          "name": "tahini",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 lemons",
+          "unit": "lemons",
+          "notes": "juiced"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 clove",
+          "unit": "clove",
+          "notes": "minced"
+        },
+        {
+          "name": "cold water",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "plus more as needed"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "plus more for cooking"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "freshly ground"
+        },
+        {
+          "name": "romanesco",
+          "amount": "2 medium heads",
+          "unit": "heads",
+          "notes": "trimmed and chopped into 1-inch florets"
+        },
+        {
+          "name": "golden raisins",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "stock",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "vegetable stock or water"
+        },
+        {
+          "name": "ground sumac",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "for garnish"
+        },
+        {
+          "name": "best-quality olive oil",
+          "amount": "for drizzling",
+          "unit": "",
+          "notes": "for finishing"
+        }
+      ],
+      "notes": null,
+      "id": 1781473173451,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473173451-0.jpg"
+      ]
+    },
+    {
       "name": "Sheet Pan Smoky Chicken, Chickpeas, and Carrots",
       "servings": 6,
       "source": null,
@@ -1168,120 +1267,6 @@
       ],
       "notes": null,
       "id": 1780699492197
-    },
-    {
-      "name": "Greek Sea Bass Baked with Santorini Assyrtiko Wine, Caper Leaves, and Herbs",
-      "servings": 6,
-      "source": null,
-      "emoji": "🐟",
-      "time": "1 hour",
-      "difficulty": "medium",
-      "tags": [
-        "greek",
-        "seafood",
-        "mediterranean",
-        "baked"
-      ],
-      "ingredients": [
-        {
-          "name": "sea bass or sea bream fillets",
-          "amount": "6 fillets",
-          "unit": "",
-          "notes": "skin-on"
-        },
-        {
-          "name": "Santorini assyrtiko wine",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "Greek or Dijon mustard",
-          "amount": "2 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "2 cloves",
-          "unit": "",
-          "notes": "minced"
-        },
-        {
-          "name": "fennel bulb",
-          "amount": "1 bulb",
-          "unit": "",
-          "notes": "trimmed, halved, and sliced"
-        },
-        {
-          "name": "red onion",
-          "amount": "1 onion",
-          "unit": "",
-          "notes": "halved and chopped"
-        },
-        {
-          "name": "cherry or teardrop tomatoes",
-          "amount": "3 cups",
-          "unit": "",
-          "notes": "whole"
-        },
-        {
-          "name": "capers",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": "drained"
-        },
-        {
-          "name": "caper leaves",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": "if available"
-        },
-        {
-          "name": "extra-virgin Greek olive oil",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "lemon",
-          "amount": "1 lemon",
-          "unit": "",
-          "notes": "grated zest only"
-        },
-        {
-          "name": "fresh thyme sprigs",
-          "amount": "4-5 sprigs",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "salt",
-          "amount": "",
-          "unit": "to taste",
-          "notes": null
-        },
-        {
-          "name": "freshly ground black pepper",
-          "amount": "",
-          "unit": "to taste",
-          "notes": null
-        },
-        {
-          "name": "fresh chives",
-          "amount": "3 tbsp",
-          "unit": "",
-          "notes": "snipped"
-        },
-        {
-          "name": "fresh parsley",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": "chopped"
-        }
-      ],
-      "notes": null,
-      "id": 1780699357251
     },
     {
       "name": "Farro with Artichokes and Herb Salad",
@@ -3297,5 +3282,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:39:28.662Z"
+  "exportedAt": "2026-06-14T21:39:52.299Z"
 }
