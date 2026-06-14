@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.6</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.7</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -365,8 +365,19 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div id="debug-log-content" style="overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch"></div>
 </div>
 
+<!-- First-run prompt: offer to load Nick's cloud-backed recipes, or start empty -->
+<div id="welcome-overlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:400;opacity:0;pointer-events:none;transition:opacity .2s"></div>
+<div id="welcome-modal" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.95);opacity:0;width:90%;max-width:380px;background:var(--card);border-radius:18px;z-index:401;transition:transform .2s,opacity .2s;padding:22px;pointer-events:none">
+  <div style="font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:10px">Welcome to Plan & Plate</div>
+  <div style="font-size:14px;color:var(--text2);margin-bottom:18px;line-height:1.5">Nick has a cloud-backed collection of recipes for this app. Would you like to start with a copy of his recipes, or begin with an empty recipe book?</div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <button onclick="acceptCloudRestore()" style="padding:12px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Add Nick's recipes</button>
+    <button onclick="declineCloudRestore()" style="padding:12px;border:1px solid var(--border);border-radius:10px;background:transparent;color:var(--text);font-size:14px;cursor:pointer;font-family:'DM Sans',sans-serif">Start with an empty recipe book</button>
+  </div>
+</div>
+
 <script>
-const VERSION='2.6';
+const VERSION='2.7';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -384,6 +395,9 @@ const GH_OWNER='njf520', GH_REPO='dinner-planner';
 const GH_TOKEN_KEY='github_pat_token';
 function getGhToken(){return localStorage.getItem(GH_TOKEN_KEY)||'';}
 function saveGhToken(t){localStorage.setItem(GH_TOKEN_KEY,t.trim());}
+// Set once the user has answered the first-run "add Nick's recipes?" prompt,
+// so it's only ever shown once per browser.
+const CLOUD_PROMPT_KEY='cloud_restore_choice';
 
 let state={recipes:[],planned:[],checkedItems:{},haveItems:{}};
 let currentTab='recipes';
@@ -573,9 +587,10 @@ async function loadState(){
       }
       return r;
     }));
-    // Fresh install / wipe — try to pull recipes and photos back from the cloud backup
-    if(!state.recipes.length){
-      await tryCloudRestore();
+    // Fresh install / wipe — if a cloud backup exists and the user hasn't been
+    // asked yet, fetch it (without applying) so the welcome modal can offer it
+    if(!state.recipes.length && !localStorage.getItem(CLOUD_PROMPT_KEY)){
+      pendingCloudBackup=await fetchCloudBackup();
     }
     // Save core state (no images) to localStorage
     try{ saveState(); }catch(e){ dlog('saveState failed during loadState: '+e.message); }
@@ -615,9 +630,9 @@ function saveApiKey(k){localStorage.setItem(API_KEY_STORAGE,k.trim());}
 //   images/{recipeId}-{index}.jpg  — one file per source photo
 //   data/backup.json               — full recipe data (sourceImages excluded;
 //                                     referenced via imageBackupUrls instead)
-// Restoring (tryCloudRestore) reads via the public raw.githubusercontent.com CDN
-// and needs no token. Writing (sync/upload) needs a GitHub token with Contents
-// read/write on this repo, entered once in Settings.
+// Restoring (fetchCloudBackup/applyCloudBackup) reads via the public
+// raw.githubusercontent.com CDN and needs no token. Writing (sync/upload) needs
+// a GitHub token with Contents read/write on this repo, entered once in Settings.
 
 async function ghRequest(path, opts={}){
   const token=getGhToken();
@@ -729,32 +744,76 @@ document.addEventListener('visibilitychange',()=>{
   }
 });
 
-// Runs on first load if local storage is empty (fresh install / wipe). Pulls
-// data/backup.json and the photos it references straight from GitHub's public
-// CDN — no token needed — so recipes and photos come back automatically.
-async function tryCloudRestore(){
+// Holds a fetched-but-not-yet-applied cloud backup, pending the user's choice
+// in the welcome modal (see acceptCloudRestore/declineCloudRestore).
+let pendingCloudBackup=null;
+
+// Fetches data/backup.json from GitHub's public CDN — no token needed. Returns
+// the parsed backup, or null if there's no backup yet / fetch failed.
+async function fetchCloudBackup(){
   try{
     const res=await fetch(`https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/data/backup.json?cb=${Date.now()}`,{cache:'no-store'});
-    if(!res.ok) return;
+    if(!res.ok) return null;
     const backup=await res.json();
-    if(!backup.recipes||!backup.recipes.length) return;
-    state.recipes=backup.recipes;
-    state.planned=backup.planned||[];
-    state.checkedItems=backup.checkedItems||{};
-    state.haveItems=backup.haveItems||{};
-    dlog('Restoring '+state.recipes.length+' recipes from cloud backup');
-    for(const r of state.recipes){
-      if(r.imageBackupUrls&&r.imageBackupUrls.length){
-        const dataUrls=[];
-        for(const url of r.imageBackupUrls){
-          try{ dataUrls.push(await fetchImageAsDataUrl(url)); }catch(e){ dlog('Restore image fetch failed: '+e.message); }
-        }
-        if(dataUrls.length){ r.sourceImages=dataUrls; await saveImages(r.id, dataUrls); }
+    if(!backup.recipes||!backup.recipes.length) return null;
+    return backup;
+  }catch(e){ dlog('Cloud backup fetch failed: '+e.message); return null; }
+}
+
+// Applies a fetched backup to local state, pulling each recipe's photos back
+// from GitHub via the public raw CDN.
+async function applyCloudBackup(backup){
+  state.recipes=backup.recipes;
+  state.planned=backup.planned||[];
+  state.checkedItems=backup.checkedItems||{};
+  state.haveItems=backup.haveItems||{};
+  dlog('Restoring '+state.recipes.length+' recipes from cloud backup');
+  for(const r of state.recipes){
+    if(r.imageBackupUrls&&r.imageBackupUrls.length){
+      const dataUrls=[];
+      for(const url of r.imageBackupUrls){
+        try{ dataUrls.push(await fetchImageAsDataUrl(url)); }catch(e){ dlog('Restore image fetch failed: '+e.message); }
       }
+      if(dataUrls.length){ r.sourceImages=dataUrls; await saveImages(r.id, dataUrls); }
     }
-    saveState();
-    toast(`Restored ${state.recipes.length} recipes from cloud backup ✓`, 5000);
-  }catch(e){ dlog('Cloud restore failed: '+e.message); }
+  }
+  saveState();
+  toast(`Restored ${state.recipes.length} recipes from cloud backup ✓`, 5000);
+}
+
+// "Add Nick's recipes" button in the welcome modal.
+async function acceptCloudRestore(){
+  hideWelcomeModal();
+  localStorage.setItem(CLOUD_PROMPT_KEY,'accepted');
+  if(pendingCloudBackup){
+    await applyCloudBackup(pendingCloudBackup);
+    pendingCloudBackup=null;
+    render();
+  }
+}
+
+// "Start with an empty recipe book" button in the welcome modal.
+function declineCloudRestore(){
+  hideWelcomeModal();
+  localStorage.setItem(CLOUD_PROMPT_KEY,'declined');
+  pendingCloudBackup=null;
+}
+
+function showWelcomeModal(){
+  document.getElementById('welcome-overlay').style.opacity='1';
+  document.getElementById('welcome-overlay').style.pointerEvents='auto';
+  const modal=document.getElementById('welcome-modal');
+  modal.style.opacity='1';
+  modal.style.pointerEvents='auto';
+  modal.style.transform='translate(-50%,-50%) scale(1)';
+}
+function hideWelcomeModal(){
+  document.getElementById('welcome-overlay').style.opacity='0';
+  document.getElementById('welcome-overlay').style.pointerEvents='none';
+  const modal=document.getElementById('welcome-modal');
+  modal.style.opacity='0';
+  modal.style.pointerEvents='none';
+  modal.style.transform='translate(-50%,-50%) scale(0.95)';
 }
 
 // Progress indicator for the one-time "back up all photos" migration, read by renderSettings().
@@ -1817,7 +1876,10 @@ function escHtml(s){
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-loadState().then(()=>render());
+loadState().then(()=>{
+  render();
+  if(pendingCloudBackup) showWelcomeModal();
+});
 
 // Auto-update check: re-fetches this same page from GitHub Pages (cache-busted) and
 // compares its VERSION constant to ours. If newer, shows a banner with a reload button.
