@@ -1,6 +1,105 @@
 {
   "recipes": [
     {
+      "name": "Braised Fish with Tomato & Coconut Chickpeas",
+      "servings": 4,
+      "source": "What to Cook When You Don't Feel Like Cooking - A Cookbook",
+      "emoji": "🐟",
+      "time": "25 min",
+      "difficulty": "medium",
+      "tags": [
+        "fish",
+        "chickpeas",
+        "one-pan",
+        "braised"
+      ],
+      "ingredients": [
+        {
+          "name": "chickpeas",
+          "amount": "2 (15-ounce) cans",
+          "unit": "cans",
+          "notes": "drained and rinsed"
+        },
+        {
+          "name": "fire-roasted diced tomatoes",
+          "amount": "1 (14.5-ounce) can",
+          "unit": "can",
+          "notes": null
+        },
+        {
+          "name": "full-fat coconut milk",
+          "amount": "1 (13.5-ounce) can",
+          "unit": "can",
+          "notes": null
+        },
+        {
+          "name": "ground cumin",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "chili powder",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground turmeric",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "limes",
+          "amount": "2",
+          "unit": "whole",
+          "notes": null
+        },
+        {
+          "name": "cilantro",
+          "amount": "½ bunch",
+          "unit": "bunch",
+          "notes": null
+        },
+        {
+          "name": "fresh spinach",
+          "amount": "2 big handfuls",
+          "unit": "handfuls",
+          "notes": null
+        },
+        {
+          "name": "cod fillets",
+          "amount": "4 (6-ounce)",
+          "unit": "fillets",
+          "notes": "or any flaky white fish"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "as needed",
+          "unit": "oil",
+          "notes": null
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "to taste",
+          "unit": "seasoning",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473935432,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473935432-0.jpg"
+      ]
+    },
+    {
       "name": "Egg Caviar with Cauliflower Mousseline and Lemon-Chive Crème Fraiche",
       "servings": 6,
       "source": "Melisse restaurant",
@@ -3358,5 +3457,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:51:58.529Z"
+  "exportedAt": "2026-06-14T21:52:31.651Z"
 }
