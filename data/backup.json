@@ -3324,96 +3324,6 @@
       ],
       "notes": null,
       "id": 1780698256787
-    },
-    {
-      "name": "Corn Maque Choux",
-      "servings": 12,
-      "source": null,
-      "emoji": "🌽",
-      "time": "45 min",
-      "difficulty": "medium",
-      "tags": [
-        "cajun",
-        "corn",
-        "side dish",
-        "southern"
-      ],
-      "ingredients": [
-        {
-          "name": "unsalted butter",
-          "amount": "4 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "vegetable oil",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "fresh corn",
-          "amount": "7 cups",
-          "unit": "",
-          "notes": "cut off the cob (about seventeen 8-inch cobs), or frozen corn kernels"
-        },
-        {
-          "name": "onions",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": "very finely chopped"
-        },
-        {
-          "name": "sugar",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "white pepper",
-          "amount": "1 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "salt",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "ground red pepper",
-          "amount": "½ tsp",
-          "unit": "",
-          "notes": "preferably cayenne"
-        },
-        {
-          "name": "chicken, beef or pork stock",
-          "amount": "2¼ cups",
-          "unit": "",
-          "notes": "in all"
-        },
-        {
-          "name": "margarine",
-          "amount": "4 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "evaporated milk",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": "in all"
-        },
-        {
-          "name": "eggs",
-          "amount": "2 large",
-          "unit": "",
-          "notes": null
-        }
-      ],
-      "notes": null,
-      "id": 1780698221302
     }
   ],
   "planned": [],
@@ -3447,5 +3357,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:48:44.225Z"
+  "exportedAt": "2026-06-14T21:49:21.940Z"
 }
