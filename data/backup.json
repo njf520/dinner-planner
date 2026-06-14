@@ -3321,96 +3321,6 @@
       ],
       "notes": null,
       "id": 1780698221302
-    },
-    {
-      "name": "Roasted Artichokes with Calabrian Chile, Anchovy & Crispy Shallots",
-      "servings": 6,
-      "source": null,
-      "emoji": "🌿",
-      "time": "45 min",
-      "difficulty": "medium",
-      "tags": [
-        "roasted",
-        "artichokes",
-        "italian",
-        "vegetables"
-      ],
-      "ingredients": [
-        {
-          "name": "lemon",
-          "amount": "½ whole",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "small or medium artichokes",
-          "amount": "5 lb",
-          "unit": "",
-          "notes": "2.3 kg"
-        },
-        {
-          "name": "extra-virgin olive oil",
-          "amount": "",
-          "unit": "for cooking",
-          "notes": null
-        },
-        {
-          "name": "salt-packed anchovies",
-          "amount": "6 whole",
-          "unit": "",
-          "notes": "rinsed and deboned"
-        },
-        {
-          "name": "Calabrian chiles",
-          "amount": "6 whole",
-          "unit": "",
-          "notes": "roughly chopped"
-        },
-        {
-          "name": "white wine",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": "120 ml"
-        },
-        {
-          "name": "kosher salt",
-          "amount": "",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "parsley",
-          "amount": "⅓ bunch",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "mint",
-          "amount": "⅓ bunch",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "chopped marjoram or oregano",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "Vegetable Stock or water",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "60 ml, optional"
-        },
-        {
-          "name": "Crispy Shallots",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": "page 66"
-        }
-      ],
-      "notes": null,
-      "id": 1780698155147
     }
   ],
   "planned": [],
@@ -3444,5 +3354,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:47:12.662Z"
+  "exportedAt": "2026-06-14T21:48:00.337Z"
 }
