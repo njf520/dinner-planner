@@ -1,6 +1,117 @@
 {
   "recipes": [
     {
+      "name": "Tuesday Night Skillet Chicken Cutlets with Artichokes and Mushrooms",
+      "servings": 4,
+      "source": null,
+      "emoji": "🍗",
+      "time": "30 min",
+      "difficulty": "easy",
+      "tags": [
+        "chicken",
+        "skillet",
+        "weeknight",
+        "one-pan"
+      ],
+      "ingredients": [
+        {
+          "name": "boneless, skinless chicken breast halves",
+          "amount": "1½ lb",
+          "unit": "lb",
+          "notes": "4 large half breasts"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "dried oregano",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "all purpose flour",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": "or flour of your choice"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "plus more as needed"
+        },
+        {
+          "name": "baby bella mushrooms",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": "sliced, about 3 cups"
+        },
+        {
+          "name": "grape tomatoes",
+          "amount": "2 cups",
+          "unit": "cup",
+          "notes": "halved"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 large",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "artichoke hearts",
+          "amount": "1 (15 oz) can",
+          "unit": "can",
+          "notes": "drained, rinsed, and quartered"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "low-sodium chicken broth",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "lemon juice",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "from 1 large lemon"
+        },
+        {
+          "name": "fresh basil leaves",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "torn"
+        },
+        {
+          "name": "plain grains",
+          "amount": "to taste",
+          "unit": null,
+          "notes": "cooked according to package directions, for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473323960,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473323960-0.jpg"
+      ]
+    },
+    {
       "name": "Porcini Crusted Beef Tenderloin with Sautéed King Trumpet, Oyster & Shiitake Mushrooms and Red Wine Demi-Glace",
       "servings": 8,
       "source": "The City Kitchen Cooking Classes",
@@ -1669,103 +1780,6 @@
       "id": 1780699492197
     },
     {
-      "name": "Sautéed Trout with Cilantro-Lime Sauce",
-      "servings": 4,
-      "source": null,
-      "emoji": "🐟",
-      "time": "15 min",
-      "difficulty": "easy",
-      "tags": [
-        "fish",
-        "trout",
-        "cilantro",
-        "quick"
-      ],
-      "ingredients": [
-        {
-          "name": "Aleppo pepper flakes",
-          "amount": "1 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "ground cumin",
-          "amount": "1 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "ground coriander",
-          "amount": "¾ tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "rainbow trout fillets",
-          "amount": "1¼ lb",
-          "unit": "",
-          "notes": "or thin saltwater fish fillets, thawed if frozen"
-        },
-        {
-          "name": "kosher salt",
-          "amount": "",
-          "unit": "",
-          "notes": "to taste"
-        },
-        {
-          "name": "ground black pepper",
-          "amount": "",
-          "unit": "",
-          "notes": "to taste"
-        },
-        {
-          "name": "extra-virgin olive oil",
-          "amount": "⅛ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "5",
-          "unit": "",
-          "notes": "large, minced"
-        },
-        {
-          "name": "dry white wine",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "capers",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": "drained"
-        },
-        {
-          "name": "lime juice",
-          "amount": "¼ cup",
-          "unit": "",
-          "notes": "from about 2 limes"
-        },
-        {
-          "name": "low-sodium chicken broth",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "fresh cilantro leaves",
-          "amount": "1½ cups",
-          "unit": "",
-          "notes": "roughly chopped"
-        }
-      ],
-      "notes": null,
-      "id": 1780699228560,
-      "lastMade": 1780862649073
-    },
-    {
       "name": "Foil-Baked Salmon with Cherry Tomatoes, Olives, and Thyme",
       "servings": "4-6",
       "source": null,
@@ -3298,5 +3312,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:41:50.364Z"
+  "exportedAt": "2026-06-14T21:42:31.174Z"
 }
