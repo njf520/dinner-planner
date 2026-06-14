@@ -1,6 +1,99 @@
 {
   "recipes": [
     {
+      "name": "Corn Maque Choux",
+      "servings": 12,
+      "source": null,
+      "emoji": "🌽",
+      "time": "45 min",
+      "difficulty": "medium",
+      "tags": [
+        "cajun",
+        "corn",
+        "side dish",
+        "southern"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "fresh corn",
+          "amount": "7 cups",
+          "unit": "cups",
+          "notes": "cut off the cob (about seventeen 8-inch cobs), or frozen corn kernels"
+        },
+        {
+          "name": "onions",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "very finely chopped"
+        },
+        {
+          "name": "sugar",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "white pepper",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground red pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "preferably cayenne"
+        },
+        {
+          "name": "stock",
+          "amount": "2¼ cups",
+          "unit": "cups",
+          "notes": "Basic Chicken, Beef or Pork Stock"
+        },
+        {
+          "name": "margarine",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "evaporated milk",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "eggs",
+          "amount": "2",
+          "unit": "whole",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473767962,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473767962-0.jpg"
+      ]
+    },
+    {
       "name": "Roasted Artichokes with Calabrian Chile, Anchovy & Crispy Shallots",
       "servings": 6,
       "source": null,
@@ -2936,102 +3029,6 @@
       "id": 1780698631237
     },
     {
-      "name": "Egg Caviar - Cauliflower Mousseline and Lemon-Chive Crème Fraîche",
-      "servings": 6,
-      "source": null,
-      "emoji": "🥚",
-      "time": "45 min",
-      "difficulty": "hard",
-      "tags": [
-        "elegant",
-        "french",
-        "appetizer",
-        "caviar"
-      ],
-      "ingredients": [
-        {
-          "name": "cauliflower",
-          "amount": "1 cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "milk",
-          "amount": "2 cups",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "heavy cream",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "sea salt",
-          "amount": "",
-          "unit": "",
-          "notes": "to taste"
-        },
-        {
-          "name": "crème fraîche",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "heavy cream",
-          "amount": "½ cup",
-          "unit": "",
-          "notes": "for whipping"
-        },
-        {
-          "name": "lemon",
-          "amount": "1",
-          "unit": "",
-          "notes": "zest only, finely chopped"
-        },
-        {
-          "name": "lemon juice",
-          "amount": "1 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "chives",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": "chopped"
-        },
-        {
-          "name": "large organic eggs",
-          "amount": "6",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "Royal Transmontanus Caviar",
-          "amount": "¼ oz",
-          "unit": "",
-          "notes": "per person"
-        },
-        {
-          "name": "fleur de sel",
-          "amount": "",
-          "unit": "",
-          "notes": "to taste"
-        },
-        {
-          "name": "black pepper",
-          "amount": "",
-          "unit": "",
-          "notes": "freshly cracked, to taste"
-        }
-      ],
-      "notes": null,
-      "id": 1780698596994
-    },
-    {
       "name": "Classic Ragù Bolognese",
       "servings": 6,
       "source": null,
@@ -3357,5 +3354,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:49:21.940Z"
+  "exportedAt": "2026-06-14T21:49:54.413Z"
 }
