@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.7</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.8</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -377,7 +377,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='2.7';
+const VERSION='2.8';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -597,7 +597,27 @@ async function loadState(){
   }catch(e){ dlog('loadState error: '+e.message); }
 }
 
-function saveState(){
+function saveState(force){
+  // Safety net: if in-memory state has no (or far fewer) recipes than what's
+  // already saved, refuse to overwrite — this is almost certainly an in-memory
+  // bug (bad load, failed migration, etc.), not a deliberate wipe. The only
+  // legitimate way to clear everything is confirmClearAll(), which passes
+  // force=true.
+  if(!force && state.recipes.length===0){
+    const existingRaw=localStorage.getItem(STORAGE_KEY);
+    if(existingRaw){
+      let existingCount=0,parseFailed=false;
+      try{
+        const existing=JSON.parse(existingRaw);
+        existingCount=(existing&&Array.isArray(existing.recipes))?existing.recipes.length:0;
+      }catch(e){ parseFailed=true; }
+      if(parseFailed||existingCount>1){
+        dlog(`saveState BLOCKED: in-memory state has 0 recipes but storage has ${parseFailed?'unreadable':existingCount} — refusing to overwrite`);
+        toast('⚠️ Save blocked to protect your recipes — please reload the app');
+        return;
+      }
+    }
+  }
   // Step 1: Save recipe data WITHOUT images — this must never fail silently
   try{
     const recipesWithoutImages=state.recipes.map(r=>({...r,sourceImages:undefined}));
@@ -713,6 +733,13 @@ async function uploadRecipeImages(r){
 // data/backup.json. No-ops if no GitHub token is configured.
 async function syncBackupToGitHub(){
   if(!getGhToken()) return;
+  // Safety net: never let an in-memory wipe (bug, bad load, etc.) propagate to
+  // the cloud backup. If we have no recipes locally, mirror saveState()'s
+  // refusal — leave the existing data/backup.json alone.
+  if(!state.recipes.length){
+    dlog('syncBackupToGitHub BLOCKED: state.recipes is empty — refusing to overwrite cloud backup');
+    return;
+  }
   try{
     const backup={
       recipes:state.recipes.map(r=>({...r,sourceImages:undefined})),
@@ -1808,7 +1835,7 @@ function confirmClearAll(){
     // Also clean up all image keys
     state.recipes.forEach(r=>deleteImages(r.id));
     state={recipes:[],planned:[],checkedItems:{},haveItems:{}};recipeMultipliers={};
-    saveState();render();toast('All recipes cleared');
+    saveState(true);render();toast('All recipes cleared');
   }
 }
 function exportData(){
