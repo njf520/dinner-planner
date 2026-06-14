@@ -1,6 +1,105 @@
 {
   "recipes": [
     {
+      "name": "Sautéed Trout with Cilantro-Lime Sauce",
+      "servings": 4,
+      "source": null,
+      "emoji": "🐟",
+      "time": "15 min",
+      "difficulty": "easy",
+      "tags": [
+        "fish",
+        "trout",
+        "cilantro",
+        "quick"
+      ],
+      "ingredients": [
+        {
+          "name": "Aleppo pepper flakes",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground cumin",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground coriander",
+          "amount": "¾ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "rainbow trout fillets",
+          "amount": "1¼ lb",
+          "unit": "lb",
+          "notes": "or thin saltwater fish fillets, thawed if frozen"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "⅛ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "5",
+          "unit": "cloves",
+          "notes": "large, minced"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "capers",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "drained"
+        },
+        {
+          "name": "lime juice",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "from about 2 limes"
+        },
+        {
+          "name": "low-sodium chicken broth",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "fresh cilantro leaves",
+          "amount": "1½ cups",
+          "unit": "cups",
+          "notes": "roughly chopped"
+        }
+      ],
+      "notes": null,
+      "id": 1781473363348,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473363348-0.jpg"
+      ]
+    },
+    {
       "name": "Tuesday Night Skillet Chicken Cutlets with Artichokes and Mushrooms",
       "servings": 4,
       "source": null,
@@ -1780,90 +1879,6 @@
       "id": 1780699492197
     },
     {
-      "name": "Foil-Baked Salmon with Cherry Tomatoes, Olives, and Thyme",
-      "servings": "4-6",
-      "source": null,
-      "emoji": "🐟",
-      "time": "30 min",
-      "difficulty": "easy",
-      "tags": [
-        "salmon",
-        "foil-baked",
-        "mediterranean",
-        "easy"
-      ],
-      "ingredients": [
-        {
-          "name": "cherry tomatoes",
-          "amount": "1½ cups",
-          "unit": "",
-          "notes": "halved"
-        },
-        {
-          "name": "pitted olives",
-          "amount": "3 oz",
-          "unit": "",
-          "notes": "about ½ cup, halved (combo of kalamata and green olives is great)"
-        },
-        {
-          "name": "shallot",
-          "amount": "1 medium",
-          "unit": "",
-          "notes": "finely chopped"
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "4 large",
-          "unit": "",
-          "notes": "minced"
-        },
-        {
-          "name": "fresh thyme leaves",
-          "amount": "1 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "dried oregano",
-          "amount": "2 tsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "kosher salt",
-          "amount": "to taste",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "ground black pepper",
-          "amount": "to taste",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "extra-virgin olive oil",
-          "amount": "3 tbsp",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "salmon fillet",
-          "amount": "1¼ lb",
-          "unit": "",
-          "notes": "large, skin removed (thawed, if frozen)"
-        },
-        {
-          "name": "lemon juice",
-          "amount": "2 tbsp",
-          "unit": "",
-          "notes": "from ½ large lemon"
-        }
-      ],
-      "notes": null,
-      "id": 1780699079615
-    },
-    {
       "name": "Olive Oil and Garlic Spaghetti with Artichokes and Olives",
       "servings": 4,
       "source": null,
@@ -3312,5 +3327,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T21:42:31.174Z"
+  "exportedAt": "2026-06-14T21:43:11.070Z"
 }
