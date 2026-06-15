@@ -241,7 +241,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.7</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.8</div>
       <div class="search-bar" id="search-bar">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -392,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.7';
+const VERSION='3.8';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1408,22 +1408,35 @@ URL FALLBACK: If given a URL with little/no page text, use your knowledge of tha
 For tags, suggest 1-4 short lowercase descriptors.
 Return ONLY the JSON.`;
 
-// Calls the Anthropic API directly from the browser using the user's own key
-// (stored in localStorage, never sent anywhere else). 45s timeout guards against
-// hung requests on flaky mobile connections.
+// Calls the Anthropic API for recipe parsing. If the user has saved their own
+// API key (in Settings), calls Anthropic directly from the browser using it.
+// Otherwise, routes through the Worker proxy (see worker.js /ai/:userId),
+// which uses a shared key and enforces a per-user daily rate limit. 45s
+// timeout guards against hung requests on flaky mobile connections.
 async function apiPost(body){
-  const key=getApiKey();if(!key)throw new Error('NO_API_KEY');
+  const key=getApiKey();
   const controller=new AbortController();
   const timeout=setTimeout(()=>controller.abort(),45000); // 45 second timeout
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:3000,...body}),
-      signal:controller.signal
-    });
+    let res;
+    if(key){
+      res=await fetch('https://api.anthropic.com/v1/messages',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+        body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:3000,...body}),
+        signal:controller.signal
+      });
+    }else{
+      if(!WORKER_URL)throw new Error('NO_API_KEY');
+      res=await fetch(`${WORKER_URL}/ai/${getAnonId()}`,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(body),
+        signal:controller.signal
+      });
+    }
     clearTimeout(timeout);
-    if(!res.ok){const e=await res.json().catch(()=>{});throw new Error(e?.error?.message||`API error ${res.status}`);}
+    if(!res.ok){const e=await res.json().catch(()=>{});throw new Error(e?.error?.message||e?.error||`API error ${res.status}`);}
     const data=await res.json();
     return data.content.find(b=>b.type==='text')?.text||'';
   }catch(e){
@@ -1988,24 +2001,15 @@ function renderSettings(){
   const c=document.getElementById('main-content');
   const key=getApiKey();
   c.innerHTML=`
-    <div style="background:#fceaea;border:2px solid #a32d2d;border-radius:11px;padding:14px;margin-bottom:20px">
-      <div style="font-weight:600;color:#a32d2d;margin-bottom:5px;font-size:14px">⚠️ Important — back up your recipes</div>
-      <p style="font-size:13px;color:#a32d2d;line-height:1.5;margin-bottom:10px">Recipes are stored in your browser. Clearing your browser cache or site data will delete them permanently. A backup file downloads automatically each time you add a recipe — keep those files safe.</p>
-      <button onclick="exportData()" style="padding:9px 16px;background:#a32d2d;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif">Download backup now</button>
-    </div>
     <div style="margin-bottom:22px">
-      <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Anthropic API key</div>
-      <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:12px">Required for URL and photo import. Stored only on this device.</p>
+      <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Anthropic API key (optional)</div>
+      <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:12px">URL and photo import work out of the box using a shared key, with a daily limit per person. Add your own key here for unlimited use. Stored only on this device.</p>
       ${!key?`<div class="apikey-banner">Get a key at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>. New accounts get free credits.</div>`:''}
       <label class="form-label">API key</label>
       <input type="text" class="form-input" id="api-key-input" placeholder="sk-ant-..." value="${escHtml(key)}" style="margin-bottom:9px;font-family:monospace;font-size:12px"">
       <button class="btn-primary" onclick="saveKeyFromInput()">Save key</button>
     </div>
     ${renderCloudBackupSection()}
-    <div style="border-top:1px solid var(--border);padding-top:18px">
-      <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Install on home screen</div>
-      <p style="font-size:14px;color:var(--text2);line-height:1.6">Chrome on Android: three-dot menu → <strong>Add to Home screen</strong>.</p>
-    </div>
     <div style="border-top:1px solid var(--border);padding-top:18px;margin-top:18px">
       <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Data</div>
       <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:9px">Everything saved on this device. Recipes with photos use more storage — export regularly as a backup.</p>
