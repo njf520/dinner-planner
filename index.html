@@ -233,7 +233,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.8</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.9</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -377,7 +377,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='2.8';
+const VERSION='2.9';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -398,6 +398,23 @@ function saveGhToken(t){localStorage.setItem(GH_TOKEN_KEY,t.trim());}
 // Set once the user has answered the first-run "add Nick's recipes?" prompt,
 // so it's only ever shown once per browser.
 const CLOUD_PROMPT_KEY='cloud_restore_choice';
+
+// Cloud-backup proxy (see worker.js) — lets users WITHOUT a GitHub token still
+// get their recipes/photos backed up, into a namespaced folder of this repo,
+// without ever handing out write access to the repo itself. Filled in once the
+// worker is deployed; until then, users without a token simply aren't synced.
+const WORKER_URL='';
+const ANON_ID_KEY='anon_backup_id';
+const ANON_ID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+function getAnonId(){
+  let id=localStorage.getItem(ANON_ID_KEY);
+  if(!id){ id=crypto.randomUUID(); localStorage.setItem(ANON_ID_KEY,id); }
+  return id;
+}
+// True if this device can sync to the cloud at all — either Nick's own GitHub
+// token (writes to the repo root) or, for everyone else, the backup proxy
+// (writes to a per-device namespaced folder).
+function cloudHasTransport(){ return !!(getGhToken()||WORKER_URL); }
 
 let state={recipes:[],planned:[],checkedItems:{},haveItems:{}};
 let currentTab='recipes';
@@ -698,29 +715,42 @@ async function fetchImageAsDataUrl(url){
   });
 }
 
+// Writes one recipe image to the cloud (direct to GitHub for Nick's device,
+// or via the backup proxy for everyone else) and returns its public raw URL.
+async function cloudPutImage(filename, dataUrl){
+  const base64=dataUrl.split(',')[1];
+  if(getGhToken()){
+    await ghPutFile(`images/${filename}`, base64, `Add image ${filename}`);
+    return `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/images/${filename}`;
+  }
+  const id=getAnonId();
+  const res=await fetch(`${WORKER_URL}/image/${id}/${filename}`,{method:'PUT',headers:{'Content-Type':'text/plain'},body:base64});
+  if(!res.ok){ const e=await res.json().catch(()=>({})); throw new Error(e.error||('Worker image upload failed: '+res.status)); }
+  return `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/images/users/${id}/${filename}`;
+}
+
 // Uploads any of a recipe's source images that aren't backed up yet, recording
 // their raw.githubusercontent.com URLs in r.imageBackupUrls. Never throws —
 // failures are logged and simply left for the next sync/migration pass.
 async function uploadRecipeImages(r){
-  if(!getGhToken()||!r.sourceImages||!r.sourceImages.length) return false;
+  if(!cloudHasTransport()||!r.sourceImages||!r.sourceImages.length) return false;
   r.imageBackupUrls=r.imageBackupUrls||[];
   let changed=false;
   for(let i=0;i<r.sourceImages.length;i++){
     if(r.imageBackupUrls[i]) continue;
-    const path=`images/${r.id}-${i}.jpg`;
+    const filename=`${r.id}-${i}.jpg`;
     try{
       let dataUrl=r.sourceImages[i];
-      let base64=dataUrl.split(',')[1];
+      let url;
       try{
-        await ghPutFile(path, base64, `Add image for recipe ${r.id}`);
+        url=await cloudPutImage(filename, dataUrl);
       }catch(e){
         // Likely over the Contents API's 1MB limit — recompress smaller and retry once
         dlog('Image upload failed, retrying smaller: '+e.message);
         dataUrl=await compressImage(dataUrl, 900, 0.7);
-        base64=dataUrl.split(',')[1];
-        await ghPutFile(path, base64, `Add image for recipe ${r.id} (resized)`);
+        url=await cloudPutImage(filename, dataUrl);
       }
-      r.imageBackupUrls[i]=`https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/${path}`;
+      r.imageBackupUrls[i]=url;
       changed=true;
     }catch(e){
       dlog('Image upload failed for '+(r.name||r.id)+' #'+i+': '+e.message);
@@ -730,14 +760,16 @@ async function uploadRecipeImages(r){
 }
 
 // Pushes the full recipe dataset (minus image blobs, which live separately) to
-// data/backup.json. No-ops if no GitHub token is configured.
-async function syncBackupToGitHub(){
-  if(!getGhToken()) return;
+// the cloud — data/backup.json for Nick's device, or a namespaced
+// data/users/{id}/backup.json via the backup proxy for everyone else. No-ops
+// if neither transport is configured.
+async function syncBackupToCloud(){
+  if(!cloudHasTransport()) return;
   // Safety net: never let an in-memory wipe (bug, bad load, etc.) propagate to
   // the cloud backup. If we have no recipes locally, mirror saveState()'s
-  // refusal — leave the existing data/backup.json alone.
+  // refusal — leave the existing cloud backup alone.
   if(!state.recipes.length){
-    dlog('syncBackupToGitHub BLOCKED: state.recipes is empty — refusing to overwrite cloud backup');
+    dlog('syncBackupToCloud BLOCKED: state.recipes is empty — refusing to overwrite cloud backup');
     return;
   }
   try{
@@ -747,27 +779,32 @@ async function syncBackupToGitHub(){
       exportedAt:new Date().toISOString()
     };
     const json=JSON.stringify(backup,null,2);
-    const base64=btoa(unescape(encodeURIComponent(json)));
-    await ghPutFile('data/backup.json', base64, 'Sync recipe data');
+    if(getGhToken()){
+      const base64=btoa(unescape(encodeURIComponent(json)));
+      await ghPutFile('data/backup.json', base64, 'Sync recipe data');
+    }else{
+      const res=await fetch(`${WORKER_URL}/sync/${getAnonId()}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:json});
+      if(!res.ok){ const e=await res.json().catch(()=>({})); throw new Error(e.error||('Worker sync failed: '+res.status)); }
+    }
     dlog('Cloud backup synced ('+backup.recipes.length+' recipes)');
   }catch(e){
     dlog('Cloud backup sync failed: '+e.message);
   }
 }
 
-// Debounced trigger for syncBackupToGitHub — frequent calls (e.g. shopping-list
+// Debounced trigger for syncBackupToCloud — frequent calls (e.g. shopping-list
 // toggles) just keep resetting the timer rather than spamming commits.
 let cloudSyncTimer=null;
 function scheduleCloudSync(){
-  if(!getGhToken()) return;
+  if(!cloudHasTransport()) return;
   clearTimeout(cloudSyncTimer);
-  cloudSyncTimer=setTimeout(()=>{cloudSyncTimer=null;syncBackupToGitHub();}, 15000);
+  cloudSyncTimer=setTimeout(()=>{cloudSyncTimer=null;syncBackupToCloud();}, 15000);
 }
 // Mobile PWAs don't reliably fire beforeunload, so flush a pending sync when backgrounded.
 document.addEventListener('visibilitychange',()=>{
   if(document.visibilityState==='hidden'&&cloudSyncTimer){
     clearTimeout(cloudSyncTimer);cloudSyncTimer=null;
-    syncBackupToGitHub();
+    syncBackupToCloud();
   }
 });
 
@@ -775,11 +812,13 @@ document.addEventListener('visibilitychange',()=>{
 // in the welcome modal (see acceptCloudRestore/declineCloudRestore).
 let pendingCloudBackup=null;
 
-// Fetches data/backup.json from GitHub's public CDN — no token needed. Returns
-// the parsed backup, or null if there's no backup yet / fetch failed.
-async function fetchCloudBackup(){
+// Fetches a backup.json from GitHub's public CDN — no token needed. Defaults
+// to Nick's own data/backup.json; pass path for a namespaced
+// data/users/{id}/backup.json (anon restore-from-ID). Returns the parsed
+// backup, or null if there's no backup yet / fetch failed.
+async function fetchCloudBackup(path){
   try{
-    const res=await fetch(`https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/data/backup.json?cb=${Date.now()}`,{cache:'no-store'});
+    const res=await fetch(`https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/${path||'data/backup.json'}?cb=${Date.now()}`,{cache:'no-store'});
     if(!res.ok) return null;
     const backup=await res.json();
     if(!backup.recipes||!backup.recipes.length) return null;
@@ -864,9 +903,21 @@ async function backupAllImagesToGitHub(){
   }
   ghBackupStatus=null;
   clearTimeout(cloudSyncTimer);cloudSyncTimer=null;
-  await syncBackupToGitHub();
+  await syncBackupToCloud();
   render();
   toast('Backup complete!');
+}
+
+// "Restore from another device" for anon (no-token) users: fetches their
+// namespaced backup by ID and applies it, same as the welcome-modal restore.
+async function restoreFromAnonId(){
+  const input=document.getElementById('anon-restore-input');
+  const id=input.value.trim().toLowerCase();
+  if(!ANON_ID_RE.test(id)){toast('That doesn\'t look like a valid backup ID.');return;}
+  const backup=await fetchCloudBackup(`data/users/${id}/backup.json`);
+  if(!backup){toast('No backup found for that ID.');return;}
+  await applyCloudBackup(backup);
+  render();
 }
 
 // Summarizes how much of the recipe/photo data is mirrored to GitHub, for display in Settings.
@@ -1742,6 +1793,24 @@ function setShopView(v){document.getElementById('main-content').dataset.shopView
 
 function renderCloudBackupSection(){
   const ghToken=getGhToken();
+  if(!ghToken){
+    if(!WORKER_URL){
+      return`<div style="border-top:1px solid var(--border);padding-top:18px;margin-top:18px">
+        <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Cloud backup</div>
+        <p style="font-size:14px;color:var(--text2);line-height:1.6">Cloud backup isn't set up on this device yet. Export your recipes from Settings regularly so you always have a copy.</p>
+      </div>`;
+    }
+    const anonId=getAnonId();
+    return`<div style="border-top:1px solid var(--border);padding-top:18px;margin-top:18px">
+      <div style="font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:5px">Cloud backup</div>
+      <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:12px">Your recipes and photos are automatically backed up under a private ID tied to this device. Write down this ID — you'll need it to restore on another device.</p>
+      <label class="form-label">Your backup ID</label>
+      <input type="text" class="form-input" readonly value="${escHtml(anonId)}" style="margin-bottom:14px;font-family:monospace;font-size:12px" onclick="this.select()">
+      <label class="form-label">Restore from another device</label>
+      <input type="text" class="form-input" id="anon-restore-input" placeholder="paste backup ID" style="margin-bottom:9px;font-family:monospace;font-size:12px">
+      <button class="btn-primary" onclick="restoreFromAnonId()">Restore</button>
+    </div>`;
+  }
   const status=getGhSyncStatus();
   let statusHtml;
   if(ghBackupStatus){
