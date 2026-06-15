@@ -238,7 +238,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.3</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.4</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -389,7 +389,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.3';
+const VERSION='3.4';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1054,6 +1054,9 @@ function getAllTags(){
 // ── Lightbox ───────────────────────────────────────────────────────────────
 let lightboxImages=[];
 let lightboxIndex=0;
+// Tracks whether openLightbox() pushed a history entry that closeLightbox()
+// still needs to pop (vs. having already been popped via the back button).
+let lightboxHistoryActive=false;
 // Pinch/zoom state
 let lbScale=1, lbMinScale=1, lbMaxScale=4;
 let lbOffsetX=0, lbOffsetY=0;
@@ -1070,6 +1073,10 @@ function openLightbox(src, images){
   updateLightbox();
   document.getElementById('lightbox').classList.add('open');
   setupLightboxTouch();
+  // Push a history entry so the device/browser back button closes the
+  // lightbox instead of navigating away from (or closing) the app.
+  history.pushState({lightbox:true}, '');
+  lightboxHistoryActive=true;
 }
 
 function updateLightbox(){
@@ -1122,17 +1129,7 @@ function setupLightboxTouch(){
       applyLbTransform();
     }
   };
-  wrap.ontouchend=function(e){
-    if(!lbIsPinching&&e.changedTouches.length===1&&lbScale===1){
-      const dx=e.changedTouches[0].clientX-lbTouchStartX;
-      const dy=Math.abs(e.changedTouches[0].clientY-lbTouchStartY);
-      if(Math.abs(dx)>50&&dy<40) lightboxNav(dx<0?1:-1);
-    }
-    if(e.touches.length<2) lbIsPinching=false;
-    // snap back if over-panned
-    if(lbScale<=1){ lbScale=1; lbOffsetX=0; lbOffsetY=0; applyLbTransform(); }
-  };
-  // double-tap to zoom
+  // Swipe left/right to navigate, double-tap to zoom.
   let lbLastTap=0;
   wrap.ontouchend=function(e){
     const now=Date.now();
@@ -1167,7 +1164,22 @@ function lightboxNav(dir){
 function closeLightbox(){
   document.getElementById('lightbox').classList.remove('open');
   lbScale=1; lbOffsetX=0; lbOffsetY=0;
+  // If we pushed a history entry to open this, pop it now so back/forward
+  // state stays in sync (the popstate listener below no-ops since the
+  // lightbox is already closed).
+  if(lightboxHistoryActive){
+    lightboxHistoryActive=false;
+    history.back();
+  }
 }
+// Closes the lightbox on back-button/gesture instead of leaving the app.
+window.addEventListener('popstate',()=>{
+  if(document.getElementById('lightbox').classList.contains('open')){
+    lightboxHistoryActive=false;
+    document.getElementById('lightbox').classList.remove('open');
+    lbScale=1; lbOffsetX=0; lbOffsetY=0;
+  }
+});
 
 // ── Toast ──────────────────────────────────────────────────────────────────
 function toast(msg,dur=0){
