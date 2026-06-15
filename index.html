@@ -168,6 +168,11 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 .diff-btn.active-easy{background:#eaf4ef;color:var(--green);border-color:var(--green)}
 .diff-btn.active-medium{background:rgba(200,75,47,0.1);color:var(--accent);border-color:var(--accent)}
 .diff-btn.active-hard{background:#fceaea;color:#a32d2d;border-color:#a32d2d}
+.cat-btns{display:flex;gap:5px}
+.cat-btn{flex:1;padding:5px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text2);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;text-align:center;transition:all .15s}
+.cat-btn.active{background:rgba(200,75,47,0.1);color:var(--accent);border-color:var(--accent)}
+.section-title{font-family:'DM Serif Display',serif;font-size:18px;margin:18px 0 10px;color:var(--text2)}
+.section-title:first-child{margin-top:0}
 
 /* tag input */
 .tag-input-wrap{display:flex;flex-wrap:wrap;gap:4px;padding:5px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:9px;cursor:text;min-height:34px;align-items:center}
@@ -233,7 +238,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.0</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.1</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -315,6 +320,13 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
       </div>
     </div>
     <div class="form-group">
+      <label class="form-label">Category</label>
+      <div class="cat-btns" id="cat-btns">
+        <button class="cat-btn" data-cat="food" onclick="setCategory('food')">🍳 Food</button>
+        <button class="cat-btn" data-cat="drink" onclick="setCategory('drink')">🍹 Drink</button>
+      </div>
+    </div>
+    <div class="form-group">
       <label class="form-label">Difficulty</label>
       <div class="diff-btns" id="diff-btns">
         <button class="diff-btn" data-diff="easy" onclick="setDiff('easy')">Easy</button>
@@ -377,7 +389,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.0';
+const VERSION='3.1';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -424,6 +436,7 @@ let expandedRecipe=null;
 let recipeMultipliers={};
 let editingRecipeId=null;
 let pendingDiff=null;
+let pendingCategory=null;
 let pendingTags=[];
 let searchQuery='';
 let activeTagFilter=null;
@@ -502,7 +515,8 @@ function migrateRecipes(recipes){
       }
       return ing;
     });
-    return {...r, ingredients:fixed};
+    const category=r.category||(r.tags&&r.tags.includes('cocktail')?'drink':'food');
+    return {...r, ingredients:fixed, category};
   });
 }
 
@@ -1136,6 +1150,7 @@ function openEditSheet(id){
   document.getElementById('meta-time').value=r.time||'';
   document.getElementById('meta-notes').value=r.notes||'';
   if(r.difficulty) setDiff(r.difficulty);
+  setCategory(r.category||'food');
   (r.tags||[]).forEach(t=>addTag(t));
   document.getElementById('add-btn').textContent='Save changes';
   // show manual method fields
@@ -1159,8 +1174,9 @@ function resetAddForm(){
   document.getElementById('add-error').style.display='none';
   document.getElementById('add-btn').textContent='Add recipe';
   document.getElementById('add-btn').disabled=false;
-  pendingPhotos=[];pendingDiff=null;pendingTags=[];
+  pendingPhotos=[];pendingDiff=null;pendingCategory=null;pendingTags=[];
   document.querySelectorAll('.diff-btn').forEach(b=>b.className='diff-btn');
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
   const wrap=document.getElementById('tag-input-wrap');
   wrap.querySelectorAll('.tag-pill').forEach(p=>p.remove());
   document.getElementById('tag-raw-input').value='';
@@ -1172,6 +1188,14 @@ function setMethod(m){
     el.classList.toggle('active',['url','photo','manual'][i]===m);
   });
   ['url','photo','manual'].forEach(n=>document.getElementById('method-'+n).style.display=n===m?'':'none');
+}
+
+// category (food/drink)
+function setCategory(c){
+  pendingCategory=c;
+  document.querySelectorAll('.cat-btn').forEach(b=>{
+    b.classList.toggle('active',b.dataset.cat===c);
+  });
 }
 
 // difficulty
@@ -1259,7 +1283,7 @@ document.getElementById('photo-camera-input').addEventListener('change',function
 
 // ── Claude API ─────────────────────────────────────────────────────────────
 const SYS=`You are a recipe and cocktail parser. Return ONLY valid JSON, no markdown.
-Shape: {"name":"str","servings":null,"source":"str or null","emoji":"food or drink emoji","time":"e.g. 45 min or null","difficulty":"easy|medium|hard or null","tags":["tag1"],"ingredients":[{"name":"str","amount":"str","unit":"str","notes":"str or null"}]}
+Shape: {"name":"str","servings":null,"source":"str or null","emoji":"food or drink emoji","time":"e.g. 45 min or null","difficulty":"easy|medium|hard or null","category":"food|drink","tags":["tag1"],"ingredients":[{"name":"str","amount":"str","unit":"str","notes":"str or null"}]}
 
 CRITICAL AMOUNT RULES:
 - ALWAYS put the FULL amount including unit in the "amount" field: "1½ oz", "¾ cup", "2 tbsp", "3 dashes"
@@ -1273,6 +1297,7 @@ FOOD RECIPE UNITS — always American:
 - Fractions: ¼ ⅓ ½ ¾
 
 COCKTAIL RECIPE RULES:
+- Set category to "drink"; for food recipes set category to "food"
 - Use oz for all spirits and liqueurs
 - Convert ml to oz: 15ml=½ oz, 20ml=⅔ oz, 22.5ml=¾ oz, 30ml=1 oz, 45ml=1½ oz, 60ml=2 oz
 - Keep dashes, drops, barspoons as-is
@@ -1337,7 +1362,8 @@ function collectMeta(parsed){
   // merge AI tags with user tags
   const aiTags=(parsed.tags||[]).map(t=>t.toLowerCase().trim());
   const allTags=[...new Set([...pendingTags,...aiTags])];
-  return{servings,time,notes,difficulty,tags:allTags};
+  const category=pendingCategory||parsed.category||(allTags.includes('cocktail')?'drink':'food');
+  return{servings,time,notes,difficulty,tags:allTags,category};
 }
 
 async function submitRecipe(){
@@ -1358,6 +1384,7 @@ async function submitRecipe(){
       time:document.getElementById('meta-time').value.trim()||r.time||null,
       notes:document.getElementById('meta-notes').value.trim()||null,
       difficulty:pendingDiff||r.difficulty||null,
+      category:pendingCategory||r.category||'food',
       tags:[...new Set([...pendingTags,...(r.tags||[])])],
       ingredients
     });
@@ -1632,7 +1659,20 @@ function renderRecipes(){
     html+=`<div class="results-label">${list.length} recipe${list.length!==1?'s':''}</div>`;
   }
 
-  for(const r of list){
+  const foodList=list.filter(r=>r.category!=='drink');
+  const drinkList=list.filter(r=>r.category==='drink');
+  if(foodList.length){
+    html+=`<div class="section-title">🍳 Food</div>`;
+    for(const r of foodList) html+=renderRecipeCard(r);
+  }
+  if(drinkList.length){
+    html+=`<div class="section-title">🍹 Drinks</div>`;
+    for(const r of drinkList) html+=renderRecipeCard(r);
+  }
+  c.innerHTML=html;
+}
+
+function renderRecipeCard(r){
     const isPlanned=state.planned.includes(r.id);
     const isExpanded=expandedRecipe===r.id;
     const mult=recipeMultipliers[r.id]||1;
@@ -1641,7 +1681,7 @@ function renderRecipes(){
     const thumbSrc=hasImages?r.sourceImages[0]:null;
     const ingCount=(r.ingredients||[]).length;
 
-    html+=`<div class="recipe-card">
+    let html=`<div class="recipe-card">
       <div class="card-top">
         <div class="card-thumb">
           ${thumbSrc
@@ -1720,8 +1760,7 @@ function renderRecipes(){
       html+=`</div>`; // card-detail
     }
     html+=`</div>`; // recipe-card
-  }
-  c.innerHTML=html;
+    return html;
 }
 
 function renderShopping(){
