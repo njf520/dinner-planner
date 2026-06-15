@@ -118,7 +118,10 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 /* Source images */
 .source-images{display:flex;gap:8px;padding:8px 14px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;border-top:1px solid var(--border)}
 .source-images::-webkit-scrollbar{display:none}
-.source-img-thumb{width:88px;height:88px;border-radius:8px;object-fit:cover;flex-shrink:0;cursor:pointer;border:1px solid var(--border)}
+.source-img-thumb{width:88px;height:88px;border-radius:8px;object-fit:cover;flex-shrink:0;cursor:pointer;border:1px solid var(--border);display:block}
+.source-img-wrap{position:relative;flex-shrink:0}
+.source-img-del{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.65);color:#fff;font-size:12px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
+.source-img-del:hover{background:var(--accent)}
 .source-link{display:block;font-size:13px;color:var(--accent);text-decoration:none;padding:8px 14px 12px;border-top:1px solid var(--border)}
 
 /* Empty / results */
@@ -238,7 +241,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.5</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.6</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -389,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.5';
+const VERSION='3.6';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1037,7 +1040,7 @@ function getFilteredRecipes(){
   let list=[...state.recipes];
   if(searchQuery){
     const q=searchQuery.toLowerCase();
-    list=list.filter(r=>(r.name||'').toLowerCase().includes(q)||(r.tags||[]).some(t=>t.toLowerCase().includes(q)));
+    list=list.filter(r=>(r.name||'').toLowerCase().includes(q)||(r.tags||[]).some(t=>t.toLowerCase().includes(q))||(r.ingredients||[]).some(ing=>(ing.name||'').toLowerCase().includes(q)));
   }
   if(activeTagFilter) list=list.filter(r=>(r.tags||[]).includes(activeTagFilter));
   if(sortMode==='oldest-made') list.sort((a,b)=>(a.lastMade||0)-(b.lastMade||0));
@@ -1611,6 +1614,16 @@ function deleteRecipe(id){
   if(expandedRecipe===id)expandedRecipe=null;
   saveState();render();
 }
+function deleteSourceImage(id,idx){
+  const r=state.recipes.find(r=>r.id===id);
+  if(!r||!r.sourceImages||!r.sourceImages[idx])return;
+  if(!confirm('Remove this photo?'))return;
+  r.sourceImages.splice(idx,1);
+  if(r.imageBackupUrls)r.imageBackupUrls.splice(idx,1);
+  if(r.sourceImages.length)saveImages(r.id,r.sourceImages);
+  else deleteImages(r.id);
+  saveState();render();
+}
 function togglePlan(id){
   const idx=state.planned.indexOf(id);
   if(idx>=0)state.planned.splice(idx,1);else state.planned.push(id);
@@ -1836,7 +1849,10 @@ function renderRecipeCard(r){
       if(hasImages){
         html+=`<div class="source-images">`;
         r.sourceImages.forEach((src,i)=>{
-          html+=`<img class="source-img-thumb" src="${escHtml(src)}" alt="Page ${i+1}" onclick="openLightboxFromRecipe(${r.id},${i})" loading="lazy">`;
+          html+=`<div class="source-img-wrap">
+            <img class="source-img-thumb" src="${escHtml(src)}" alt="Page ${i+1}" onclick="openLightboxFromRecipe(${r.id},${i})" loading="lazy">
+            <button class="source-img-del" onclick="event.stopPropagation();deleteSourceImage(${r.id},${i})" aria-label="Remove photo">✕</button>
+          </div>`;
         });
         html+=`</div>`;
       }
