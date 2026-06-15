@@ -403,7 +403,7 @@ const CLOUD_PROMPT_KEY='cloud_restore_choice';
 // get their recipes/photos backed up, into a namespaced folder of this repo,
 // without ever handing out write access to the repo itself. Filled in once the
 // worker is deployed; until then, users without a token simply aren't synced.
-const WORKER_URL='';
+const WORKER_URL='https://belly-up-backup-proxy.njf520.workers.dev';
 const ANON_ID_KEY='anon_backup_id';
 const ANON_ID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 function getAnonId(){
