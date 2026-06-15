@@ -1,4 +1,4 @@
-# Plan & Plate
+# Belly Up
 
 A personal recipe rolodex, cocktail book, and grocery shopping list — built as a
 single-file Progressive Web App (PWA) with no framework and no build step.

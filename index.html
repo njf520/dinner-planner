@@ -7,10 +7,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Plan &amp; Plate">
+<meta name="apple-mobile-web-app-title" content="Belly Up">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<title>Plan & Plate</title>
+<title>Belly Up</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -232,8 +232,8 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <div class="app">
   <div class="header">
     <div class="header-top">
-      <div class="app-title">Plan &amp; <span>Plate</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v2.9</div>
+      <div class="app-title">Belly <span>Up</span></div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.0</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -368,7 +368,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 <!-- First-run prompt: offer to load Nick's cloud-backed recipes, or start empty -->
 <div id="welcome-overlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:400;opacity:0;pointer-events:none;transition:opacity .2s"></div>
 <div id="welcome-modal" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.95);opacity:0;width:90%;max-width:380px;background:var(--card);border-radius:18px;z-index:401;transition:transform .2s,opacity .2s;padding:22px;pointer-events:none">
-  <div style="font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:10px">Welcome to Plan & Plate</div>
+  <div style="font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:10px">Welcome to Belly Up</div>
   <div style="font-size:14px;color:var(--text2);margin-bottom:18px;line-height:1.5">Nick has a cloud-backed collection of recipes for this app. Would you like to start with a copy of his recipes, or begin with an empty recipe book?</div>
   <div style="display:flex;flex-direction:column;gap:10px">
     <button onclick="acceptCloudRestore()" style="padding:12px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Add Nick's recipes</button>
@@ -377,7 +377,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='2.9';
+const VERSION='3.0';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
