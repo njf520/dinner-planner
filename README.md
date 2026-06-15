@@ -23,6 +23,11 @@ Live app: https://njf520.github.io/dinner-planner/
 - **Search & tag filters**
 - **Auto-update banner**: checks the live GitHub Pages copy on load and prompts to
   reload when a newer version is deployed
+- **Offline support**: a service worker caches the app shell, so it loads and
+  works (against locally stored data) without a network connection
+- **Multi-device sync warning**: if recipes were synced from another device
+  since this one last synced, you'll get a heads-up so you can check for
+  conflicts
 - **Backup/restore**: export/import all recipe data as a dated JSON file
 - **Cloud backup (GitHub)**: recipes and source photos are automatically mirrored
   to this GitHub repo (`data/backup.json` + `images/`), so a browser wipe or
@@ -62,10 +67,12 @@ There is no build step — `index.html` is the deployed artifact.
 2. **Bump the `VERSION` constant** near the top of the `<script>` block (and the
    `#version-display` text in the header) — the in-app auto-update banner compares
    this string against the live copy to detect new deploys
-3. Upload/commit `index.html` to the `dinner-planner` GitHub repo, replacing the
-   existing file
-4. GitHub Pages serves the new version within ~60 seconds
-5. Installed PWA clients will see an "Update available" banner and can reload to
+3. **Bump `CACHE_NAME` in `sw.js`** to match — this is how the service worker
+   discards old cached assets and serves the new ones offline
+4. Upload/commit `index.html` and `sw.js` to the `dinner-planner` GitHub repo,
+   replacing the existing files
+5. GitHub Pages serves the new version within ~60 seconds
+6. Installed PWA clients will see an "Update available" banner and can reload to
    pick up the change
 
 ## Data model

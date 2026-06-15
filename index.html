@@ -238,7 +238,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.1</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.2</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -389,7 +389,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.1';
+const VERSION='3.2';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -410,6 +410,10 @@ function saveGhToken(t){localStorage.setItem(GH_TOKEN_KEY,t.trim());}
 // Set once the user has answered the first-run "add Nick's recipes?" prompt,
 // so it's only ever shown once per browser.
 const CLOUD_PROMPT_KEY='cloud_restore_choice';
+// Tracks the exportedAt timestamp of the cloud backup as of our last
+// successful sync/restore, so we can warn (non-blockingly) if another device
+// has pushed since then — see syncBackupToCloud().
+const LAST_SYNC_KEY='last_cloud_sync_at';
 
 // Cloud-backup proxy (see worker.js) — lets users WITHOUT a GitHub token still
 // get their recipes/photos backed up, into a namespaced folder of this repo,
@@ -787,6 +791,19 @@ async function syncBackupToCloud(){
     return;
   }
   try{
+    // Multi-device safety check: if another device has pushed a newer backup
+    // since our last known sync, warn the user (non-blocking — we still push
+    // our local changes, since both sets of edits matter and this is meant to
+    // be informational rather than a hard merge gate).
+    const lastKnown=localStorage.getItem(LAST_SYNC_KEY);
+    if(lastKnown){
+      const remotePath=getGhToken()?undefined:`data/users/${getAnonId()}/backup.json`;
+      const remote=await fetchCloudBackup(remotePath);
+      if(remote&&remote.exportedAt&&remote.exportedAt!==lastKnown){
+        dlog('Cloud backup changed since last sync (was '+lastKnown+', now '+remote.exportedAt+') — another device may have synced. Proceeding with this device\'s changes.');
+        toast('⚠️ Recipes were also updated on another device — both changes are kept, but double-check for conflicts', 6000);
+      }
+    }
     const backup={
       recipes:state.recipes.map(r=>({...r,sourceImages:undefined})),
       planned:state.planned,checkedItems:state.checkedItems,haveItems:state.haveItems,
@@ -800,6 +817,7 @@ async function syncBackupToCloud(){
       const res=await fetch(`${WORKER_URL}/sync/${getAnonId()}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:json});
       if(!res.ok){ const e=await res.json().catch(()=>({})); throw new Error(e.error||('Worker sync failed: '+res.status)); }
     }
+    localStorage.setItem(LAST_SYNC_KEY, backup.exportedAt);
     dlog('Cloud backup synced ('+backup.recipes.length+' recipes)');
   }catch(e){
     dlog('Cloud backup sync failed: '+e.message);
@@ -858,6 +876,7 @@ async function applyCloudBackup(backup){
     }
   }
   saveState();
+  if(backup.exportedAt) localStorage.setItem(LAST_SYNC_KEY, backup.exportedAt);
   toast(`Restored ${state.recipes.length} recipes from cloud backup ✓`, 5000);
 }
 
@@ -2040,6 +2059,14 @@ function showUpdateBanner(newVersion){
 
 // Check for update 3 seconds after load
 setTimeout(checkForUpdate, 3000);
+
+// Register the service worker for offline support. Scoped to ./ (the
+// dinner-planner/ path on GitHub Pages) so it only controls this app.
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('./sw.js').catch(e=>dlog('Service worker registration failed: '+e.message));
+  });
+}
 </script>
 </body>
 </html>
