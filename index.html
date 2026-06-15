@@ -238,7 +238,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.4</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.5</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -389,7 +389,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.4';
+const VERSION='3.5';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1045,6 +1045,28 @@ function getFilteredRecipes(){
   return list;
 }
 
+// Flat list of every source image across the currently visible recipes, in
+// the same order they're rendered (Food section, then Drinks), so the
+// lightbox can swipe across recipe boundaries.
+function getGlobalImageList(){
+  const list=getFilteredRecipes();
+  const ordered=[...list.filter(r=>r.category!=='drink'), ...list.filter(r=>r.category==='drink')];
+  const out=[];
+  for(const r of ordered){
+    (r.sourceImages||[]).forEach((src,idx)=>out.push({recipeId:r.id, idx, src}));
+  }
+  return out;
+}
+
+// Opens the lightbox at a given recipe's image, but with the full
+// cross-recipe image list so swiping continues into neighboring recipes.
+function openLightboxFromRecipe(recipeId, imgIndex){
+  const all=getGlobalImageList();
+  let pos=all.findIndex(x=>x.recipeId===recipeId&&x.idx===imgIndex);
+  if(pos<0) pos=0;
+  openLightbox(all.map(x=>x.src), pos);
+}
+
 function getAllTags(){
   const tags=new Set();
   state.recipes.forEach(r=>(r.tags||[]).forEach(t=>tags.add(t)));
@@ -1065,10 +1087,10 @@ let lbTouchStartX=0, lbTouchStartY=0;
 let lbDragStartX=0, lbDragStartY=0;
 let lbIsPinching=false;
 
-function openLightbox(src, images){
-  lightboxImages = images||[src];
-  lightboxIndex = lightboxImages.indexOf(src);
-  if(lightboxIndex<0) lightboxIndex=0;
+function openLightbox(images, startIndex){
+  lightboxImages = images||[];
+  lightboxIndex = startIndex||0;
+  if(lightboxIndex<0||lightboxIndex>=lightboxImages.length) lightboxIndex=0;
   lbScale=1; lbOffsetX=0; lbOffsetY=0;
   updateLightbox();
   document.getElementById('lightbox').classList.add('open');
@@ -1754,7 +1776,7 @@ function renderRecipeCard(r){
         <div class="card-thumb">
           ${thumbSrc
             ?`<img src="${escHtml(thumbSrc)}" alt="recipe">
-               <button class="card-thumb-btn" onclick="event.stopPropagation();openLightbox('${escHtml(thumbSrc)}',${JSON.stringify(r.sourceImages||[thumbSrc]).replace(/"/g,'&quot;')})" aria-label="View image">
+               <button class="card-thumb-btn" onclick="event.stopPropagation();openLightboxFromRecipe(${r.id},0)" aria-label="View image">
                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                </button>`
             :(r.emoji||'🍽️')}
@@ -1812,10 +1834,9 @@ function renderRecipeCard(r){
 
       // Source images
       if(hasImages){
-        const imgListJson=JSON.stringify(r.sourceImages).replace(/"/g,'&quot;');
         html+=`<div class="source-images">`;
         r.sourceImages.forEach((src,i)=>{
-          html+=`<img class="source-img-thumb" src="${escHtml(src)}" alt="Page ${i+1}" onclick="openLightbox('${escHtml(src)}',JSON.parse(this.dataset.imgs))" data-imgs="${imgListJson}" loading="lazy">`;
+          html+=`<img class="source-img-thumb" src="${escHtml(src)}" alt="Page ${i+1}" onclick="openLightboxFromRecipe(${r.id},${i})" loading="lazy">`;
         });
         html+=`</div>`;
       }
