@@ -238,7 +238,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.2</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.3</div>
       <div class="search-bar" id="search-bar" style="display:none">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -389,7 +389,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.2';
+const VERSION='3.3';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -513,8 +513,9 @@ function migrateRecipes(recipes){
       if(ing.unit && ing.amount && !ing.amount.toLowerCase().includes(ing.unit.toLowerCase())){
         return {...ing, amount: ing.amount+' '+ing.unit, unit:''};
       }
-      // If amount is just a bare number with no unit text, append unit
-      if(ing.unit && ing.amount && /^[\d\s¼½¾⅓⅔⅛⅜⅝⅞\/\.]+$/.test(ing.amount.trim())){
+      // If amount is just a bare number (including ranges like "1-2" or "1 to 2")
+      // with no unit text, append unit
+      if(ing.unit && ing.amount && /^[\d\s¼½¾⅓⅔⅛⅜⅝⅞\/\.\-–to]+$/i.test(ing.amount.trim())){
         return {...ing, amount: ing.amount.trim()+' '+ing.unit, unit:''};
       }
       return ing;
@@ -839,6 +840,14 @@ document.addEventListener('visibilitychange',()=>{
     syncBackupToCloud();
   }
 });
+// iOS Safari/PWAs fire pagehide (but not always visibilitychange) when the app
+// is closed or swiped away — flush there too as a second safety net.
+window.addEventListener('pagehide',()=>{
+  if(cloudSyncTimer){
+    clearTimeout(cloudSyncTimer);cloudSyncTimer=null;
+    syncBackupToCloud();
+  }
+});
 
 // Holds a fetched-but-not-yet-applied cloud backup, pending the user's choice
 // in the welcome modal (see acceptCloudRestore/declineCloudRestore).
@@ -860,13 +869,34 @@ async function fetchCloudBackup(path){
 
 // Applies a fetched backup to local state, pulling each recipe's photos back
 // from GitHub via the public raw CDN.
+//
+// If the local recipe book is empty (fresh install / first-run welcome modal),
+// this is a full restore — the backup becomes the local state outright.
+// Otherwise (e.g. "Restore from another device" on a device that already has
+// recipes), it MERGES: any backup recipe not already present locally (by id or
+// name) is added, and existing local recipes/marks are never removed or
+// overwritten — avoids silently wiping recipes the user already has.
 async function applyCloudBackup(backup){
-  state.recipes=backup.recipes;
-  state.planned=backup.planned||[];
-  state.checkedItems=backup.checkedItems||{};
-  state.haveItems=backup.haveItems||{};
-  dlog('Restoring '+state.recipes.length+' recipes from cloud backup');
-  for(const r of state.recipes){
+  const freshStart=state.recipes.length===0;
+  let added;
+  if(freshStart){
+    state.recipes=backup.recipes||[];
+    state.planned=backup.planned||[];
+    state.checkedItems=backup.checkedItems||{};
+    state.haveItems=backup.haveItems||{};
+    added=state.recipes;
+    dlog('Restoring '+state.recipes.length+' recipes from cloud backup');
+  }else{
+    const existingIds=new Set(state.recipes.map(r=>r.id));
+    const existingNames=new Set(state.recipes.map(r=>(r.name||'').toLowerCase()));
+    added=(backup.recipes||[]).filter(r=>!existingIds.has(r.id)&&!existingNames.has((r.name||'').toLowerCase()));
+    state.recipes=[...state.recipes, ...added];
+    state.planned=[...new Set([...state.planned, ...(backup.planned||[])])];
+    state.checkedItems={...(backup.checkedItems||{}), ...state.checkedItems};
+    state.haveItems={...(backup.haveItems||{}), ...state.haveItems};
+    dlog('Merging cloud backup: '+added.length+' new of '+(backup.recipes||[]).length+' recipes');
+  }
+  for(const r of added){
     if(r.imageBackupUrls&&r.imageBackupUrls.length){
       const dataUrls=[];
       for(const url of r.imageBackupUrls){
@@ -877,7 +907,13 @@ async function applyCloudBackup(backup){
   }
   saveState();
   if(backup.exportedAt) localStorage.setItem(LAST_SYNC_KEY, backup.exportedAt);
-  toast(`Restored ${state.recipes.length} recipes from cloud backup ✓`, 5000);
+  if(freshStart){
+    toast(`Restored ${state.recipes.length} recipes from cloud backup ✓`, 5000);
+  }else if(added.length){
+    toast(`Added ${added.length} new recipe(s) from backup ✓`, 5000);
+  }else{
+    toast(`No new recipes — you already have everything from that backup`, 5000);
+  }
 }
 
 // "Add Nick's recipes" button in the welcome modal.
@@ -947,6 +983,7 @@ async function restoreFromAnonId(){
   const input=document.getElementById('anon-restore-input');
   const id=input.value.trim().toLowerCase();
   if(!ANON_ID_RE.test(id)){toast('That doesn\'t look like a valid backup ID.');return;}
+  if(state.recipes.length&&!confirm(`Add any recipes from backup ${id} that you don't already have? Your existing recipes won't be removed or changed.`)) return;
   const backup=await fetchCloudBackup(`data/users/${id}/backup.json`);
   if(!backup){toast('No backup found for that ID.');return;}
   await applyCloudBackup(backup);
@@ -1345,7 +1382,7 @@ async function apiPost(body){
     const res=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1400,...body}),
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:3000,...body}),
       signal:controller.signal
     });
     clearTimeout(timeout);
