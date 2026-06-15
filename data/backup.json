@@ -22,38 +22,38 @@
         },
         {
           "name": "cucumber",
-          "amount": "1 small",
-          "unit": "whole",
+          "amount": "1 small whole",
+          "unit": "",
           "notes": "peeled, seeded, finely diced"
         },
         {
           "name": "red bell pepper",
-          "amount": "1 medium",
-          "unit": "whole",
+          "amount": "1 medium whole",
+          "unit": "",
           "notes": "cored, seeded, finely diced"
         },
         {
           "name": "yellow bell pepper",
-          "amount": "1 medium",
-          "unit": "whole",
+          "amount": "1 medium whole",
+          "unit": "",
           "notes": "cored, seeded, finely diced"
         },
         {
           "name": "jalapeño",
-          "amount": "1 small",
-          "unit": "whole",
+          "amount": "1 small whole",
+          "unit": "",
           "notes": "seeded, minced (use half for a less spicy version)"
         },
         {
           "name": "pale green inner celery stalks",
-          "amount": "3",
-          "unit": "stalk",
+          "amount": "3 stalk",
+          "unit": "",
           "notes": "finely diced"
         },
         {
           "name": "red onion",
-          "amount": "½ small",
-          "unit": "whole",
+          "amount": "½ small whole",
+          "unit": "",
           "notes": "finely diced"
         },
         {
@@ -97,7 +97,8 @@
       "id": 1781474789768,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474789768-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Grilled King Oyster Mushrooms with Tarragon Butter",
@@ -139,8 +140,8 @@
         },
         {
           "name": "garlic clove",
-          "amount": "1",
-          "unit": "clove",
+          "amount": "1 clove",
+          "unit": "",
           "notes": "minced"
         },
         {
@@ -175,8 +176,8 @@
         },
         {
           "name": "lemon",
-          "amount": "½",
-          "unit": "lemon",
+          "amount": "½ lemon",
+          "unit": "",
           "notes": "for juice"
         },
         {
@@ -190,7 +191,8 @@
       "id": 1781474728378,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474728378-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Ragù Bolognese Sauce",
@@ -226,20 +228,20 @@
         },
         {
           "name": "onion",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": null
         },
         {
           "name": "carrot",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": null
         },
         {
           "name": "celery stick",
-          "amount": "1",
-          "unit": "stick",
+          "amount": "1 stick",
+          "unit": "",
           "notes": null
         },
         {
@@ -268,8 +270,8 @@
         },
         {
           "name": "bay leaf",
-          "amount": "1",
-          "unit": "leaf",
+          "amount": "1 leaf",
+          "unit": "",
           "notes": "dried, or 2 fresh"
         },
         {
@@ -292,8 +294,8 @@
         },
         {
           "name": "whole peeled plum tomatoes in purée",
-          "amount": "28 oz",
-          "unit": "can",
+          "amount": "28 oz can",
+          "unit": "",
           "notes": "passed through food mill, optional"
         },
         {
@@ -322,7 +324,8 @@
         }
       ],
       "notes": null,
-      "id": 1781474614437
+      "id": 1781474614437,
+      "category": "food"
     },
     {
       "name": "Bifu Kare Raisu",
@@ -364,20 +367,20 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "2",
-          "unit": "cloves",
+          "amount": "2 cloves",
+          "unit": "",
           "notes": "finely chopped"
         },
         {
           "name": "medium onions",
-          "amount": "3",
-          "unit": "onions",
+          "amount": "3 onions",
+          "unit": "",
           "notes": "chopped"
         },
         {
           "name": "apple",
-          "amount": "1",
-          "unit": "apple",
+          "amount": "1 apple",
+          "unit": "",
           "notes": "grated"
         },
         {
@@ -406,8 +409,8 @@
         },
         {
           "name": "sea salt",
-          "amount": "to taste",
-          "unit": "salt",
+          "amount": "to taste salt",
+          "unit": "",
           "notes": null
         },
         {
@@ -418,14 +421,14 @@
         },
         {
           "name": "Yukon Gold potato",
-          "amount": "1 large",
-          "unit": "potato",
+          "amount": "1 large potato",
+          "unit": "",
           "notes": "scrubbed and cut into ½-inch pieces"
         },
         {
           "name": "carrots",
-          "amount": "2 large",
-          "unit": "carrots",
+          "amount": "2 large carrots",
+          "unit": "",
           "notes": "cut into ½-inch pieces"
         },
         {
@@ -459,15 +462,16 @@
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-0.jpg",
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-1.jpg",
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-2.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
-      "name": "Turmeric Gin Cocktail",
+      "name": "Square Root",
       "servings": 1,
       "source": "Nick Farrell",
       "emoji": "🍸",
       "time": null,
-      "difficulty": "medium",
+      "difficulty": "easy",
       "tags": [
         "cocktail",
         "gin",
@@ -476,53 +480,54 @@
       ],
       "ingredients": [
         {
-          "name": "powdered turmeric",
-          "amount": "pinch",
-          "unit": "pinch",
+          "name": "pinch powdered turmeric",
+          "amount": "",
+          "unit": "",
           "notes": null
         },
         {
-          "name": "gin",
-          "amount": "1½ oz",
-          "unit": "oz",
+          "name": "1½ oz gin",
+          "amount": "",
+          "unit": "",
           "notes": null
         },
         {
-          "name": "domaine ginger liqueur",
-          "amount": "1 oz",
-          "unit": "oz",
-          "notes": "domaine canton"
-        },
-        {
-          "name": "carrot eau de vie",
-          "amount": "¼ oz",
-          "unit": "oz",
+          "name": "1 oz domaine ginger liqueur domaine canton",
+          "amount": "",
+          "unit": "",
           "notes": null
         },
         {
-          "name": "lemon juice",
-          "amount": "¾ oz",
-          "unit": "oz",
+          "name": "¼ oz carrot eau de vie",
+          "amount": "",
+          "unit": "",
           "notes": null
         },
         {
-          "name": "carrot juice",
-          "amount": "1¼ oz",
-          "unit": "oz",
+          "name": "¾ oz lemon juice",
+          "amount": "",
+          "unit": "",
           "notes": null
         },
         {
-          "name": "fee foam bitters",
-          "amount": "2 dashes",
-          "unit": "dashes",
-          "notes": "nondairy foaming agent"
+          "name": "1¼ oz carrot juice",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "2 dashes fee foam bitters nondairy foaming agent",
+          "amount": "",
+          "unit": "",
+          "notes": null
         }
       ],
       "notes": null,
       "id": 1781474298563,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474298563-0.jpg"
-      ]
+      ],
+      "category": "drink"
     },
     {
       "name": "Braised Fish with Tomato & Coconut Chickpeas",
@@ -582,8 +587,8 @@
         },
         {
           "name": "limes",
-          "amount": "2",
-          "unit": "whole",
+          "amount": "2 whole",
+          "unit": "",
           "notes": null
         },
         {
@@ -600,8 +605,8 @@
         },
         {
           "name": "cod fillets",
-          "amount": "4 (6-ounce)",
-          "unit": "fillets",
+          "amount": "4 (6-ounce) fillets",
+          "unit": "",
           "notes": "or any flaky white fish"
         },
         {
@@ -621,7 +626,8 @@
       "id": 1781474186298,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474186298-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Egg Caviar with Cauliflower Mousseline and Lemon-Chive Crème Fraiche",
@@ -721,7 +727,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473887567-0.jpg",
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473887567-1.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Corn Maque Choux",
@@ -814,7 +821,8 @@
       "id": 1781473767962,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473767962-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Roasted Artichokes with Calabrian Chile, Anchovy & Crispy Shallots",
@@ -907,7 +915,8 @@
       "id": 1781473708229,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473708229-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Peanutty Pork & Brussels",
@@ -994,7 +1003,8 @@
       "id": 1781473616666,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473616666-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Any Fish with Saffron Cherry Tomatoes",
@@ -1087,7 +1097,8 @@
       "id": 1781473571656,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473571656-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Everything-Crusted Tuna with Snap Peas & Tahini-Jang Sauce",
@@ -1174,7 +1185,8 @@
       "id": 1781473523112,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473523112-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "The Smoothest, Fluffiest Hummus",
@@ -1261,7 +1273,8 @@
       "id": 1781473485011,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473485011-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Meanest Loaded Hummus Dip",
@@ -1391,7 +1404,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473460889-0.jpg",
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473460889-1.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Olive Oil and Garlic Spaghetti with Artichokes and Olives",
@@ -1496,7 +1510,8 @@
       "id": 1781473431147,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473431147-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Foil-Baked Salmon with Cherry Tomatoes, Olives, and Thyme",
@@ -1583,7 +1598,8 @@
       "id": 1781473399257,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473399257-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Sautéed Trout with Cilantro-Lime Sauce",
@@ -1682,7 +1698,8 @@
       "id": 1781473363348,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473363348-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Tuesday Night Skillet Chicken Cutlets with Artichokes and Mushrooms",
@@ -1793,7 +1810,8 @@
       "id": 1781473323960,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473323960-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Porcini Crusted Beef Tenderloin with Sautéed King Trumpet, Oyster & Shiitake Mushrooms and Red Wine Demi-Glace",
@@ -1953,7 +1971,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473282450-0.jpg",
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473282450-1.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Farro with Artichokes and Herb Salad",
@@ -2076,7 +2095,8 @@
       "id": 1781473229967,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473229967-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Greek Sea Bass Baked with Santorini Assyrtiko Wine, Caper Leaves, and Herbs",
@@ -2193,7 +2213,8 @@
       "id": 1781473199887,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473199887-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Pan-Roasted Romanesco with Golden Raisins, Tahini & Sumac",
@@ -2292,7 +2313,8 @@
       "id": 1781473173451,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473173451-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Sheet Pan Smoky Chicken, Chickpeas, and Carrots",
@@ -2397,7 +2419,8 @@
       "id": 1781473127040,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473127040-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Romaine, Arugula, and Mint Fattoush Salad",
@@ -2544,7 +2567,8 @@
       "id": 1781473077703,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473077703-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Boeuf Bourguignon",
@@ -2667,7 +2691,8 @@
       "id": 1781471589014,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781471589014-0.jpg"
-      ]
+      ],
+      "category": "food"
     },
     {
       "name": "Easy Lemon and Herb Couscous Salad",
@@ -2763,7 +2788,8 @@
         }
       ],
       "notes": null,
-      "id": 1780939717164
+      "id": 1780939717164,
+      "category": "food"
     },
     {
       "name": "Green Chile Margarita",
@@ -2829,7 +2855,8 @@
         }
       ],
       "notes": null,
-      "id": 1780889368107
+      "id": 1780889368107,
+      "category": "drink"
     },
     {
       "name": "Overnight Oats",
@@ -2895,7 +2922,8 @@
         }
       ],
       "notes": null,
-      "id": 1780868140083
+      "id": 1780868140083,
+      "category": "food"
     },
     {
       "name": "Dill Pickle Soup",
@@ -2997,7 +3025,8 @@
         }
       ],
       "notes": null,
-      "id": 1780724683067
+      "id": 1780724683067,
+      "category": "food"
     },
     {
       "name": "Grilled Asparagus with Pancetta Citronette",
@@ -3063,7 +3092,8 @@
         }
       ],
       "notes": null,
-      "id": 1780724432353
+      "id": 1780724432353,
+      "category": "food"
     },
     {
       "name": "Perfect Manhattan Cocktail",
@@ -3110,7 +3140,8 @@
         }
       ],
       "notes": null,
-      "id": 1780700366000
+      "id": 1780700366000,
+      "category": "drink"
     },
     {
       "name": "The Last Word",
@@ -3164,7 +3195,8 @@
         }
       ],
       "notes": null,
-      "id": 1780699920667
+      "id": 1780699920667,
+      "category": "drink"
     },
     {
       "name": "Mexican Martini (Anejo Margarita)",
@@ -3224,7 +3256,8 @@
         }
       ],
       "notes": null,
-      "id": 1780699798345
+      "id": 1780699798345,
+      "category": "drink"
     },
     {
       "name": "Classic Margarita",
@@ -3278,7 +3311,8 @@
         }
       ],
       "notes": null,
-      "id": 1780699556483
+      "id": 1780699556483,
+      "category": "drink"
     },
     {
       "name": "Al Pastor",
@@ -3404,7 +3438,8 @@
         }
       ],
       "notes": null,
-      "id": 1780699492197
+      "id": 1780699492197,
+      "category": "food"
     },
     {
       "name": "Maximilian Affair",
@@ -3464,7 +3499,8 @@
         }
       ],
       "notes": null,
-      "id": 1780698917162
+      "id": 1780698917162,
+      "category": "drink"
     }
   ],
   "planned": [],
@@ -3498,5 +3534,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-14T22:07:22.334Z"
+  "exportedAt": "2026-06-15T20:04:14.238Z"
 }
