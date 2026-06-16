@@ -1,6 +1,67 @@
 {
   "recipes": [
     {
+      "name": "Fat Mexican Duck",
+      "servings": 1,
+      "source": "https://www.diffordsguide.com/cocktails/recipe/41434/fat-mexican-duck",
+      "emoji": "🥃",
+      "time": null,
+      "difficulty": "easy",
+      "category": "drink",
+      "tags": [
+        "cocktail",
+        "mezcal",
+        "tequila",
+        "stirred"
+      ],
+      "ingredients": [
+        {
+          "name": "Mezcal",
+          "amount": "1½ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "Reposado Tequila",
+          "amount": "¾ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "Cointreau",
+          "amount": "½ oz",
+          "unit": "oz",
+          "notes": "or triple sec"
+        },
+        {
+          "name": "Agave syrup",
+          "amount": "¼ oz",
+          "unit": "oz",
+          "notes": "2:1 rich agave syrup"
+        },
+        {
+          "name": "Orange bitters",
+          "amount": "2 dashes",
+          "unit": "dashes",
+          "notes": null
+        },
+        {
+          "name": "Rocks glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": "over ice"
+        },
+        {
+          "name": "Orange twist",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781577577686
+    },
+    {
       "name": "Watermelon and Cucumber Gazpacho",
       "servings": 4,
       "source": null,
@@ -3534,5 +3595,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-16T02:39:27.185Z"
+  "exportedAt": "2026-06-16T02:39:52.087Z"
 }
