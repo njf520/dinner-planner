@@ -392,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.10';
+const VERSION='3.11';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1043,7 +1043,8 @@ function getFilteredRecipes(){
     list=list.filter(r=>(r.name||'').toLowerCase().includes(q)||(r.tags||[]).some(t=>t.toLowerCase().includes(q))||(r.ingredients||[]).some(ing=>(ing.name||'').toLowerCase().includes(q)));
   }
   if(activeTagFilter) list=list.filter(r=>(r.tags||[]).includes(activeTagFilter));
-  if(sortMode==='oldest-made') list.sort((a,b)=>(a.lastMade||0)-(b.lastMade||0));
+  if(sortMode==='default') list.sort((a,b)=>(b.lastOpened||0)-(a.lastOpened||0));
+  else if(sortMode==='oldest-made') list.sort((a,b)=>(a.lastMade||0)-(b.lastMade||0));
   else if(sortMode==='never-made') list=list.filter(r=>!r.lastMade);
   return list;
 }
@@ -1646,7 +1647,15 @@ function unplanRecipe(id){
   state.planned=state.planned.filter(p=>p!==id);
   saveState();renderShopping();
 }
-function toggleExpand(id){expandedRecipe=expandedRecipe===id?null:id;render();}
+function toggleExpand(id){
+  const opening=expandedRecipe!==id;
+  expandedRecipe=opening?id:null;
+  if(opening){
+    const r=state.recipes.find(x=>x.id===id);
+    if(r){r.lastOpened=Date.now();saveState();}
+  }
+  render();
+}
 function setMultiplier(id,m){recipeMultipliers[id]=m;render();}
 
 // notes inline edit
