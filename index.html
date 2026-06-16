@@ -241,7 +241,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.8</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.9</div>
       <div class="search-bar" id="search-bar">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -392,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.8';
+const VERSION='3.9';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1526,7 +1526,7 @@ async function submitRecipe(){
     return;
   }
 
-  if(!key){showError('No API key found. Go to Settings tab, paste your key, and tap Save key first.');return;}
+  if(!key&&!WORKER_URL){showError('No API key found. Go to Settings tab, paste your key, and tap Save key first.');return;}
 
   if(addMethod==='url'){
     const url=document.getElementById('url-input').value.trim();
