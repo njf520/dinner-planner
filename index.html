@@ -392,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.13';
+const VERSION='3.14';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -803,9 +803,9 @@ async function syncBackupToCloud(){
     if(lastKnown){
       const remotePath=getGhToken()?undefined:`data/users/${getAnonId()}/backup.json`;
       const remote=await fetchCloudBackup(remotePath);
-      if(remote&&remote.exportedAt&&remote.exportedAt!==lastKnown){
-        dlog('Cloud backup changed since last sync (was '+lastKnown+', now '+remote.exportedAt+') — another device may have synced. Proceeding with this device\'s changes.');
-        toast('⚠️ Recipes were also updated on another device — both changes are kept, but double-check for conflicts', 6000);
+      if(remote&&remote.exportedAt&&remote.exportedAt>lastKnown){
+        dlog('Cloud backup is newer than last sync (was '+lastKnown+', remote is '+remote.exportedAt+') — another device may have synced.');
+        toast('⚠️ Another device updated recipes — check for conflicts', 5000);
       }
     }
     const backup={
@@ -2148,11 +2148,16 @@ async function checkForUpdate(){
   }catch(e){}
 }
 
+async function applyUpdate(){
+  try{ const keys=await caches.keys(); await Promise.all(keys.map(k=>caches.delete(k))); }catch(e){}
+  window.location.reload();
+}
+
 function showUpdateBanner(newVersion){
   const banner=document.createElement('div');
   banner.id='update-banner';
   banner.style.cssText='position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:var(--accent);color:#fff;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;z-index:999;font-size:13px;font-weight:500';
-  banner.innerHTML=`<span>v${newVersion} available</span><button onclick="window.location.reload(true)" style="background:rgba(255,255,255,0.25);border:none;color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Update now</button>`;
+  banner.innerHTML=`<span>v${newVersion} available</span><button onclick="applyUpdate()" style="background:rgba(255,255,255,0.25);border:none;color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Update now</button>`;
   document.body.appendChild(banner);
 }
 
@@ -2164,7 +2169,7 @@ document.getElementById('version-display').textContent='v'+VERSION;
 // dinner-planner/ path on GitHub Pages) so it only controls this app.
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
-    navigator.serviceWorker.register('./sw.js').catch(e=>dlog('Service worker registration failed: '+e.message));
+    navigator.serviceWorker.register('./sw.js?v='+VERSION).catch(e=>dlog('Service worker registration failed: '+e.message));
   });
 }
 </script>
