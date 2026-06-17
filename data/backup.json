@@ -3566,7 +3566,9 @@
       "category": "drink"
     }
   ],
-  "planned": [],
+  "planned": [
+    1781473399257
+  ],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -3597,5 +3599,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-17T18:32:10.650Z"
+  "exportedAt": "2026-06-17T18:35:11.989Z"
 }
