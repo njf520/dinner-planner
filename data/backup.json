@@ -3202,7 +3202,8 @@
       ],
       "notes": null,
       "id": 1780700366000,
-      "category": "drink"
+      "category": "drink",
+      "lastOpened": 1781667898820
     },
     {
       "name": "The Last Word",
@@ -3318,7 +3319,8 @@
       ],
       "notes": null,
       "id": 1780699798345,
-      "category": "drink"
+      "category": "drink",
+      "lastOpened": 1781667914200
     },
     {
       "name": "Classic Margarita",
@@ -3595,5 +3597,5 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true
   },
-  "exportedAt": "2026-06-17T03:30:06.179Z"
+  "exportedAt": "2026-06-17T03:45:29.466Z"
 }
