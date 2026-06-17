@@ -241,7 +241,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
   <div class="header">
     <div class="header-top">
       <div class="app-title">Belly <span>Up</span></div>
-      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px">v3.9</div>
+      <div id="version-display" style="font-size:10px;color:var(--text3);flex-shrink:0;align-self:flex-end;padding-bottom:3px"></div>
       <div class="search-bar" id="search-bar">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" placeholder="Search recipes…" oninput="onSearch()" autocomplete="off">
@@ -392,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.11';
+const VERSION='3.12';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1700,7 +1700,7 @@ function clearPlan(){state.planned=[];saveState();render();}
 // follows a typical grocery store layout. Each category matches ingredients whose
 // name contains any of its keywords (first match wins, checked top to bottom).
 const SHOP_CATEGORIES = [
-  { name: 'Produce & Fresh Herbs', keywords: ['lettuce','spinach','kale','arugula','cabbage','broccoli','cauliflower','carrot','celery','cucumber','zucchini','squash','eggplant','pepper','tomato','onion','shallot','garlic','leek','scallion','chive','ginger','potato','sweet potato','yam','beet','radish','turnip','parsnip','fennel','artichoke','asparagus','corn','pea','bean','mushroom','avocado','lemon','lime','orange','apple','pear','grape','berry','strawberry','blueberry','raspberry','blackberry','cherry','peach','plum','mango','pineapple','banana','melon','watermelon','fig','date','basil','parsley','cilantro','mint','thyme','rosemary','oregano','sage','dill','tarragon','chervil','bay','herb','fresh','produce','fruit','vegetable','greens','lettuce','arugula','chard','watercress','endive','radicchio','microgreen','sprout'] },
+  { name: 'Produce & Fresh Herbs', keywords: ['lettuce','spinach','kale','arugula','cabbage','broccoli','cauliflower','carrot','celery','cucumber','zucchini','squash','eggplant','pepper','tomato','onion','shallot','garlic','leek','scallion','chive','ginger','potato','sweet potato','yam','beet','radish','turnip','parsnip','fennel','artichoke','asparagus','corn','pea','bean','mushroom','avocado','lemon','lime','orange','apple','pear','grape','berry','strawberry','blueberry','raspberry','blackberry','cherry','peach','plum','mango','pineapple','banana','melon','watermelon','fig','date','basil','parsley','cilantro','mint','fresh herb','herb','fresh','produce','fruit','vegetable','greens','chard','watercress','endive','radicchio','microgreen','sprout'] },
   { name: 'Seeds, Nuts & Dried Fruit', keywords: ['almond','walnut','pecan','cashew','pistachio','hazelnut','peanut','pine nut','macadamia','chestnut','seed','sunflower','pumpkin','sesame','flax','chia','hemp','poppy','tahini','nut','nut butter','raisin','dried cranberry','dried fruit','currant','sultana','apricot','prune','date','fig','dried cherry','dried blueberry'] },
   { name: 'Cheese', keywords: ['cheese','parmesan','parmigiano','pecorino','cheddar','mozzarella','brie','camembert','gouda','gruyere','feta','ricotta','goat cheese','blue cheese','gorgonzola','manchego','provolone','fontina','havarti','muenster','queso','cotija','paneer'] },
   { name: 'Olives & Pickles', keywords: ['olive oil','caper','pickle','gherkin','cornichon','pepperoncini','banana pepper','jalapeno','kimchi','sauerkraut','preserved lemon','kalamata','castelvetrano','pitted olive','green olive','black olive','stuffed olive'] },
@@ -2158,6 +2158,7 @@ function showUpdateBanner(newVersion){
 
 // Check for update 3 seconds after load
 setTimeout(checkForUpdate, 3000);
+document.getElementById('version-display').textContent='v'+VERSION;
 
 // Register the service worker for offline support. Scoped to ./ (the
 // dinner-planner/ path on GitHub Pages) so it only controls this app.
