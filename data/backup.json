@@ -3566,7 +3566,9 @@
       "category": "drink"
     }
   ],
-  "planned": [],
+  "planned": [
+    1781473399257
+  ],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": true,
@@ -3580,7 +3582,9 @@
     "ing_onions": true,
     "ing_tomatopaste": false,
     "ing_chickpeas": false,
-    "ing_bonelessskinlesschickenthighs": false
+    "ing_bonelessskinlesschickenthighs": false,
+    "ing_pittedolives": false,
+    "ing_cherrytomatoes": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3595,7 +3599,9 @@
     "ing_onions": false,
     "ing_tomatopaste": true,
     "ing_chickpeas": true,
-    "ing_bonelessskinlesschickenthighs": true
+    "ing_bonelessskinlesschickenthighs": true,
+    "ing_pittedolives": true,
+    "ing_cherrytomatoes": true
   },
-  "exportedAt": "2026-06-17T18:53:24.081Z"
+  "exportedAt": "2026-06-17T18:53:56.271Z"
 }
