@@ -1,0 +1,3607 @@
+{
+  "recipes": [
+    {
+      "name": "Fat Mexican Duck",
+      "servings": 1,
+      "source": "https://www.diffordsguide.com/cocktails/recipe/41434/fat-mexican-duck",
+      "emoji": "🥃",
+      "time": null,
+      "difficulty": "easy",
+      "category": "drink",
+      "tags": [
+        "cocktail",
+        "mezcal",
+        "tequila",
+        "stirred"
+      ],
+      "ingredients": [
+        {
+          "name": "Mezcal",
+          "amount": "1½ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "Reposado Tequila",
+          "amount": "¾ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "Cointreau",
+          "amount": "½ oz",
+          "unit": "oz",
+          "notes": "or triple sec"
+        },
+        {
+          "name": "Agave syrup",
+          "amount": "¼ oz",
+          "unit": "oz",
+          "notes": "2:1 rich agave syrup"
+        },
+        {
+          "name": "Orange bitters",
+          "amount": "2 dashes",
+          "unit": "dashes",
+          "notes": null
+        },
+        {
+          "name": "Rocks glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": "over ice"
+        },
+        {
+          "name": "Orange twist",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781577577686
+    },
+    {
+      "name": "Watermelon and Cucumber Gazpacho",
+      "servings": 4,
+      "source": null,
+      "emoji": "🥣",
+      "time": "1 hour",
+      "difficulty": "easy",
+      "tags": [
+        "gazpacho",
+        "cold soup",
+        "summer",
+        "vegetarian"
+      ],
+      "ingredients": [
+        {
+          "name": "seedless watermelon chunks",
+          "amount": "5 cups",
+          "unit": "cup",
+          "notes": "divided use"
+        },
+        {
+          "name": "cucumber",
+          "amount": "1 small whole",
+          "unit": "",
+          "notes": "peeled, seeded, finely diced"
+        },
+        {
+          "name": "red bell pepper",
+          "amount": "1 medium whole",
+          "unit": "",
+          "notes": "cored, seeded, finely diced"
+        },
+        {
+          "name": "yellow bell pepper",
+          "amount": "1 medium whole",
+          "unit": "",
+          "notes": "cored, seeded, finely diced"
+        },
+        {
+          "name": "jalapeño",
+          "amount": "1 small whole",
+          "unit": "",
+          "notes": "seeded, minced (use half for a less spicy version)"
+        },
+        {
+          "name": "pale green inner celery stalks",
+          "amount": "3 stalk",
+          "unit": "",
+          "notes": "finely diced"
+        },
+        {
+          "name": "red onion",
+          "amount": "½ small whole",
+          "unit": "",
+          "notes": "finely diced"
+        },
+        {
+          "name": "fresh mint",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "finely chopped"
+        },
+        {
+          "name": "fresh lime juice",
+          "amount": "3 tablespoons",
+          "unit": "tablespoon",
+          "notes": null
+        },
+        {
+          "name": "red wine vinegar",
+          "amount": "2 tablespoons",
+          "unit": "tablespoon",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "¼ teaspoon",
+          "unit": "teaspoon",
+          "notes": null
+        },
+        {
+          "name": "sour cream",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        },
+        {
+          "name": "fresh mint sprigs",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781474789768,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474789768-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Grilled King Oyster Mushrooms with Tarragon Butter",
+      "servings": "4-6",
+      "source": null,
+      "emoji": "🍄",
+      "time": "15 min",
+      "difficulty": "easy",
+      "tags": [
+        "grilled",
+        "mushrooms",
+        "side dish",
+        "vegetarian"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": "at room temperature"
+        },
+        {
+          "name": "fresh tarragon",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "chopped"
+        },
+        {
+          "name": "fresh flat-leaf parsley",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "chopped"
+        },
+        {
+          "name": "fresh chives",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "snipped"
+        },
+        {
+          "name": "garlic clove",
+          "amount": "1 clove",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "finely grated"
+        },
+        {
+          "name": "king oyster mushrooms",
+          "amount": "10 oz",
+          "unit": "oz",
+          "notes": "halved lengthwise"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "lemon",
+          "amount": "½ lemon",
+          "unit": "",
+          "notes": "for juice"
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": "to taste",
+          "unit": null,
+          "notes": "for finishing"
+        }
+      ],
+      "notes": null,
+      "id": 1781474728378,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474728378-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Ragù Bolognese Sauce",
+      "servings": "5-6 cups",
+      "source": "https://www.theclevercarrot.com/2022/01/ragu-bolognese-sauce/",
+      "emoji": "🍝",
+      "time": "3 hours 10 min",
+      "difficulty": "medium",
+      "tags": [
+        "italian",
+        "pasta sauce",
+        "meat sauce",
+        "bolognese"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "pancetta",
+          "amount": "2 oz",
+          "unit": "oz",
+          "notes": "diced"
+        },
+        {
+          "name": "onion",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "carrot",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "celery stick",
+          "amount": "1 stick",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "ground beef",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "about 80% lean"
+        },
+        {
+          "name": "ground pork",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "whole milk",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "ground nutmeg",
+          "amount": "pinch",
+          "unit": "pinch",
+          "notes": null
+        },
+        {
+          "name": "bay leaf",
+          "amount": "1 leaf",
+          "unit": "",
+          "notes": "dried, or 2 fresh"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "tomato paste",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "heaping"
+        },
+        {
+          "name": "chicken stock",
+          "amount": "1-2 cups",
+          "unit": "cups",
+          "notes": "quality"
+        },
+        {
+          "name": "whole peeled plum tomatoes in purée",
+          "amount": "28 oz can",
+          "unit": "",
+          "notes": "passed through food mill, optional"
+        },
+        {
+          "name": "salt",
+          "amount": "",
+          "unit": "seasoning",
+          "notes": "to taste"
+        },
+        {
+          "name": "black pepper",
+          "amount": "",
+          "unit": "seasoning",
+          "notes": "to taste"
+        },
+        {
+          "name": "pappardelle pasta",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": "homemade, for serving"
+        },
+        {
+          "name": "Parmesan cheese",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "fresh grated, for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781474614437,
+      "category": "food"
+    },
+    {
+      "name": "Bifu Kare Raisu",
+      "servings": 6,
+      "source": null,
+      "emoji": "🍛",
+      "time": "60 min",
+      "difficulty": "medium",
+      "tags": [
+        "japanese",
+        "curry",
+        "beef",
+        "rice"
+      ],
+      "ingredients": [
+        {
+          "name": "neutral oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "vegetable or other neutral oil"
+        },
+        {
+          "name": "beef chuck",
+          "amount": "2 lb",
+          "unit": "lb",
+          "notes": "cut into ¾-inch pieces"
+        },
+        {
+          "name": "kurozato black sugar",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "or dark brown sugar"
+        },
+        {
+          "name": "fresh ginger",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "finely minced"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2 cloves",
+          "unit": "",
+          "notes": "finely chopped"
+        },
+        {
+          "name": "medium onions",
+          "amount": "3 onions",
+          "unit": "",
+          "notes": "chopped"
+        },
+        {
+          "name": "apple",
+          "amount": "1 apple",
+          "unit": "",
+          "notes": "grated"
+        },
+        {
+          "name": "S&B brand curry powder",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "mirin",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "shoyu",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "chicken stock",
+          "amount": "1 qt",
+          "unit": "qt",
+          "notes": null
+        },
+        {
+          "name": "sea salt",
+          "amount": "to taste salt",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "konbucha kelp tea powder",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "optional"
+        },
+        {
+          "name": "Yukon Gold potato",
+          "amount": "1 large potato",
+          "unit": "",
+          "notes": "scrubbed and cut into ½-inch pieces"
+        },
+        {
+          "name": "carrots",
+          "amount": "2 large carrots",
+          "unit": "",
+          "notes": "cut into ½-inch pieces"
+        },
+        {
+          "name": "potato starch",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "hot rice",
+          "amount": "",
+          "unit": "serving",
+          "notes": "for serving"
+        },
+        {
+          "name": "yogurt raita",
+          "amount": "",
+          "unit": "serving",
+          "notes": "for serving"
+        },
+        {
+          "name": "fukujinzuke pickles",
+          "amount": "",
+          "unit": "serving",
+          "notes": "store-bought, optional"
+        }
+      ],
+      "notes": null,
+      "id": 1781474422194,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-0.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-1.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-2.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Square Root",
+      "servings": 1,
+      "source": "Nick Farrell",
+      "emoji": "🍸",
+      "time": null,
+      "difficulty": "medium",
+      "tags": [
+        "cocktail",
+        "gin",
+        "turmeric",
+        "shaken"
+      ],
+      "ingredients": [
+        {
+          "name": "pinch powdered turmeric",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "1½ oz gin",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "1 oz domaine ginger liqueur domaine canton",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "¼ oz carrot eau de vie",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "¾ oz lemon juice",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "1¼ oz carrot juice",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "2 dashes fee foam bitters nondairy foaming agent",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781474298563,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474298563-0.jpg"
+      ],
+      "category": "drink"
+    },
+    {
+      "name": "Braised Fish with Tomato & Coconut Chickpeas",
+      "servings": 4,
+      "source": "What to Cook When You Don't Feel Like Cooking",
+      "emoji": "🐟",
+      "time": "25 min",
+      "difficulty": "easy",
+      "tags": [
+        "braised",
+        "fish",
+        "chickpeas",
+        "one-pan"
+      ],
+      "ingredients": [
+        {
+          "name": "chickpeas",
+          "amount": "2 (15-ounce) cans",
+          "unit": "cans",
+          "notes": "drained and rinsed"
+        },
+        {
+          "name": "fire-roasted diced tomatoes",
+          "amount": "1 (14.5-ounce) can",
+          "unit": "can",
+          "notes": null
+        },
+        {
+          "name": "full-fat coconut milk",
+          "amount": "1 (13.5-ounce) can",
+          "unit": "can",
+          "notes": null
+        },
+        {
+          "name": "ground cumin",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "chili powder",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground turmeric",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": "divided"
+        },
+        {
+          "name": "limes",
+          "amount": "2 whole",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "cilantro",
+          "amount": "½ bunch",
+          "unit": "bunch",
+          "notes": null
+        },
+        {
+          "name": "fresh spinach",
+          "amount": "3 big handfuls",
+          "unit": "handfuls",
+          "notes": null
+        },
+        {
+          "name": "cod fillets",
+          "amount": "4 (6-ounce) fillets",
+          "unit": "",
+          "notes": "or any flaky white fish"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for drizzling"
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "1 big pinch",
+          "unit": "pinch",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781474186298,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474186298-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Egg Caviar with Cauliflower Mousseline and Lemon-Chive Crème Fraiche",
+      "servings": 6,
+      "source": "Melisse restaurant",
+      "emoji": "🥚",
+      "time": "45 min",
+      "difficulty": "hard",
+      "tags": [
+        "elegant",
+        "caviar",
+        "appetizer",
+        "french"
+      ],
+      "ingredients": [
+        {
+          "name": "cauliflower",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "cut into small pieces"
+        },
+        {
+          "name": "milk",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": null
+        },
+        {
+          "name": "heavy cream",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "sea salt",
+          "amount": "to taste",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "crème fraiche",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "heavy cream",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "for whipping"
+        },
+        {
+          "name": "lemon",
+          "amount": "1",
+          "unit": "",
+          "notes": "zest of 1 lemon, finely chopped"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "chives",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "chopped"
+        },
+        {
+          "name": "large organic eggs",
+          "amount": "6",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "Royal Transmontanus Caviar",
+          "amount": "¼ oz",
+          "unit": "oz",
+          "notes": "about ¼ ounce per person, if not more"
+        },
+        {
+          "name": "fleur de sel",
+          "amount": "pinch",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "freshly cracked"
+        }
+      ],
+      "notes": null,
+      "id": 1781473887567,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473887567-0.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473887567-1.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Corn Maque Choux",
+      "servings": 12,
+      "source": null,
+      "emoji": "🌽",
+      "time": "45 min",
+      "difficulty": "medium",
+      "tags": [
+        "cajun",
+        "corn",
+        "side dish",
+        "southern"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "fresh corn",
+          "amount": "7 cups",
+          "unit": "cups",
+          "notes": "cut off the cob (about seventeen 8-inch cobs), or frozen corn kernels"
+        },
+        {
+          "name": "onions",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "very finely chopped"
+        },
+        {
+          "name": "sugar",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "white pepper",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground red pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "preferably cayenne"
+        },
+        {
+          "name": "stock",
+          "amount": "2¼ cups",
+          "unit": "cups",
+          "notes": "Basic Chicken, Beef or Pork Stock"
+        },
+        {
+          "name": "margarine",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "evaporated milk",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "eggs",
+          "amount": "2 whole",
+          "unit": "",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473767962,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473767962-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Roasted Artichokes with Calabrian Chile, Anchovy & Crispy Shallots",
+      "servings": 6,
+      "source": null,
+      "emoji": "🍽️",
+      "time": "45 min",
+      "difficulty": "medium",
+      "tags": [
+        "roasted",
+        "artichokes",
+        "italian",
+        "appetizer"
+      ],
+      "ingredients": [
+        {
+          "name": "lemon",
+          "amount": "½ whole",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "small or medium artichokes",
+          "amount": "5 lb",
+          "unit": "lb",
+          "notes": "2.3 kg"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "as needed oil",
+          "unit": "",
+          "notes": "for cooking"
+        },
+        {
+          "name": "salt-packed anchovies",
+          "amount": "6 fillets",
+          "unit": "",
+          "notes": "rinsed and deboned"
+        },
+        {
+          "name": "Calabrian chiles",
+          "amount": "6 chiles",
+          "unit": "",
+          "notes": "roughly chopped"
+        },
+        {
+          "name": "white wine",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "120 ml"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste salt",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "parsley",
+          "amount": "⅓ bunch",
+          "unit": "bunch",
+          "notes": null
+        },
+        {
+          "name": "mint",
+          "amount": "⅓ bunch",
+          "unit": "bunch",
+          "notes": null
+        },
+        {
+          "name": "marjoram or oregano",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "chopped"
+        },
+        {
+          "name": "vegetable stock or water",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "60 ml, optional"
+        },
+        {
+          "name": "Crispy Shallots",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "page 66"
+        }
+      ],
+      "notes": null,
+      "id": 1781473708229,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473708229-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Peanutty Pork & Brussels",
+      "servings": 3,
+      "source": null,
+      "emoji": "🥗",
+      "time": "15 min",
+      "difficulty": "easy",
+      "tags": [
+        "stir-fry",
+        "pork",
+        "brussels sprouts",
+        "asian"
+      ],
+      "ingredients": [
+        {
+          "name": "untoasted sesame oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "ground pork",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "plus more as needed"
+        },
+        {
+          "name": "Brussels sprouts",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 cloves",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "fresh cilantro leaves and tender stems",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "low-sodium soy sauce",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "rice vinegar",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "creamy peanut butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "sriracha",
+          "amount": "1-2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "toasted sesame seeds",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473616666,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473616666-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Any Fish with Saffron Cherry Tomatoes",
+      "servings": 4,
+      "source": null,
+      "emoji": "🐟",
+      "time": "25 min",
+      "difficulty": "medium",
+      "tags": [
+        "fish",
+        "saffron",
+        "mediterranean",
+        "skillet"
+      ],
+      "ingredients": [
+        {
+          "name": "large shallot",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "thinly sliced"
+        },
+        {
+          "name": "fennel bulb",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "thinly sliced"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 cloves",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "cherry tomatoes",
+          "amount": "2 pints",
+          "unit": "pints",
+          "notes": "halved"
+        },
+        {
+          "name": "saffron",
+          "amount": "pinch",
+          "unit": "pinch",
+          "notes": "about 20 threads"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for tomatoes"
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for tomatoes"
+        },
+        {
+          "name": "fish fillets",
+          "amount": "4 fillets",
+          "unit": "",
+          "notes": "6- to 8-ounce, like cod or halibut"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "big pinch each",
+          "unit": "pinch",
+          "notes": "for seasoning fish"
+        },
+        {
+          "name": "black pepper",
+          "amount": "big pinch each",
+          "unit": "pinch",
+          "notes": "for seasoning fish"
+        },
+        {
+          "name": "pita breads",
+          "amount": "4 breads",
+          "unit": "",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473571656,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473571656-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Everything-Crusted Tuna with Snap Peas & Tahini-Jang Sauce",
+      "servings": 4,
+      "source": null,
+      "emoji": "🐟",
+      "time": "30 min",
+      "difficulty": "medium",
+      "tags": [
+        "tuna",
+        "asian",
+        "seared",
+        "healthy"
+      ],
+      "ingredients": [
+        {
+          "name": "tuna steaks",
+          "amount": "4 (4- to 6-ounce) steaks",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "low-sodium soy sauce",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "sesame oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "toasted or not"
+        },
+        {
+          "name": "everything bagel seasoning",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "or sesame seeds, plus more as needed"
+        },
+        {
+          "name": "neutral oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "snap peas",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2 cloves",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "lime",
+          "amount": "1 lime",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "gochujang",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "tahini",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "or any nut/seed butter"
+        },
+        {
+          "name": "honey",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473523112,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473523112-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "The Smoothest, Fluffiest Hummus",
+      "servings": 6,
+      "source": null,
+      "emoji": "🧄",
+      "time": null,
+      "difficulty": "medium",
+      "tags": [
+        "hummus",
+        "mediterranean",
+        "chickpeas",
+        "dip"
+      ],
+      "ingredients": [
+        {
+          "name": "dried chickpeas",
+          "amount": "1¼ cups",
+          "unit": "cups",
+          "notes": null
+        },
+        {
+          "name": "baking soda",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "1 or 2 large cloves",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "ice cubes",
+          "amount": "3 or 4 cubes",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "tahini paste",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": "plus more as desired"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "salt",
+          "notes": "to taste"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "from 1 large lemon, plus more as desired"
+        },
+        {
+          "name": "hot water",
+          "amount": "",
+          "unit": "water",
+          "notes": "optional, for thinning"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "",
+          "unit": "oil",
+          "notes": "for serving"
+        },
+        {
+          "name": "sumac",
+          "amount": "",
+          "unit": "spice",
+          "notes": "for serving"
+        },
+        {
+          "name": "warm pita bread",
+          "amount": "",
+          "unit": "bread",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473485011,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473485011-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Meanest Loaded Hummus Dip",
+      "servings": 6,
+      "source": null,
+      "emoji": "🧄",
+      "time": null,
+      "difficulty": "medium",
+      "tags": [
+        "hummus",
+        "dip",
+        "lamb",
+        "middle eastern"
+      ],
+      "ingredients": [
+        {
+          "name": "extra virgin olive oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for cooking"
+        },
+        {
+          "name": "red onion",
+          "amount": "1 small onion",
+          "unit": "",
+          "notes": "coarsely chopped, reserve 1-2 tbsp for serving"
+        },
+        {
+          "name": "green bell pepper",
+          "amount": "½ large pepper",
+          "unit": "",
+          "notes": "cored, seeded, and coarsely chopped"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2 large cloves",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "ground lamb",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for seasoning meat"
+        },
+        {
+          "name": "black pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for seasoning meat"
+        },
+        {
+          "name": "ground allspice",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "sumac",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground cinnamon",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "canned tomato sauce",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "hummus",
+          "amount": "12 oz",
+          "unit": "oz",
+          "notes": "The Smoothest, Fluffiest Hummus or quality store-bought"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for drizzling"
+        },
+        {
+          "name": "Roma tomato",
+          "amount": "1 tomato",
+          "unit": "",
+          "notes": "chopped"
+        },
+        {
+          "name": "flat leaf parsley",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "chopped"
+        },
+        {
+          "name": "pomegranate seeds",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "fresh arils"
+        },
+        {
+          "name": "toasted pine nuts",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "optional"
+        },
+        {
+          "name": "warm pita bread",
+          "amount": "",
+          "unit": "serving",
+          "notes": "or homemade pita chips for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473460889,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473460889-0.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473460889-1.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Olive Oil and Garlic Spaghetti with Artichokes and Olives",
+      "servings": 4,
+      "source": null,
+      "emoji": "🍝",
+      "time": "20 min",
+      "difficulty": "easy",
+      "tags": [
+        "pasta",
+        "vegetarian",
+        "mediterranean",
+        "italian"
+      ],
+      "ingredients": [
+        {
+          "name": "kosher salt",
+          "amount": "to taste pinch",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "to taste pinch",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "thin spaghetti",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 large cloves",
+          "unit": "",
+          "notes": "crushed"
+        },
+        {
+          "name": "fresh flat leaf parsley",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "roughly chopped"
+        },
+        {
+          "name": "yellow grape tomatoes",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": "halved"
+        },
+        {
+          "name": "scallions",
+          "amount": "3 scallions",
+          "unit": "",
+          "notes": "trimmed, white and green parts chopped"
+        },
+        {
+          "name": "marinated artichoke hearts",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "drained and quartered, jarred"
+        },
+        {
+          "name": "kalamata olives",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "halved and pitted"
+        },
+        {
+          "name": "creamy feta cheese",
+          "amount": "2 to 3 oz",
+          "unit": "oz",
+          "notes": "crumbled, about ½ cup"
+        },
+        {
+          "name": "fresh basil leaves",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "torn, plus more if desired"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "1 lemon",
+          "unit": "",
+          "notes": "grated"
+        },
+        {
+          "name": "red pepper flakes",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "optional"
+        }
+      ],
+      "notes": null,
+      "id": 1781473431147,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473431147-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Foil-Baked Salmon with Cherry Tomatoes, Olives, and Thyme",
+      "servings": "4-6",
+      "source": null,
+      "emoji": "🐟",
+      "time": "15 min",
+      "difficulty": "easy",
+      "tags": [
+        "salmon",
+        "foil-baked",
+        "mediterranean",
+        "easy"
+      ],
+      "ingredients": [
+        {
+          "name": "cherry tomatoes",
+          "amount": "1½ cups",
+          "unit": "cups",
+          "notes": "halved"
+        },
+        {
+          "name": "pitted olives",
+          "amount": "3 oz",
+          "unit": "oz",
+          "notes": "about ½ cup, halved - combo of kalamata and green olives is great"
+        },
+        {
+          "name": "shallot",
+          "amount": "1 medium",
+          "unit": "",
+          "notes": "finely chopped"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 large",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "fresh thyme leaves",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "dried oregano",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "salmon fillet",
+          "amount": "1 large (1¼ lb)",
+          "unit": "lb",
+          "notes": "skin removed, thawed if frozen"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "from ½ large lemon"
+        }
+      ],
+      "notes": null,
+      "id": 1781473399257,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473399257-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Sautéed Trout with Cilantro-Lime Sauce",
+      "servings": 4,
+      "source": null,
+      "emoji": "🐟",
+      "time": "15 min",
+      "difficulty": "easy",
+      "tags": [
+        "fish",
+        "trout",
+        "cilantro",
+        "quick"
+      ],
+      "ingredients": [
+        {
+          "name": "Aleppo pepper flakes",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground cumin",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground coriander",
+          "amount": "¾ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "rainbow trout fillets",
+          "amount": "1¼ lb",
+          "unit": "lb",
+          "notes": "or thin saltwater fish fillets, thawed if frozen"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "",
+          "unit": "",
+          "notes": "to taste"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "⅛ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "5 cloves",
+          "unit": "",
+          "notes": "large, minced"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "capers",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "drained"
+        },
+        {
+          "name": "lime juice",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "from about 2 limes"
+        },
+        {
+          "name": "low-sodium chicken broth",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "fresh cilantro leaves",
+          "amount": "1½ cups",
+          "unit": "cups",
+          "notes": "roughly chopped"
+        }
+      ],
+      "notes": null,
+      "id": 1781473363348,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473363348-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Tuesday Night Skillet Chicken Cutlets with Artichokes and Mushrooms",
+      "servings": 4,
+      "source": null,
+      "emoji": "🍗",
+      "time": "30 min",
+      "difficulty": "easy",
+      "tags": [
+        "chicken",
+        "skillet",
+        "weeknight",
+        "one-pan"
+      ],
+      "ingredients": [
+        {
+          "name": "boneless, skinless chicken breast halves",
+          "amount": "1½ lb",
+          "unit": "lb",
+          "notes": "4 large half breasts"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "to taste",
+          "unit": null,
+          "notes": null
+        },
+        {
+          "name": "dried oregano",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "all purpose flour",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": "or flour of your choice"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "plus more as needed"
+        },
+        {
+          "name": "baby bella mushrooms",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": "sliced, about 3 cups"
+        },
+        {
+          "name": "grape tomatoes",
+          "amount": "2 cups",
+          "unit": "cup",
+          "notes": "halved"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 large cloves",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "artichoke hearts",
+          "amount": "1 (15 oz) can",
+          "unit": "can",
+          "notes": "drained, rinsed, and quartered"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "low-sodium chicken broth",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "lemon juice",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "from 1 large lemon"
+        },
+        {
+          "name": "fresh basil leaves",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "torn"
+        },
+        {
+          "name": "plain grains",
+          "amount": "to taste",
+          "unit": null,
+          "notes": "cooked according to package directions, for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1781473323960,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473323960-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Porcini Crusted Beef Tenderloin with Sautéed King Trumpet, Oyster & Shiitake Mushrooms and Red Wine Demi-Glace",
+      "servings": 8,
+      "source": "The City Kitchen Cooking Classes",
+      "emoji": "🥩",
+      "time": "45 min",
+      "difficulty": "hard",
+      "tags": [
+        "beef",
+        "mushrooms",
+        "fine dining",
+        "porcini"
+      ],
+      "ingredients": [
+        {
+          "name": "porcini powder",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "garlic powder",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for crust"
+        },
+        {
+          "name": "pepper",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for crust"
+        },
+        {
+          "name": "beef tenderloin steaks",
+          "amount": "8 steaks",
+          "unit": "",
+          "notes": "about 1½ inches thick"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for steaks"
+        },
+        {
+          "name": "butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for steaks"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "butter",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "oyster mushrooms",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "ends trimmed"
+        },
+        {
+          "name": "shiitake mushrooms",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "stems removed, caps quartered"
+        },
+        {
+          "name": "king trumpet mushrooms",
+          "amount": "½ lb",
+          "unit": "lb",
+          "notes": "sliced"
+        },
+        {
+          "name": "salt",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for mushrooms"
+        },
+        {
+          "name": "fresh rosemary",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "finely chopped"
+        },
+        {
+          "name": "butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for demi-glace"
+        },
+        {
+          "name": "white onion",
+          "amount": "1 small onion",
+          "unit": "",
+          "notes": "very finely diced"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2 cloves",
+          "unit": "",
+          "notes": "minced or grated"
+        },
+        {
+          "name": "dry red wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "stock",
+          "amount": "¾ cup",
+          "unit": "cup",
+          "notes": "beef or veal"
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for demi-glace"
+        },
+        {
+          "name": "pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for demi-glace"
+        },
+        {
+          "name": "micro greens",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473282450,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473282450-0.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473282450-1.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Farro with Artichokes and Herb Salad",
+      "servings": 6,
+      "source": "Jonathan Sawyer",
+      "emoji": "🌾",
+      "time": "1 hour",
+      "difficulty": "medium",
+      "tags": [
+        "farro",
+        "artichokes",
+        "grain",
+        "salad"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "carrot",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "finely diced"
+        },
+        {
+          "name": "celery root",
+          "amount": "1 small whole",
+          "unit": "",
+          "notes": "peeled and finely diced"
+        },
+        {
+          "name": "onion",
+          "amount": "1 small whole",
+          "unit": "",
+          "notes": "finely diced"
+        },
+        {
+          "name": "celery ribs",
+          "amount": "2 ribs",
+          "unit": "",
+          "notes": "1 finely diced and 1 thinly sliced, plus ½ cup celery leaves"
+        },
+        {
+          "name": "bay leaf",
+          "amount": "1 leaf",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "farro",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": "14 ounces"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "low-sodium chicken broth",
+          "amount": "4 cups",
+          "unit": "cups",
+          "notes": null
+        },
+        {
+          "name": "salt and freshly ground pepper",
+          "amount": "",
+          "unit": "seasoning",
+          "notes": null
+        },
+        {
+          "name": "Grana Padano cheese",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "grated, plus shaved cheese for garnish"
+        },
+        {
+          "name": "marinated baby artichokes",
+          "amount": "4 oz",
+          "unit": "oz",
+          "notes": "drained and halved (¾ cup)"
+        },
+        {
+          "name": "flat-leaf parsley leaves",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "chives",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "snipped"
+        },
+        {
+          "name": "tarragon leaves",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "white wine vinegar",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473229967,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473229967-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Greek Sea Bass Baked with Santorini Assyrtiko Wine, Caper Leaves, and Herbs",
+      "servings": 6,
+      "source": null,
+      "emoji": "🐟",
+      "time": "60 min",
+      "difficulty": "medium",
+      "tags": [
+        "greek",
+        "seafood",
+        "baked",
+        "mediterranean"
+      ],
+      "ingredients": [
+        {
+          "name": "sea bass or sea bream fillets",
+          "amount": "6 fillets",
+          "unit": "",
+          "notes": "skin-on"
+        },
+        {
+          "name": "Santorini assyrtiko wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "mustard",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": "Greek or Dijon"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2 cloves",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "fennel bulb",
+          "amount": "1 bulb",
+          "unit": "",
+          "notes": "trimmed, halved, and sliced"
+        },
+        {
+          "name": "red onion",
+          "amount": "1 onion",
+          "unit": "",
+          "notes": "halved and chopped"
+        },
+        {
+          "name": "tomatoes",
+          "amount": "3 cups",
+          "unit": "cups",
+          "notes": "cherry or teardrop, whole"
+        },
+        {
+          "name": "capers",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "drained"
+        },
+        {
+          "name": "caper leaves",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "if available"
+        },
+        {
+          "name": "extra-virgin Greek olive oil",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "lemon",
+          "amount": "1 lemon",
+          "unit": "",
+          "notes": "grated zest only"
+        },
+        {
+          "name": "fresh thyme sprigs",
+          "amount": "4 or 5 sprigs",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "to taste seasoning",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "to taste seasoning",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "fresh chives",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "snipped"
+        },
+        {
+          "name": "fresh parsley",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "chopped"
+        }
+      ],
+      "notes": null,
+      "id": 1781473199887,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473199887-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Pan-Roasted Romanesco with Golden Raisins, Tahini & Sumac",
+      "servings": "4-6",
+      "source": null,
+      "emoji": "🥦",
+      "time": "20 min",
+      "difficulty": "medium",
+      "tags": [
+        "vegetarian",
+        "middle eastern",
+        "side dish",
+        "roasted"
+      ],
+      "ingredients": [
+        {
+          "name": "tahini",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 lemons",
+          "unit": "lemons",
+          "notes": "juiced"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 clove",
+          "unit": "clove",
+          "notes": "minced"
+        },
+        {
+          "name": "cold water",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "plus more as needed"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "plus more for cooking"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "freshly ground"
+        },
+        {
+          "name": "romanesco",
+          "amount": "2 medium heads",
+          "unit": "heads",
+          "notes": "trimmed and chopped into 1-inch florets"
+        },
+        {
+          "name": "golden raisins",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "stock",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "vegetable stock or water"
+        },
+        {
+          "name": "ground sumac",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "for garnish"
+        },
+        {
+          "name": "best-quality olive oil",
+          "amount": "for drizzling",
+          "unit": "",
+          "notes": "for finishing"
+        }
+      ],
+      "notes": null,
+      "id": 1781473173451,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473173451-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Sheet Pan Smoky Chicken, Chickpeas, and Carrots",
+      "servings": 6,
+      "source": null,
+      "emoji": "🍗",
+      "time": "45 min",
+      "difficulty": "easy",
+      "tags": [
+        "sheet pan",
+        "chicken",
+        "smoky",
+        "dinner"
+      ],
+      "ingredients": [
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "for tomato rub"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "from 2 large lemons"
+        },
+        {
+          "name": "tomato paste",
+          "amount": "5 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "5 large cloves",
+          "unit": "",
+          "notes": "minced"
+        },
+        {
+          "name": "ground cumin",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "smoked paprika",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "Aleppo pepper flakes",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "",
+          "unit": "",
+          "notes": "for brushing sheet pan and drizzling"
+        },
+        {
+          "name": "carrots",
+          "amount": "6 carrots",
+          "unit": "",
+          "notes": "9-10 oz total, peeled, halved lengthwise, cut into 2-inch pieces"
+        },
+        {
+          "name": "medium onions",
+          "amount": "2 onions",
+          "unit": "",
+          "notes": "halved and cut into ½-inch slices"
+        },
+        {
+          "name": "chickpeas",
+          "amount": "1 (15 oz) can",
+          "unit": "can",
+          "notes": "drained"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "",
+          "notes": "for seasoning"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "",
+          "unit": "",
+          "notes": "for seasoning"
+        },
+        {
+          "name": "boneless, skinless chicken thighs",
+          "amount": "10 thighs",
+          "unit": "",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781473127040,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473127040-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Romaine, Arugula, and Mint Fattoush Salad",
+      "servings": 6,
+      "source": "Leyla restaurant, Charleston, South Carolina",
+      "emoji": "🥗",
+      "time": null,
+      "difficulty": "easy",
+      "tags": [
+        "salad",
+        "mediterranean",
+        "lebanese",
+        "fattoush"
+      ],
+      "ingredients": [
+        {
+          "name": "pocket style pitas",
+          "amount": "2 whole",
+          "unit": "",
+          "notes": "6 inch"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "for frying pita"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "pinch",
+          "unit": "pinch",
+          "notes": "for pita"
+        },
+        {
+          "name": "sumac",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "for pita"
+        },
+        {
+          "name": "romaine lettuce hearts",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": "about 3 hearts, trimmed and thinly sliced crosswise"
+        },
+        {
+          "name": "packed baby arugula",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "1 to 2 ounces"
+        },
+        {
+          "name": "red bell pepper",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "cored, seeded, and sliced into thin batons"
+        },
+        {
+          "name": "English cucumber",
+          "amount": "½ whole",
+          "unit": "",
+          "notes": "hothouse, halved lengthwise, seeds scooped out, and thinly sliced crosswise (about 1 cup)"
+        },
+        {
+          "name": "halved cherry tomatoes",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "small red onion",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "thinly sliced crosswise into rounds"
+        },
+        {
+          "name": "radishes",
+          "amount": "2 or 3 whole",
+          "unit": "",
+          "notes": "thinly sliced crosswise into rounds"
+        },
+        {
+          "name": "thinly sliced mint leaves",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "½ to ¾ tsp",
+          "unit": "tsp",
+          "notes": "generous pinch for seasoning"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "olive oil",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": "for dressing"
+        },
+        {
+          "name": "pomegranate molasses",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "garlic",
+          "amount": "2 cloves",
+          "unit": "cloves",
+          "notes": "minced, for dressing"
+        },
+        {
+          "name": "sumac",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "allspice",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "cinnamon",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        }
+      ],
+      "notes": null,
+      "id": 1781473077703,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473077703-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Boeuf Bourguignon",
+      "servings": null,
+      "source": "Nick Farrell recipe",
+      "emoji": "🥩",
+      "time": "2 hours",
+      "difficulty": "medium",
+      "tags": [
+        "french",
+        "beef",
+        "stew",
+        "wine"
+      ],
+      "ingredients": [
+        {
+          "name": "thick-cut bacon",
+          "amount": "4 slices",
+          "unit": "slices",
+          "notes": null
+        },
+        {
+          "name": "lean beef stew meat",
+          "amount": "2 lbs",
+          "unit": "lbs",
+          "notes": "chuck, cut into 1 inch cubes"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "carrot",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "peeled and chopped"
+        },
+        {
+          "name": "large yellow onion",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 cloves",
+          "unit": "",
+          "notes": "pressed"
+        },
+        {
+          "name": "flour",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "tomato paste",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "dry red wine",
+          "amount": "3 cups",
+          "unit": "cups",
+          "notes": "lots of"
+        },
+        {
+          "name": "bay leaf",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste seasoning",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "small onions",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": "frozen pearl onions or fresh"
+        },
+        {
+          "name": "butter",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "plus 2 tbsp more for mushrooms"
+        },
+        {
+          "name": "mushrooms",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": "cut in half if large"
+        },
+        {
+          "name": "water",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "for cooking onions"
+        },
+        {
+          "name": "sugar",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1781471589014,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781471589014-0.jpg"
+      ],
+      "category": "food"
+    },
+    {
+      "name": "Easy Lemon and Herb Couscous Salad",
+      "servings": 8,
+      "source": "https://www.inspiredtaste.net/12689/lemon-and-herb-couscous-salad-recipe/",
+      "emoji": "🥗",
+      "time": "20 min",
+      "difficulty": "easy",
+      "tags": [
+        "couscous",
+        "salad",
+        "mediterranean",
+        "make-ahead"
+      ],
+      "ingredients": [
+        {
+          "name": "dried pearl couscous",
+          "amount": "2 cups",
+          "unit": "cup",
+          "notes": "also called Israeli couscous, 8 ounces"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "Dijon mustard",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "honey",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "or more to taste"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "finely grated"
+        },
+        {
+          "name": "fresh lemon juice",
+          "amount": "2-4 tbsp",
+          "unit": "tbsp",
+          "notes": "fresh squeezed, depending on taste"
+        },
+        {
+          "name": "English cucumber",
+          "amount": "1 medium whole",
+          "unit": "",
+          "notes": "diced"
+        },
+        {
+          "name": "tomatoes",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "chopped, about 1 large tomato"
+        },
+        {
+          "name": "fresh herbs",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "coarsely chopped, like parsley, mint, basil, dill, or a combination"
+        },
+        {
+          "name": "nuts",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "chopped, like walnuts, pine nuts, or almonds, toasted"
+        },
+        {
+          "name": "raisins",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "golden raisins preferred"
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "black pepper",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        }
+      ],
+      "notes": null,
+      "id": 1780939717164,
+      "category": "food"
+    },
+    {
+      "name": "Green Chile Margarita",
+      "servings": 1,
+      "source": "https://stgeorgespirits.com/recipes/green-chile-margarita",
+      "emoji": "🍸",
+      "time": "5 min",
+      "difficulty": "easy",
+      "tags": [
+        "cocktail",
+        "margarita",
+        "tequila",
+        "spicy"
+      ],
+      "ingredients": [
+        {
+          "name": "tequila blanco",
+          "amount": "2 oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "St. George Green Chile Vodka",
+          "amount": "½ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "lime juice",
+          "amount": "1 oz",
+          "unit": "oz",
+          "notes": "fresh"
+        },
+        {
+          "name": "orange liqueur",
+          "amount": "½ oz",
+          "unit": "oz",
+          "notes": "Cointreau or Triple Sec"
+        },
+        {
+          "name": "agave nectar",
+          "amount": "¼ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "",
+          "unit": "rim",
+          "notes": "for glass rim"
+        },
+        {
+          "name": "lime wheel",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        },
+        {
+          "name": "rocks glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1780889368107,
+      "category": "drink"
+    },
+    {
+      "name": "Overnight Oats",
+      "servings": null,
+      "source": "https://feelgoodfoodie.net/recipe/overnight-oats/#wprm-recipe-container-8144",
+      "emoji": "🥣",
+      "time": "5 min prep + overnight",
+      "difficulty": "easy",
+      "tags": [
+        "breakfast",
+        "overnight",
+        "healthy",
+        "meal-prep"
+      ],
+      "ingredients": [
+        {
+          "name": "old-fashioned oats",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "milk of choice",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "dairy or non-dairy"
+        },
+        {
+          "name": "chia seeds",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "maple syrup or honey",
+          "amount": "1-2 tbsp",
+          "unit": "tbsp",
+          "notes": "to taste"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "pinch of salt",
+          "amount": "1 pinch",
+          "unit": "pinch",
+          "notes": null
+        },
+        {
+          "name": "fresh berries",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "for topping"
+        },
+        {
+          "name": "nuts or seeds",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for topping"
+        }
+      ],
+      "notes": null,
+      "id": 1780868140083,
+      "category": "food"
+    },
+    {
+      "name": "Dill Pickle Soup",
+      "servings": null,
+      "source": "https://noblepig.com/wprm_print/dill-pickle-soup/",
+      "emoji": "🥒",
+      "time": "30 min",
+      "difficulty": "easy",
+      "tags": [
+        "soup",
+        "pickle",
+        "comfort food",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "name": "butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "yellow onion",
+          "amount": "1 medium",
+          "unit": "medium",
+          "notes": "diced"
+        },
+        {
+          "name": "celery",
+          "amount": "2 stalks",
+          "unit": "stalks",
+          "notes": "diced"
+        },
+        {
+          "name": "carrots",
+          "amount": "2 medium",
+          "unit": "medium",
+          "notes": "diced"
+        },
+        {
+          "name": "garlic",
+          "amount": "3 cloves",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "all-purpose flour",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "chicken broth",
+          "amount": "4 cups",
+          "unit": "cups",
+          "notes": null
+        },
+        {
+          "name": "dill pickles",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "diced"
+        },
+        {
+          "name": "dill pickle juice",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "potatoes",
+          "amount": "2 medium",
+          "unit": "medium",
+          "notes": "peeled and diced"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "fresh dill",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "chopped"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "unit": "to taste",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "unit": "to taste",
+          "notes": "freshly ground"
+        }
+      ],
+      "notes": null,
+      "id": 1780724683067,
+      "category": "food"
+    },
+    {
+      "name": "Grilled Asparagus with Pancetta Citronette",
+      "servings": 4,
+      "source": "https://www.westernbbqproducts.com/recipes/veg/asparagus-pancetta-citronette",
+      "emoji": "🥬",
+      "time": "20 min",
+      "difficulty": "easy",
+      "tags": [
+        "grilled",
+        "asparagus",
+        "pancetta",
+        "side dish"
+      ],
+      "ingredients": [
+        {
+          "name": "fresh asparagus",
+          "amount": "2 lb",
+          "unit": "lb",
+          "notes": "trimmed"
+        },
+        {
+          "name": "pancetta",
+          "amount": "4 oz",
+          "unit": "oz",
+          "notes": "diced"
+        },
+        {
+          "name": "olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "fresh"
+        },
+        {
+          "name": "orange juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "fresh"
+        },
+        {
+          "name": "Dijon mustard",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "freshly ground"
+        }
+      ],
+      "notes": null,
+      "id": 1780724432353,
+      "category": "food"
+    },
+    {
+      "name": "Perfect Manhattan Cocktail",
+      "servings": 1,
+      "source": "https://rickrodgers.com/the-perfect-manhattan-cocktail-2/",
+      "emoji": "🥃",
+      "time": "2 min",
+      "difficulty": "easy",
+      "tags": [
+        "cocktail",
+        "whiskey",
+        "classic"
+      ],
+      "ingredients": [
+        {
+          "name": "rye whiskey or bourbon",
+          "amount": "2 oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "sweet vermouth",
+          "amount": "1 oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "Angostura bitters",
+          "amount": "2 dashes",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "maraschino cherry",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        },
+        {
+          "name": "coupe glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": "chilled"
+        }
+      ],
+      "notes": null,
+      "id": 1780700366000,
+      "category": "drink",
+      "lastOpened": 1781667898820
+    },
+    {
+      "name": "The Last Word",
+      "servings": 1,
+      "source": "https://www.liquor.com/recipes/the-last-word/",
+      "emoji": "🍸",
+      "time": null,
+      "difficulty": "easy",
+      "tags": [
+        "cocktail",
+        "gin",
+        "prohibition",
+        "herbal"
+      ],
+      "ingredients": [
+        {
+          "name": "gin",
+          "amount": "¾ oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "green Chartreuse",
+          "amount": "¾ oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "maraschino liqueur",
+          "amount": "¾ oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "fresh lime juice",
+          "amount": "¾ oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "coupe glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": null
+        },
+        {
+          "name": "lime wheel",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "optional"
+        }
+      ],
+      "notes": null,
+      "id": 1780699920667,
+      "category": "drink"
+    },
+    {
+      "name": "Mexican Martini (Anejo Margarita)",
+      "servings": 1,
+      "source": "https://www.diffordsguide.com/cocktails/recipe/1304/mexican-martini-anejo-margarita",
+      "emoji": "🍸",
+      "time": "5 min",
+      "difficulty": "easy",
+      "tags": [
+        "cocktail",
+        "tequila",
+        "margarita",
+        "mexican"
+      ],
+      "ingredients": [
+        {
+          "name": "anejo tequila",
+          "amount": "2 oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "orange liqueur",
+          "amount": "¾ oz",
+          "unit": "",
+          "notes": "Cointreau or triple sec"
+        },
+        {
+          "name": "fresh lime juice",
+          "amount": "¾ oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "simple syrup",
+          "amount": "¼ oz",
+          "unit": "",
+          "notes": "optional, to taste"
+        },
+        {
+          "name": "salt",
+          "amount": "",
+          "unit": "rim",
+          "notes": "for glass rim"
+        },
+        {
+          "name": "coupe glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": null
+        },
+        {
+          "name": "lime wheel",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1780699798345,
+      "category": "drink",
+      "lastOpened": 1781667914200
+    },
+    {
+      "name": "Classic Margarita",
+      "servings": 1,
+      "source": "https://www.gimmesomeoven.com/margarita-recipe/#wprm-recipe-container-59579",
+      "emoji": "🍸",
+      "time": "5 min",
+      "difficulty": "easy",
+      "tags": [
+        "cocktail",
+        "tequila",
+        "lime",
+        "classic"
+      ],
+      "ingredients": [
+        {
+          "name": "silver tequila",
+          "amount": "2 oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "fresh lime juice",
+          "amount": "1 oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "orange liqueur",
+          "amount": "1 oz",
+          "unit": "",
+          "notes": "Cointreau or triple sec"
+        },
+        {
+          "name": "coarse salt",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for rim"
+        },
+        {
+          "name": "lime wheel",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        },
+        {
+          "name": "rocks glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1780699556483,
+      "category": "drink"
+    },
+    {
+      "name": "Al Pastor",
+      "servings": 6,
+      "source": "https://stellanspice.com/al-pastor/#wprm-recipe-container-8280",
+      "emoji": "🌮",
+      "time": "4 hours",
+      "difficulty": "medium",
+      "tags": [
+        "mexican",
+        "pork",
+        "tacos",
+        "marinated"
+      ],
+      "ingredients": [
+        {
+          "name": "pork shoulder",
+          "amount": "3 lb",
+          "unit": "",
+          "notes": "cut into thin slices"
+        },
+        {
+          "name": "guajillo chiles",
+          "amount": "3 whole",
+          "unit": "",
+          "notes": "stemmed and seeded"
+        },
+        {
+          "name": "ancho chiles",
+          "amount": "2 whole",
+          "unit": "",
+          "notes": "stemmed and seeded"
+        },
+        {
+          "name": "chipotle chiles in adobo",
+          "amount": "2 whole",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "orange juice",
+          "amount": "½ cup",
+          "unit": "",
+          "notes": "fresh"
+        },
+        {
+          "name": "white vinegar",
+          "amount": "¼ cup",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "achiote paste",
+          "amount": "2 tbsp",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "garlic",
+          "amount": "4 cloves",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "white onion",
+          "amount": "½ medium",
+          "unit": "",
+          "notes": "roughly chopped"
+        },
+        {
+          "name": "cumin",
+          "amount": "1 tsp",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "dried oregano",
+          "amount": "1 tsp",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "1 tsp",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "½ tsp",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "pineapple",
+          "amount": "1 cup",
+          "unit": "",
+          "notes": "diced"
+        },
+        {
+          "name": "corn tortillas",
+          "amount": "12 small",
+          "unit": "",
+          "notes": "warmed"
+        },
+        {
+          "name": "white onion",
+          "amount": "½ medium",
+          "unit": "",
+          "notes": "finely diced, for serving"
+        },
+        {
+          "name": "cilantro",
+          "amount": "½ cup",
+          "unit": "",
+          "notes": "chopped, for serving"
+        },
+        {
+          "name": "lime",
+          "amount": "2 whole",
+          "unit": "",
+          "notes": "cut into wedges"
+        }
+      ],
+      "notes": null,
+      "id": 1780699492197,
+      "category": "food"
+    },
+    {
+      "name": "Maximilian Affair",
+      "servings": 1,
+      "source": "https://www.diffordsguide.com/cocktails/recipe/14827/maximilian-affair",
+      "emoji": "🥃",
+      "time": "5 min",
+      "difficulty": "easy",
+      "tags": [
+        "cocktail",
+        "mezcal",
+        "elderflower",
+        "citrus"
+      ],
+      "ingredients": [
+        {
+          "name": "mezcal",
+          "amount": "2 oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "elderflower liqueur",
+          "amount": "½ oz",
+          "unit": "",
+          "notes": "St-Germain"
+        },
+        {
+          "name": "yellow Chartreuse",
+          "amount": "¼ oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "lime juice",
+          "amount": "¾ oz",
+          "unit": "",
+          "notes": "freshly squeezed"
+        },
+        {
+          "name": "simple syrup",
+          "amount": "¼ oz",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "coupe glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": null
+        },
+        {
+          "name": "lime wheel",
+          "amount": "",
+          "unit": "garnish",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1780698917162,
+      "category": "drink"
+    }
+  ],
+  "planned": [
+    1781473399257
+  ],
+  "checkedItems": {
+    "ing_groundblackpepper": false,
+    "ing_extravirginoliveoil": true,
+    "ing_groundcumin": false,
+    "ing_koshersalt": false,
+    "ing_smokedpaprika": false,
+    "ing_aleppopepperflakes": false,
+    "ing_carrots": true,
+    "ing_lemonjuice": true,
+    "ing_garlic": true,
+    "ing_onions": true,
+    "ing_tomatopaste": false,
+    "ing_chickpeas": false,
+    "ing_bonelessskinlesschickenthighs": false,
+    "ing_pittedolives": false,
+    "ing_cherrytomatoes": false
+  },
+  "haveItems": {
+    "ing_groundblackpepper": true,
+    "ing_extravirginoliveoil": false,
+    "ing_groundcumin": true,
+    "ing_koshersalt": true,
+    "ing_smokedpaprika": true,
+    "ing_aleppopepperflakes": true,
+    "ing_carrots": false,
+    "ing_lemonjuice": false,
+    "ing_garlic": false,
+    "ing_onions": false,
+    "ing_tomatopaste": true,
+    "ing_chickpeas": true,
+    "ing_bonelessskinlesschickenthighs": true,
+    "ing_pittedolives": true,
+    "ing_cherrytomatoes": true
+  },
+  "exportedAt": "2026-06-19T21:23:35.303Z"
+}
