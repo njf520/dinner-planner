@@ -2753,7 +2753,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781471589014-0.jpg"
       ],
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1781904602267
     },
     {
       "name": "Easy Lemon and Herb Couscous Salad",
@@ -3154,7 +3155,8 @@
       ],
       "notes": null,
       "id": 1780724432353,
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1781904592539
     },
     {
       "name": "Perfect Manhattan Cocktail",
@@ -3603,5 +3605,5 @@
     "ing_pittedolives": true,
     "ing_cherrytomatoes": true
   },
-  "exportedAt": "2026-06-19T21:23:51.801Z"
+  "exportedAt": "2026-06-19T21:30:17.474Z"
 }
