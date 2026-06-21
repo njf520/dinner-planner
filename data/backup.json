@@ -159,7 +159,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474789768-0.jpg"
       ],
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1782011609415
     },
     {
       "name": "Grilled King Oyster Mushrooms with Tarragon Butter",
@@ -588,7 +589,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474298563-0.jpg"
       ],
-      "category": "drink"
+      "category": "drink",
+      "lastOpened": 1782011664099
     },
     {
       "name": "Braised Fish with Tomato & Coconut Chickpeas",
@@ -1660,7 +1662,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473399257-0.jpg"
       ],
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1781722925731
     },
     {
       "name": "Sautéed Trout with Cilantro-Lime Sauce",
@@ -3563,7 +3566,8 @@
       ],
       "notes": null,
       "id": 1780698917162,
-      "category": "drink"
+      "category": "drink",
+      "lastOpened": 1782011617627
     }
   ],
   "planned": [
@@ -3603,5 +3607,5 @@
     "ing_pittedolives": true,
     "ing_cherrytomatoes": true
   },
-  "exportedAt": "2026-06-17T18:54:48.957Z"
+  "exportedAt": "2026-06-21T22:12:40.966Z"
 }
