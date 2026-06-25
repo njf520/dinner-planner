@@ -1,6 +1,98 @@
 {
   "recipes": [
     {
+      "name": "Fig Salad with Arugula & Pecans",
+      "servings": 6,
+      "source": "https://www.feastingathome.com/fig-arugula-salad/",
+      "emoji": "🥗",
+      "time": "20 min",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "salad",
+        "vegetarian",
+        "summer",
+        "fall"
+      ],
+      "ingredients": [
+        {
+          "name": "red onion",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "thinly sliced; soak in salted water 15 min if sensitive to sharpness"
+        },
+        {
+          "name": "toasted pecans",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "or maple glazed pecans"
+        },
+        {
+          "name": "baby arugula",
+          "amount": "5 oz",
+          "unit": "oz",
+          "notes": "about 6-7 cups"
+        },
+        {
+          "name": "fresh figs",
+          "amount": "6-8",
+          "unit": "whole",
+          "notes": "stems removed, quartered"
+        },
+        {
+          "name": "fresh basil leaves",
+          "amount": "10-15",
+          "unit": "leaves",
+          "notes": "torn"
+        },
+        {
+          "name": "firm goat cheese",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "crumbled; use log-style chevre or substitute gorgonzola"
+        },
+        {
+          "name": "olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "balsamic vinegar",
+          "amount": "2½ tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "maple syrup",
+          "amount": "1-2 tsp",
+          "unit": "tsp",
+          "notes": "or honey"
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "vanilla extract",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "optional"
+        }
+      ],
+      "notes": null,
+      "id": 1782417520449,
+      "lastOpened": 1782417524925
+    },
+    {
       "name": "Fat Mexican Duck",
       "servings": 1,
       "source": "https://www.diffordsguide.com/cocktails/recipe/41434/fat-mexican-duck",
@@ -3571,7 +3663,8 @@
     }
   ],
   "planned": [
-    1781473399257
+    1781473399257,
+    1782417520449
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -3588,7 +3681,15 @@
     "ing_chickpeas": false,
     "ing_bonelessskinlesschickenthighs": false,
     "ing_pittedolives": false,
-    "ing_cherrytomatoes": false
+    "ing_cherrytomatoes": false,
+    "ing_blackpepper": false,
+    "ing_redonion": false,
+    "ing_oliveoil": false,
+    "ing_balsamicvinegar": false,
+    "ing_driedoregano": false,
+    "ing_salt": false,
+    "ing_maplesyrup": false,
+    "ing_vanillaextract": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3605,7 +3706,15 @@
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true,
     "ing_pittedolives": true,
-    "ing_cherrytomatoes": true
+    "ing_cherrytomatoes": true,
+    "ing_blackpepper": true,
+    "ing_redonion": true,
+    "ing_oliveoil": true,
+    "ing_balsamicvinegar": true,
+    "ing_driedoregano": true,
+    "ing_salt": true,
+    "ing_maplesyrup": true,
+    "ing_vanillaextract": true
   },
-  "exportedAt": "2026-06-25T19:53:00.737Z"
+  "exportedAt": "2026-06-25T22:16:30.341Z"
 }
