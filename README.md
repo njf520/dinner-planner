@@ -44,7 +44,7 @@ Live app: https://njf520.github.io/dinner-planner/
   (keyed by recipe id) — kept out of `localStorage` to avoid quota errors
 - **AI parsing**: calls the Anthropic Messages API directly from the browser using
   a user-supplied API key (stored only in `localStorage`, model
-  `claude-sonnet-4-20250514`)
+  `claude-sonnet-4-6`)
 - **URL fetching**: tries a few public CORS proxies in sequence to grab page text;
   falls back to Claude's own knowledge of the URL for JS-heavy sites
 - Hosted on GitHub Pages, installable as a PWA (manifest + icons)
@@ -115,6 +115,39 @@ Top-level app state (`dinner_planner_v5` in `localStorage`):
   "haveItems": { "ing_oliveoil": true }
 }
 ```
+
+## Installing the app
+
+Belly Up is a Progressive Web App — no app store needed. Just visit the link in a
+browser and add it to your home screen.
+
+### Android (Chrome)
+
+1. Open **Chrome** and go to **https://njf520.github.io/dinner-planner/**
+2. A popup should appear saying "Add Belly Up to Home screen" — tap **Install** or **Add**
+   - If no popup appears: tap the **⋮ menu** (top right) → **Add to Home screen** → **Add**
+3. The app icon will appear on your home screen — tap it to open
+4. On first launch, you'll be asked **"Add Nick's recipes?"** — tap it to start with
+   a copy of Nick's collection, or choose **Start empty** to begin from scratch
+
+### iOS (Safari)
+
+1. Open **Safari** and go to **https://njf520.github.io/dinner-planner/**
+   - It must be Safari — Chrome/Firefox on iOS don't support "Add to Home Screen"
+2. Tap the **Share button** (the square with an arrow at the bottom of the screen)
+3. Scroll down and tap **Add to Home Screen**
+4. Tap **Add** in the top right
+5. The app icon will appear on your home screen — tap it to open
+6. On first launch, you'll be asked **"Add Nick's recipes?"** — tap it to start with
+   a copy of Nick's collection, or choose **Start empty** to begin from scratch
+
+### After installing
+
+- Your recipes are saved locally on your phone and backed up automatically — no
+  account or login needed
+- The app works offline once installed
+- Updates are detected automatically; you'll see a banner when a new version is
+  available, or tap the "Belly Up" title to check manually
 
 ## Backups
 
