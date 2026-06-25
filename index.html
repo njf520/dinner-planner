@@ -392,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.14';
+const VERSION='3.15';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -1437,7 +1437,15 @@ async function apiPost(body){
       });
     }
     clearTimeout(timeout);
-    if(!res.ok){const e=await res.json().catch(()=>{});throw new Error(e?.error?.message||e?.error||`API error ${res.status}`);}
+    if(!res.ok){
+      const e=await res.json().catch(()=>({}));
+      const msg=e?.error?.message||e?.error||'';
+      if(res.status===402) throw new Error('The AI account is out of credits. Recipe import is temporarily unavailable.');
+      if(res.status===429) throw new Error(msg||'Too many requests — please wait a minute and try again.');
+      if(res.status===401) throw new Error('API key is invalid or expired. Check your key in Settings.');
+      if(res.status===529) throw new Error('Claude is overloaded right now. Try again in a few minutes.');
+      throw new Error(msg||`API error ${res.status}`);
+    }
     const data=await res.json();
     return data.content.find(b=>b.type==='text')?.text||'';
   }catch(e){

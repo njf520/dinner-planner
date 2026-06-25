@@ -2,7 +2,7 @@
 //
 // Bump CACHE_NAME (alongside VERSION in index.html) on every deploy so old
 // caches get cleaned up and clients pick up fresh assets.
-const CACHE_NAME='belly-up-v3.14';
+const CACHE_NAME='belly-up-v3.15';
 const APP_SHELL=[
   './',
   './index.html',
