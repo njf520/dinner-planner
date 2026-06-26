@@ -1,6 +1,139 @@
 {
   "recipes": [
     {
+      "name": "Chicken Fajitas",
+      "servings": 4,
+      "source": "https://www.delish.com/cooking/recipe-ideas/a19665622/chicken-fajitas-recipe/?utm_source=google&utm_medium=cpc&utm_campaign=mgu_ga_del_md_pmx_prog_org_us_18345007169&gad_source=1&gad_campaignid=18339119658&gclid=Cj0KCQjwo_PRBhDNARIsAEcVALUmVptoeeZFGCvsilbyzaZAiseV6m1vOU4ZW1COYHvKaZ9NNdQuc_YaAg0hEALw_wcB",
+      "emoji": "🌮",
+      "time": "30 min",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "mexican",
+        "chicken",
+        "skillet",
+        "weeknight"
+      ],
+      "ingredients": [
+        {
+          "name": "boneless skinless chicken breasts",
+          "amount": "1½ lb",
+          "unit": "lb",
+          "notes": "sliced into strips"
+        },
+        {
+          "name": "olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "divided"
+        },
+        {
+          "name": "chili powder",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "cumin",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "garlic powder",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "smoked paprika",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "oregano",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "dried"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "black pepper",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "freshly ground"
+        },
+        {
+          "name": "bell peppers",
+          "amount": "3",
+          "unit": "whole",
+          "notes": "mixed colors, thinly sliced"
+        },
+        {
+          "name": "yellow onion",
+          "amount": "1",
+          "unit": "whole",
+          "notes": "thinly sliced"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "3",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "lime juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "freshly squeezed"
+        },
+        {
+          "name": "flour tortillas",
+          "amount": "8",
+          "unit": "whole",
+          "notes": "warmed, for serving"
+        },
+        {
+          "name": "sour cream",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        },
+        {
+          "name": "guacamole",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        },
+        {
+          "name": "salsa",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        },
+        {
+          "name": "fresh cilantro",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        },
+        {
+          "name": "lime wedges",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1782433287357
+    },
+    {
       "name": "Fig Salad with Arugula & Pecans",
       "servings": 6,
       "source": "https://www.feastingathome.com/fig-arugula-salad/",
@@ -35,14 +168,14 @@
         },
         {
           "name": "fresh figs",
-          "amount": "6-8",
-          "unit": "whole",
+          "amount": "6-8 whole",
+          "unit": "",
           "notes": "stems removed, quartered"
         },
         {
           "name": "fresh basil leaves",
-          "amount": "10-15",
-          "unit": "leaves",
+          "amount": "10-15 leaves",
+          "unit": "",
           "notes": "torn"
         },
         {
@@ -3663,8 +3796,8 @@
     }
   ],
   "planned": [
-    1781473399257,
-    1782417520449
+    1782417520449,
+    1782433287357
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -3689,7 +3822,8 @@
     "ing_driedoregano": false,
     "ing_salt": false,
     "ing_maplesyrup": false,
-    "ing_vanillaextract": false
+    "ing_vanillaextract": false,
+    "ing_garliccloves": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3714,7 +3848,8 @@
     "ing_driedoregano": true,
     "ing_salt": true,
     "ing_maplesyrup": true,
-    "ing_vanillaextract": true
+    "ing_vanillaextract": true,
+    "ing_garliccloves": true
   },
-  "exportedAt": "2026-06-25T22:16:30.341Z"
+  "exportedAt": "2026-06-26T00:22:02.873Z"
 }
