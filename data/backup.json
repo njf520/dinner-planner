@@ -3829,7 +3829,8 @@
     "ing_cumin": false,
     "ing_flourtortillas": false,
     "ing_bonelessskinlesschickenbreasts": false,
-    "ing_oregano": false
+    "ing_oregano": false,
+    "ing_bellpeppers": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3860,7 +3861,8 @@
     "ing_cumin": true,
     "ing_flourtortillas": true,
     "ing_bonelessskinlesschickenbreasts": true,
-    "ing_oregano": true
+    "ing_oregano": true,
+    "ing_bellpeppers": true
   },
-  "exportedAt": "2026-06-26T00:23:39.341Z"
+  "exportedAt": "2026-06-26T00:24:50.229Z"
 }
