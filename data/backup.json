@@ -131,7 +131,8 @@
         }
       ],
       "notes": null,
-      "id": 1782433287357
+      "id": 1782433287357,
+      "lastOpened": 1782433404283
     },
     {
       "name": "Fig Salad with Arugula & Pecans",
@@ -3861,5 +3862,5 @@
     "ing_bonelessskinlesschickenbreasts": true,
     "ing_oregano": true
   },
-  "exportedAt": "2026-06-26T00:22:28.123Z"
+  "exportedAt": "2026-06-26T00:23:39.341Z"
 }
