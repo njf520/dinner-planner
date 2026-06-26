@@ -224,7 +224,7 @@
       ],
       "notes": null,
       "id": 1782417520449,
-      "lastOpened": 1782417524925
+      "lastOpened": 1782433827921
     },
     {
       "name": "Fat Mexican Duck",
@@ -3836,7 +3836,10 @@
     "ing_freshfigs": true,
     "ing_garlicpowder": false,
     "ing_limejuice": true,
-    "ing_limewedges": true
+    "ing_limewedges": true,
+    "ing_toastedpecans": true,
+    "ing_yellowonion": true,
+    "ing_guacamole": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3874,7 +3877,10 @@
     "ing_freshfigs": false,
     "ing_garlicpowder": true,
     "ing_limejuice": false,
-    "ing_limewedges": false
+    "ing_limewedges": false,
+    "ing_toastedpecans": false,
+    "ing_yellowonion": false,
+    "ing_guacamole": false
   },
-  "exportedAt": "2026-06-26T00:28:14.530Z"
+  "exportedAt": "2026-06-26T00:30:31.907Z"
 }
