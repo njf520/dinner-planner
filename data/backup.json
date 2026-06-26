@@ -3823,7 +3823,12 @@
     "ing_salt": false,
     "ing_maplesyrup": false,
     "ing_vanillaextract": false,
-    "ing_garliccloves": false
+    "ing_garliccloves": false,
+    "ing_chilipowder": false,
+    "ing_cumin": false,
+    "ing_flourtortillas": false,
+    "ing_bonelessskinlesschickenbreasts": false,
+    "ing_oregano": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3849,7 +3854,12 @@
     "ing_salt": true,
     "ing_maplesyrup": true,
     "ing_vanillaextract": true,
-    "ing_garliccloves": true
+    "ing_garliccloves": true,
+    "ing_chilipowder": true,
+    "ing_cumin": true,
+    "ing_flourtortillas": true,
+    "ing_bonelessskinlesschickenbreasts": true,
+    "ing_oregano": true
   },
-  "exportedAt": "2026-06-26T00:22:02.873Z"
+  "exportedAt": "2026-06-26T00:22:28.123Z"
 }
