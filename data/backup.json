@@ -3830,7 +3830,8 @@
     "ing_flourtortillas": false,
     "ing_bonelessskinlesschickenbreasts": false,
     "ing_oregano": false,
-    "ing_bellpeppers": false
+    "ing_bellpeppers": false,
+    "ing_freshcilantro": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3862,7 +3863,8 @@
     "ing_flourtortillas": true,
     "ing_bonelessskinlesschickenbreasts": true,
     "ing_oregano": true,
-    "ing_bellpeppers": true
+    "ing_bellpeppers": true,
+    "ing_freshcilantro": true
   },
-  "exportedAt": "2026-06-26T00:24:50.229Z"
+  "exportedAt": "2026-06-26T00:25:54.625Z"
 }
