@@ -3832,7 +3832,9 @@
     "ing_oregano": false,
     "ing_bellpeppers": true,
     "ing_freshcilantro": false,
-    "ing_freshbasilleaves": true
+    "ing_freshbasilleaves": true,
+    "ing_freshfigs": true,
+    "ing_garlicpowder": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3866,7 +3868,9 @@
     "ing_oregano": true,
     "ing_bellpeppers": false,
     "ing_freshcilantro": true,
-    "ing_freshbasilleaves": false
+    "ing_freshbasilleaves": false,
+    "ing_freshfigs": false,
+    "ing_garlicpowder": true
   },
-  "exportedAt": "2026-06-26T00:27:14.386Z"
+  "exportedAt": "2026-06-26T00:27:47.137Z"
 }
