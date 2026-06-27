@@ -71,20 +71,20 @@
         },
         {
           "name": "bell peppers",
-          "amount": "3",
-          "unit": "whole",
+          "amount": "3 whole",
+          "unit": "",
           "notes": "mixed colors, thinly sliced"
         },
         {
           "name": "yellow onion",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": "thinly sliced"
         },
         {
           "name": "garlic cloves",
-          "amount": "3",
-          "unit": "cloves",
+          "amount": "3 cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
@@ -95,8 +95,8 @@
         },
         {
           "name": "flour tortillas",
-          "amount": "8",
-          "unit": "whole",
+          "amount": "8 whole",
+          "unit": "",
           "notes": "warmed, for serving"
         },
         {
@@ -224,7 +224,7 @@
       ],
       "notes": null,
       "id": 1782417520449,
-      "lastOpened": 1782433827921
+      "lastOpened": 1782524763248
     },
     {
       "name": "Fat Mexican Duck",
@@ -3839,7 +3839,11 @@
     "ing_limewedges": true,
     "ing_toastedpecans": true,
     "ing_yellowonion": true,
-    "ing_guacamole": true
+    "ing_guacamole": true,
+    "ing_firmgoatcheese": true,
+    "ing_babyarugula": true,
+    "ing_sourcream": true,
+    "ing_salsa": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -3880,7 +3884,11 @@
     "ing_limewedges": false,
     "ing_toastedpecans": false,
     "ing_yellowonion": false,
-    "ing_guacamole": false
+    "ing_guacamole": false,
+    "ing_firmgoatcheese": false,
+    "ing_babyarugula": false,
+    "ing_sourcream": false,
+    "ing_salsa": false
   },
-  "exportedAt": "2026-06-26T00:30:31.907Z"
+  "exportedAt": "2026-06-27T01:46:06.472Z"
 }
