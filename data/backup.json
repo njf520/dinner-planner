@@ -3848,7 +3848,8 @@
   "planned": [
     1782417520449,
     1782433287357,
-    1781473399257
+    1781473399257,
+    1781473431147
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -3940,5 +3941,5 @@
     "ing_sourcream": false,
     "ing_salsa": false
   },
-  "exportedAt": "2026-06-28T16:36:23.751Z"
+  "exportedAt": "2026-06-28T16:37:22.682Z"
 }
