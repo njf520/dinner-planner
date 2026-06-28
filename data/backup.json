@@ -3998,8 +3998,8 @@
     }
   ],
   "planned": [
-    1781473399257,
-    1781473431147
+    1782670410788,
+    1782670314852
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -4044,7 +4044,9 @@
     "ing_firmgoatcheese": true,
     "ing_babyarugula": true,
     "ing_sourcream": true,
-    "ing_salsa": true
+    "ing_salsa": true,
+    "ing_freshlygroundblackpepper": false,
+    "ing_italianseasoning": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4089,7 +4091,9 @@
     "ing_firmgoatcheese": false,
     "ing_babyarugula": false,
     "ing_sourcream": false,
-    "ing_salsa": false
+    "ing_salsa": false,
+    "ing_freshlygroundblackpepper": true,
+    "ing_italianseasoning": true
   },
-  "exportedAt": "2026-06-28T18:13:46.741Z"
+  "exportedAt": "2026-06-28T18:21:28.472Z"
 }
