@@ -4048,7 +4048,12 @@
     "ing_salsa": true,
     "ing_freshlygroundblackpepper": false,
     "ing_italianseasoning": false,
-    "ing_curlykale": false
+    "ing_curlykale": false,
+    "ing_greencabbage": false,
+    "ing_lemon": true,
+    "ing_lemons": true,
+    "ing_shavedparmesancheese": false,
+    "ing_freshlygratedparmesancheese": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4096,7 +4101,12 @@
     "ing_salsa": false,
     "ing_freshlygroundblackpepper": true,
     "ing_italianseasoning": true,
-    "ing_curlykale": true
+    "ing_curlykale": true,
+    "ing_greencabbage": true,
+    "ing_lemon": false,
+    "ing_lemons": false,
+    "ing_shavedparmesancheese": true,
+    "ing_freshlygratedparmesancheese": false
   },
-  "exportedAt": "2026-06-28T20:40:22.155Z"
+  "exportedAt": "2026-06-28T20:48:01.966Z"
 }
