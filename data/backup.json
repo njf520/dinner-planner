@@ -1,6 +1,55 @@
 {
   "recipes": [
     {
+      "name": "Negroni",
+      "servings": 1,
+      "source": "https://www.diffordsguide.com/cocktails/recipe/1392/negroni-cocktail",
+      "emoji": "🍸",
+      "time": "5 min",
+      "difficulty": "easy",
+      "category": "drink",
+      "tags": [
+        "cocktail",
+        "gin",
+        "classic",
+        "aperitif"
+      ],
+      "ingredients": [
+        {
+          "name": "Gin",
+          "amount": "1½ oz",
+          "unit": "oz",
+          "notes": "London Dry gin recommended"
+        },
+        {
+          "name": "Campari",
+          "amount": "1 oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "Sweet vermouth",
+          "amount": "1 oz",
+          "unit": "oz",
+          "notes": "Rosso vermouth"
+        },
+        {
+          "name": "Orange slice or twist",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "Flamed orange peel or orange slice"
+        },
+        {
+          "name": "Rocks glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": "Served over a large ice cube"
+        }
+      ],
+      "notes": null,
+      "id": 1782530305776
+    },
+    {
       "name": "Chicken Fajitas",
       "servings": 4,
       "source": "https://www.delish.com/cooking/recipe-ideas/a19665622/chicken-fajitas-recipe/?utm_source=google&utm_medium=cpc&utm_campaign=mgu_ga_del_md_pmx_prog_org_us_18345007169&gad_source=1&gad_campaignid=18339119658&gclid=Cj0KCQjwo_PRBhDNARIsAEcVALUmVptoeeZFGCvsilbyzaZAiseV6m1vOU4ZW1COYHvKaZ9NNdQuc_YaAg0hEALw_wcB",
@@ -3798,7 +3847,8 @@
   ],
   "planned": [
     1782417520449,
-    1782433287357
+    1782433287357,
+    1781473399257
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -3890,5 +3940,5 @@
     "ing_sourcream": false,
     "ing_salsa": false
   },
-  "exportedAt": "2026-06-27T03:18:21.246Z"
+  "exportedAt": "2026-06-28T16:36:23.751Z"
 }
