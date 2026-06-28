@@ -3846,8 +3846,6 @@
     }
   ],
   "planned": [
-    1782417520449,
-    1782433287357,
     1781473399257,
     1781473431147
   ],
@@ -3859,7 +3857,7 @@
     "ing_smokedpaprika": false,
     "ing_aleppopepperflakes": false,
     "ing_carrots": true,
-    "ing_lemonjuice": true,
+    "ing_lemonjuice": false,
     "ing_garlic": true,
     "ing_onions": true,
     "ing_tomatopaste": false,
@@ -3904,14 +3902,14 @@
     "ing_smokedpaprika": true,
     "ing_aleppopepperflakes": true,
     "ing_carrots": false,
-    "ing_lemonjuice": false,
+    "ing_lemonjuice": true,
     "ing_garlic": false,
     "ing_onions": false,
     "ing_tomatopaste": true,
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true,
-    "ing_pittedolives": true,
-    "ing_cherrytomatoes": true,
+    "ing_pittedolives": false,
+    "ing_cherrytomatoes": false,
     "ing_blackpepper": true,
     "ing_redonion": true,
     "ing_oliveoil": true,
@@ -3920,7 +3918,7 @@
     "ing_salt": true,
     "ing_maplesyrup": true,
     "ing_vanillaextract": true,
-    "ing_garliccloves": true,
+    "ing_garliccloves": false,
     "ing_chilipowder": true,
     "ing_cumin": true,
     "ing_flourtortillas": true,
@@ -3941,5 +3939,5 @@
     "ing_sourcream": false,
     "ing_salsa": false
   },
-  "exportedAt": "2026-06-28T16:37:22.682Z"
+  "exportedAt": "2026-06-28T16:38:04.045Z"
 }
