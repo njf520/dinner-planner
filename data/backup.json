@@ -4053,7 +4053,11 @@
     "ing_lemon": true,
     "ing_lemons": true,
     "ing_shavedparmesancheese": false,
-    "ing_freshlygratedparmesancheese": true
+    "ing_freshlygratedparmesancheese": true,
+    "ing_cannelliniorwhitebeans": false,
+    "ing_marinatedartichokehearts": false,
+    "ing_spaghetti": false,
+    "ing_crustybread": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4106,7 +4110,11 @@
     "ing_lemon": false,
     "ing_lemons": false,
     "ing_shavedparmesancheese": true,
-    "ing_freshlygratedparmesancheese": false
+    "ing_freshlygratedparmesancheese": false,
+    "ing_cannelliniorwhitebeans": true,
+    "ing_marinatedartichokehearts": true,
+    "ing_spaghetti": true,
+    "ing_crustybread": true
   },
-  "exportedAt": "2026-06-28T20:48:01.966Z"
+  "exportedAt": "2026-06-28T21:04:24.213Z"
 }
