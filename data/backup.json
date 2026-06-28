@@ -1,6 +1,94 @@
 {
   "recipes": [
     {
+      "name": "Lemon Parm Crispy White Bean & Artichoke Salad",
+      "servings": 4,
+      "source": "What to Cook When You Don't Feel Like Cooking",
+      "emoji": "🥗",
+      "time": "30 min",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "salad",
+        "vegetarian",
+        "beans",
+        "kale"
+      ],
+      "ingredients": [
+        {
+          "name": "cannellini or white beans",
+          "amount": "1 (15 oz) can",
+          "unit": "can",
+          "notes": "drained and rinsed; chickpeas or any white bean work well"
+        },
+        {
+          "name": "marinated artichoke hearts",
+          "amount": "1 (12 oz) jar",
+          "unit": "jar",
+          "notes": "juices reserved for tossing with beans"
+        },
+        {
+          "name": "crusty bread",
+          "amount": "4 large slices",
+          "unit": "slices",
+          "notes": "cut into cubes for croutons"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "3 tbsp plus ¼ cup",
+          "unit": "tbsp/cup",
+          "notes": "3 tbsp for roasting, ¼ cup for finishing salad"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "1¼ tsp",
+          "unit": "tsp",
+          "notes": "plus more to taste"
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "several grinds",
+          "unit": "to taste",
+          "notes": "plus more to taste"
+        },
+        {
+          "name": "garlic powder",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "Italian seasoning",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "curly kale",
+          "amount": "2 bunches",
+          "unit": "bunches",
+          "notes": "stemmed and finely chopped, massaged until tender"
+        },
+        {
+          "name": "shaved Parmesan cheese",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": "about 3 oz shaved, or 1 cup grated"
+        },
+        {
+          "name": "lemons",
+          "amount": "2",
+          "unit": "whole",
+          "notes": "juiced over finished salad"
+        }
+      ],
+      "notes": null,
+      "id": 1782670314852,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1782670314852-0.jpg"
+      ]
+    },
+    {
       "name": "Negroni",
       "servings": 1,
       "source": "https://www.diffordsguide.com/cocktails/recipe/1392/negroni-cocktail",
@@ -3939,5 +4027,5 @@
     "ing_sourcream": false,
     "ing_salsa": false
   },
-  "exportedAt": "2026-06-28T16:38:04.045Z"
+  "exportedAt": "2026-06-28T18:12:11.133Z"
 }
