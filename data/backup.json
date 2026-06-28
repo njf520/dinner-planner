@@ -1,6 +1,70 @@
 {
   "recipes": [
     {
+      "name": "Cabbage-io e Pepe",
+      "servings": 5,
+      "source": "What to Cook When You Don't Feel Like Cooking",
+      "emoji": "🍝",
+      "time": "30 min",
+      "difficulty": "medium",
+      "category": "food",
+      "tags": [
+        "pasta",
+        "italian",
+        "vegetarian",
+        "cabbage"
+      ],
+      "ingredients": [
+        {
+          "name": "kosher salt",
+          "amount": "1¾ tsp",
+          "unit": "tsp",
+          "notes": "plus more for seasoning"
+        },
+        {
+          "name": "spaghetti",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "green cabbage",
+          "amount": "1 head",
+          "unit": "head",
+          "notes": "halved, cored, and thinly sliced"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "freshly ground black pepper",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "freshly grated Parmesan cheese",
+          "amount": "1½ cups",
+          "unit": "cup",
+          "notes": "plus more for serving"
+        },
+        {
+          "name": "lemon",
+          "amount": "1",
+          "unit": "whole",
+          "notes": "halved, for squeezing"
+        }
+      ],
+      "notes": null,
+      "id": 1782670410788,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1782670410788-0.jpg"
+      ]
+    },
+    {
       "name": "Lemon Parm Crispy White Bean & Artichoke Salad",
       "servings": 4,
       "source": "What to Cook When You Don't Feel Like Cooking",
@@ -4027,5 +4091,5 @@
     "ing_sourcream": false,
     "ing_salsa": false
   },
-  "exportedAt": "2026-06-28T18:12:11.133Z"
+  "exportedAt": "2026-06-28T18:13:46.741Z"
 }
