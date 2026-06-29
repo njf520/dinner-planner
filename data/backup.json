@@ -53,8 +53,8 @@
         },
         {
           "name": "lemon",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": "halved, for squeezing"
         }
       ],
@@ -62,7 +62,8 @@
       "id": 1782670410788,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1782670410788-0.jpg"
-      ]
+      ],
+      "lastOpened": 1782765986989
     },
     {
       "name": "Lemon Parm Crispy White Bean & Artichoke Salad",
@@ -99,8 +100,8 @@
         },
         {
           "name": "extra-virgin olive oil",
-          "amount": "3 tbsp plus ¼ cup",
-          "unit": "tbsp/cup",
+          "amount": "3 tbsp plus ¼ cup tbsp/cup",
+          "unit": "",
           "notes": "3 tbsp for roasting, ¼ cup for finishing salad"
         },
         {
@@ -111,8 +112,8 @@
         },
         {
           "name": "freshly ground black pepper",
-          "amount": "several grinds",
-          "unit": "to taste",
+          "amount": "several grinds to taste",
+          "unit": "",
           "notes": "plus more to taste"
         },
         {
@@ -141,8 +142,8 @@
         },
         {
           "name": "lemons",
-          "amount": "2",
-          "unit": "whole",
+          "amount": "2 whole",
+          "unit": "",
           "notes": "juiced over finished salad"
         }
       ],
@@ -4004,7 +4005,7 @@
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
-    "ing_extravirginoliveoil": true,
+    "ing_extravirginoliveoil": false,
     "ing_groundcumin": false,
     "ing_koshersalt": false,
     "ing_smokedpaprika": false,
@@ -4036,7 +4037,7 @@
     "ing_freshcilantro": false,
     "ing_freshbasilleaves": true,
     "ing_freshfigs": true,
-    "ing_garlicpowder": true,
+    "ing_garlicpowder": false,
     "ing_limejuice": true,
     "ing_limewedges": true,
     "ing_toastedpecans": true,
@@ -4061,7 +4062,7 @@
   },
   "haveItems": {
     "ing_groundblackpepper": true,
-    "ing_extravirginoliveoil": false,
+    "ing_extravirginoliveoil": true,
     "ing_groundcumin": true,
     "ing_koshersalt": true,
     "ing_smokedpaprika": true,
@@ -4093,7 +4094,7 @@
     "ing_freshcilantro": true,
     "ing_freshbasilleaves": false,
     "ing_freshfigs": false,
-    "ing_garlicpowder": false,
+    "ing_garlicpowder": true,
     "ing_limejuice": false,
     "ing_limewedges": false,
     "ing_toastedpecans": false,
@@ -4116,5 +4117,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-06-28T21:04:24.213Z"
+  "exportedAt": "2026-06-29T20:46:42.335Z"
 }
