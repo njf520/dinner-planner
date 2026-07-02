@@ -3983,9 +3983,7 @@
       "lastOpened": 1782958667639
     }
   ],
-  "planned": [
-    1782670410788
-  ],
+  "planned": [],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -4100,5 +4098,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-02T20:41:58.015Z"
+  "exportedAt": "2026-07-02T20:43:38.926Z"
 }
