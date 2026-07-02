@@ -1,6 +1,79 @@
 {
   "recipes": [
     {
+      "name": "Egg Roll in a Bowl",
+      "servings": 4,
+      "source": "https://www.spendwithpennies.com/egg-roll-in-a-bowl/",
+      "emoji": "🥢",
+      "time": "30 min",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "asian",
+        "low carb",
+        "quick",
+        "weeknight"
+      ],
+      "ingredients": [
+        {
+          "name": "ground chicken or ground pork",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": "ground chicken or ground pork"
+        },
+        {
+          "name": "green onions",
+          "amount": "4",
+          "unit": "whole",
+          "notes": "thinly sliced, whites and greens separated"
+        },
+        {
+          "name": "fresh ginger",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": "grated"
+        },
+        {
+          "name": "garlic",
+          "amount": "4 cloves",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "coleslaw mix",
+          "amount": "16 oz",
+          "unit": "oz",
+          "notes": "or shredded cabbage"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "low-sodium or coconut aminos can be substituted"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "or to taste"
+        },
+        {
+          "name": "fresh cilantro",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "chopped, for garnish"
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for garnish"
+        }
+      ],
+      "notes": "Add mushrooms and carrots!!!",
+      "id": 1782958656090
+    },
+    {
       "name": "Cabbage-io e Pepe",
       "servings": 5,
       "source": "What to Cook When You Don't Feel Like Cooking",
@@ -3907,7 +3980,7 @@
       "notes": null,
       "id": 1780698917162,
       "category": "drink",
-      "lastOpened": 1782011617627
+      "lastOpened": 1782958667639
     }
   ],
   "planned": [
@@ -4027,5 +4100,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-02T02:15:41.282Z"
+  "exportedAt": "2026-07-02T02:18:14.180Z"
 }
