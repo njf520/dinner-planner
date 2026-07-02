@@ -1,6 +1,115 @@
 {
   "recipes": [
     {
+      "name": "Ravioli Primavera",
+      "servings": 5,
+      "source": "https://www.thepioneerwoman.com/food-cooking/recipes/a32403902/ravioli-primavera-recipe/",
+      "emoji": "🍝",
+      "time": "25 min",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "pasta",
+        "vegetable",
+        "quick",
+        "creamy"
+      ],
+      "ingredients": [
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "cheese or spinach ravioli",
+          "amount": "18 oz",
+          "unit": "oz",
+          "notes": "two 9-oz packages"
+        },
+        {
+          "name": "salted butter",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "whole",
+          "notes": "finely diced"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "3",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "broccoli florets",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "thin asparagus",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": "trimmed and cut into 1-inch pieces"
+        },
+        {
+          "name": "white wine",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "can substitute with extra chicken broth"
+        },
+        {
+          "name": "low-sodium chicken broth",
+          "amount": "⅔ cup",
+          "unit": "cup",
+          "notes": "use vegetable broth to make vegetarian"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "frozen peas",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "thawed"
+        },
+        {
+          "name": "diced ham",
+          "amount": "¾ cup",
+          "unit": "cup",
+          "notes": "omit for vegetarian"
+        },
+        {
+          "name": "prepared pesto",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "grated parmesan cheese",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "plus more for serving"
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "unit": "",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1783025177007
+    },
+    {
       "name": "Egg Roll in a Bowl",
       "servings": 4,
       "source": "https://www.spendwithpennies.com/egg-roll-in-a-bowl/",
@@ -4098,5 +4207,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-02T20:46:08.731Z"
+  "exportedAt": "2026-07-02T20:46:31.587Z"
 }
