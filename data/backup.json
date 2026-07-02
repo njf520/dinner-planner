@@ -23,8 +23,8 @@
         },
         {
           "name": "green onions",
-          "amount": "4",
-          "unit": "whole",
+          "amount": "4 whole",
+          "unit": "",
           "notes": "thinly sliced, whites and greens separated"
         },
         {
@@ -4100,5 +4100,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-02T02:18:14.180Z"
+  "exportedAt": "2026-07-02T20:41:58.015Z"
 }
