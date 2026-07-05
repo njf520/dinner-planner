@@ -1,6 +1,56 @@
 {
   "recipes": [
     {
+      "name": "Dry-Brined Salmon",
+      "servings": 4,
+      "source": "https://cooking.nytimes.com/recipes/1024187-dry-brined-salmon",
+      "emoji": "🐟",
+      "time": "15 min plus 8 hrs brining",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "seafood",
+        "salmon",
+        "brining",
+        "weeknight"
+      ],
+      "ingredients": [
+        {
+          "name": "skin-on salmon fillets",
+          "amount": "4 (5- to 7-oz each)",
+          "unit": "fillets",
+          "notes": "any type of salmon; coho or sockeye for leaner, king for fattier"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "½–1 tsp per fillet",
+          "unit": "tsp",
+          "notes": "Diamond Crystal kosher salt; or ¼–½ tsp table salt, or ⅓–⅔ tsp Morton kosher salt per fillet"
+        },
+        {
+          "name": "neutral cooking oil",
+          "amount": "thin film",
+          "unit": "",
+          "notes": "whatever oil you cook with; for coating fillets before cooking"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for drizzling over finished salmon"
+        },
+        {
+          "name": "lemon wedges",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1783280000800,
+      "lastOpened": 1783280023813
+    },
+    {
       "name": "Maximilian Affair",
       "servings": 1,
       "source": "https://abarabove.com/recipe/maximilian-affair/",
@@ -4324,5 +4374,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-05T19:33:14.902Z"
+  "exportedAt": "2026-07-05T19:33:58.131Z"
 }
