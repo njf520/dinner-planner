@@ -1,6 +1,55 @@
 {
   "recipes": [
     {
+      "name": "Maximilian Affair",
+      "servings": 1,
+      "source": "https://abarabove.com/recipe/maximilian-affair/",
+      "emoji": "🍸",
+      "time": null,
+      "difficulty": "easy",
+      "category": "drink",
+      "tags": [
+        "cocktail",
+        "mezcal",
+        "elderflower",
+        "stirred"
+      ],
+      "ingredients": [
+        {
+          "name": "Mezcal",
+          "amount": "1 oz",
+          "unit": "oz",
+          "notes": "Sanka recommended"
+        },
+        {
+          "name": "Elderflower Liqueur",
+          "amount": "1 oz",
+          "unit": "oz",
+          "notes": "St. Germain recommended"
+        },
+        {
+          "name": "Punt e Mes",
+          "amount": "½ oz",
+          "unit": "oz",
+          "notes": null
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": "¼ oz",
+          "unit": "oz",
+          "notes": "freshly squeezed"
+        },
+        {
+          "name": "Chilled cocktail glass",
+          "amount": "",
+          "unit": "glass",
+          "notes": null
+        }
+      ],
+      "notes": null,
+      "id": 1783210296779
+    },
+    {
       "name": "Charred Chicken Thighs with Dill Greek Yogurt Sauce",
       "servings": 4,
       "source": null,
@@ -4275,5 +4324,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-05T00:11:31.394Z"
+  "exportedAt": "2026-07-05T19:33:14.902Z"
 }
