@@ -1,6 +1,136 @@
 {
   "recipes": [
     {
+      "name": "Charred Chicken Thighs with Dill Greek Yogurt Sauce",
+      "servings": 4,
+      "source": null,
+      "emoji": "🍗",
+      "time": null,
+      "difficulty": "medium",
+      "category": "food",
+      "tags": [
+        "chicken",
+        "grilling",
+        "mediterranean",
+        "yogurt"
+      ],
+      "ingredients": [
+        {
+          "name": "garlic cloves, minced",
+          "amount": "10 cloves",
+          "unit": "",
+          "notes": "for chicken marinade"
+        },
+        {
+          "name": "ground allspice",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground cardamom",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground nutmeg",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "sweet paprika",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "5 tbsp",
+          "unit": "tbsp",
+          "notes": "3 tbsp for spice rub, 2 tbsp for marinade"
+        },
+        {
+          "name": "boneless, skinless chicken thighs",
+          "amount": "8 pieces",
+          "unit": "",
+          "notes": "large"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "to taste",
+          "notes": "for seasoning chicken"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "",
+          "unit": "to taste",
+          "notes": "for seasoning chicken"
+        },
+        {
+          "name": "red onion, halved and thinly sliced crosswise",
+          "amount": "1 medium",
+          "unit": "",
+          "notes": "used in marinade, discarded before grilling"
+        },
+        {
+          "name": "fresh lemon juice",
+          "amount": "6 tbsp",
+          "unit": "tbsp",
+          "notes": "juice of 2 medium lemons"
+        },
+        {
+          "name": "garlic clove, minced",
+          "amount": "1 medium clove",
+          "unit": "",
+          "notes": "for yogurt sauce"
+        },
+        {
+          "name": "plain full-fat Greek yogurt",
+          "amount": "1¼ cups",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "fresh dill, roughly chopped",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "for yogurt sauce"
+        },
+        {
+          "name": "fresh lemon juice",
+          "amount": "",
+          "unit": "to taste",
+          "notes": "juice of ½ large lemon, for yogurt sauce"
+        },
+        {
+          "name": "cayenne pepper",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "optional, for yogurt sauce"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "to taste",
+          "notes": "for yogurt sauce"
+        }
+      ],
+      "notes": null,
+      "id": 1783030733953,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1783030733953-0.jpg"
+      ]
+    },
+    {
       "name": "Ravioli Primavera",
       "servings": 5,
       "source": "https://www.thepioneerwoman.com/food-cooking/recipes/a32403902/ravioli-primavera-recipe/",
@@ -35,14 +165,14 @@
         },
         {
           "name": "onion",
-          "amount": "1",
-          "unit": "whole",
+          "amount": "1 whole",
+          "unit": "",
           "notes": "finely diced"
         },
         {
           "name": "garlic cloves",
-          "amount": "3",
-          "unit": "cloves",
+          "amount": "3 cloves",
+          "unit": "",
           "notes": "minced"
         },
         {
@@ -4028,68 +4158,6 @@
       "notes": null,
       "id": 1780699492197,
       "category": "food"
-    },
-    {
-      "name": "Maximilian Affair",
-      "servings": 1,
-      "source": "https://www.diffordsguide.com/cocktails/recipe/14827/maximilian-affair",
-      "emoji": "🥃",
-      "time": "5 min",
-      "difficulty": "easy",
-      "tags": [
-        "cocktail",
-        "mezcal",
-        "elderflower",
-        "citrus"
-      ],
-      "ingredients": [
-        {
-          "name": "mezcal",
-          "amount": "2 oz",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "elderflower liqueur",
-          "amount": "½ oz",
-          "unit": "",
-          "notes": "St-Germain"
-        },
-        {
-          "name": "yellow Chartreuse",
-          "amount": "¼ oz",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "lime juice",
-          "amount": "¾ oz",
-          "unit": "",
-          "notes": "freshly squeezed"
-        },
-        {
-          "name": "simple syrup",
-          "amount": "¼ oz",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "coupe glass",
-          "amount": "",
-          "unit": "glass",
-          "notes": null
-        },
-        {
-          "name": "lime wheel",
-          "amount": "",
-          "unit": "garnish",
-          "notes": null
-        }
-      ],
-      "notes": null,
-      "id": 1780698917162,
-      "category": "drink",
-      "lastOpened": 1782958667639
     }
   ],
   "planned": [],
@@ -4207,5 +4275,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-02T20:46:31.587Z"
+  "exportedAt": "2026-07-05T00:11:31.394Z"
 }
