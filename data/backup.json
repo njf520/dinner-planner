@@ -17,8 +17,8 @@
       "ingredients": [
         {
           "name": "skin-on salmon fillets",
-          "amount": "4 (5- to 7-oz each)",
-          "unit": "fillets",
+          "amount": "4 (5- to 7-oz each) fillets",
+          "unit": "",
           "notes": "any type of salmon; coho or sockeye for leaner, king for fattier"
         },
         {
@@ -97,7 +97,8 @@
         }
       ],
       "notes": null,
-      "id": 1783210296779
+      "id": 1783210296779,
+      "lastOpened": 1783307892805
     },
     {
       "name": "Charred Chicken Thighs with Dill Greek Yogurt Sauce",
@@ -4374,5 +4375,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-05T19:33:58.131Z"
+  "exportedAt": "2026-07-06T03:18:28.234Z"
 }
