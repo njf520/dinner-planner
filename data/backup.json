@@ -1,6 +1,56 @@
 {
   "recipes": [
     {
+      "name": "Burnt Basque Cheesecake (La Viña Style)",
+      "servings": 8,
+      "source": "https://spanishsabores.com/burnt-basque-cheesecake-recipe",
+      "emoji": "🧀",
+      "time": "1 hr",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "dessert",
+        "cheesecake",
+        "spanish",
+        "basque"
+      ],
+      "ingredients": [
+        {
+          "name": "Philadelphia cream cheese",
+          "amount": "2.2 lb",
+          "unit": "lb",
+          "notes": "about 1 kg; room temperature; can substitute mascarpone or other cream cheese"
+        },
+        {
+          "name": "eggs",
+          "amount": "7",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "sugar",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": "400g; for less sweet, use 1½–1¾ cups"
+        },
+        {
+          "name": "all-purpose flour",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": "optional; helps with texture"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "6½ fl oz",
+          "unit": "fl oz",
+          "notes": "about ⅘ cup or 200ml"
+        }
+      ],
+      "notes": null,
+      "id": 1783454066692,
+      "lastOpened": 1783464996758
+    },
+    {
       "name": "Dry-Brined Salmon",
       "servings": 4,
       "source": "https://cooking.nytimes.com/recipes/1024187-dry-brined-salmon",
@@ -4375,5 +4425,5 @@
     "ing_spaghetti": true,
     "ing_crustybread": true
   },
-  "exportedAt": "2026-07-07T19:51:48.365Z"
+  "exportedAt": "2026-07-07T22:56:52.283Z"
 }
