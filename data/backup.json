@@ -387,7 +387,8 @@
         }
       ],
       "notes": null,
-      "id": 1783025177007
+      "id": 1783025177007,
+      "lastOpened": 1784005236723
     },
     {
       "name": "Egg Roll in a Bowl",
@@ -4431,5 +4432,5 @@
     "ing_heavycream": true,
     "ing_allpurposeflour": false
   },
-  "exportedAt": "2026-07-14T05:00:02.012Z"
+  "exportedAt": "2026-07-14T05:00:41.625Z"
 }
