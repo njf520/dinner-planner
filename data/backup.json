@@ -4311,7 +4311,9 @@
       "category": "food"
     }
   ],
-  "planned": [],
+  "planned": [
+    1781473431147
+  ],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -4432,5 +4434,5 @@
     "ing_heavycream": true,
     "ing_allpurposeflour": false
   },
-  "exportedAt": "2026-07-14T05:01:04.069Z"
+  "exportedAt": "2026-07-14T05:02:04.096Z"
 }
