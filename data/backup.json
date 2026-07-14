@@ -48,7 +48,7 @@
       ],
       "notes": null,
       "id": 1783454066692,
-      "lastOpened": 1783464996758
+      "lastOpened": 1783568010037
     },
     {
       "name": "Dry-Brined Salmon",
@@ -4310,7 +4310,9 @@
       "category": "food"
     }
   ],
-  "planned": [],
+  "planned": [
+    1783454066692
+  ],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -4366,7 +4368,10 @@
     "ing_cannelliniorwhitebeans": false,
     "ing_marinatedartichokehearts": false,
     "ing_spaghetti": false,
-    "ing_crustybread": false
+    "ing_crustybread": false,
+    "ing_eggs": false,
+    "ing_heavycream": false,
+    "ing_allpurposeflour": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4423,7 +4428,10 @@
     "ing_cannelliniorwhitebeans": true,
     "ing_marinatedartichokehearts": true,
     "ing_spaghetti": true,
-    "ing_crustybread": true
+    "ing_crustybread": true,
+    "ing_eggs": true,
+    "ing_heavycream": true,
+    "ing_allpurposeflour": false
   },
-  "exportedAt": "2026-07-07T22:56:52.283Z"
+  "exportedAt": "2026-07-14T04:59:38.107Z"
 }
