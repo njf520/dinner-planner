@@ -525,7 +525,7 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1782670410788-0.jpg"
       ],
-      "lastOpened": 1782765986989
+      "lastOpened": 1784005186965
     },
     {
       "name": "Negroni",
@@ -4310,9 +4310,7 @@
       "category": "food"
     }
   ],
-  "planned": [
-    1783454066692
-  ],
+  "planned": [],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -4433,5 +4431,5 @@
     "ing_heavycream": true,
     "ing_allpurposeflour": false
   },
-  "exportedAt": "2026-07-14T04:59:38.107Z"
+  "exportedAt": "2026-07-14T05:00:02.012Z"
 }
