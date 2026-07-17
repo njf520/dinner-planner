@@ -1417,7 +1417,8 @@
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-1.jpg",
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-2.jpg"
       ],
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1784257583574
     },
     {
       "name": "Square Root",
@@ -4401,7 +4402,8 @@
     }
   ],
   "planned": [
-    1781473431147
+    1781473431147,
+    1781474422194
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -4410,7 +4412,7 @@
     "ing_koshersalt": false,
     "ing_smokedpaprika": false,
     "ing_aleppopepperflakes": false,
-    "ing_carrots": true,
+    "ing_carrots": false,
     "ing_lemonjuice": false,
     "ing_garlic": true,
     "ing_onions": true,
@@ -4461,7 +4463,8 @@
     "ing_crustybread": false,
     "ing_eggs": false,
     "ing_heavycream": false,
-    "ing_allpurposeflour": true
+    "ing_allpurposeflour": true,
+    "ing_apple": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4470,7 +4473,7 @@
     "ing_koshersalt": true,
     "ing_smokedpaprika": true,
     "ing_aleppopepperflakes": true,
-    "ing_carrots": false,
+    "ing_carrots": true,
     "ing_lemonjuice": true,
     "ing_garlic": false,
     "ing_onions": false,
@@ -4521,7 +4524,8 @@
     "ing_crustybread": true,
     "ing_eggs": true,
     "ing_heavycream": true,
-    "ing_allpurposeflour": false
+    "ing_allpurposeflour": false,
+    "ing_apple": false
   },
-  "exportedAt": "2026-07-17T03:05:49.428Z"
+  "exportedAt": "2026-07-17T03:07:03.317Z"
 }
