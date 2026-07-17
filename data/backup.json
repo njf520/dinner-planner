@@ -1,6 +1,95 @@
 {
   "recipes": [
     {
+      "name": "Cornbread & Chestnut Stuffing",
+      "servings": null,
+      "source": null,
+      "emoji": "🦃",
+      "time": null,
+      "difficulty": "medium",
+      "category": "food",
+      "tags": [
+        "stuffing",
+        "thanksgiving",
+        "cornbread",
+        "chestnut"
+      ],
+      "ingredients": [
+        {
+          "name": "cornbread",
+          "amount": "1 batch",
+          "unit": "batch",
+          "notes": "use a mix if desired; cook, crumble, and let get stale"
+        },
+        {
+          "name": "white bread",
+          "amount": "1 loaf",
+          "unit": "loaf",
+          "notes": "French loaf or similar; pull white out, cube, and let get stale"
+        },
+        {
+          "name": "chestnuts",
+          "amount": "1 lb",
+          "unit": "lb",
+          "notes": "cross-cut and roast at 375°F until cuts open, then peel and coarsely chop"
+        },
+        {
+          "name": "onions",
+          "amount": "2 small or 1 large whole",
+          "unit": "",
+          "notes": "chopped"
+        },
+        {
+          "name": "celery",
+          "amount": "3 stalks",
+          "unit": "stalks",
+          "notes": "chopped"
+        },
+        {
+          "name": "green pepper",
+          "amount": "1 large whole",
+          "unit": "",
+          "notes": "chopped"
+        },
+        {
+          "name": "mushrooms",
+          "amount": "1 handful",
+          "unit": "handful",
+          "notes": "sliced; add last to pan"
+        },
+        {
+          "name": "butter",
+          "amount": "1 stick",
+          "unit": "stick",
+          "notes": "for sautéing vegetables"
+        },
+        {
+          "name": "wine",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "about a cup, maybe more; add once vegetables are softened"
+        },
+        {
+          "name": "dried herbs",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "oregano, sage, thyme, rosemary"
+        },
+        {
+          "name": "chicken broth",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "add if stuffing is too dry; moisten but do not make wet"
+        }
+      ],
+      "notes": null,
+      "id": 1784228506349,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1784228506349-0.jpg"
+      ],
+      "lastOpened": 1784228515293
+    },
+    {
       "name": "Burnt Basque Cheesecake (La Viña Style)",
       "servings": 8,
       "source": "https://spanishsabores.com/burnt-basque-cheesecake-recipe",
@@ -4434,5 +4523,5 @@
     "ing_heavycream": true,
     "ing_allpurposeflour": false
   },
-  "exportedAt": "2026-07-16T19:01:39.756Z"
+  "exportedAt": "2026-07-17T03:05:49.428Z"
 }
