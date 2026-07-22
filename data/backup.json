@@ -951,7 +951,8 @@
         }
       ],
       "notes": null,
-      "id": 1781577577686
+      "id": 1781577577686,
+      "lastOpened": 1784257667588
     },
     {
       "name": "Watermelon and Cucumber Gazpacho",
@@ -4527,5 +4528,5 @@
     "ing_allpurposeflour": false,
     "ing_apple": false
   },
-  "exportedAt": "2026-07-17T03:07:32.993Z"
+  "exportedAt": "2026-07-22T03:41:29.587Z"
 }
