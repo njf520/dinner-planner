@@ -1,6 +1,94 @@
 {
   "recipes": [
     {
+      "name": "Mexican Cream Cheese Flan (Flan Napolitano)",
+      "servings": 12,
+      "source": "177milkstreet.com (adapted by Rose Hattabaugh)",
+      "emoji": "🍮",
+      "time": "1¾ hours plus cooling and chilling",
+      "difficulty": "medium",
+      "category": "food",
+      "tags": [
+        "mexican",
+        "custard",
+        "dessert",
+        "baked"
+      ],
+      "ingredients": [
+        {
+          "name": "white sugar",
+          "amount": "¾ cup",
+          "unit": "cup",
+          "notes": "161 grams"
+        },
+        {
+          "name": "cream cheese",
+          "amount": "4 oz",
+          "unit": "oz",
+          "notes": "113 grams, cut into a few chunks, room temperature"
+        },
+        {
+          "name": "sweetened condensed milk",
+          "amount": "14 oz",
+          "unit": "oz",
+          "notes": "one 14-ounce can"
+        },
+        {
+          "name": "evaporated milk",
+          "amount": "12 oz",
+          "unit": "oz",
+          "notes": "one 12-ounce can"
+        },
+        {
+          "name": "half-and-half",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "room temperature"
+        },
+        {
+          "name": "large eggs",
+          "amount": "5 whole",
+          "unit": "",
+          "notes": "room temperature"
+        },
+        {
+          "name": "large egg yolk",
+          "amount": "1 whole",
+          "unit": "",
+          "notes": "room temperature"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": "1 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "table salt",
+          "amount": "⅛ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "water",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "for the caramel in the saucepan"
+        },
+        {
+          "name": "water",
+          "amount": "2–3 cups",
+          "unit": "cup",
+          "notes": "for the baking sheet water bath; towel should be just submerged"
+        }
+      ],
+      "notes": null,
+      "id": 1784691695909,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1784691695909-0.jpg"
+      ]
+    },
+    {
       "name": "Cornbread & Chestnut Stuffing",
       "servings": null,
       "source": null,
@@ -1419,7 +1507,7 @@
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-2.jpg"
       ],
       "category": "food",
-      "lastOpened": 1784257583574
+      "lastOpened": 1785633038010
     },
     {
       "name": "Square Root",
@@ -4528,5 +4616,5 @@
     "ing_allpurposeflour": false,
     "ing_apple": false
   },
-  "exportedAt": "2026-07-22T03:41:29.587Z"
+  "exportedAt": "2026-08-02T01:10:38.194Z"
 }
