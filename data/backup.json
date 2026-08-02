@@ -4526,7 +4526,7 @@
     "ing_oregano": false,
     "ing_bellpeppers": true,
     "ing_freshcilantro": false,
-    "ing_freshbasilleaves": true,
+    "ing_freshbasilleaves": false,
     "ing_freshfigs": true,
     "ing_garlicpowder": false,
     "ing_limejuice": true,
@@ -4553,16 +4553,18 @@
     "ing_eggs": false,
     "ing_heavycream": false,
     "ing_allpurposeflour": true,
-    "ing_apple": true
+    "ing_apple": false,
+    "ing_freshflatleafparsley": false,
+    "ing_freshginger": false
   },
   "haveItems": {
-    "ing_groundblackpepper": true,
+    "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": true,
     "ing_groundcumin": true,
     "ing_koshersalt": true,
     "ing_smokedpaprika": true,
     "ing_aleppopepperflakes": true,
-    "ing_carrots": true,
+    "ing_carrots": false,
     "ing_lemonjuice": true,
     "ing_garlic": false,
     "ing_onions": false,
@@ -4608,13 +4610,15 @@
     "ing_shavedparmesancheese": true,
     "ing_freshlygratedparmesancheese": false,
     "ing_cannelliniorwhitebeans": true,
-    "ing_marinatedartichokehearts": true,
+    "ing_marinatedartichokehearts": false,
     "ing_spaghetti": true,
     "ing_crustybread": true,
     "ing_eggs": true,
     "ing_heavycream": true,
     "ing_allpurposeflour": false,
-    "ing_apple": false
+    "ing_apple": false,
+    "ing_freshflatleafparsley": false,
+    "ing_freshginger": false
   },
-  "exportedAt": "2026-08-02T01:10:53.075Z"
+  "exportedAt": "2026-08-02T01:11:30.580Z"
 }
