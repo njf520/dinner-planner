@@ -1371,145 +1371,6 @@
       "category": "food"
     },
     {
-      "name": "Bifu Kare Raisu",
-      "servings": 6,
-      "source": null,
-      "emoji": "🍛",
-      "time": "60 min",
-      "difficulty": "medium",
-      "tags": [
-        "japanese",
-        "curry",
-        "beef",
-        "rice"
-      ],
-      "ingredients": [
-        {
-          "name": "neutral oil",
-          "amount": "3 tbsp",
-          "unit": "tbsp",
-          "notes": "vegetable or other neutral oil"
-        },
-        {
-          "name": "beef chuck",
-          "amount": "2 lb",
-          "unit": "lb",
-          "notes": "cut into ¾-inch pieces"
-        },
-        {
-          "name": "kurozato black sugar",
-          "amount": "2 tbsp",
-          "unit": "tbsp",
-          "notes": "or dark brown sugar"
-        },
-        {
-          "name": "fresh ginger",
-          "amount": "1 tbsp",
-          "unit": "tbsp",
-          "notes": "finely minced"
-        },
-        {
-          "name": "garlic cloves",
-          "amount": "2 cloves",
-          "unit": "",
-          "notes": "finely chopped"
-        },
-        {
-          "name": "medium onions",
-          "amount": "3 onions",
-          "unit": "",
-          "notes": "chopped"
-        },
-        {
-          "name": "apple",
-          "amount": "1 apple",
-          "unit": "",
-          "notes": "grated"
-        },
-        {
-          "name": "S&B brand curry powder",
-          "amount": "¼ cup",
-          "unit": "cup",
-          "notes": null
-        },
-        {
-          "name": "mirin",
-          "amount": "3 tbsp",
-          "unit": "tbsp",
-          "notes": null
-        },
-        {
-          "name": "shoyu",
-          "amount": "2 tbsp",
-          "unit": "tbsp",
-          "notes": null
-        },
-        {
-          "name": "chicken stock",
-          "amount": "1 qt",
-          "unit": "qt",
-          "notes": null
-        },
-        {
-          "name": "sea salt",
-          "amount": "to taste salt",
-          "unit": "",
-          "notes": null
-        },
-        {
-          "name": "konbucha kelp tea powder",
-          "amount": "2 tbsp",
-          "unit": "tbsp",
-          "notes": "optional"
-        },
-        {
-          "name": "Yukon Gold potato",
-          "amount": "1 large potato",
-          "unit": "",
-          "notes": "scrubbed and cut into ½-inch pieces"
-        },
-        {
-          "name": "carrots",
-          "amount": "2 large carrots",
-          "unit": "",
-          "notes": "cut into ½-inch pieces"
-        },
-        {
-          "name": "potato starch",
-          "amount": "1 tbsp",
-          "unit": "tbsp",
-          "notes": null
-        },
-        {
-          "name": "hot rice",
-          "amount": "",
-          "unit": "serving",
-          "notes": "for serving"
-        },
-        {
-          "name": "yogurt raita",
-          "amount": "",
-          "unit": "serving",
-          "notes": "for serving"
-        },
-        {
-          "name": "fukujinzuke pickles",
-          "amount": "",
-          "unit": "serving",
-          "notes": "store-bought, optional"
-        }
-      ],
-      "notes": null,
-      "id": 1781474422194,
-      "imageBackupUrls": [
-        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-0.jpg",
-        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-1.jpg",
-        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781474422194-2.jpg"
-      ],
-      "category": "food",
-      "lastOpened": 1785633038010
-    },
-    {
       "name": "Square Root",
       "servings": 1,
       "source": "Nick Farrell",
@@ -4491,8 +4352,7 @@
     }
   ],
   "planned": [
-    1781473431147,
-    1781474422194
+    1781473431147
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -4620,5 +4480,5 @@
     "ing_freshflatleafparsley": false,
     "ing_freshginger": false
   },
-  "exportedAt": "2026-08-02T01:11:30.580Z"
+  "exportedAt": "2026-08-02T01:12:47.900Z"
 }
