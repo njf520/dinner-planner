@@ -638,7 +638,8 @@
         }
       ],
       "notes": "Add mushrooms and carrots!!!",
-      "id": 1782958656090
+      "id": 1782958656090,
+      "lastOpened": 1788819021878
     },
     {
       "name": "Cabbage-io e Pepe",
@@ -886,7 +887,7 @@
       ],
       "notes": null,
       "id": 1782433287357,
-      "lastOpened": 1782433404283
+      "lastOpened": 1788819038525
     },
     {
       "name": "Fig Salad with Arugula & Pecans",
@@ -4480,5 +4481,5 @@
     "ing_freshflatleafparsley": false,
     "ing_freshginger": false
   },
-  "exportedAt": "2026-09-07T22:10:07.930Z"
+  "exportedAt": "2026-09-07T22:10:53.569Z"
 }
