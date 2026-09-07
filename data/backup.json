@@ -3764,7 +3764,8 @@
       ],
       "notes": null,
       "id": 1780889368107,
-      "category": "drink"
+      "category": "drink",
+      "lastOpened": 1788824020169
     },
     {
       "name": "Overnight Oats",
@@ -4167,7 +4168,7 @@
       "notes": null,
       "id": 1780699798345,
       "category": "drink",
-      "lastOpened": 1781667914200
+      "lastOpened": 1788824008113
     },
     {
       "name": "Classic Margarita",
@@ -4481,5 +4482,5 @@
     "ing_freshflatleafparsley": false,
     "ing_freshginger": false
   },
-  "exportedAt": "2026-09-07T22:10:53.569Z"
+  "exportedAt": "2026-09-07T23:33:42.763Z"
 }
