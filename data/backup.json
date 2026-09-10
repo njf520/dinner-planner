@@ -1,6 +1,88 @@
 {
   "recipes": [
     {
+      "name": "Plum Torte",
+      "servings": 8,
+      "source": "NYT Cooking",
+      "emoji": "🫐",
+      "time": "1 hr 15 min",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "dessert",
+        "cake",
+        "fruit",
+        "baking"
+      ],
+      "ingredients": [
+        {
+          "name": "sugar",
+          "amount": "¾ to 1 cup",
+          "unit": "cup",
+          "notes": "adjust to taste"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "½ cup",
+          "unit": "cup",
+          "notes": "softened"
+        },
+        {
+          "name": "unbleached flour",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "sifted"
+        },
+        {
+          "name": "baking powder",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "1 pinch",
+          "unit": "pinch",
+          "notes": "optional"
+        },
+        {
+          "name": "eggs",
+          "amount": "2",
+          "unit": "whole",
+          "notes": null
+        },
+        {
+          "name": "purple plums",
+          "amount": "24 halves",
+          "unit": "halves",
+          "notes": "pitted"
+        },
+        {
+          "name": "sugar",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "for topping"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "to taste",
+          "unit": "",
+          "notes": "for topping"
+        },
+        {
+          "name": "cinnamon",
+          "amount": "~1 tsp",
+          "unit": "tsp",
+          "notes": "for topping, adjust to taste"
+        }
+      ],
+      "notes": null,
+      "id": 1789079416559,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1789079416559-0.jpg"
+      ]
+    },
+    {
       "name": "Mexican Cream Cheese Flan (Flan Napolitano)",
       "servings": 12,
       "source": "177milkstreet.com (adapted by Rose Hattabaugh)",
@@ -4482,5 +4564,5 @@
     "ing_freshflatleafparsley": false,
     "ing_freshginger": false
   },
-  "exportedAt": "2026-09-10T22:30:12.035Z"
+  "exportedAt": "2026-09-10T22:30:32.530Z"
 }
