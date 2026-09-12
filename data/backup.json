@@ -47,8 +47,8 @@
         },
         {
           "name": "eggs",
-          "amount": "2",
-          "unit": "whole",
+          "amount": "2 whole",
+          "unit": "",
           "notes": null
         },
         {
@@ -4305,7 +4305,8 @@
       ],
       "notes": null,
       "id": 1780699556483,
-      "category": "drink"
+      "category": "drink",
+      "lastOpened": 1789235731346
     },
     {
       "name": "Al Pastor",
@@ -4564,5 +4565,5 @@
     "ing_freshflatleafparsley": false,
     "ing_freshginger": false
   },
-  "exportedAt": "2026-09-10T22:30:32.530Z"
+  "exportedAt": "2026-09-12T17:55:45.775Z"
 }
