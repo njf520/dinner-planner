@@ -4500,10 +4500,11 @@
     "ing_allpurposeflour": true,
     "ing_apple": false,
     "ing_freshflatleafparsley": false,
-    "ing_freshginger": false
+    "ing_freshginger": false,
+    "ing_redpepperflakes": false
   },
   "haveItems": {
-    "ing_groundblackpepper": false,
+    "ing_groundblackpepper": true,
     "ing_extravirginoliveoil": true,
     "ing_groundcumin": true,
     "ing_koshersalt": true,
@@ -4563,7 +4564,8 @@
     "ing_allpurposeflour": false,
     "ing_apple": false,
     "ing_freshflatleafparsley": false,
-    "ing_freshginger": false
+    "ing_freshginger": false,
+    "ing_redpepperflakes": true
   },
-  "exportedAt": "2026-09-13T17:38:53.363Z"
+  "exportedAt": "2026-09-13T17:43:54.429Z"
 }
