@@ -4492,7 +4492,7 @@
     "ing_shavedparmesancheese": false,
     "ing_freshlygratedparmesancheese": true,
     "ing_cannelliniorwhitebeans": false,
-    "ing_marinatedartichokehearts": false,
+    "ing_marinatedartichokehearts": true,
     "ing_spaghetti": false,
     "ing_crustybread": false,
     "ing_eggs": false,
@@ -4504,7 +4504,9 @@
     "ing_redpepperflakes": false,
     "ing_lemonzest": false,
     "ing_yellowgrapetomatoes": true,
-    "ing_scallions": true
+    "ing_scallions": true,
+    "ing_creamyfetacheese": true,
+    "ing_kalamataolives": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4571,7 +4573,9 @@
     "ing_redpepperflakes": true,
     "ing_lemonzest": true,
     "ing_yellowgrapetomatoes": false,
-    "ing_scallions": false
+    "ing_scallions": false,
+    "ing_creamyfetacheese": false,
+    "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-13T19:05:53.077Z"
+  "exportedAt": "2026-09-13T19:10:21.803Z"
 }
