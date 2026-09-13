@@ -4502,7 +4502,8 @@
     "ing_freshflatleafparsley": true,
     "ing_freshginger": false,
     "ing_redpepperflakes": false,
-    "ing_lemonzest": false
+    "ing_lemonzest": false,
+    "ing_yellowgrapetomatoes": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4567,7 +4568,8 @@
     "ing_freshflatleafparsley": false,
     "ing_freshginger": false,
     "ing_redpepperflakes": true,
-    "ing_lemonzest": true
+    "ing_lemonzest": true,
+    "ing_yellowgrapetomatoes": false
   },
-  "exportedAt": "2026-09-13T19:02:32.338Z"
+  "exportedAt": "2026-09-13T19:04:31.597Z"
 }
