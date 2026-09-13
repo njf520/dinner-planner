@@ -4503,7 +4503,8 @@
     "ing_freshginger": false,
     "ing_redpepperflakes": false,
     "ing_lemonzest": false,
-    "ing_yellowgrapetomatoes": true
+    "ing_yellowgrapetomatoes": true,
+    "ing_scallions": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4569,7 +4570,8 @@
     "ing_freshginger": false,
     "ing_redpepperflakes": true,
     "ing_lemonzest": true,
-    "ing_yellowgrapetomatoes": false
+    "ing_yellowgrapetomatoes": false,
+    "ing_scallions": false
   },
-  "exportedAt": "2026-09-13T19:04:31.597Z"
+  "exportedAt": "2026-09-13T19:05:53.077Z"
 }
