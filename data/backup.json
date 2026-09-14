@@ -1,6 +1,67 @@
 {
   "recipes": [
     {
+      "name": "Easy Lemon Butter Sauce for Fish",
+      "servings": 4,
+      "source": "https://cooking.nytimes.com/article/easy-sauce-for-fish",
+      "emoji": "🐟",
+      "time": "10 min",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "sauce",
+        "seafood",
+        "quick",
+        "butter"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "4 tbsp",
+          "unit": "tbsp",
+          "notes": "cut into pieces"
+        },
+        {
+          "name": "garlic",
+          "amount": "2 cloves",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "freshly squeezed"
+        },
+        {
+          "name": "lemon zest",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "fresh herbs",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": "chopped parsley, dill, or chives"
+        },
+        {
+          "name": "salt",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": "or to taste"
+        },
+        {
+          "name": "black pepper",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "freshly ground"
+        }
+      ],
+      "notes": null,
+      "id": 1789420550077
+    },
+    {
       "name": "Plum Torte",
       "servings": 8,
       "source": "NYT Cooking",
@@ -4577,5 +4638,5 @@
     "ing_creamyfetacheese": false,
     "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-14T21:15:40.386Z"
+  "exportedAt": "2026-09-14T21:16:04.645Z"
 }
