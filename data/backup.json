@@ -59,7 +59,8 @@
         }
       ],
       "notes": null,
-      "id": 1789420550077
+      "id": 1789420550077,
+      "lastOpened": 1789420660721
     },
     {
       "name": "Plum Torte",
@@ -4638,5 +4639,5 @@
     "ing_creamyfetacheese": false,
     "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-14T21:16:04.645Z"
+  "exportedAt": "2026-09-14T21:17:46.848Z"
 }
