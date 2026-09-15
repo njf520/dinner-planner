@@ -4553,7 +4553,7 @@
     "ing_lemon": true,
     "ing_lemons": true,
     "ing_shavedparmesancheese": false,
-    "ing_freshlygratedparmesancheese": true,
+    "ing_freshlygratedparmesancheese": false,
     "ing_cannelliniorwhitebeans": false,
     "ing_marinatedartichokehearts": true,
     "ing_spaghetti": false,
@@ -4562,7 +4562,7 @@
     "ing_heavycream": false,
     "ing_allpurposeflour": true,
     "ing_apple": false,
-    "ing_freshflatleafparsley": true,
+    "ing_freshflatleafparsley": false,
     "ing_freshginger": false,
     "ing_redpepperflakes": false,
     "ing_lemonzest": false,
@@ -4640,5 +4640,5 @@
     "ing_creamyfetacheese": false,
     "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-15T01:32:16.674Z"
+  "exportedAt": "2026-09-15T01:32:37.182Z"
 }
