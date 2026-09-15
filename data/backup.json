@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "name": "Easy Lemon Butter Sauce for Fish",
+      "name": "Vietnamese Sauce for Fish, Poutry, etc.",
       "servings": 4,
       "source": "https://cooking.nytimes.com/article/easy-sauce-for-fish",
       "emoji": "🐟",
@@ -16,46 +16,46 @@
       ],
       "ingredients": [
         {
-          "name": "unsalted butter",
-          "amount": "4 tbsp",
-          "unit": "tbsp",
-          "notes": "cut into pieces"
-        },
-        {
-          "name": "garlic",
-          "amount": "2 cloves",
-          "unit": "cloves",
-          "notes": "minced"
-        },
-        {
-          "name": "lemon juice",
-          "amount": "2 tbsp",
-          "unit": "tbsp",
-          "notes": "freshly squeezed"
-        },
-        {
-          "name": "lemon zest",
-          "amount": "1 tsp",
-          "unit": "tsp",
+          "name": "4 tbsp unsalted butter cut into pieces",
+          "amount": "",
+          "unit": "",
           "notes": null
         },
         {
-          "name": "fresh herbs",
-          "amount": "2 tbsp",
-          "unit": "tbsp",
-          "notes": "chopped parsley, dill, or chives"
+          "name": "2 cloves garlic minced",
+          "amount": "",
+          "unit": "",
+          "notes": null
         },
         {
-          "name": "salt",
-          "amount": "½ tsp",
-          "unit": "tsp",
-          "notes": "or to taste"
+          "name": "2 tbsp lemon juice freshly squeezed",
+          "amount": "",
+          "unit": "",
+          "notes": null
         },
         {
-          "name": "black pepper",
-          "amount": "¼ tsp",
-          "unit": "tsp",
-          "notes": "freshly ground"
+          "name": "1 tsp lemon zest",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "2 tbsp fresh herbs chopped parsley, dill, or chives",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "½ tsp salt or to taste",
+          "amount": "",
+          "unit": "",
+          "notes": null
+        },
+        {
+          "name": "¼ tsp black pepper freshly ground",
+          "amount": "",
+          "unit": "",
+          "notes": null
         }
       ],
       "notes": null,
@@ -4639,5 +4639,5 @@
     "ing_creamyfetacheese": false,
     "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-14T21:17:46.848Z"
+  "exportedAt": "2026-09-15T00:08:47.833Z"
 }
