@@ -2562,7 +2562,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473431147-0.jpg"
       ],
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1789516428755
     },
     {
       "name": "Foil-Baked Salmon with Cherry Tomatoes, Olives, and Thyme",
@@ -4640,5 +4641,5 @@
     "ing_creamyfetacheese": false,
     "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-15T23:53:36.177Z"
+  "exportedAt": "2026-09-15T23:54:03.816Z"
 }
