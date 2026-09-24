@@ -4499,10 +4499,7 @@
       "category": "food"
     }
   ],
-  "planned": [
-    1781473431147,
-    1782670410788
-  ],
+  "planned": [],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -4641,5 +4638,5 @@
     "ing_creamyfetacheese": false,
     "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-16T14:24:22.092Z"
+  "exportedAt": "2026-09-24T15:48:03.299Z"
 }
