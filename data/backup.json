@@ -4526,7 +4526,7 @@
     "ing_salt": false,
     "ing_maplesyrup": false,
     "ing_vanillaextract": false,
-    "ing_garliccloves": true,
+    "ing_garliccloves": false,
     "ing_chilipowder": false,
     "ing_cumin": false,
     "ing_flourtortillas": false,
@@ -4534,7 +4534,7 @@
     "ing_oregano": false,
     "ing_bellpeppers": true,
     "ing_freshcilantro": false,
-    "ing_freshbasilleaves": true,
+    "ing_freshbasilleaves": false,
     "ing_freshfigs": true,
     "ing_garlicpowder": false,
     "ing_limejuice": true,
@@ -4579,7 +4579,7 @@
     "ing_smokedpaprika": true,
     "ing_aleppopepperflakes": true,
     "ing_carrots": false,
-    "ing_lemonjuice": true,
+    "ing_lemonjuice": false,
     "ing_garlic": false,
     "ing_onions": false,
     "ing_tomatopaste": true,
@@ -4640,5 +4640,5 @@
     "ing_creamyfetacheese": false,
     "ing_kalamataolives": false
   },
-  "exportedAt": "2026-09-24T15:59:29.212Z"
+  "exportedAt": "2026-09-24T18:08:28.788Z"
 }
