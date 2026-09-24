@@ -4510,7 +4510,7 @@
     "ing_smokedpaprika": false,
     "ing_aleppopepperflakes": false,
     "ing_carrots": false,
-    "ing_lemonjuice": false,
+    "ing_lemonjuice": true,
     "ing_garlic": true,
     "ing_onions": true,
     "ing_tomatopaste": false,
@@ -4526,7 +4526,7 @@
     "ing_salt": false,
     "ing_maplesyrup": false,
     "ing_vanillaextract": false,
-    "ing_garliccloves": false,
+    "ing_garliccloves": true,
     "ing_chilipowder": false,
     "ing_cumin": false,
     "ing_flourtortillas": false,
@@ -4534,7 +4534,7 @@
     "ing_oregano": false,
     "ing_bellpeppers": true,
     "ing_freshcilantro": false,
-    "ing_freshbasilleaves": false,
+    "ing_freshbasilleaves": true,
     "ing_freshfigs": true,
     "ing_garlicpowder": false,
     "ing_limejuice": true,
@@ -4569,7 +4569,11 @@
     "ing_yellowgrapetomatoes": true,
     "ing_scallions": true,
     "ing_creamyfetacheese": true,
-    "ing_kalamataolives": true
+    "ing_kalamataolives": true,
+    "ing_babybellamushrooms": true,
+    "ing_grapetomatoes": true,
+    "ing_artichokehearts": true,
+    "ing_plaingrains": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4638,7 +4642,11 @@
     "ing_yellowgrapetomatoes": false,
     "ing_scallions": false,
     "ing_creamyfetacheese": false,
-    "ing_kalamataolives": false
+    "ing_kalamataolives": false,
+    "ing_babybellamushrooms": false,
+    "ing_grapetomatoes": false,
+    "ing_artichokehearts": false,
+    "ing_plaingrains": false
   },
-  "exportedAt": "2026-09-24T18:08:28.788Z"
+  "exportedAt": "2026-09-24T18:36:52.535Z"
 }
