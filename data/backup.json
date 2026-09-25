@@ -4573,7 +4573,9 @@
     "ing_babybellamushrooms": true,
     "ing_grapetomatoes": true,
     "ing_artichokehearts": true,
-    "ing_plaingrains": true
+    "ing_plaingrains": true,
+    "ing_lowsodiumchickenbroth": true,
+    "ing_bonelessskinlesschickenbreasthalves": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4646,7 +4648,9 @@
     "ing_babybellamushrooms": false,
     "ing_grapetomatoes": false,
     "ing_artichokehearts": false,
-    "ing_plaingrains": false
+    "ing_plaingrains": false,
+    "ing_lowsodiumchickenbroth": false,
+    "ing_bonelessskinlesschickenbreasthalves": false
   },
-  "exportedAt": "2026-09-24T18:36:52.535Z"
+  "exportedAt": "2026-09-25T00:41:11.973Z"
 }
