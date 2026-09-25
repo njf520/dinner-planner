@@ -2864,7 +2864,8 @@
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473323960-0.jpg"
       ],
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1790296875771
     },
     {
       "name": "Porcini Crusted Beef Tenderloin with Sautéed King Trumpet, Oyster & Shiitake Mushrooms and Red Wine Demi-Glace",
@@ -4652,5 +4653,5 @@
     "ing_lowsodiumchickenbroth": false,
     "ing_bonelessskinlesschickenbreasthalves": false
   },
-  "exportedAt": "2026-09-25T00:41:11.973Z"
+  "exportedAt": "2026-09-25T00:41:30.827Z"
 }
