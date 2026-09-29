@@ -1,6 +1,49 @@
 {
   "recipes": [
     {
+      "name": "No-Knead Bread",
+      "servings": 8,
+      "source": "https://bittmanproject.com/recipe/no-knead-bread/",
+      "emoji": "🍞",
+      "time": "12–18 hrs",
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "bread",
+        "baking",
+        "no-knead",
+        "artisan"
+      ],
+      "ingredients": [
+        {
+          "name": "all-purpose or bread flour",
+          "amount": "3 cups",
+          "unit": "cup",
+          "notes": "plus more for dusting"
+        },
+        {
+          "name": "instant or active dry yeast",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "salt",
+          "amount": "1¼ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "water",
+          "amount": "1½ cups",
+          "unit": "cup",
+          "notes": "room temperature"
+        }
+      ],
+      "notes": null,
+      "id": 1790459733906
+    },
+    {
       "name": "Vietnamese Sauce for Fish, Poutry, etc.",
       "servings": 4,
       "source": "https://cooking.nytimes.com/article/easy-sauce-for-fish",
@@ -4500,9 +4543,7 @@
       "category": "food"
     }
   ],
-  "planned": [
-    1781473323960
-  ],
+  "planned": [],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -4653,5 +4694,5 @@
     "ing_lowsodiumchickenbroth": false,
     "ing_bonelessskinlesschickenbreasthalves": false
   },
-  "exportedAt": "2026-09-26T21:55:20.639Z"
+  "exportedAt": "2026-09-29T05:07:16.681Z"
 }
