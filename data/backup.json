@@ -1,6 +1,109 @@
 {
   "recipes": [
     {
+      "name": "Red Wine Braised Beef Short Ribs",
+      "servings": 4,
+      "source": "https://www.seriouseats.com/red-wine-braised-beef-short-ribs-recipe",
+      "emoji": "🥩",
+      "time": "4 hrs",
+      "difficulty": "medium",
+      "category": "food",
+      "tags": [
+        "braised",
+        "beef",
+        "short ribs",
+        "winter"
+      ],
+      "ingredients": [
+        {
+          "name": "bone-in beef short ribs",
+          "amount": "4 lb",
+          "unit": "lb",
+          "notes": "about 4–6 ribs"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": "plus more to taste"
+        },
+        {
+          "name": "black pepper",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "freshly ground"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "onion",
+          "amount": "1 large",
+          "unit": "whole",
+          "notes": "roughly chopped"
+        },
+        {
+          "name": "carrots",
+          "amount": "2 medium",
+          "unit": "whole",
+          "notes": "roughly chopped"
+        },
+        {
+          "name": "celery stalks",
+          "amount": "2",
+          "unit": "whole",
+          "notes": "roughly chopped"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4",
+          "unit": "cloves",
+          "notes": "smashed"
+        },
+        {
+          "name": "tomato paste",
+          "amount": "2 tbsp",
+          "unit": "tbsp",
+          "notes": null
+        },
+        {
+          "name": "dry red wine",
+          "amount": "1 bottle (750 ml)",
+          "unit": "bottle",
+          "notes": "such as Cabernet Sauvignon or Côtes du Rhône"
+        },
+        {
+          "name": "beef or chicken stock",
+          "amount": "2 cups",
+          "unit": "cups",
+          "notes": "beef stock preferred"
+        },
+        {
+          "name": "fresh thyme",
+          "amount": "6",
+          "unit": "sprigs",
+          "notes": null
+        },
+        {
+          "name": "bay leaves",
+          "amount": "2",
+          "unit": "whole",
+          "notes": null
+        },
+        {
+          "name": "fresh flat-leaf parsley",
+          "amount": "",
+          "unit": "garnish",
+          "notes": "chopped, for serving"
+        }
+      ],
+      "notes": null,
+      "id": 1791503465177
+    },
+    {
       "name": "No-Knead Bread",
       "servings": 8,
       "source": "https://bittmanproject.com/recipe/no-knead-bread/",
@@ -4694,5 +4797,5 @@
     "ing_lowsodiumchickenbroth": false,
     "ing_bonelessskinlesschickenbreasthalves": false
   },
-  "exportedAt": "2026-10-08T23:50:51.446Z"
+  "exportedAt": "2026-10-08T23:53:27.662Z"
 }
