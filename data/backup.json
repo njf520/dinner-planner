@@ -101,7 +101,8 @@
         }
       ],
       "notes": null,
-      "id": 1791503465177
+      "id": 1791503465177,
+      "lastOpened": 1791511257904
     },
     {
       "name": "No-Knead Bread",
@@ -4660,7 +4661,7 @@
     "ing_lemonjuice": true,
     "ing_garlic": true,
     "ing_onions": true,
-    "ing_tomatopaste": false,
+    "ing_tomatopaste": true,
     "ing_chickpeas": false,
     "ing_bonelessskinlesschickenthighs": false,
     "ing_pittedolives": false,
@@ -4673,7 +4674,7 @@
     "ing_salt": false,
     "ing_maplesyrup": false,
     "ing_vanillaextract": false,
-    "ing_garliccloves": false,
+    "ing_garliccloves": true,
     "ing_chilipowder": false,
     "ing_cumin": false,
     "ing_flourtortillas": false,
@@ -4725,7 +4726,11 @@
     "ing_bonelessskinlesschickenbreasthalves": true,
     "ing_vegetableoil": false,
     "ing_celerystalks": true,
-    "ing_freshthyme": true
+    "ing_freshthyme": true,
+    "ing_onion": true,
+    "ing_dryredwine": true,
+    "ing_boneinbeefshortribs": true,
+    "ing_beeforchickenstock": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4803,7 +4808,11 @@
     "ing_bonelessskinlesschickenbreasthalves": false,
     "ing_vegetableoil": true,
     "ing_celerystalks": false,
-    "ing_freshthyme": false
+    "ing_freshthyme": false,
+    "ing_onion": false,
+    "ing_dryredwine": false,
+    "ing_boneinbeefshortribs": false,
+    "ing_beeforchickenstock": false
   },
-  "exportedAt": "2026-10-09T01:09:10.732Z"
+  "exportedAt": "2026-10-09T02:01:02.463Z"
 }
