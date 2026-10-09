@@ -41,26 +41,26 @@
         },
         {
           "name": "onion",
-          "amount": "1 large",
-          "unit": "whole",
+          "amount": "1 large whole",
+          "unit": "",
           "notes": "roughly chopped"
         },
         {
           "name": "carrots",
-          "amount": "2 medium",
-          "unit": "whole",
+          "amount": "2 medium whole",
+          "unit": "",
           "notes": "roughly chopped"
         },
         {
           "name": "celery stalks",
-          "amount": "2",
-          "unit": "whole",
+          "amount": "2 whole",
+          "unit": "",
           "notes": "roughly chopped"
         },
         {
           "name": "garlic cloves",
-          "amount": "4",
-          "unit": "cloves",
+          "amount": "4 cloves",
+          "unit": "",
           "notes": "smashed"
         },
         {
@@ -83,14 +83,14 @@
         },
         {
           "name": "fresh thyme",
-          "amount": "6",
-          "unit": "sprigs",
+          "amount": "6 sprigs",
+          "unit": "",
           "notes": null
         },
         {
           "name": "bay leaves",
-          "amount": "2",
-          "unit": "whole",
+          "amount": "2 whole",
+          "unit": "",
           "notes": null
         },
         {
@@ -4646,7 +4646,9 @@
       "category": "food"
     }
   ],
-  "planned": [],
+  "planned": [
+    1791503465177
+  ],
   "checkedItems": {
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
@@ -4654,7 +4656,7 @@
     "ing_koshersalt": false,
     "ing_smokedpaprika": false,
     "ing_aleppopepperflakes": false,
-    "ing_carrots": false,
+    "ing_carrots": true,
     "ing_lemonjuice": true,
     "ing_garlic": true,
     "ing_onions": true,
@@ -4671,7 +4673,7 @@
     "ing_salt": false,
     "ing_maplesyrup": false,
     "ing_vanillaextract": false,
-    "ing_garliccloves": true,
+    "ing_garliccloves": false,
     "ing_chilipowder": false,
     "ing_cumin": false,
     "ing_flourtortillas": false,
@@ -4707,7 +4709,7 @@
     "ing_heavycream": false,
     "ing_allpurposeflour": true,
     "ing_apple": false,
-    "ing_freshflatleafparsley": false,
+    "ing_freshflatleafparsley": true,
     "ing_freshginger": false,
     "ing_redpepperflakes": false,
     "ing_lemonzest": false,
@@ -4720,7 +4722,10 @@
     "ing_artichokehearts": true,
     "ing_plaingrains": true,
     "ing_lowsodiumchickenbroth": true,
-    "ing_bonelessskinlesschickenbreasthalves": true
+    "ing_bonelessskinlesschickenbreasthalves": true,
+    "ing_vegetableoil": false,
+    "ing_celerystalks": true,
+    "ing_freshthyme": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4733,7 +4738,7 @@
     "ing_lemonjuice": false,
     "ing_garlic": false,
     "ing_onions": false,
-    "ing_tomatopaste": true,
+    "ing_tomatopaste": false,
     "ing_chickpeas": true,
     "ing_bonelessskinlesschickenthighs": true,
     "ing_pittedolives": false,
@@ -4795,7 +4800,10 @@
     "ing_artichokehearts": false,
     "ing_plaingrains": false,
     "ing_lowsodiumchickenbroth": false,
-    "ing_bonelessskinlesschickenbreasthalves": false
+    "ing_bonelessskinlesschickenbreasthalves": false,
+    "ing_vegetableoil": true,
+    "ing_celerystalks": false,
+    "ing_freshthyme": false
   },
-  "exportedAt": "2026-10-08T23:53:27.662Z"
+  "exportedAt": "2026-10-09T01:09:10.732Z"
 }
