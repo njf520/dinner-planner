@@ -4775,9 +4775,9 @@
     "ing_chickpeas": false,
     "ing_bonelessskinlesschickenthighs": false,
     "ing_pittedolives": false,
-    "ing_cherrytomatoes": false,
+    "ing_cherrytomatoes": true,
     "ing_blackpepper": false,
-    "ing_redonion": false,
+    "ing_redonion": true,
     "ing_oliveoil": false,
     "ing_balsamicvinegar": false,
     "ing_driedoregano": false,
@@ -4801,7 +4801,7 @@
     "ing_yellowonion": true,
     "ing_guacamole": true,
     "ing_firmgoatcheese": true,
-    "ing_babyarugula": false,
+    "ing_babyarugula": true,
     "ing_sourcream": true,
     "ing_salsa": true,
     "ing_freshlygroundblackpepper": false,
@@ -4845,7 +4845,13 @@
     "ing_freshlemonjuice": false,
     "ing_groundcinnamon": false,
     "ing_groundcoriander": false,
-    "ing_sumac": false
+    "ing_sumac": false,
+    "ing_englishcucumber": true,
+    "ing_freshmintleaves": true,
+    "ing_redbellpepper": true,
+    "ing_smallredonion": true,
+    "ing_radishes": true,
+    "ing_romainelettucehearts": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4932,7 +4938,13 @@
     "ing_freshlemonjuice": true,
     "ing_groundcinnamon": true,
     "ing_groundcoriander": true,
-    "ing_sumac": true
+    "ing_sumac": true,
+    "ing_englishcucumber": false,
+    "ing_freshmintleaves": false,
+    "ing_redbellpepper": false,
+    "ing_smallredonion": false,
+    "ing_radishes": false,
+    "ing_romainelettucehearts": false
   },
-  "exportedAt": "2026-10-11T19:09:45.487Z"
+  "exportedAt": "2026-10-11T19:37:51.468Z"
 }
