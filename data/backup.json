@@ -1,6 +1,118 @@
 {
   "recipes": [
     {
+      "name": "Sumac-Rubbed Drumsticks with Marinated Onions",
+      "servings": 6,
+      "source": null,
+      "emoji": "🍗",
+      "time": "1 hr",
+      "difficulty": "medium",
+      "category": "food",
+      "tags": [
+        "chicken",
+        "grilling",
+        "middle eastern",
+        "sumac"
+      ],
+      "ingredients": [
+        {
+          "name": "red onion",
+          "amount": "1 medium",
+          "unit": "whole",
+          "notes": "quartered"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "4 or 5 large",
+          "unit": "cloves",
+          "notes": null
+        },
+        {
+          "name": "sumac",
+          "amount": "2 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "Aleppo pepper flakes",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground allspice",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground coriander",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "cayenne pepper",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground cinnamon",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "ground turmeric",
+          "amount": "½ tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": null
+        },
+        {
+          "name": "fresh lemon juice",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "juice of 1 large lemon"
+        },
+        {
+          "name": "chicken drumsticks",
+          "amount": "3 lb",
+          "unit": "lb",
+          "notes": null
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "to taste",
+          "notes": "season well all over including under skin"
+        },
+        {
+          "name": "Sumac and Vinegar-Marinated Onions",
+          "amount": "",
+          "unit": "to serve",
+          "notes": "see page 295"
+        }
+      ],
+      "notes": null,
+      "id": 1791738933875,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1791738933875-0.jpg"
+      ]
+    },
+    {
       "name": "Red Wine Braised Beef Short Ribs",
       "servings": 4,
       "source": "https://www.seriouseats.com/red-wine-braised-beef-short-ribs-recipe",
@@ -4815,5 +4927,5 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false
   },
-  "exportedAt": "2026-10-11T17:15:26.846Z"
+  "exportedAt": "2026-10-11T17:19:00.732Z"
 }
