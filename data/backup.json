@@ -4842,7 +4842,9 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false,
     "ing_cayennepepper": false,
-    "ing_freshlemonjuice": false
+    "ing_freshlemonjuice": false,
+    "ing_groundcinnamon": false,
+    "ing_groundcoriander": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4926,7 +4928,9 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false,
     "ing_cayennepepper": true,
-    "ing_freshlemonjuice": true
+    "ing_freshlemonjuice": true,
+    "ing_groundcinnamon": true,
+    "ing_groundcoriander": true
   },
-  "exportedAt": "2026-10-11T19:07:43.152Z"
+  "exportedAt": "2026-10-11T19:08:13.218Z"
 }
