@@ -4757,7 +4757,6 @@
     }
   ],
   "planned": [
-    1791503465177,
     1791739429347,
     1791738933875
   ],
@@ -4772,7 +4771,7 @@
     "ing_lemonjuice": true,
     "ing_garlic": true,
     "ing_onions": true,
-    "ing_tomatopaste": true,
+    "ing_tomatopaste": false,
     "ing_chickpeas": false,
     "ing_bonelessskinlesschickenthighs": false,
     "ing_pittedolives": false,
@@ -4785,7 +4784,7 @@
     "ing_salt": false,
     "ing_maplesyrup": false,
     "ing_vanillaextract": false,
-    "ing_garliccloves": true,
+    "ing_garliccloves": false,
     "ing_chilipowder": false,
     "ing_cumin": false,
     "ing_flourtortillas": false,
@@ -4821,7 +4820,7 @@
     "ing_heavycream": false,
     "ing_allpurposeflour": true,
     "ing_apple": false,
-    "ing_freshflatleafparsley": true,
+    "ing_freshflatleafparsley": false,
     "ing_freshginger": false,
     "ing_redpepperflakes": false,
     "ing_lemonzest": false,
@@ -4836,16 +4835,16 @@
     "ing_lowsodiumchickenbroth": true,
     "ing_bonelessskinlesschickenbreasthalves": true,
     "ing_vegetableoil": false,
-    "ing_celerystalks": true,
-    "ing_freshthyme": true,
-    "ing_onion": true,
-    "ing_dryredwine": true,
-    "ing_boneinbeefshortribs": true,
-    "ing_beeforchickenstock": true
+    "ing_celerystalks": false,
+    "ing_freshthyme": false,
+    "ing_onion": false,
+    "ing_dryredwine": false,
+    "ing_boneinbeefshortribs": false,
+    "ing_beeforchickenstock": false
   },
   "haveItems": {
-    "ing_groundblackpepper": true,
-    "ing_extravirginoliveoil": true,
+    "ing_groundblackpepper": false,
+    "ing_extravirginoliveoil": false,
     "ing_groundcumin": true,
     "ing_koshersalt": false,
     "ing_smokedpaprika": true,
@@ -4860,7 +4859,7 @@
     "ing_pittedolives": false,
     "ing_cherrytomatoes": false,
     "ing_blackpepper": false,
-    "ing_redonion": true,
+    "ing_redonion": false,
     "ing_oliveoil": true,
     "ing_balsamicvinegar": true,
     "ing_driedoregano": true,
@@ -4917,7 +4916,7 @@
     "ing_plaingrains": false,
     "ing_lowsodiumchickenbroth": false,
     "ing_bonelessskinlesschickenbreasthalves": false,
-    "ing_vegetableoil": true,
+    "ing_vegetableoil": false,
     "ing_celerystalks": false,
     "ing_freshthyme": false,
     "ing_onion": false,
@@ -4925,5 +4924,5 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false
   },
-  "exportedAt": "2026-10-11T18:44:37.135Z"
+  "exportedAt": "2026-10-11T18:45:37.901Z"
 }
