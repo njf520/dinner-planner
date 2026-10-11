@@ -17,8 +17,8 @@
       "ingredients": [
         {
           "name": "pocket-style pitas (6-inch)",
-          "amount": "2",
-          "unit": "pitas",
+          "amount": "2 pitas",
+          "unit": "",
           "notes": "day-old preferred; split in half and torn into bite-sized pieces"
         },
         {
@@ -53,14 +53,14 @@
         },
         {
           "name": "red bell pepper",
-          "amount": "1",
-          "unit": "pepper",
+          "amount": "1 pepper",
+          "unit": "",
           "notes": "cored, seeded, and sliced into thin batons"
         },
         {
           "name": "English cucumber",
-          "amount": "½",
-          "unit": "cucumber",
+          "amount": "½ cucumber",
+          "unit": "",
           "notes": "halved lengthwise, seeds scooped out, thinly sliced crosswise; about 1 cup"
         },
         {
@@ -71,14 +71,14 @@
         },
         {
           "name": "small red onion",
-          "amount": "1",
-          "unit": "onion",
+          "amount": "1 onion",
+          "unit": "",
           "notes": "thinly sliced crosswise into rounds"
         },
         {
           "name": "radishes",
-          "amount": "2 or 3",
-          "unit": "radishes",
+          "amount": "2 or 3 radishes",
+          "unit": "",
           "notes": "thinly sliced crosswise into rounds"
         },
         {
@@ -113,8 +113,8 @@
         },
         {
           "name": "garlic cloves",
-          "amount": "1 or 2",
-          "unit": "cloves",
+          "amount": "1 or 2 cloves",
+          "unit": "",
           "notes": "large, minced; for dressing"
         },
         {
@@ -4757,7 +4757,9 @@
     }
   ],
   "planned": [
-    1791503465177
+    1791503465177,
+    1791739429347,
+    1791738933875
   ],
   "checkedItems": {
     "ing_groundblackpepper": false,
@@ -4766,7 +4768,7 @@
     "ing_koshersalt": false,
     "ing_smokedpaprika": false,
     "ing_aleppopepperflakes": false,
-    "ing_carrots": true,
+    "ing_carrots": false,
     "ing_lemonjuice": true,
     "ing_garlic": true,
     "ing_onions": true,
@@ -4800,7 +4802,7 @@
     "ing_yellowonion": true,
     "ing_guacamole": true,
     "ing_firmgoatcheese": true,
-    "ing_babyarugula": true,
+    "ing_babyarugula": false,
     "ing_sourcream": true,
     "ing_salsa": true,
     "ing_freshlygroundblackpepper": false,
@@ -4845,9 +4847,9 @@
     "ing_groundblackpepper": true,
     "ing_extravirginoliveoil": true,
     "ing_groundcumin": true,
-    "ing_koshersalt": true,
+    "ing_koshersalt": false,
     "ing_smokedpaprika": true,
-    "ing_aleppopepperflakes": true,
+    "ing_aleppopepperflakes": false,
     "ing_carrots": false,
     "ing_lemonjuice": false,
     "ing_garlic": false,
@@ -4857,7 +4859,7 @@
     "ing_bonelessskinlesschickenthighs": true,
     "ing_pittedolives": false,
     "ing_cherrytomatoes": false,
-    "ing_blackpepper": true,
+    "ing_blackpepper": false,
     "ing_redonion": true,
     "ing_oliveoil": true,
     "ing_balsamicvinegar": true,
@@ -4923,5 +4925,5 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false
   },
-  "exportedAt": "2026-10-11T17:24:05.546Z"
+  "exportedAt": "2026-10-11T18:44:37.135Z"
 }
