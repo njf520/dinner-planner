@@ -4851,7 +4851,8 @@
     "ing_redbellpepper": true,
     "ing_smallredonion": true,
     "ing_radishes": true,
-    "ing_romainelettucehearts": true
+    "ing_romainelettucehearts": true,
+    "ing_groundallspice": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4944,7 +4945,8 @@
     "ing_redbellpepper": false,
     "ing_smallredonion": false,
     "ing_radishes": false,
-    "ing_romainelettucehearts": false
+    "ing_romainelettucehearts": false,
+    "ing_groundallspice": false
   },
-  "exportedAt": "2026-10-11T19:41:47.451Z"
+  "exportedAt": "2026-10-11T19:43:12.065Z"
 }
