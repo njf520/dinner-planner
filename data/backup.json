@@ -1,6 +1,150 @@
 {
   "recipes": [
     {
+      "name": "Romaine, Arugula, and Mint Fattoush Salad",
+      "servings": 6,
+      "source": null,
+      "emoji": "🥗",
+      "time": null,
+      "difficulty": "easy",
+      "category": "food",
+      "tags": [
+        "salad",
+        "lebanese",
+        "vegetarian",
+        "fattoush"
+      ],
+      "ingredients": [
+        {
+          "name": "pocket-style pitas (6-inch)",
+          "amount": "2",
+          "unit": "pitas",
+          "notes": "day-old preferred; split in half and torn into bite-sized pieces"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "for frying pita"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "",
+          "unit": "to taste",
+          "notes": null
+        },
+        {
+          "name": "sumac",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": "for dusting fried pita chips"
+        },
+        {
+          "name": "romaine lettuce hearts",
+          "amount": "8 oz",
+          "unit": "oz",
+          "notes": "about 3 hearts, trimmed and thinly sliced crosswise"
+        },
+        {
+          "name": "baby arugula",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "packed; 1 to 2 oz"
+        },
+        {
+          "name": "red bell pepper",
+          "amount": "1",
+          "unit": "pepper",
+          "notes": "cored, seeded, and sliced into thin batons"
+        },
+        {
+          "name": "English cucumber",
+          "amount": "½",
+          "unit": "cucumber",
+          "notes": "halved lengthwise, seeds scooped out, thinly sliced crosswise; about 1 cup"
+        },
+        {
+          "name": "cherry tomatoes",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "halved"
+        },
+        {
+          "name": "small red onion",
+          "amount": "1",
+          "unit": "onion",
+          "notes": "thinly sliced crosswise into rounds"
+        },
+        {
+          "name": "radishes",
+          "amount": "2 or 3",
+          "unit": "radishes",
+          "notes": "thinly sliced crosswise into rounds"
+        },
+        {
+          "name": "fresh mint leaves",
+          "amount": "1 cup",
+          "unit": "cup",
+          "notes": "thinly sliced"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "1 tsp",
+          "unit": "tsp",
+          "notes": null
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "⅓ cup",
+          "unit": "cup",
+          "notes": "for dressing"
+        },
+        {
+          "name": "pomegranate molasses",
+          "amount": "3 tbsp",
+          "unit": "tbsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "fresh lemon juice",
+          "amount": "¼ cup",
+          "unit": "cup",
+          "notes": "juice of 1 large lemon; for dressing"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "1 or 2",
+          "unit": "cloves",
+          "notes": "large, minced; for dressing"
+        },
+        {
+          "name": "sumac",
+          "amount": "1½ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "ground allspice",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        },
+        {
+          "name": "ground cinnamon",
+          "amount": "¼ tsp",
+          "unit": "tsp",
+          "notes": "for dressing"
+        }
+      ],
+      "notes": null,
+      "id": 1791739429347,
+      "imageBackupUrls": [
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1791739429347-0.jpg",
+        "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1791739429347-1.jpg"
+      ],
+      "lastOpened": 1791739435898
+    },
+    {
       "name": "Sumac-Rubbed Drumsticks with Marinated Onions",
       "servings": 6,
       "source": null,
@@ -4779,5 +4923,5 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false
   },
-  "exportedAt": "2026-10-11T17:23:12.020Z"
+  "exportedAt": "2026-10-11T17:24:05.546Z"
 }
