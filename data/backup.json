@@ -4840,15 +4840,17 @@
     "ing_onion": false,
     "ing_dryredwine": false,
     "ing_boneinbeefshortribs": false,
-    "ing_beeforchickenstock": false
+    "ing_beeforchickenstock": false,
+    "ing_cayennepepper": false,
+    "ing_freshlemonjuice": false
   },
   "haveItems": {
-    "ing_groundblackpepper": false,
-    "ing_extravirginoliveoil": false,
+    "ing_groundblackpepper": true,
+    "ing_extravirginoliveoil": true,
     "ing_groundcumin": true,
     "ing_koshersalt": false,
     "ing_smokedpaprika": true,
-    "ing_aleppopepperflakes": false,
+    "ing_aleppopepperflakes": true,
     "ing_carrots": false,
     "ing_lemonjuice": false,
     "ing_garlic": false,
@@ -4866,7 +4868,7 @@
     "ing_salt": true,
     "ing_maplesyrup": true,
     "ing_vanillaextract": true,
-    "ing_garliccloves": false,
+    "ing_garliccloves": true,
     "ing_chilipowder": true,
     "ing_cumin": true,
     "ing_flourtortillas": true,
@@ -4922,7 +4924,9 @@
     "ing_onion": false,
     "ing_dryredwine": false,
     "ing_boneinbeefshortribs": false,
-    "ing_beeforchickenstock": false
+    "ing_beeforchickenstock": false,
+    "ing_cayennepepper": true,
+    "ing_freshlemonjuice": true
   },
-  "exportedAt": "2026-10-11T18:45:37.901Z"
+  "exportedAt": "2026-10-11T19:07:43.152Z"
 }
