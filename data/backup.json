@@ -17,14 +17,14 @@
       "ingredients": [
         {
           "name": "red onion",
-          "amount": "1 medium",
-          "unit": "whole",
+          "amount": "1 medium whole",
+          "unit": "",
           "notes": "quartered"
         },
         {
           "name": "garlic cloves",
-          "amount": "4 or 5 large",
-          "unit": "cloves",
+          "amount": "4 or 5 large cloves",
+          "unit": "",
           "notes": null
         },
         {
@@ -4927,5 +4927,5 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false
   },
-  "exportedAt": "2026-10-11T17:19:00.732Z"
+  "exportedAt": "2026-10-11T17:21:35.921Z"
 }
