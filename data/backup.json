@@ -4844,13 +4844,14 @@
     "ing_cayennepepper": false,
     "ing_freshlemonjuice": false,
     "ing_groundcinnamon": false,
-    "ing_groundcoriander": false
+    "ing_groundcoriander": false,
+    "ing_sumac": false
   },
   "haveItems": {
     "ing_groundblackpepper": true,
     "ing_extravirginoliveoil": true,
     "ing_groundcumin": true,
-    "ing_koshersalt": false,
+    "ing_koshersalt": true,
     "ing_smokedpaprika": true,
     "ing_aleppopepperflakes": true,
     "ing_carrots": false,
@@ -4930,7 +4931,8 @@
     "ing_cayennepepper": true,
     "ing_freshlemonjuice": true,
     "ing_groundcinnamon": true,
-    "ing_groundcoriander": true
+    "ing_groundcoriander": true,
+    "ing_sumac": true
   },
-  "exportedAt": "2026-10-11T19:08:13.218Z"
+  "exportedAt": "2026-10-11T19:09:45.487Z"
 }
