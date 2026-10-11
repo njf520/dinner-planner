@@ -516,7 +516,7 @@
       ],
       "notes": null,
       "id": 1783454066692,
-      "lastOpened": 1785633191680
+      "lastOpened": 1791737449129
     },
     {
       "name": "Dry-Brined Salmon",
@@ -4228,7 +4228,8 @@
       ],
       "notes": null,
       "id": 1780724683067,
-      "category": "food"
+      "category": "food",
+      "lastOpened": 1791737444866
     },
     {
       "name": "Grilled Asparagus with Pancetta Citronette",
@@ -4814,5 +4815,5 @@
     "ing_boneinbeefshortribs": false,
     "ing_beeforchickenstock": false
   },
-  "exportedAt": "2026-10-11T16:50:28.351Z"
+  "exportedAt": "2026-10-11T16:50:51.819Z"
 }
