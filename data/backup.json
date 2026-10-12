@@ -254,7 +254,8 @@
       "id": 1791738933875,
       "imageBackupUrls": [
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1791738933875-0.jpg"
-      ]
+      ],
+      "lastOpened": 1791769058610
     },
     {
       "name": "Red Wine Braised Beef Short Ribs",
@@ -4853,7 +4854,10 @@
     "ing_radishes": true,
     "ing_romainelettucehearts": true,
     "ing_groundallspice": true,
-    "ing_groundturmeric": true
+    "ing_groundturmeric": true,
+    "ing_pomegranatemolasses": true,
+    "ing_chickendrumsticks": true,
+    "ing_pocketstylepitas6inch": true
   },
   "haveItems": {
     "ing_groundblackpepper": true,
@@ -4948,7 +4952,10 @@
     "ing_radishes": false,
     "ing_romainelettucehearts": false,
     "ing_groundallspice": false,
-    "ing_groundturmeric": false
+    "ing_groundturmeric": false,
+    "ing_pomegranatemolasses": false,
+    "ing_chickendrumsticks": false,
+    "ing_pocketstylepitas6inch": false
   },
-  "exportedAt": "2026-10-11T19:49:01.899Z"
+  "exportedAt": "2026-10-12T01:37:53.976Z"
 }
