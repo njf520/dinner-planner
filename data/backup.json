@@ -4760,8 +4760,28 @@
       "category": "food"
     }
   ],
-  "planned": [],
-  "checkedItems": {},
-  "haveItems": {},
-  "exportedAt": "2026-10-19T21:42:25.024Z"
+  "planned": [
+    1781473127040
+  ],
+  "checkedItems": {
+    "ing_aleppopepperflakes": false,
+    "ing_chickpeas": false,
+    "ing_garliccloves": false,
+    "ing_groundblackpepper": false,
+    "ing_extravirginoliveoil": false,
+    "ing_groundcumin": false,
+    "ing_koshersalt": false,
+    "ing_smokedpaprika": false
+  },
+  "haveItems": {
+    "ing_aleppopepperflakes": true,
+    "ing_chickpeas": false,
+    "ing_garliccloves": false,
+    "ing_groundblackpepper": true,
+    "ing_extravirginoliveoil": true,
+    "ing_groundcumin": true,
+    "ing_koshersalt": true,
+    "ing_smokedpaprika": true
+  },
+  "exportedAt": "2026-10-20T00:01:27.233Z"
 }
