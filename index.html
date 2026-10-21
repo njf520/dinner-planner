@@ -392,7 +392,7 @@ textarea.form-input{resize:none;height:64px;line-height:1.5}
 </div>
 
 <script>
-const VERSION='3.15';
+const VERSION='3.16';
 const STORAGE_KEY='dinner_planner_v5';
 let debugLog=[];
 function dlog(msg, data){
@@ -667,16 +667,17 @@ function saveState(force){
     }
     return;
   }
-  // Step 2: Save images one recipe at a time — if one fails, skip it, never touch others
-  const failed=[];
-  state.recipes.forEach(r=>{
-    if(r.sourceImages&&r.sourceImages.length){
-      const ok=saveImages(r.id,r.sourceImages);
-      if(!ok) failed.push(r.name);
-    }
-  });
-  if(failed.length){
-    toast('⚠️ Images for "'+failed[0]+'"'+( failed.length>1?' +'+( failed.length-1)+' more':'')+' couldn\'t save — browser storage limit hit. Recipe data is safe. Export a backup from Settings.');
+  // Step 2: Save images one recipe at a time — async, report failures
+  const imageRecipes=state.recipes.filter(r=>r.sourceImages&&r.sourceImages.length);
+  if(imageRecipes.length){
+    Promise.all(imageRecipes.map(r=>saveImages(r.id,r.sourceImages).then(ok=>ok?null:r.name)))
+      .then(results=>{
+        const failed=results.filter(Boolean);
+        if(failed.length){
+          toast('⚠️ Photos for "'+failed[0]+'"'+(failed.length>1?' and '+(failed.length-1)+' more recipe(s)':'')+' couldn\'t save — device storage full. Recipe text is safe. Free up space or export a backup from Settings.');
+        }
+      })
+      .catch(e=>dlog('Image save error: '+e.message));
   }
   scheduleCloudSync();
 }
@@ -2056,7 +2057,7 @@ function showStorageUsage(){
   const el=document.getElementById('storage-usage-display');
   if(!el)return;
   const usedKB=getStorageUsedKB();
-  el.innerHTML=`Recipe data: <span style="color:var(--green);font-weight:500">${usedKB}KB</span> (localStorage) · Images: stored in IndexedDB <span style="color:var(--green);font-weight:500">(no size limit)</span>`;
+  el.innerHTML=`Recipe data: <span style="color:var(--green);font-weight:500">${usedKB}KB</span> (localStorage) · Photos: stored in IndexedDB (device storage limit applies)`;
 }
 
 function saveKeyFromInput(){
