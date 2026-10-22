@@ -875,7 +875,7 @@
       ],
       "notes": null,
       "id": 1783210296779,
-      "lastOpened": 1783307892805
+      "lastOpened": 1792712965084
     },
     {
       "name": "Charred Chicken Thighs with Dill Greek Yogurt Sauce",
@@ -1303,7 +1303,8 @@
         }
       ],
       "notes": null,
-      "id": 1782530305776
+      "id": 1782530305776,
+      "lastOpened": 1792712978232
     },
     {
       "name": "Chicken Fajitas",
@@ -4630,7 +4631,7 @@
       "notes": null,
       "id": 1780699556483,
       "category": "drink",
-      "lastOpened": 1789235731346
+      "lastOpened": 1792462662951
     },
     {
       "name": "Al Pastor",
@@ -4793,5 +4794,5 @@
     "ing_bonelessskinlesschickenthighs": false,
     "ing_tomatopaste": false
   },
-  "exportedAt": "2026-10-20T01:40:41.979Z"
+  "exportedAt": "2026-10-22T23:49:40.913Z"
 }
