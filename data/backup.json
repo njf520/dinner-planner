@@ -4781,7 +4781,9 @@
     "ing_driedoregano": false,
     "ing_allpurposeflour": false,
     "ing_drywhitewine": false,
-    "ing_lowsodiumchickenbroth": false
+    "ing_lowsodiumchickenbroth": false,
+    "ing_freshbasilleaves": true,
+    "ing_grapetomatoes": true
   },
   "haveItems": {
     "ing_aleppopepperflakes": true,
@@ -4800,7 +4802,9 @@
     "ing_driedoregano": true,
     "ing_allpurposeflour": true,
     "ing_drywhitewine": true,
-    "ing_lowsodiumchickenbroth": true
+    "ing_lowsodiumchickenbroth": true,
+    "ing_freshbasilleaves": false,
+    "ing_grapetomatoes": false
   },
-  "exportedAt": "2026-10-25T23:46:55.100Z"
+  "exportedAt": "2026-10-25T23:48:47.787Z"
 }
