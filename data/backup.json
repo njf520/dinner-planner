@@ -4767,7 +4767,7 @@
   "checkedItems": {
     "ing_aleppopepperflakes": false,
     "ing_chickpeas": false,
-    "ing_garliccloves": false,
+    "ing_garliccloves": true,
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
     "ing_groundcumin": false,
@@ -4775,7 +4775,7 @@
     "ing_smokedpaprika": false,
     "ing_carrots": true,
     "ing_mediumonions": true,
-    "ing_lemonjuice": false,
+    "ing_lemonjuice": true,
     "ing_bonelessskinlesschickenthighs": true,
     "ing_tomatopaste": true,
     "ing_driedoregano": false,
@@ -4783,7 +4783,8 @@
     "ing_drywhitewine": false,
     "ing_lowsodiumchickenbroth": false,
     "ing_freshbasilleaves": true,
-    "ing_grapetomatoes": true
+    "ing_grapetomatoes": true,
+    "ing_babybellamushrooms": true
   },
   "haveItems": {
     "ing_aleppopepperflakes": true,
@@ -4804,7 +4805,8 @@
     "ing_drywhitewine": true,
     "ing_lowsodiumchickenbroth": true,
     "ing_freshbasilleaves": false,
-    "ing_grapetomatoes": false
+    "ing_grapetomatoes": false,
+    "ing_babybellamushrooms": false
   },
-  "exportedAt": "2026-10-25T23:48:47.787Z"
+  "exportedAt": "2026-10-25T23:49:47.264Z"
 }
