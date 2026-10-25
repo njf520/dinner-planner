@@ -3272,7 +3272,7 @@
         "https://raw.githubusercontent.com/njf520/dinner-planner/main/images/1781473323960-0.jpg"
       ],
       "category": "food",
-      "lastOpened": 1790296875771
+      "lastOpened": 1792971973213
     },
     {
       "name": "Porcini Crusted Beef Tenderloin with Sautéed King Trumpet, Oyster & Shiitake Mushrooms and Red Wine Demi-Glace",
@@ -4762,12 +4762,12 @@
     }
   ],
   "planned": [
-    1781473127040
+    1781473323960
   ],
   "checkedItems": {
     "ing_aleppopepperflakes": false,
     "ing_chickpeas": false,
-    "ing_garliccloves": true,
+    "ing_garliccloves": false,
     "ing_groundblackpepper": false,
     "ing_extravirginoliveoil": false,
     "ing_groundcumin": false,
@@ -4775,9 +4775,13 @@
     "ing_smokedpaprika": false,
     "ing_carrots": true,
     "ing_mediumonions": true,
-    "ing_lemonjuice": true,
+    "ing_lemonjuice": false,
     "ing_bonelessskinlesschickenthighs": true,
-    "ing_tomatopaste": true
+    "ing_tomatopaste": true,
+    "ing_driedoregano": false,
+    "ing_allpurposeflour": false,
+    "ing_drywhitewine": false,
+    "ing_lowsodiumchickenbroth": false
   },
   "haveItems": {
     "ing_aleppopepperflakes": true,
@@ -4792,7 +4796,11 @@
     "ing_mediumonions": false,
     "ing_lemonjuice": false,
     "ing_bonelessskinlesschickenthighs": false,
-    "ing_tomatopaste": false
+    "ing_tomatopaste": false,
+    "ing_driedoregano": true,
+    "ing_allpurposeflour": true,
+    "ing_drywhitewine": true,
+    "ing_lowsodiumchickenbroth": true
   },
-  "exportedAt": "2026-10-25T23:45:53.042Z"
+  "exportedAt": "2026-10-25T23:46:55.100Z"
 }
