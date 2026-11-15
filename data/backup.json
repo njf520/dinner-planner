@@ -4789,12 +4789,14 @@
     "ing_bonelessskinlesschickenbreasthalves": false,
     "ing_groundallspice": false,
     "ing_groundcinnamon": false,
-    "ing_pomegranatemolasses": false
+    "ing_pomegranatemolasses": false,
+    "ing_smallredonion": false,
+    "ing_sumac": false
   },
   "haveItems": {
     "ing_aleppopepperflakes": true,
     "ing_chickpeas": false,
-    "ing_garliccloves": false,
+    "ing_garliccloves": true,
     "ing_groundblackpepper": true,
     "ing_extravirginoliveoil": true,
     "ing_groundcumin": true,
@@ -4816,7 +4818,9 @@
     "ing_bonelessskinlesschickenbreasthalves": true,
     "ing_groundallspice": true,
     "ing_groundcinnamon": true,
-    "ing_pomegranatemolasses": true
+    "ing_pomegranatemolasses": true,
+    "ing_smallredonion": true,
+    "ing_sumac": true
   },
-  "exportedAt": "2026-11-15T19:45:10.724Z"
+  "exportedAt": "2026-11-15T19:46:43.025Z"
 }
