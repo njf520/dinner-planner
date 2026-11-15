@@ -4796,7 +4796,8 @@
     "ing_cherrytomatoes": true,
     "ing_englishcucumber": true,
     "ing_freshlemonjuice": true,
-    "ing_freshmintleaves": true
+    "ing_freshmintleaves": true,
+    "ing_redbellpepper": true
   },
   "haveItems": {
     "ing_aleppopepperflakes": true,
@@ -4830,7 +4831,8 @@
     "ing_cherrytomatoes": false,
     "ing_englishcucumber": false,
     "ing_freshlemonjuice": false,
-    "ing_freshmintleaves": false
+    "ing_freshmintleaves": false,
+    "ing_redbellpepper": false
   },
-  "exportedAt": "2026-11-15T21:42:37.367Z"
+  "exportedAt": "2026-11-15T21:44:16.575Z"
 }
