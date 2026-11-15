@@ -4791,7 +4791,12 @@
     "ing_groundcinnamon": false,
     "ing_pomegranatemolasses": false,
     "ing_smallredonion": false,
-    "ing_sumac": false
+    "ing_sumac": false,
+    "ing_babyarugula": true,
+    "ing_cherrytomatoes": true,
+    "ing_englishcucumber": true,
+    "ing_freshlemonjuice": true,
+    "ing_freshmintleaves": true
   },
   "haveItems": {
     "ing_aleppopepperflakes": true,
@@ -4820,7 +4825,12 @@
     "ing_groundcinnamon": true,
     "ing_pomegranatemolasses": true,
     "ing_smallredonion": true,
-    "ing_sumac": true
+    "ing_sumac": true,
+    "ing_babyarugula": false,
+    "ing_cherrytomatoes": false,
+    "ing_englishcucumber": false,
+    "ing_freshlemonjuice": false,
+    "ing_freshmintleaves": false
   },
-  "exportedAt": "2026-11-15T19:46:43.025Z"
+  "exportedAt": "2026-11-15T21:42:37.367Z"
 }
